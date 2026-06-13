@@ -546,6 +546,44 @@ def simulate_by_tournament(
     return simulate_betting_report(all_predictions, config=config)
 
 
+def plan_flat_2026_bets(predictions: list[dict[str, Any]], config: ModelConfig | None = None) -> dict[str, Any]:
+    """2026 未赛场：每场 50 元押模型最高概率 1X2。"""
+    upcoming = [p for p in predictions if not p.get("played")]
+    sim = simulate_flat_bets(upcoming, label="2026 世界杯", config=config, only_played=False)
+    plans: list[dict[str, Any]] = []
+    total_stake = 0.0
+    for d in sim.get("details") or []:
+        stake = float(d.get("stake") or STAKE)
+        total_stake += stake
+        plans.append(
+            {
+                "title": d.get("title", ""),
+                "group": next((p.get("group", "") for p in upcoming if p.get("title") == d.get("title")), ""),
+                "date": next(
+                    (
+                        (p.get("openfootball") or {}).get("date", "")
+                        for p in upcoming
+                        if p.get("title") == d.get("title")
+                    ),
+                    "",
+                ),
+                "pick": d.get("pick", ""),
+                "odds": d.get("odds"),
+                "stake": stake,
+                "potential_win": d.get("potential_win"),
+            }
+        )
+    return {
+        "strategy": "flat_1x2",
+        "selected_count": len(plans),
+        "total_stake": round(total_stake, 2),
+        "stake_per_bet": STAKE,
+        "bankroll_start": BANKROLL_START,
+        "bet_rule": "每场 50 元押模型最高概率赛果（1X2）",
+        "plans": plans,
+    }
+
+
 def plan_2026_bets(predictions: list[dict[str, Any]]) -> dict[str, Any]:
     """2026 精选 15 场投注计划（含未赛）。"""
     tc = _tier_cfg()
@@ -586,9 +624,8 @@ def simulate_2026(predictions: list[dict[str, Any]], config: ModelConfig | None 
     flat_settled = (
         simulate_flat_bets(played, label="2026 世界杯", config=config, only_played=True) if played else None
     )
-    tiered_settled = (
-        simulate_tiered_bets(played, label="2026 世界杯", config=config, only_played=True, curated=True)
-        if played
-        else None
-    )
-    return {"flat_1x2": flat_settled, "tiered_curated": tiered_settled, "plan": plan_2026_bets(predictions)}
+    return {
+        "primary": "flat_1x2",
+        "flat_1x2": flat_settled,
+        "plan": plan_flat_2026_bets(predictions, config=config),
+    }

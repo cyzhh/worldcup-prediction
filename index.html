@@ -255,7 +255,7 @@
     "date_range": "2026.06.11 - 06.27",
     "subtitle": "awesome-football 多源融合 · 赛程/球员/球场/ELO/H2H/积分榜",
     "data_source": "https://github.com/openfootball/awesome-football",
-    "db_built_at": "2026-06-13T13:38:28.735560+00:00",
+    "db_built_at": "2026-06-13T13:42:53.183567+00:00",
     "sources": [
       "https://github.com/openfootball/worldcup",
       "https://github.com/openfootball/worldcup.json",
@@ -26958,15 +26958,15 @@
   ],
   "backtest": {
     "method": "walk-forward group stage backtest (1998-2022, ELO priors from 1986+)",
-    "generated_at": "2026-06-13T13:38:30.827365+00:00",
+    "generated_at": "2026-06-13T13:42:55.300536+00:00",
     "overall": {
       "matches": 336,
       "outcome_accuracy": 0.622,
       "exact_score_accuracy": 0.1101,
       "brier_score": 0.6249,
-      "macro_f1": 0.4877,
-      "draw_f1": 0.3814,
-      "draw_precision": 0.3106,
+      "macro_f1": 0.4902,
+      "draw_f1": 0.3832,
+      "draw_precision": 0.313,
       "upset_capture_rate": 0.0
     },
     "betting": {
@@ -26980,8 +26980,8 @@
           "bet_rule": "每场 50 元押模型最高概率赛果（1X2），共 48 场",
           "odds_source": "ELO 隐含欧赔 + 7% 抽水"
         },
-        "overall_profit_all_tournaments": 3081.5,
-        "overall_roi": 0.1834,
+        "overall_profit_all_tournaments": 3192.0,
+        "overall_roi": 0.19,
         "overall_staked": 16800.0,
         "by_tournament": {
           "1998 法国世界杯": {
@@ -27001,12 +27001,12 @@
             "bankroll_start": 2000.0,
             "stake_per_bet": 50.0,
             "bets": 48,
-            "wins": 19,
-            "hit_rate": 0.3958,
+            "wins": 20,
+            "hit_rate": 0.4167,
             "staked": 2400.0,
-            "profit": 111.5,
-            "ending_bankroll": 2111.5,
-            "roi": 0.0465
+            "profit": 222.0,
+            "ending_bankroll": 2222.0,
+            "roi": 0.0925
           },
           "2006 德国世界杯": {
             "strategy": "flat_1x2",
@@ -27085,8 +27085,8 @@
           },
           "odds_source": "典型欧赔（1X2 1.6 / 亚盘 1.9 / 大小 1.85）"
         },
-        "overall_profit_all_tournaments": -1157.5,
-        "overall_roi": -0.1033,
+        "overall_profit_all_tournaments": -1250.0,
+        "overall_roi": -0.1116,
         "overall_staked": 11200.0,
         "leg_breakdown": {},
         "by_tournament": {
@@ -27100,12 +27100,12 @@
             "selected_matches": 15,
             "legs": 34,
             "legs_counted": 33,
-            "wins": 13,
-            "hit_rate": 0.3939,
+            "wins": 12,
+            "hit_rate": 0.3636,
             "staked": 1700.0,
-            "profit": -490.0,
-            "ending_bankroll": 1510.0,
-            "roi": -0.2882,
+            "profit": -582.5,
+            "ending_bankroll": 1417.5,
+            "roi": -0.3426,
             "by_tier": {
               "strong": {
                 "matches": 8,
@@ -27116,7 +27116,7 @@
               "medium": {
                 "matches": 5,
                 "staked": 500.0,
-                "profit": -222.5,
+                "profit": -315.0,
                 "legs": 10
               }
             }
@@ -27310,9 +27310,9 @@
         }
       },
       "comparison": {
-        "flat_profit": 3081.5,
-        "tiered_profit": -1157.5,
-        "delta": -4239.0,
+        "flat_profit": 3192.0,
+        "tiered_profit": -1250.0,
+        "delta": -4442.0,
         "why_tiered_underperforms": [
           "1X2 模型有 walk-forward edge，亚盘/大小球未单独校准",
           "强信号场追加亚盘要求净胜球，1 球小胜常赢 1X2 却输亚盘",
@@ -27322,6 +27322,7 @@
     }
   },
   "betting_2026": {
+    "primary": "flat_1x2",
     "flat_1x2": {
       "strategy": "flat_1x2",
       "bankroll_start": 2000.0,
@@ -27372,551 +27373,193 @@
         }
       ]
     },
-    "tiered_curated": {
-      "label": "2026 世界杯",
-      "strategy": "tiered_curated",
-      "bankroll_start": 2000.0,
-      "budget_cap": 1800.0,
-      "reserve": 200.0,
-      "stake_per_leg": 50.0,
-      "selected_matches": 2,
-      "legs": 6,
-      "legs_counted": 6,
-      "wins": 5,
-      "hit_rate": 0.8333,
-      "staked": 300.0,
-      "profit": 142.5,
-      "ending_bankroll": 2142.5,
-      "roi": 0.475,
-      "by_tier": {
-        "strong": {
-          "matches": 2,
-          "staked": 300.0,
-          "profit": 142.5,
-          "legs": 6
-        }
-      },
-      "details": [
-        {
-          "title": "Mexico vs South Africa",
-          "tier": "strong",
-          "confidence": 70.2,
-          "strength_diff": 0.178,
-          "match_stake": 150.0,
-          "match_pnl": 117.5,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "home",
-              "stake": 50.0,
-              "odds": 1.6,
-              "won": true,
-              "pnl": 30.0
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": -1.0,
-              "label": "亚盘: 墨西哥-1.0",
-              "stake": 50.0,
-              "odds": 1.9,
-              "won": true,
-              "pnl": 45.0
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.72,
-              "won": true,
-              "pnl": 42.5
-            }
-          ]
-        },
-        {
-          "title": "USA vs Paraguay",
-          "tier": "strong",
-          "confidence": 70.0,
-          "strength_diff": 0.189,
-          "match_stake": 150.0,
-          "match_pnl": 25.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "home",
-              "stake": 50.0,
-              "odds": 1.6,
-              "won": true,
-              "pnl": 30.0
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": -1.5,
-              "label": "亚盘: 美国-1.5",
-              "stake": 50.0,
-              "odds": 1.9,
-              "won": true,
-              "pnl": 45.0
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.72,
-              "won": false,
-              "pnl": -50.0
-            }
-          ]
-        }
-      ]
-    },
     "plan": {
-      "selected_count": 15,
-      "total_stake": 2000.0,
-      "budget_cap": 1800.0,
+      "strategy": "flat_1x2",
+      "selected_count": 20,
+      "total_stake": 1000.0,
+      "stake_per_bet": 50.0,
+      "bankroll_start": 2000.0,
+      "bet_rule": "每场 50 元押模型最高概率赛果（1X2）",
       "plans": [
         {
-          "title": "Jordan vs Argentina",
-          "group": "J",
-          "date": "2026-06-27",
-          "tier": "strong",
-          "confidence": 77.9,
-          "strength_diff": -0.271,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "away",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": 1.0,
-              "label": "亚盘: 约旦+1.0",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.667
-            }
-          ]
+          "title": "Qatar vs Switzerland",
+          "group": "B",
+          "date": "2026-06-13",
+          "pick": "away",
+          "odds": 1.18,
+          "stake": 50.0,
+          "potential_win": 9.0
         },
         {
-          "title": "France vs Iraq",
-          "group": "I",
-          "date": "2026-06-22",
-          "tier": "strong",
-          "confidence": 77.8,
-          "strength_diff": 0.376,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "home",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": -1.5,
-              "label": "亚盘: 法国-1.5",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.608
-            }
-          ]
-        },
-        {
-          "title": "Senegal vs Iraq",
-          "group": "I",
-          "date": "2026-06-26",
-          "tier": "strong",
-          "confidence": 77.4,
-          "strength_diff": 0.294,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "home",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": -1.5,
-              "label": "亚盘: 塞内加尔-1.5",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.678
-            }
-          ]
-        },
-        {
-          "title": "New Zealand vs Belgium",
-          "group": "G",
-          "date": "2026-06-26",
-          "tier": "strong",
-          "confidence": 77.2,
-          "strength_diff": -0.266,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "away",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": 1.0,
-              "label": "亚盘: 新西兰+1.0",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.669
-            }
-          ]
-        },
-        {
-          "title": "Brazil vs Haiti",
+          "title": "Brazil vs Morocco",
           "group": "C",
-          "date": "2026-06-19",
-          "tier": "strong",
-          "confidence": 76.4,
-          "strength_diff": 0.3,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "home",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": -1.5,
-              "label": "亚盘: 巴西-1.5",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.642
-            }
-          ]
+          "date": "2026-06-13",
+          "pick": "home",
+          "odds": 2.11,
+          "stake": 50.0,
+          "potential_win": 55.5
         },
         {
-          "title": "Spain vs Saudi Arabia",
-          "group": "H",
-          "date": "2026-06-21",
-          "tier": "strong",
-          "confidence": 76.0,
-          "strength_diff": 0.289,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "home",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": -1.5,
-              "label": "亚盘: 西班牙-1.5",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.677
-            }
-          ]
+          "title": "Haiti vs Scotland",
+          "group": "C",
+          "date": "2026-06-13",
+          "pick": "away",
+          "odds": 1.15,
+          "stake": 50.0,
+          "potential_win": 7.5
         },
         {
-          "title": "Panama vs England",
-          "group": "L",
-          "date": "2026-06-27",
-          "tier": "strong",
-          "confidence": 75.5,
-          "strength_diff": -0.365,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "away",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": 1.0,
-              "label": "亚盘: 巴拿马+1.0",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.72
-            }
-          ]
+          "title": "Australia vs Turkey",
+          "group": "D",
+          "date": "2026-06-13",
+          "pick": "draw",
+          "odds": 3.72,
+          "stake": 50.0,
+          "potential_win": 136.0
         },
         {
-          "title": "Uruguay vs Cape Verde",
-          "group": "H",
-          "date": "2026-06-21",
-          "tier": "strong",
-          "confidence": 74.3,
-          "strength_diff": 0.223,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "home",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": -1.5,
-              "label": "亚盘: 乌拉圭-1.5",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.708
-            }
-          ]
+          "title": "Germany vs Curaçao",
+          "group": "E",
+          "date": "2026-06-14",
+          "pick": "home",
+          "odds": 0.98,
+          "stake": 50.0,
+          "potential_win": -1.0
         },
         {
-          "title": "England vs Ghana",
-          "group": "L",
-          "date": "2026-06-23",
-          "tier": "strong",
-          "confidence": 74.3,
-          "strength_diff": 0.21,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "home",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": -1.5,
-              "label": "亚盘: 英格兰-1.5",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.71
-            }
-          ]
-        },
-        {
-          "title": "Tunisia vs Netherlands",
+          "title": "Netherlands vs Japan",
           "group": "F",
-          "date": "2026-06-25",
-          "tier": "strong",
-          "confidence": 74.2,
-          "strength_diff": -0.229,
-          "match_stake": 150.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "away",
-              "stake": 50.0,
-              "odds": 1.6
-            },
-            {
-              "type": "asian",
-              "side": "home",
-              "line": 1.0,
-              "label": "亚盘: 突尼斯+1.0",
-              "stake": 50.0,
-              "odds": 1.9
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.699
-            }
-          ]
+          "date": "2026-06-14",
+          "pick": "home",
+          "odds": 1.63,
+          "stake": 50.0,
+          "potential_win": 31.5
+        },
+        {
+          "title": "Ivory Coast vs Ecuador",
+          "group": "E",
+          "date": "2026-06-14",
+          "pick": "draw",
+          "odds": 3.88,
+          "stake": 50.0,
+          "potential_win": 144.0
+        },
+        {
+          "title": "Sweden vs Tunisia",
+          "group": "F",
+          "date": "2026-06-14",
+          "pick": "home",
+          "odds": 1.9,
+          "stake": 50.0,
+          "potential_win": 45.0
+        },
+        {
+          "title": "Spain vs Cape Verde",
+          "group": "H",
+          "date": "2026-06-15",
+          "pick": "home",
+          "odds": 0.99,
+          "stake": 50.0,
+          "potential_win": -0.5
+        },
+        {
+          "title": "Belgium vs Egypt",
+          "group": "G",
+          "date": "2026-06-15",
+          "pick": "home",
+          "odds": 1.48,
+          "stake": 50.0,
+          "potential_win": 24.0
+        },
+        {
+          "title": "Saudi Arabia vs Uruguay",
+          "group": "H",
+          "date": "2026-06-15",
+          "pick": "away",
+          "odds": 1.11,
+          "stake": 50.0,
+          "potential_win": 5.5
         },
         {
           "title": "Iran vs New Zealand",
           "group": "G",
           "date": "2026-06-15",
-          "tier": "medium",
-          "confidence": 66.4,
-          "strength_diff": 0.12,
-          "match_stake": 100.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "home",
-              "stake": 50.0,
-              "odds": 1.75
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.72
-            }
-          ]
+          "pick": "home",
+          "odds": 1.01,
+          "stake": 50.0,
+          "potential_win": 0.5
         },
         {
-          "title": "Curaçao vs Ivory Coast",
-          "group": "E",
-          "date": "2026-06-25",
-          "tier": "medium",
-          "confidence": 66.1,
-          "strength_diff": -0.116,
-          "match_stake": 100.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "away",
-              "stake": 50.0,
-              "odds": 1.75
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.72
-            }
-          ]
-        },
-        {
-          "title": "Scotland vs Morocco",
-          "group": "C",
-          "date": "2026-06-19",
-          "tier": "medium",
-          "confidence": 61.7,
-          "strength_diff": -0.111,
-          "match_stake": 100.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "away",
-              "stake": 50.0,
-              "odds": 1.75
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.72
-            }
-          ]
-        },
-        {
-          "title": "Tunisia vs Japan",
-          "group": "F",
-          "date": "2026-06-20",
-          "tier": "medium",
-          "confidence": 59.4,
-          "strength_diff": -0.101,
-          "match_stake": 100.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "away",
-              "stake": 50.0,
-              "odds": 1.75
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.72
-            }
-          ]
-        },
-        {
-          "title": "Norway vs Senegal",
+          "title": "France vs Senegal",
           "group": "I",
-          "date": "2026-06-22",
-          "tier": "medium",
-          "confidence": 58.2,
-          "strength_diff": -0.081,
-          "match_stake": 100.0,
-          "legs": [
-            {
-              "type": "1x2",
-              "pick": "away",
-              "stake": 50.0,
-              "odds": 1.75
-            },
-            {
-              "type": "ou",
-              "pick": "under",
-              "stake": 50.0,
-              "odds": 1.85,
-              "confidence": 0.72
-            }
-          ]
+          "date": "2026-06-16",
+          "pick": "home",
+          "odds": 1.66,
+          "stake": 50.0,
+          "potential_win": 33.0
+        },
+        {
+          "title": "Iraq vs Norway",
+          "group": "I",
+          "date": "2026-06-16",
+          "pick": "away",
+          "odds": 1.31,
+          "stake": 50.0,
+          "potential_win": 15.5
+        },
+        {
+          "title": "Argentina vs Algeria",
+          "group": "J",
+          "date": "2026-06-16",
+          "pick": "home",
+          "odds": 1.33,
+          "stake": 50.0,
+          "potential_win": 16.5
+        },
+        {
+          "title": "Austria vs Jordan",
+          "group": "J",
+          "date": "2026-06-16",
+          "pick": "home",
+          "odds": 1.15,
+          "stake": 50.0,
+          "potential_win": 7.5
+        },
+        {
+          "title": "Portugal vs DR Congo",
+          "group": "K",
+          "date": "2026-06-17",
+          "pick": "home",
+          "odds": 1.13,
+          "stake": 50.0,
+          "potential_win": 6.5
+        },
+        {
+          "title": "England vs Croatia",
+          "group": "L",
+          "date": "2026-06-17",
+          "pick": "home",
+          "odds": 1.98,
+          "stake": 50.0,
+          "potential_win": 49.0
+        },
+        {
+          "title": "Ghana vs Panama",
+          "group": "L",
+          "date": "2026-06-17",
+          "pick": "draw",
+          "odds": 6.64,
+          "stake": 50.0,
+          "potential_win": 282.0
+        },
+        {
+          "title": "Uzbekistan vs Colombia",
+          "group": "K",
+          "date": "2026-06-17",
+          "pick": "away",
+          "odds": 1.18,
+          "stake": 50.0,
+          "potential_win": 9.0
         }
       ]
     }
@@ -28264,12 +27907,9 @@
     function renderBetting() {
       const betting = DATA.backtest?.betting || {};
       const flat = betting.flat_1x2 || {};
-      const tiered = betting.tiered_curated || {};
-      const cmp = betting.comparison || {};
       const flatCfg = flat.config || {};
-      const tierCfg = tiered.config || {};
       const w26 = DATA.betting_2026 || {};
-      const settled = w26.settled;
+      const settled = w26.flat_1x2;
       const plan = w26.plan;
 
       function sortRows(byTournament) {
@@ -28280,18 +27920,14 @@
         });
       }
 
-      function histTable(byTournament, mode) {
+      function histTable(byTournament) {
         const rows = sortRows(byTournament).map(([label, t]) => {
           const profit = t.profit ?? 0;
           const cls = profit >= 0 ? "tag win" : "tag lose";
-          const countCol = mode === "flat"
-            ? `${t.bets ?? 0} 场`
-            : `${t.selected_matches ?? 0} 场`;
-          const legCol = mode === "flat" ? `${t.bets ?? 0} 注` : `${t.legs ?? 0} 注`;
           return `<tr>
             <td>${label}</td>
-            <td>${countCol}</td>
-            <td>${legCol}</td>
+            <td>${t.bets ?? 0} 场</td>
+            <td>${t.bets ?? 0} 注</td>
             <td>${t.wins ?? 0}${t.hit_rate != null ? ` (${(t.hit_rate * 100).toFixed(1)}%)` : ""}</td>
             <td>${t.staked ?? 0} 元</td>
             <td><span class="${cls}">${profit >= 0 ? "+" : ""}${profit} 元</span></td>
@@ -28303,35 +27939,32 @@
       }
 
       const flatProfit = flat.overall_profit_all_tournaments;
-      const tierProfit = tiered.overall_profit_all_tournaments;
       const flatRoi = flat.overall_roi;
-      const tierRoi = tiered.overall_roi;
-      const th = tierCfg.tier_thresholds || {};
 
       let w26Html = "<p style='color:var(--muted);padding:20px;text-align:center'>尚无已赛结算</p>";
       if (settled) {
         const p = settled.profit ?? 0;
         w26Html = `
           <div class="metrics-row" style="margin-bottom:16px">
-            <div class="metric-card">
+            <div class="metric-card" style="border:1px solid var(--green)">
               <div class="metric-value ${p >= 0 ? "live" : ""}">${p >= 0 ? "+" : ""}${p} 元</div>
-              <div class="metric-label">2026 已赛盈亏（三档）</div>
-              <div class="metric-sub">${settled.selected_matches} 场 · ${settled.legs} 注 · 命中 ${settled.wins}/${settled.legs_counted || settled.legs}</div>
+              <div class="metric-label">2026 已赛盈亏（单场 1X2）</div>
+              <div class="metric-sub">${settled.bets} 场 · ${settled.bets} 注 · 命中 ${settled.wins}/${settled.bets}</div>
             </div>
             <div class="metric-card">
               <div class="metric-value">${settled.ending_bankroll ?? "—"} 元</div>
               <div class="metric-label">当前虚拟余额</div>
-              <div class="metric-sub">预算上限 ${settled.budget_cap ?? 1800} · 留底 ${settled.reserve ?? 200}</div>
+              <div class="metric-sub">起始 ${settled.bankroll_start ?? 2000} · 每场 ${settled.stake_per_bet ?? 50} 元</div>
             </div>
           </div>`;
         if (settled.details?.length) {
           w26Html += `<div class="player-table-wrap"><div class="player-table-scroll"><table class="player-table">
-            <thead><tr><th>比赛</th><th>档位</th><th>注单</th><th>盈亏</th></tr></thead>
+            <thead><tr><th>比赛</th><th>押注</th><th>赔率</th><th>盈亏</th></tr></thead>
             <tbody>${settled.details.map(d => `<tr>
-              <td>${d.title}<br><span style="color:var(--muted);font-size:0.72rem">置信 ${d.confidence}% · Δ${d.strength_diff}</span></td>
-              <td>${tierLabel(d.tier)}</td>
-              <td style="font-size:0.78rem">${(d.legs||[]).map(l => legLabel(l) + (l.pnl != null ? ` <span class="${l.won ? "tag win" : l.won===false ? "tag lose" : ""}">${l.pnl>=0?"+":""}${l.pnl}</span>` : "")).join("<br>")}</td>
-              <td><span class="${(d.match_pnl||0) >= 0 ? "tag win" : "tag lose"}">${d.match_pnl >= 0 ? "+" : ""}${d.match_pnl} 元</span></td>
+              <td>${d.title}</td>
+              <td>胜平负·${pickLabel(d.pick)} · ${d.stake} 元</td>
+              <td>${d.odds}</td>
+              <td><span class="${d.won ? "tag win" : "tag lose"}">${d.pnl >= 0 ? "+" : ""}${d.pnl} 元</span></td>
             </tr>`).join("")}</tbody></table></div></div>`;
         }
       }
@@ -28339,51 +27972,38 @@
       let planHtml = "";
       if (plan?.plans?.length) {
         planHtml = `
-          <div class="player-table-head" style="margin:24px 0 12px"><h2>2026 精选计划（${plan.selected_count} 场 · 合计 ${plan.total_stake} 元）</h2></div>
+          <div class="player-table-head" style="margin:24px 0 12px"><h2>2026 待赛场次（${plan.selected_count} 场 · 合计 ${plan.total_stake} 元）</h2></div>
           <div class="player-table-wrap"><div class="player-table-scroll"><table class="player-table">
-            <thead><tr><th>比赛</th><th>档位</th><th>置信度</th><th>注单组合</th><th>单场</th></tr></thead>
+            <thead><tr><th>比赛</th><th>日期</th><th>小组</th><th>押注</th><th>赔率</th><th>单场</th><th>潜在盈利</th></tr></thead>
             <tbody>${plan.plans.map(p => `<tr>
-              <td>${p.title}<br><span style="color:var(--muted);font-size:0.72rem">${p.date || ""} · ${p.group || ""}</span></td>
-              <td>${tierLabel(p.tier)}</td>
-              <td>${p.confidence}%</td>
-              <td style="font-size:0.78rem">${(p.legs||[]).map(l => legLabel(l)).join("<br>")}</td>
-              <td>${p.match_stake} 元</td>
+              <td>${p.title}</td>
+              <td>${p.date || "—"}</td>
+              <td>${p.group || "—"}</td>
+              <td>胜平负·${pickLabel(p.pick)}</td>
+              <td>${p.odds ?? "—"}</td>
+              <td>${p.stake ?? 50} 元</td>
+              <td>${p.potential_win != null ? "+" + p.potential_win + " 元" : "—"}</td>
             </tr>`).join("")}</tbody></table></div></div>`;
       }
 
-      const whyTiered = (cmp.why_tiered_underperforms || []).map(s => `<li>${s}</li>`).join("");
       document.getElementById("betting-content").innerHTML = `
         <div class="metrics-row" style="margin-bottom:20px">
           <div class="metric-card" style="border:1px solid var(--green)">
             <div class="metric-value live">${flatProfit != null ? (flatProfit >= 0 ? "+" : "") + flatProfit : "—"} 元</div>
-            <div class="metric-label">策略 A · 单场 1X2（主策略）</div>
-            <div class="metric-sub">每场 50 元押最高概率 · ROI ${flatRoi != null ? (flatRoi * 100).toFixed(1) + "%" : "—"} · 投入 ${flat.overall_staked ?? "—"} 元</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-value">${tierProfit != null ? (tierProfit >= 0 ? "+" : "") + tierProfit : "—"} 元</div>
-            <div class="metric-label">策略 B · 三档精选</div>
-            <div class="metric-sub">强10×3 + 中5×2 · ROI ${tierRoi != null ? (tierRoi * 100).toFixed(1) + "%" : "—"} · 投入 ${tiered.overall_staked ?? "—"} 元</div>
+            <div class="metric-label">策略 · 单场 1X2</div>
+            <div class="metric-sub">1998–2022 七届 · ROI ${flatRoi != null ? (flatRoi * 100).toFixed(1) + "%" : "—"} · 投入 ${flat.overall_staked ?? "—"} 元</div>
           </div>
         </div>
         <p style="text-align:center;color:var(--muted);font-size:0.82rem;margin-bottom:16px;line-height:1.6">
-          校准目标以 <strong>策略 A 1X2 ROI</strong> 为主（35% ROI + 20% 利润 + 30% 准确率）。<br>
-          策略 B：${th.strong || "强|Δ|>0.12"} → 3×50 · ${th.medium || "中"} → 2×50 · 留底 ${tierCfg.reserve ?? 200} 元
+          <strong>单场 1X2</strong>：每场 ${flatCfg.stake_per_bet ?? 50} 元押模型最高概率赛果 · 每届本金 ${flatCfg.bankroll_per_tournament ?? 2000} 元 · 共 48 场<br>
+          ${flatCfg.bet_rule || "历史回测与 2026 虚拟投注均使用此策略"}
         </p>
-        ${whyTiered ? `<div style="max-width:720px;margin:0 auto 20px;font-size:0.78rem;color:var(--muted)"><strong>策略 B 落后原因：</strong><ul style="margin:8px 0 0 18px">${whyTiered}</ul></div>` : ""}
         <div class="player-table-wrap" style="margin-bottom:24px">
-          <div class="player-table-head"><h2>策略 A · 历届小组赛（单场 1X2）</h2></div>
+          <div class="player-table-head"><h2>历届世界杯小组赛回测</h2></div>
           <div class="player-table-scroll">
           <table class="player-table">
             <thead><tr><th>届次</th><th>场次</th><th>注数</th><th>命中</th><th>总投入</th><th>盈亏</th><th>期末余额</th><th>ROI</th></tr></thead>
-            <tbody>${histTable(flat.by_tournament, "flat")}</tbody>
-          </table></div>
-        </div>
-        <div class="player-table-wrap" style="margin-bottom:24px">
-          <div class="player-table-head"><h2>策略 B · 历届小组赛（三档精选）</h2></div>
-          <div class="player-table-scroll">
-          <table class="player-table">
-            <thead><tr><th>届次</th><th>精选场</th><th>注数</th><th>命中</th><th>总投入</th><th>盈亏</th><th>期末余额</th><th>ROI</th></tr></thead>
-            <tbody>${histTable(tiered.by_tournament, "tiered")}</tbody>
+            <tbody>${histTable(flat.by_tournament)}</tbody>
           </table></div>
         </div>
         <div class="player-table-head" style="margin-bottom:12px"><h2>2026 当届（进行中）</h2></div>

@@ -5,7 +5,7 @@
     "date_range": "2026.06.11 - 06.27",
     "subtitle": "awesome-football 多源融合 · 赛程/球员/球场/ELO/H2H/积分榜",
     "data_source": "https://github.com/openfootball/awesome-football",
-    "db_built_at": "2026-06-13T13:38:28.735560+00:00",
+    "db_built_at": "2026-06-13T13:42:53.183567+00:00",
     "sources": [
       "https://github.com/openfootball/worldcup",
       "https://github.com/openfootball/worldcup.json",
