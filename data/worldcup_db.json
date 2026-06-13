@@ -1,6 +1,6 @@
 {
   "meta": {
-    "built_at": "2026-06-13T11:28:25.095172+00:00",
+    "built_at": "2026-06-13T11:29:26.054345+00:00",
     "tournament": "World Cup 2026",
     "sources": [
       "https://github.com/openfootball/worldcup",
@@ -323,8 +323,8 @@
       "squad_size": 26,
       "avg_age": 27.5,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "RSA": {
@@ -374,8 +374,8 @@
       "squad_size": 28,
       "avg_age": 25.6,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "KOR": {
@@ -425,8 +425,8 @@
       "squad_size": 27,
       "avg_age": 27.5,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "CZE": {
@@ -476,8 +476,8 @@
       "squad_size": 24,
       "avg_age": 27.6,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "CAN": {
@@ -527,8 +527,8 @@
       "squad_size": 33,
       "avg_age": 26.2,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "BIH": {
@@ -578,8 +578,8 @@
       "squad_size": 27,
       "avg_age": 26.1,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "QAT": {
@@ -629,8 +629,8 @@
       "squad_size": 51,
       "avg_age": 28.5,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "SUI": {
@@ -680,8 +680,8 @@
       "squad_size": 26,
       "avg_age": 27.8,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "BRA": {
@@ -731,8 +731,8 @@
       "squad_size": 27,
       "avg_age": 28.6,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "MAR": {
@@ -782,8 +782,8 @@
       "squad_size": 36,
       "avg_age": 25.4,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "HAI": {
@@ -833,8 +833,8 @@
       "squad_size": 20,
       "avg_age": 27.3,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "SCO": {
@@ -884,8 +884,8 @@
       "squad_size": 27,
       "avg_age": 28.6,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "USA": {
@@ -935,8 +935,8 @@
       "squad_size": 31,
       "avg_age": 26.1,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "PAR": {
@@ -986,8 +986,8 @@
       "squad_size": 23,
       "avg_age": 28.2,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "AUS": {
@@ -1037,8 +1037,8 @@
       "squad_size": 33,
       "avg_age": 26.8,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "TUR": {
@@ -1088,8 +1088,8 @@
       "squad_size": 26,
       "avg_age": 27.2,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "GER": {
@@ -1139,8 +1139,8 @@
       "squad_size": 28,
       "avg_age": 27.2,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "CUW": {
@@ -1190,8 +1190,8 @@
       "squad_size": 24,
       "avg_age": 27.0,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "CIV": {
@@ -1241,8 +1241,8 @@
       "squad_size": 27,
       "avg_age": 25.3,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "ECU": {
@@ -1292,8 +1292,8 @@
       "squad_size": 33,
       "avg_age": 25.5,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "NED": {
@@ -1343,8 +1343,8 @@
       "squad_size": 33,
       "avg_age": 27.0,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "JPN": {
@@ -1394,8 +1394,8 @@
       "squad_size": 26,
       "avg_age": 27.2,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "SWE": {
@@ -1445,8 +1445,8 @@
       "squad_size": 26,
       "avg_age": 26.1,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "TUN": {
@@ -1496,8 +1496,8 @@
       "squad_size": 22,
       "avg_age": 25.6,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "BEL": {
@@ -1547,8 +1547,8 @@
       "squad_size": 26,
       "avg_age": 27.1,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "EGY": {
@@ -1598,8 +1598,8 @@
       "squad_size": 31,
       "avg_age": 28.6,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "IRN": {
@@ -1649,8 +1649,8 @@
       "squad_size": 31,
       "avg_age": 29.1,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "NZL": {
@@ -1700,8 +1700,8 @@
       "squad_size": 26,
       "avg_age": 26.6,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "ESP": {
@@ -1751,8 +1751,8 @@
       "squad_size": 33,
       "avg_age": 26.1,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "CPV": {
@@ -1802,8 +1802,8 @@
       "squad_size": 25,
       "avg_age": 29.4,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "KSA": {
@@ -1853,8 +1853,8 @@
       "squad_size": 33,
       "avg_age": 27.5,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "URU": {
@@ -1904,8 +1904,8 @@
       "squad_size": 30,
       "avg_age": 28.0,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "FRA": {
@@ -1955,8 +1955,8 @@
       "squad_size": 26,
       "avg_age": 26.6,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "SEN": {
@@ -2006,8 +2006,8 @@
       "squad_size": 29,
       "avg_age": 26.7,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "IRQ": {
@@ -2057,8 +2057,8 @@
       "squad_size": 20,
       "avg_age": 25.9,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "NOR": {
@@ -2108,8 +2108,8 @@
       "squad_size": 29,
       "avg_age": 25.7,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "ARG": {
@@ -2159,8 +2159,8 @@
       "squad_size": 34,
       "avg_age": 27.8,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "ALG": {
@@ -2210,8 +2210,8 @@
       "squad_size": 28,
       "avg_age": 24.9,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "AUT": {
@@ -2261,8 +2261,8 @@
       "squad_size": 26,
       "avg_age": 28.1,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "JOR": {
@@ -2312,8 +2312,8 @@
       "squad_size": 23,
       "avg_age": 28.0,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "POR": {
@@ -2363,8 +2363,8 @@
       "squad_size": 27,
       "avg_age": 27.5,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "COD": {
@@ -2414,8 +2414,8 @@
       "squad_size": 24,
       "avg_age": 28.9,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "UZB": {
@@ -2465,8 +2465,8 @@
       "squad_size": 23,
       "avg_age": 26.0,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "COL": {
@@ -2516,8 +2516,8 @@
       "squad_size": 30,
       "avg_age": 29.2,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "ENG": {
@@ -2567,8 +2567,8 @@
       "squad_size": 40,
       "avg_age": 26.9,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "CRO": {
@@ -2618,8 +2618,8 @@
       "squad_size": 26,
       "avg_age": 27.9,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "GHA": {
@@ -2669,8 +2669,8 @@
       "squad_size": 37,
       "avg_age": 26.0,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     },
     "PAN": {
@@ -2720,8 +2720,8 @@
       "squad_size": 22,
       "avg_age": 28.3,
       "data_sources": [
-        "seed",
-        "risingtransfers/world-cup-2026-data"
+        "risingtransfers/world-cup-2026-data",
+        "seed"
       ]
     }
   },

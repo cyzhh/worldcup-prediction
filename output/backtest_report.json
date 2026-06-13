@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T11:28:27.085150+00:00",
+  "generated_at": "2026-06-13T11:29:27.980987+00:00",
   "method": "walk-forward group stage backtest (1998-2022, ELO priors from 1986+)",
   "calibration": {
     "group_stage_draw_base": 0.2,
@@ -61,9 +61,9 @@
   },
   "overall": {
     "matches": 336,
-    "outcome_accuracy": 0.6369,
+    "outcome_accuracy": 0.6399,
     "exact_score_accuracy": 0.119,
-    "brier_score": 0.6098,
+    "brier_score": 0.6097,
     "log_loss": 1.0235,
     "draw_rate_actual": 0.247,
     "draw_rate_predicted": 0.0,
@@ -105,8 +105,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6667,
       "exact_score_accuracy": 0.125,
-      "brier_score": 0.5988,
-      "log_loss": 1.0015,
+      "brier_score": 0.5986,
+      "log_loss": 1.0012,
       "draw_rate_actual": 0.3333,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -132,10 +132,10 @@
     },
     "2002 日韩世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.5417,
+      "outcome_accuracy": 0.5625,
       "exact_score_accuracy": 0.0833,
-      "brier_score": 0.6526,
-      "log_loss": 1.0811,
+      "brier_score": 0.6522,
+      "log_loss": 1.0805,
       "draw_rate_actual": 0.2917,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -157,8 +157,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6875,
       "exact_score_accuracy": 0.0833,
-      "brier_score": 0.57,
-      "log_loss": 0.9652,
+      "brier_score": 0.5703,
+      "log_loss": 0.9655,
       "draw_rate_actual": 0.2292,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -186,8 +186,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6667,
       "exact_score_accuracy": 0.1667,
-      "brier_score": 0.6438,
-      "log_loss": 1.0692,
+      "brier_score": 0.644,
+      "log_loss": 1.0696,
       "draw_rate_actual": 0.2917,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -250,8 +250,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6458,
       "exact_score_accuracy": 0.125,
-      "brier_score": 0.5928,
-      "log_loss": 1.0015,
+      "brier_score": 0.5927,
+      "log_loss": 1.0014,
       "draw_rate_actual": 0.1875,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -1202,19 +1202,19 @@
         "key": "CHI",
         "code": "CHI",
         "name": "Chile",
-        "fifa_rank": 22,
+        "fifa_rank": 19,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 39.5,
+      "prob_home": 39.3,
       "prob_draw": 28.7,
-      "prob_away": 31.8,
+      "prob_away": 32.0,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 18 位（Italy #4 vs Chile #22），纸面实力主队略优。",
+        "FIFA排名差距 15 位（Italy #4 vs Chile #19），纸面实力主队略优。",
         "ELO 分差 40.40000000000009 分，对应历史胜率约 55%。",
         "世界杯参赛经验：Italy 5 次 vs Chile 5 次。",
         "近10场战绩 Italy 3胜2平1负，Chile 4胜3平3负；xG差 +0.5 vs +0.2。",
@@ -1232,12 +1232,12 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 17.3
+          "prob": 17.2
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 16.9
+          "prob": 17.0
         },
         {
           "home": 1,
@@ -1254,7 +1254,7 @@
         {
           "name": "基本面实力",
           "home": 0.561,
-          "away": 0.493,
+          "away": 0.501,
           "weight": 0.27249864281601516
         },
         {

@@ -27,6 +27,20 @@
     header { text-align: center; margin-bottom: 28px; }
     header h1 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; margin-bottom: 12px; }
     header p { color: var(--muted); font-size: 0.9rem; }
+    .metrics-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px; margin-bottom: 24px;
+    }
+    .metric-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 16px 18px; text-align: center;
+    }
+    .metric-value {
+      font-size: 1.75rem; font-weight: 800; color: var(--accent); line-height: 1.2;
+    }
+    .metric-value.live { color: var(--green); }
+    .metric-label { font-size: 0.82rem; color: var(--text); margin-top: 6px; font-weight: 600; }
+    .metric-sub { font-size: 0.72rem; color: var(--muted); margin-top: 4px; }
     .stats-bar {
       text-align: center; color: var(--muted); font-size: 0.8rem; margin-bottom: 20px;
     }
@@ -206,6 +220,7 @@
       <h1 id="page-title">2026 FIFA 世界杯 小组赛量化预测</h1>
       <p id="page-subtitle"></p>
     </header>
+    <div class="metrics-row" id="metrics-row"></div>
     <div class="view-tabs">
       <button class="view-tab active" data-view="matches">⚽ 比赛预测</button>
       <button class="view-tab" data-view="players">👤 球员评分</button>
@@ -550,10 +565,48 @@
       document.getElementById("matches").innerHTML = html || `<p style="text-align:center;color:var(--muted);padding:40px">无匹配比赛</p>`;
     }
 
+    function renderMetrics() {
+      const bt = DATA.backtest?.overall || {};
+      const histAcc = bt.outcome_accuracy != null ? (bt.outcome_accuracy * 100).toFixed(1) : null;
+      const histExact = bt.exact_score_accuracy != null ? (bt.exact_score_accuracy * 100).toFixed(1) : null;
+      const histN = bt.matches || 336;
+
+      const all = DATA.predictions || [];
+      const played = all.filter(m => m.played);
+      const outcomeHits = played.filter(m => m.outcome_hit).length;
+      const scoreHits = played.filter(m => m.result_hit).length;
+
+      let liveAccHtml = "—";
+      let liveSub = "尚无已赛样本";
+      if (played.length) {
+        const liveAcc = (outcomeHits / played.length * 100).toFixed(1);
+        liveAccHtml = `${liveAcc}%`;
+        liveSub = `赛果 ${outcomeHits}/${played.length} · 比分 ${scoreHits}/${played.length}`;
+      }
+
+      document.getElementById("metrics-row").innerHTML = `
+        <div class="metric-card">
+          <div class="metric-value">${histAcc != null ? histAcc + "%" : "—"}</div>
+          <div class="metric-label">历史回测胜平负准确率</div>
+          <div class="metric-sub">1998–2022 · ${histN} 场 walk-forward</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value live">${liveAccHtml}</div>
+          <div class="metric-label">2026 当届已赛命中率</div>
+          <div class="metric-sub">${liveSub}</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">${histExact != null ? histExact + "%" : "—"}</div>
+          <div class="metric-label">历史精确比分命中率</div>
+          <div class="metric-sub">Brier ${bt.brier_score != null ? bt.brier_score.toFixed(3) : "—"}</div>
+        </div>`;
+    }
+
     function render() {
       const meta = DATA.meta || {};
       document.getElementById("page-subtitle").textContent =
         `${meta.subtitle || ""} | ${meta.date_range || ""} | ${meta.squads_players || "?"} 名球员 · ${meta.total_group_matches || DATA.predictions.length} 场`;
+      renderMetrics();
       renderViewTabs();
       renderMatchToolbar();
       renderMatches();
