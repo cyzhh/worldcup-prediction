@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 路线图
+    url: https://github.com/cyzhh/worldcup-prediction/blob/main/docs/ROADMAP.md
+    about: 查看 P0–P5 迭代计划与 Sprint 切分

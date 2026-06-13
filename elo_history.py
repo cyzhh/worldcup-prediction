@@ -6,11 +6,13 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
+from app_config import elo_config
 from football_txt_parser import parse_all_results
 from team_registry import NAME_TO_KEY, team_key
 
-K_FACTOR = 32
-HOME_ADV = 65
+_elo = elo_config()
+K_FACTOR = int(_elo.get("k_factor", 32))
+HOME_ADV = int(_elo.get("home_adv", 65))
 
 
 def parse_cup_txt_results(text: str) -> list[dict[str, Any]]:

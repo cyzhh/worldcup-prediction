@@ -63,6 +63,8 @@ class PredictionResult:
     prob_away: float
     prob_under_25: float
     asian_handicap: str
+    strength_diff: float = 0.0
+    asian_line_home: float = 0.0
     played: bool = False
     actual_score: dict[str, int] | None = None
     group: str = ""
@@ -538,7 +540,8 @@ def prob_under_25(lam_h: float, lam_a: float, strength_diff: float = 0.0, config
     return _clamp(blend, 0.48, 0.72)
 
 
-def asian_handicap_line(strength_diff: float, home_name: str) -> str:
+def asian_handicap_line(strength_diff: float, home_name: str) -> tuple[str, float]:
+    """返回 (展示文案, 主队亚盘线数值)。"""
     if strength_diff > 0.18:
         line = -1.5
     elif strength_diff > 0.10:
@@ -552,9 +555,9 @@ def asian_handicap_line(strength_diff: float, home_name: str) -> str:
     else:
         line = 1.0
     if line == 0.0:
-        return "亚盘: 平手"
+        return "亚盘: 平手", 0.0
     sign = "-" if line < 0 else "+"
-    return f"亚盘: {home_name}{sign}{abs(line)}"
+    return f"亚盘: {home_name}{sign}{abs(line)}", line
 
 
 def build_analysis(
@@ -684,7 +687,7 @@ def predict_match(
 
     score_h, score_a = pick_display_score(p_h, p_d, p_a, scores, strength_diff)
     under25 = prob_under_25(lam_h, lam_a, strength_diff, config=cfg)
-    handicap = asian_handicap_line(strength_diff, home["name"])
+    handicap, ah_line = asian_handicap_line(strength_diff, home["name"])
     analysis = build_analysis_extended(
         home, away, strength_diff, dims, match["round"], match.get("venue", ""), h2h,
         travel=match.get("travel_km"), motivation=match.get("motivation"),
@@ -712,6 +715,8 @@ def predict_match(
         prob_away=round(p_a * 100, 1),
         prob_under_25=round(under25 * 100, 1),
         asian_handicap=handicap,
+        strength_diff=round(strength_diff, 4),
+        asian_line_home=ah_line,
         played=bool(match.get("played")),
         actual_score=match.get("actual_score"),
         group=match.get("group", ""),
@@ -753,7 +758,10 @@ def result_to_dict(r: PredictionResult) -> dict[str, Any]:
         "prob_draw": r.prob_draw,
         "prob_away": r.prob_away,
         "prob_under_25": r.prob_under_25,
+        "prob_over_25": round(100.0 - r.prob_under_25, 1),
         "asian_handicap": r.asian_handicap,
+        "strength_diff": r.strength_diff,
+        "asian_line_home": r.asian_line_home,
         "analysis": r.analysis,
         "score_probs": r.score_probs,
         "dimensions": [

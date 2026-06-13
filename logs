@@ -1,0 +1,6 @@
+2026-06-13 20:41:01 [INFO] worldcup.generate_html: 已生成 D:\CYZ\project\worldcup\index.html
+2026-06-13 20:43:31 [INFO] worldcup.generate_html: 已生成 D:\CYZ\project\worldcup\index.html
+2026-06-13 20:43:52 [INFO] worldcup.sync: 已同步 2026--usa/cup.txt
+2026-06-13 20:43:52 [INFO] worldcup.sync: 已同步 2026/worldcup.json
+2026-06-13 20:43:53 [INFO] worldcup.db_builder: 已构建 D:\CYZ\project\worldcup\data\worldcup_db.json
+2026-06-13 20:43:58 [INFO] worldcup.generate_html: 已生成 D:\CYZ\project\worldcup\index.html

@@ -1,0 +1,57 @@
+---
+name: Roadmap 任务
+description: 从 docs/ROADMAP.md 拆出的迭代任务
+title: "[Px-N] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - P0 紧急
+        - P1 快速优化
+        - P2 模型调优
+        - P3 数据层
+        - P4 前端产品
+        - P5 部署运维
+    validations:
+      required: true
+  - type: dropdown
+    id: sprint
+    attributes:
+      label: Sprint
+      options:
+        - S2 模型
+        - S3 产品
+        - S4 数据/部署
+        - 未分配
+  - type: input
+    id: estimate
+    attributes:
+      label: 预估工时
+      placeholder: "例如 4h"
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景 / 问题
+      description: 为什么要做这件事？
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+      description: 怎样算完成？可量化指标优先。
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: 关联文件 / 模块
+      placeholder: "predictor.py, backtest.py, ..."
+  - type: textarea
+    id: notes
+    attributes:
+      label: 技术备注
+      description: 实现提示、风险、依赖其他 Issue

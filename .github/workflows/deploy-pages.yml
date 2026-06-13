@@ -27,6 +27,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: 单元测试
+        run: pip install -r requirements-dev.txt && pytest tests/ -q
+
       - name: 同步数据并生成预测页面
         run: |
           python sync_openfootball.py

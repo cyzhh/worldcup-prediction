@@ -8,11 +8,13 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).parent
-CALIBRATION_PATH = ROOT / "output" / "model_calibration.json"
+from app_config import model_defaults, path_from_config
 
-# 默认参数（可被回测覆盖）
-DEFAULTS = {
+ROOT = Path(__file__).parent
+CALIBRATION_PATH = path_from_config("model_calibration", "output/model_calibration.json")
+
+# 默认参数（config.yaml → 回测校准覆盖）
+_DEFAULTS_FALLBACK = {
     "group_stage_draw_base": 0.22,
     "group_stage_round1_draw_boost": 0.04,
     "under_25_base": 0.55,
@@ -31,6 +33,8 @@ DEFAULTS = {
     # 将平局概率质量向历史频率收缩（缓解模型过度预测平局）
     "draw_mass_blend": 0.40,
 }
+
+DEFAULTS = {**_DEFAULTS_FALLBACK, **model_defaults()}
 
 
 @dataclass

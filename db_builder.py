@@ -199,9 +199,13 @@ def build_db() -> dict[str, Any]:
 
 
 def main() -> None:
+    from wc_logging import setup_logging
+
+    log = setup_logging("worldcup.db_builder")
     db = build_db()
     DB_PATH.write_text(json.dumps(db, ensure_ascii=False, indent=2), encoding="utf-8")
     m = db["meta"]
+    log.info("已构建 %s", DB_PATH)
     print(f"已构建 {DB_PATH}")
     print(f"  球队 {m['teams_count']} · 比赛 {m['matches_count']} · 球员 {m['squads_players']} · H2H {m['h2h_pairs']}")
 
