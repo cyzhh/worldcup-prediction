@@ -4,12 +4,31 @@
 
 ## 在线访问（GitHub Pages）
 
-### 第一次部署（三步）
+### 若 `gh auth login` 网络超时（校园网常见）
+
+终端报 `dial tcp ... github.com:443 ... failed` 时，说明 **CLI 直连 GitHub 被拦**，可改用 **浏览器 + Token**：
+
+```powershell
+# 可选：若你有本地代理（Clash 等），先让终端走代理
+$env:HTTPS_PROXY = "http://127.0.0.1:7890"
+$env:HTTP_PROXY  = "http://127.0.0.1:7890"
+
+# 1. 浏览器创建空仓库: https://github.com/new  名称 worldcup
+# 2. 浏览器生成 Token: https://github.com/settings/tokens  勾选 repo
+# 3. 推送（把 USER 和 ghp_xxx 换成你的）
+.\deploy-manual.ps1 -UserName USER -Token ghp_xxxx
+```
+
+然后在浏览器打开仓库 **Settings → Pages → Source 选 GitHub Actions**，到 **Actions** 页运行 workflow。
+
+### 第一次部署（有 gh 且网络正常时）
 
 ```powershell
 cd D:\CYZ\project\worldcup
 
 # 1. 登录 GitHub（浏览器授权，只需一次）
+#    若提示找不到 gh，先执行下面一行，或关闭终端重新打开：
+#    $env:Path = "C:\Program Files\GitHub CLI;" + $env:Path
 gh auth login
 
 # 2. 一键创建仓库 + 推送 + 开启 Pages

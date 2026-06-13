@@ -17,12 +17,16 @@ param(
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
-# 刷新 PATH（winget 安装 gh 后可能需要）
+# 刷新 PATH（winget 安装 gh 后旧终端可能找不到）
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" +
             [System.Environment]::GetEnvironmentVariable("Path", "User")
+$ghDir = "C:\Program Files\GitHub CLI"
+if ((Test-Path "$ghDir\gh.exe") -and ($env:Path -notlike "*GitHub CLI*")) {
+    $env:Path = "$ghDir;" + $env:Path
+}
 
 if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
-    Write-Error "未找到 gh 命令。请安装 GitHub CLI: winget install GitHub.cli"
+    Write-Error "未找到 gh。请关闭终端重新打开，或运行: winget install GitHub.cli"
 }
 
 $authStatus = gh auth status 2>&1
