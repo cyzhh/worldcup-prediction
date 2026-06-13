@@ -20,11 +20,6 @@ SOURCES = {
     "risingtransfers/per90_stats.csv": "https://raw.githubusercontent.com/risingtransfers/world-cup-2026-data/main/data/per90_stats.csv",
     # Onside 2026 模型基准 (CC BY 4.0)
     "onside/predictions.csv": "https://onsidearena.com/data/predictions.csv",
-    "onside/champions.csv": "https://onsidearena.com/data/champions.csv",
-    "onside/fixtures.csv": "https://onsidearena.com/data/fixtures.csv",
-    # 扩展历史世界杯（ELO / H2H）
-    "openfootball/2014--brazil/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2014--brazil/cup.txt",
-    "openfootball/2006--germany/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2006--germany/cup.txt",
 }
 
 

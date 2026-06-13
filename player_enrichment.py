@@ -27,7 +27,7 @@ def _resolve_country(country: str, code: str) -> str:
         "KSA": "KSA", "URU": "URU", "FRA": "FRA", "SEN": "SEN", "IRQ": "IRQ",
         "NOR": "NOR", "ARG": "ARG", "ALG": "ALG", "AUT": "AUT", "JOR": "JOR",
         "POR": "POR", "COD": "COD", "UZB": "UZB", "COL": "COL", "ENG": "ENG",
-        "CRO": "CRO", "GHA": "GHA", "PAN": "PAN",
+        "CRO": "CRO", "GHA": "GHA", "PAN": "PAN", "DZA": "ALG",
     }
     if code in iso3:
         return iso3[code]

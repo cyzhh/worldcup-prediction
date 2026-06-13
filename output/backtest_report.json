@@ -1,0 +1,1170 @@
+{
+  "generated_at": "2026-06-13T08:48:49.592656+00:00",
+  "method": "walk-forward group stage backtest (2006-2022)",
+  "calibration": {
+    "group_stage_draw_base": 0.22,
+    "group_stage_round1_draw_boost": 0.02,
+    "under_25_base": 0.55,
+    "elo_blend_strong": 0.6,
+    "elo_blend_close": 0.52,
+    "historical_shrinkage": 0.08,
+    "upset_elo_threshold": 120.0,
+    "upset_prob_boost": 0.035,
+    "favorite_draw_penalty": 0.015,
+    "wdl_priors_by_elo_gap": {
+      "even": {
+        "home": 0.4,
+        "draw": 0.2368,
+        "away": 0.3632,
+        "samples": 190
+      },
+      "slight": {
+        "home": 0.375,
+        "draw": 0.1667,
+        "away": 0.4583,
+        "samples": 48
+      },
+      "moderate": {
+        "home": 0.5,
+        "draw": 0.0,
+        "away": 0.5,
+        "samples": 2
+      }
+    },
+    "calibrated_at": "2026-06-13T08:29:41.916964+00:00",
+    "backtest_summary": {
+      "composite_score": 0.6314,
+      "matches": 240,
+      "outcome_accuracy": 0.6125,
+      "exact_score_accuracy": 0.0875,
+      "brier_score": 0.6669,
+      "log_loss": 1.105,
+      "draw_rate_actual": 0.2208,
+      "draw_rate_predicted": 0.4417
+    }
+  },
+  "overall": {
+    "matches": 240,
+    "outcome_accuracy": 0.6083,
+    "exact_score_accuracy": 0.0875,
+    "brier_score": 0.6678,
+    "log_loss": 1.1065,
+    "draw_rate_actual": 0.2208,
+    "draw_rate_predicted": 0.4375,
+    "wdl_priors_by_elo_gap": {
+      "even": {
+        "home": 0.4,
+        "draw": 0.2368,
+        "away": 0.3632,
+        "samples": 190
+      },
+      "slight": {
+        "home": 0.375,
+        "draw": 0.1667,
+        "away": 0.4583,
+        "samples": 48
+      },
+      "moderate": {
+        "home": 0.5,
+        "draw": 0.0,
+        "away": 0.5,
+        "samples": 2
+      }
+    }
+  },
+  "by_tournament": {
+    "2006 德国世界杯": {
+      "matches": 48,
+      "outcome_accuracy": 0.5,
+      "exact_score_accuracy": 0.0625,
+      "brier_score": 0.6846,
+      "log_loss": 1.1257,
+      "draw_rate_actual": 0.2292,
+      "draw_rate_predicted": 0.9792,
+      "wdl_priors_by_elo_gap": {
+        "even": {
+          "home": 0.5,
+          "draw": 0.2292,
+          "away": 0.2708,
+          "samples": 48
+        }
+      }
+    },
+    "2010 南非世界杯": {
+      "matches": 48,
+      "outcome_accuracy": 0.6875,
+      "exact_score_accuracy": 0.1458,
+      "brier_score": 0.6953,
+      "log_loss": 1.1455,
+      "draw_rate_actual": 0.2917,
+      "draw_rate_predicted": 0.2917,
+      "wdl_priors_by_elo_gap": {
+        "even": {
+          "home": 0.3333,
+          "draw": 0.2667,
+          "away": 0.4,
+          "samples": 45
+        },
+        "slight": {
+          "home": 0.3333,
+          "draw": 0.6667,
+          "away": 0.0,
+          "samples": 3
+        }
+      }
+    },
+    "2014 巴西世界杯": {
+      "matches": 48,
+      "outcome_accuracy": 0.6042,
+      "exact_score_accuracy": 0.0625,
+      "brier_score": 0.6171,
+      "log_loss": 1.0279,
+      "draw_rate_actual": 0.1875,
+      "draw_rate_predicted": 0.3125,
+      "wdl_priors_by_elo_gap": {
+        "slight": {
+          "home": 0.3077,
+          "draw": 0.1538,
+          "away": 0.5385,
+          "samples": 13
+        },
+        "even": {
+          "home": 0.4286,
+          "draw": 0.2,
+          "away": 0.3714,
+          "samples": 35
+        }
+      }
+    },
+    "2018 俄罗斯世界杯": {
+      "matches": 48,
+      "outcome_accuracy": 0.6667,
+      "exact_score_accuracy": 0.0833,
+      "brier_score": 0.6805,
+      "log_loss": 1.1352,
+      "draw_rate_actual": 0.1875,
+      "draw_rate_predicted": 0.3333,
+      "wdl_priors_by_elo_gap": {
+        "even": {
+          "home": 0.3636,
+          "draw": 0.2121,
+          "away": 0.4242,
+          "samples": 33
+        },
+        "slight": {
+          "home": 0.3333,
+          "draw": 0.1333,
+          "away": 0.5333,
+          "samples": 15
+        }
+      }
+    },
+    "2022 卡塔尔世界杯": {
+      "matches": 48,
+      "outcome_accuracy": 0.5833,
+      "exact_score_accuracy": 0.0833,
+      "brier_score": 0.6615,
+      "log_loss": 1.098,
+      "draw_rate_actual": 0.2083,
+      "draw_rate_predicted": 0.2708,
+      "wdl_priors_by_elo_gap": {
+        "even": {
+          "home": 0.3448,
+          "draw": 0.2759,
+          "away": 0.3793,
+          "samples": 29
+        },
+        "slight": {
+          "home": 0.4706,
+          "draw": 0.1176,
+          "away": 0.4118,
+          "samples": 17
+        },
+        "moderate": {
+          "home": 0.5,
+          "draw": 0.0,
+          "away": 0.5,
+          "samples": 2
+        }
+      }
+    }
+  },
+  "sample_predictions": [
+    {
+      "match_id": 1,
+      "title": "Germany vs Costa Rica",
+      "subtitle": "2006 小组赛 A组 · 第1轮",
+      "group": "A",
+      "played": true,
+      "openfootball": {
+        "tournament": "2006--germany",
+        "group": "A",
+        "round_num": 1
+      },
+      "home": {
+        "key": "GER",
+        "code": "GER",
+        "name": "Germany",
+        "fifa_rank": 10,
+        "elo": 1500.0
+      },
+      "away": {
+        "key": "CRC",
+        "code": "CRC",
+        "name": "Costa Rica",
+        "fifa_rank": 23,
+        "elo": 1500.0
+      },
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 34.1,
+      "prob_draw": 37.3,
+      "prob_away": 28.6,
+      "prob_under_25": 72.0,
+      "asian_handicap": "亚盘: 平手",
+      "analysis": [
+        "FIFA排名差距 13 位（Germany #10 vs Costa Rica #23），纸面实力接近。",
+        "ELO 分差 0.0 分，对应历史胜率约 50%。",
+        "世界杯参赛经验：Germany 2 次 vs Costa Rica 2 次。",
+        "近10场战绩 Germany 4胜3平3负，Costa Rica 4胜3平3负；xG差 +0.2 vs +0.2。",
+        "主场优势：Germany 联合东道主，Allianz Arena, München 作战，高原/主场效应显著。",
+        "阵容深度：Germany 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Germany（密集防守 + 反击）vs Costa Rica（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "小组赛首轮：各队战术偏保守，平局概率高于赛季均值；强队倾向控分而非大胜。"
+      ],
+      "score_probs": [
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 33.4
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 20.3
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 16.3
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 9.9
+        },
+        {
+          "home": 2,
+          "away": 0,
+          "prob": 6.2
+        }
+      ],
+      "dimensions": [
+        {
+          "name": "基本面实力",
+          "home": 0.513,
+          "away": 0.478,
+          "weight": 0.278184
+        },
+        {
+          "name": "近期状态",
+          "home": 0.512,
+          "away": 0.512,
+          "weight": 0.23182
+        },
+        {
+          "name": "战术风格",
+          "home": 0.5,
+          "away": 0.56,
+          "weight": 0.23182
+        },
+        {
+          "name": "阵容深度",
+          "home": 0.585,
+          "away": 0.585,
+          "weight": 0.092728
+        },
+        {
+          "name": "比赛环境",
+          "home": 1.0,
+          "away": 0.72,
+          "weight": 0.092728
+        },
+        {
+          "name": "小组赛战意",
+          "home": 0.5,
+          "away": 0.5,
+          "weight": 0.046364
+        },
+        {
+          "name": "临场风险",
+          "home": 0.915,
+          "away": 0.915,
+          "weight": 0.07272
+        }
+      ],
+      "actual_score": "4 : 2",
+      "actual_home": 4,
+      "actual_away": 2,
+      "result_hit": false,
+      "outcome_hit": false,
+      "tournament": "2006 德国世界杯",
+      "year": 2006
+    },
+    {
+      "match_id": 2,
+      "title": "Poland vs Ecuador",
+      "subtitle": "2006 小组赛 A组 · 第1轮",
+      "group": "A",
+      "played": true,
+      "openfootball": {
+        "tournament": "2006--germany",
+        "group": "A",
+        "round_num": 1
+      },
+      "home": {
+        "key": "POL",
+        "code": "POL",
+        "name": "Poland",
+        "fifa_rank": 18,
+        "elo": 1500.0
+      },
+      "away": {
+        "key": "ECU",
+        "code": "ECU",
+        "name": "Ecuador",
+        "fifa_rank": 27,
+        "elo": 1500.0
+      },
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 31.6,
+      "prob_draw": 37.4,
+      "prob_away": 31.0,
+      "prob_under_25": 72.0,
+      "asian_handicap": "亚盘: 平手",
+      "analysis": [
+        "FIFA排名差距 9 位（Poland #18 vs Ecuador #27），纸面实力接近。",
+        "ELO 分差 0.0 分，对应历史胜率约 50%。",
+        "世界杯参赛经验：Poland 2 次 vs Ecuador 2 次。",
+        "近10场战绩 Poland 4胜3平3负，Ecuador 4胜3平3负；xG差 +0.2 vs +0.2。",
+        "比赛环境：Veltins-Arena, Gelsenkirchen，气候适应度 Poland 72% vs Ecuador 72%。",
+        "阵容深度：Poland 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Poland（密集防守 + 反击）vs Ecuador（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "小组赛首轮：各队战术偏保守，平局概率高于赛季均值；强队倾向控分而非大胜。"
+      ],
+      "score_probs": [
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 33.5
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 18.6
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 18.0
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 10.0
+        },
+        {
+          "home": 2,
+          "away": 0,
+          "prob": 5.2
+        }
+      ],
+      "dimensions": [
+        {
+          "name": "基本面实力",
+          "home": 0.491,
+          "away": 0.468,
+          "weight": 0.278184
+        },
+        {
+          "name": "近期状态",
+          "home": 0.512,
+          "away": 0.512,
+          "weight": 0.23182
+        },
+        {
+          "name": "战术风格",
+          "home": 0.5,
+          "away": 0.56,
+          "weight": 0.23182
+        },
+        {
+          "name": "阵容深度",
+          "home": 0.585,
+          "away": 0.585,
+          "weight": 0.092728
+        },
+        {
+          "name": "比赛环境",
+          "home": 0.8,
+          "away": 0.72,
+          "weight": 0.092728
+        },
+        {
+          "name": "小组赛战意",
+          "home": 0.5,
+          "away": 0.5,
+          "weight": 0.046364
+        },
+        {
+          "name": "临场风险",
+          "home": 0.915,
+          "away": 0.915,
+          "weight": 0.07272
+        }
+      ],
+      "actual_score": "0 : 2",
+      "actual_home": 0,
+      "actual_away": 2,
+      "result_hit": false,
+      "outcome_hit": true,
+      "tournament": "2006 德国世界杯",
+      "year": 2006
+    },
+    {
+      "match_id": 3,
+      "title": "Germany vs Poland",
+      "subtitle": "2006 小组赛 A组 · 第2轮",
+      "group": "A",
+      "played": true,
+      "openfootball": {
+        "tournament": "2006--germany",
+        "group": "A",
+        "round_num": 2
+      },
+      "home": {
+        "key": "GER",
+        "code": "GER",
+        "name": "Germany",
+        "fifa_rank": 10,
+        "elo": 1500.0
+      },
+      "away": {
+        "key": "POL",
+        "code": "POL",
+        "name": "Poland",
+        "fifa_rank": 18,
+        "elo": 1500.0
+      },
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 34.1,
+      "prob_draw": 36.0,
+      "prob_away": 29.9,
+      "prob_under_25": 72.0,
+      "asian_handicap": "亚盘: 平手",
+      "analysis": [
+        "FIFA排名差距 8 位（Germany #10 vs Poland #18），纸面实力接近。",
+        "ELO 分差 0.0 分，对应历史胜率约 50%。",
+        "世界杯参赛经验：Germany 2 次 vs Poland 2 次。",
+        "近10场战绩 Germany 4胜3平3负，Poland 4胜3平3负；xG差 +0.2 vs +0.2。",
+        "主场优势：Germany 联合东道主，Signal Iduna Park, Dortmund 作战，高原/主场效应显著。",
+        "阵容深度：Germany 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Germany（密集防守 + 反击）vs Poland（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "积分榜战意：Germany 3分第1名；Poland 0分第4名。"
+      ],
+      "score_probs": [
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 31.0
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 19.5
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 16.8
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 10.6
+        },
+        {
+          "home": 2,
+          "away": 0,
+          "prob": 6.2
+        }
+      ],
+      "dimensions": [
+        {
+          "name": "基本面实力",
+          "home": 0.513,
+          "away": 0.491,
+          "weight": 0.278184
+        },
+        {
+          "name": "近期状态",
+          "home": 0.512,
+          "away": 0.512,
+          "weight": 0.23182
+        },
+        {
+          "name": "战术风格",
+          "home": 0.5,
+          "away": 0.56,
+          "weight": 0.23182
+        },
+        {
+          "name": "阵容深度",
+          "home": 0.585,
+          "away": 0.585,
+          "weight": 0.092728
+        },
+        {
+          "name": "比赛环境",
+          "home": 1.0,
+          "away": 0.72,
+          "weight": 0.092728
+        },
+        {
+          "name": "小组赛战意",
+          "home": 0.5,
+          "away": 0.5,
+          "weight": 0.046364
+        },
+        {
+          "name": "临场风险",
+          "home": 0.915,
+          "away": 0.915,
+          "weight": 0.07272
+        }
+      ],
+      "actual_score": "1 : 0",
+      "actual_home": 1,
+      "actual_away": 0,
+      "result_hit": false,
+      "outcome_hit": false,
+      "tournament": "2006 德国世界杯",
+      "year": 2006
+    },
+    {
+      "match_id": 4,
+      "title": "Ecuador vs Costa Rica",
+      "subtitle": "2006 小组赛 A组 · 第2轮",
+      "group": "A",
+      "played": true,
+      "openfootball": {
+        "tournament": "2006--germany",
+        "group": "A",
+        "round_num": 2
+      },
+      "home": {
+        "key": "ECU",
+        "code": "ECU",
+        "name": "Ecuador",
+        "fifa_rank": 27,
+        "elo": 1500.0
+      },
+      "away": {
+        "key": "CRC",
+        "code": "CRC",
+        "name": "Costa Rica",
+        "fifa_rank": 23,
+        "elo": 1500.0
+      },
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 30.7,
+      "prob_draw": 36.0,
+      "prob_away": 33.3,
+      "prob_under_25": 72.0,
+      "asian_handicap": "亚盘: 平手",
+      "analysis": [
+        "FIFA排名差距 4 位（Ecuador #27 vs Costa Rica #23），纸面实力接近。",
+        "ELO 分差 0.0 分，对应历史胜率约 50%。",
+        "世界杯参赛经验：Ecuador 2 次 vs Costa Rica 2 次。",
+        "近10场战绩 Ecuador 4胜3平3负，Costa Rica 4胜3平3负；xG差 +0.2 vs +0.2。",
+        "比赛环境：AOL Arena, Hamburg，气候适应度 Ecuador 72% vs Costa Rica 72%。",
+        "阵容深度：Ecuador 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Ecuador（密集防守 + 反击）vs Costa Rica（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "积分榜战意：Ecuador 3分第2名；Costa Rica 0分第3名。"
+      ],
+      "score_probs": [
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 31.0
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 19.0
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 17.3
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 10.6
+        },
+        {
+          "home": 0,
+          "away": 2,
+          "prob": 5.8
+        }
+      ],
+      "dimensions": [
+        {
+          "name": "基本面实力",
+          "home": 0.468,
+          "away": 0.478,
+          "weight": 0.278184
+        },
+        {
+          "name": "近期状态",
+          "home": 0.512,
+          "away": 0.512,
+          "weight": 0.23182
+        },
+        {
+          "name": "战术风格",
+          "home": 0.5,
+          "away": 0.56,
+          "weight": 0.23182
+        },
+        {
+          "name": "阵容深度",
+          "home": 0.585,
+          "away": 0.585,
+          "weight": 0.092728
+        },
+        {
+          "name": "比赛环境",
+          "home": 0.8,
+          "away": 0.72,
+          "weight": 0.092728
+        },
+        {
+          "name": "小组赛战意",
+          "home": 0.5,
+          "away": 0.54,
+          "weight": 0.046364
+        },
+        {
+          "name": "临场风险",
+          "home": 0.915,
+          "away": 0.915,
+          "weight": 0.07272
+        }
+      ],
+      "actual_score": "3 : 0",
+      "actual_home": 3,
+      "actual_away": 0,
+      "result_hit": false,
+      "outcome_hit": false,
+      "tournament": "2006 德国世界杯",
+      "year": 2006
+    },
+    {
+      "match_id": 5,
+      "title": "Ecuador vs Germany",
+      "subtitle": "2006 小组赛 A组 · 第3轮",
+      "group": "A",
+      "played": true,
+      "openfootball": {
+        "tournament": "2006--germany",
+        "group": "A",
+        "round_num": 3
+      },
+      "home": {
+        "key": "ECU",
+        "code": "ECU",
+        "name": "Ecuador",
+        "fifa_rank": 27,
+        "elo": 1500.0
+      },
+      "away": {
+        "key": "GER",
+        "code": "GER",
+        "name": "Germany",
+        "fifa_rank": 10,
+        "elo": 1500.0
+      },
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 27.8,
+      "prob_draw": 35.9,
+      "prob_away": 36.3,
+      "prob_under_25": 72.0,
+      "asian_handicap": "亚盘: 平手",
+      "analysis": [
+        "FIFA排名差距 17 位（Ecuador #27 vs Germany #10），纸面实力主队略优。",
+        "ELO 分差 0.0 分，对应历史胜率约 50%。",
+        "世界杯参赛经验：Ecuador 2 次 vs Germany 2 次。",
+        "近10场战绩 Ecuador 4胜3平3负，Germany 4胜3平3负；xG差 +0.2 vs +0.2。",
+        "比赛环境：Olympiastadion, Berlin，气候适应度 Ecuador 72% vs Germany 90%。",
+        "阵容深度：Ecuador 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Ecuador（密集防守 + 反击）vs Germany（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "积分榜战意：Ecuador 6分第1名，可接受平局；Germany 6分第2名。"
+      ],
+      "score_probs": [
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 31.0
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 20.9
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 15.4
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 10.4
+        },
+        {
+          "home": 0,
+          "away": 2,
+          "prob": 7.1
+        }
+      ],
+      "dimensions": [
+        {
+          "name": "基本面实力",
+          "home": 0.468,
+          "away": 0.513,
+          "weight": 0.278184
+        },
+        {
+          "name": "近期状态",
+          "home": 0.512,
+          "away": 0.512,
+          "weight": 0.23182
+        },
+        {
+          "name": "战术风格",
+          "home": 0.5,
+          "away": 0.56,
+          "weight": 0.23182
+        },
+        {
+          "name": "阵容深度",
+          "home": 0.585,
+          "away": 0.585,
+          "weight": 0.092728
+        },
+        {
+          "name": "比赛环境",
+          "home": 0.8,
+          "away": 0.9,
+          "weight": 0.092728
+        },
+        {
+          "name": "小组赛战意",
+          "home": 0.36,
+          "away": 0.36,
+          "weight": 0.046364
+        },
+        {
+          "name": "临场风险",
+          "home": 0.915,
+          "away": 0.915,
+          "weight": 0.07272
+        }
+      ],
+      "actual_score": "0 : 3",
+      "actual_home": 0,
+      "actual_away": 3,
+      "result_hit": false,
+      "outcome_hit": true,
+      "tournament": "2006 德国世界杯",
+      "year": 2006
+    },
+    {
+      "match_id": 6,
+      "title": "Costa Rica vs Poland",
+      "subtitle": "2006 小组赛 A组 · 第3轮",
+      "group": "A",
+      "played": true,
+      "openfootball": {
+        "tournament": "2006--germany",
+        "group": "A",
+        "round_num": 3
+      },
+      "home": {
+        "key": "CRC",
+        "code": "CRC",
+        "name": "Costa Rica",
+        "fifa_rank": 23,
+        "elo": 1500.0
+      },
+      "away": {
+        "key": "POL",
+        "code": "POL",
+        "name": "Poland",
+        "fifa_rank": 18,
+        "elo": 1500.0
+      },
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 30.6,
+      "prob_draw": 36.0,
+      "prob_away": 33.4,
+      "prob_under_25": 72.0,
+      "asian_handicap": "亚盘: 平手",
+      "analysis": [
+        "FIFA排名差距 5 位（Costa Rica #23 vs Poland #18），纸面实力接近。",
+        "ELO 分差 0.0 分，对应历史胜率约 50%。",
+        "世界杯参赛经验：Costa Rica 2 次 vs Poland 2 次。",
+        "近10场战绩 Costa Rica 4胜3平3负，Poland 4胜3平3负；xG差 +0.2 vs +0.2。",
+        "比赛环境：AWD-Arena, Hannover，气候适应度 Costa Rica 72% vs Poland 72%。",
+        "阵容深度：Costa Rica 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Costa Rica（密集防守 + 反击）vs Poland（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "积分榜战意：Costa Rica 0分第4名，需抢分；Poland 0分第3名。"
+      ],
+      "score_probs": [
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 31.0
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 19.1
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 17.2
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 10.6
+        },
+        {
+          "home": 0,
+          "away": 2,
+          "prob": 5.9
+        }
+      ],
+      "dimensions": [
+        {
+          "name": "基本面实力",
+          "home": 0.478,
+          "away": 0.491,
+          "weight": 0.278184
+        },
+        {
+          "name": "近期状态",
+          "home": 0.512,
+          "away": 0.512,
+          "weight": 0.23182
+        },
+        {
+          "name": "战术风格",
+          "home": 0.5,
+          "away": 0.56,
+          "weight": 0.23182
+        },
+        {
+          "name": "阵容深度",
+          "home": 0.585,
+          "away": 0.585,
+          "weight": 0.092728
+        },
+        {
+          "name": "比赛环境",
+          "home": 0.8,
+          "away": 0.72,
+          "weight": 0.092728
+        },
+        {
+          "name": "小组赛战意",
+          "home": 0.62,
+          "away": 0.66,
+          "weight": 0.046364
+        },
+        {
+          "name": "临场风险",
+          "home": 0.915,
+          "away": 0.915,
+          "weight": 0.07272
+        }
+      ],
+      "actual_score": "1 : 2",
+      "actual_home": 1,
+      "actual_away": 2,
+      "result_hit": false,
+      "outcome_hit": true,
+      "tournament": "2006 德国世界杯",
+      "year": 2006
+    },
+    {
+      "match_id": 7,
+      "title": "England vs Paraguay",
+      "subtitle": "2006 小组赛 B组 · 第1轮",
+      "group": "B",
+      "played": true,
+      "openfootball": {
+        "tournament": "2006--germany",
+        "group": "B",
+        "round_num": 1
+      },
+      "home": {
+        "key": "ENG",
+        "code": "ENG",
+        "name": "England",
+        "fifa_rank": 22,
+        "elo": 1500.0
+      },
+      "away": {
+        "key": "PAR",
+        "code": "PAR",
+        "name": "Paraguay",
+        "fifa_rank": 24,
+        "elo": 1500.0
+      },
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 31.0,
+      "prob_draw": 37.4,
+      "prob_away": 31.6,
+      "prob_under_25": 72.0,
+      "asian_handicap": "亚盘: 平手",
+      "analysis": [
+        "FIFA排名差距 2 位（England #22 vs Paraguay #24），纸面实力接近。",
+        "ELO 分差 0.0 分，对应历史胜率约 50%。",
+        "世界杯参赛经验：England 2 次 vs Paraguay 2 次。",
+        "近10场战绩 England 4胜3平3负，Paraguay 4胜3平3负；xG差 +0.2 vs +0.2。",
+        "比赛环境：Commerzbank-Arena, Frankfurt，气候适应度 England 72% vs Paraguay 72%。",
+        "阵容深度：England 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：England（密集防守 + 反击）vs Paraguay（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "小组赛首轮：各队战术偏保守，平局概率高于赛季均值；强队倾向控分而非大胜。"
+      ],
+      "score_probs": [
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 33.5
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 18.4
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 18.2
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 10.0
+        },
+        {
+          "home": 0,
+          "away": 2,
+          "prob": 5.1
+        }
+      ],
+      "dimensions": [
+        {
+          "name": "基本面实力",
+          "home": 0.481,
+          "away": 0.476,
+          "weight": 0.278184
+        },
+        {
+          "name": "近期状态",
+          "home": 0.512,
+          "away": 0.512,
+          "weight": 0.23182
+        },
+        {
+          "name": "战术风格",
+          "home": 0.5,
+          "away": 0.56,
+          "weight": 0.23182
+        },
+        {
+          "name": "阵容深度",
+          "home": 0.585,
+          "away": 0.585,
+          "weight": 0.092728
+        },
+        {
+          "name": "比赛环境",
+          "home": 0.8,
+          "away": 0.72,
+          "weight": 0.092728
+        },
+        {
+          "name": "小组赛战意",
+          "home": 0.5,
+          "away": 0.5,
+          "weight": 0.046364
+        },
+        {
+          "name": "临场风险",
+          "home": 0.915,
+          "away": 0.915,
+          "weight": 0.07272
+        }
+      ],
+      "actual_score": "1 : 0",
+      "actual_home": 1,
+      "actual_away": 0,
+      "result_hit": false,
+      "outcome_hit": false,
+      "tournament": "2006 德国世界杯",
+      "year": 2006
+    },
+    {
+      "match_id": 8,
+      "title": "Trinidad and Tobago vs Sweden",
+      "subtitle": "2006 小组赛 B组 · 第1轮",
+      "group": "B",
+      "played": true,
+      "openfootball": {
+        "tournament": "2006--germany",
+        "group": "B",
+        "round_num": 1
+      },
+      "home": {
+        "key": "TRI",
+        "code": "TRI",
+        "name": "Trinidad and Tobago",
+        "fifa_rank": 5,
+        "elo": 1500.0
+      },
+      "away": {
+        "key": "SWE",
+        "code": "SWE",
+        "name": "Sweden",
+        "fifa_rank": 11,
+        "elo": 1500.0
+      },
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 31.3,
+      "prob_draw": 37.4,
+      "prob_away": 31.3,
+      "prob_under_25": 72.0,
+      "asian_handicap": "亚盘: 平手",
+      "analysis": [
+        "FIFA排名差距 6 位（Trinidad and Tobago #5 vs Sweden #11），纸面实力接近。",
+        "ELO 分差 0.0 分，对应历史胜率约 50%。",
+        "世界杯参赛经验：Trinidad and Tobago 2 次 vs Sweden 2 次。",
+        "近10场战绩 Trinidad and Tobago 4胜3平3负，Sweden 4胜3平3负；xG差 +0.2 vs +0.2。",
+        "比赛环境：Signal Iduna Park, Dortmund，气候适应度 Trinidad and Tobago 72% vs Sweden 72%。",
+        "阵容深度：Trinidad and Tobago 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Trinidad and Tobago（密集防守 + 反击）vs Sweden（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "小组赛首轮：各队战术偏保守，平局概率高于赛季均值；强队倾向控分而非大胜。"
+      ],
+      "score_probs": [
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 33.5
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 18.4
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 18.2
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 10.0
+        },
+        {
+          "home": 2,
+          "away": 0,
+          "prob": 5.1
+        }
+      ],
+      "dimensions": [
+        {
+          "name": "基本面实力",
+          "home": 0.526,
+          "away": 0.51,
+          "weight": 0.278184
+        },
+        {
+          "name": "近期状态",
+          "home": 0.512,
+          "away": 0.512,
+          "weight": 0.23182
+        },
+        {
+          "name": "战术风格",
+          "home": 0.5,
+          "away": 0.56,
+          "weight": 0.23182
+        },
+        {
+          "name": "阵容深度",
+          "home": 0.585,
+          "away": 0.585,
+          "weight": 0.092728
+        },
+        {
+          "name": "比赛环境",
+          "home": 0.8,
+          "away": 0.72,
+          "weight": 0.092728
+        },
+        {
+          "name": "小组赛战意",
+          "home": 0.5,
+          "away": 0.5,
+          "weight": 0.046364
+        },
+        {
+          "name": "临场风险",
+          "home": 0.915,
+          "away": 0.915,
+          "weight": 0.07272
+        }
+      ],
+      "actual_score": "0 : 0",
+      "actual_home": 0,
+      "actual_away": 0,
+      "result_hit": false,
+      "outcome_hit": true,
+      "tournament": "2006 德国世界杯",
+      "year": 2006
+    }
+  ]
+}

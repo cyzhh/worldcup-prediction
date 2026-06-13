@@ -13,6 +13,7 @@ NAME_TO_KEY: dict[str, str] = {
     "Czechia": "CZE",
     "Canada": "CAN",
     "Bosnia & Herzegovina": "BIH",
+    "Bosnia-Herzegovina": "BIH",
     "Qatar": "QAT",
     "Switzerland": "SUI",
     "Brazil": "BRA",
@@ -60,17 +61,27 @@ NAME_TO_KEY: dict[str, str] = {
     "Croatia": "CRO",
     "Ghana": "GHA",
     "Panama": "PAN",
-}
-
-DISPLAY_CODE: dict[str, str] = {
-    "MEX": "MX", "RSA": "ZA", "KOR": "KR", "CZE": "CZ", "CAN": "CA", "BIH": "BA",
-    "QAT": "QA", "SUI": "CH", "BRA": "BR", "MAR": "MA", "HAI": "HT", "SCO": "SX",
-    "USA": "US", "PAR": "PY", "AUS": "AU", "TUR": "TR", "GER": "DE", "CUW": "CW",
-    "CIV": "CI", "ECU": "EC", "NED": "NL", "JPN": "JP", "SWE": "SE", "TUN": "TN",
-    "BEL": "BE", "EGY": "EG", "IRN": "IR", "NZL": "NZ", "ESP": "ES", "CPV": "CV",
-    "KSA": "SA", "URU": "UY", "FRA": "FR", "SEN": "SN", "IRQ": "IQ", "NOR": "NO",
-    "ARG": "AR", "ALG": "DZ", "AUT": "AT", "JOR": "JO", "POR": "PT", "COD": "CD",
-    "UZB": "UZ", "COL": "CO", "ENG": "GB", "CRO": "HR", "GHA": "GH", "PAN": "PA",
+    "Russia": "RUS",
+    # 历史世界杯额外队名
+    "Serbia and Montenegro": "SCG",
+    "Serbia": "SRB",
+    "Trinidad and Tobago": "TRI",
+    "Costa Rica": "CRC",
+    "North Korea": "PRK",
+    "Wales": "WAL",
+    "Slovakia": "SVK",
+    "Greece": "GRE",
+    "Slovenia": "SVN",
+    "Honduras": "HON",
+    "Chile": "CHI",
+    "Cameroon": "CMR",
+    "Denmark": "DEN",
+    "Nigeria": "NGA",
+    "Angola": "ANG",
+    "Togo": "TOG",
+    "Ukraine": "UKR",
+    "Poland": "POL",
+    "Italy": "ITA",
 }
 
 

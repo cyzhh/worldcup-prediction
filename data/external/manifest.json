@@ -3,20 +3,12 @@
     "openfootball/worldcup": "see sync_openfootball.py",
     "risingtransfers/squads.csv": "https://raw.githubusercontent.com/risingtransfers/world-cup-2026-data/main/data/squads.csv",
     "risingtransfers/per90_stats.csv": "https://raw.githubusercontent.com/risingtransfers/world-cup-2026-data/main/data/per90_stats.csv",
-    "onside/predictions.csv": "https://onsidearena.com/data/predictions.csv",
-    "onside/champions.csv": "https://onsidearena.com/data/champions.csv",
-    "onside/fixtures.csv": "https://onsidearena.com/data/fixtures.csv",
-    "openfootball/2014--brazil/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2014--brazil/cup.txt",
-    "openfootball/2006--germany/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2006--germany/cup.txt"
+    "onside/predictions.csv": "https://onsidearena.com/data/predictions.csv"
   },
   "status": {
     "openfootball/worldcup": "delegated",
     "risingtransfers/squads.csv": "cached",
     "risingtransfers/per90_stats.csv": "cached",
-    "onside/predictions.csv": "cached",
-    "onside/champions.csv": "cached",
-    "onside/fixtures.csv": "cached",
-    "openfootball/2014--brazil/cup.txt": "cached",
-    "openfootball/2006--germany/cup.txt": "cached"
+    "onside/predictions.csv": "cached"
   }
 }

@@ -9,6 +9,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+from model_config import ModelConfig, elo_gap_bucket, load_config
+
 # 七大维度基准权重（文档 3.1–3.7）
 DIM_WEIGHTS = {
     "fundamental": 0.35,
@@ -20,10 +22,14 @@ DIM_WEIGHTS = {
     "risk": 0.0,  # 浮动，运行时按数据赋值
 }
 
-# 小组赛历史统计校准
+# 小组赛历史统计校准（默认值，可被 model_calibration.json 覆盖）
 GROUP_STAGE_DRAW_BASE = 0.22
 GROUP_STAGE_ROUND1_DRAW_BOOST = 0.04
 UNDER_25_BASE = 0.55
+
+
+def _cfg(config: ModelConfig | None = None) -> ModelConfig:
+    return config or load_config()
 
 
 @dataclass
@@ -182,13 +188,19 @@ def score_risk(team: dict[str, Any]) -> float:
     return _clamp(1.0 - team["squad"]["injury_risk"] * 0.6)
 
 
-def elo_win_prob(elo_home: float, elo_away: float, draw_factor: float = 0.0) -> tuple[float, float, float]:
+def elo_win_prob(
+    elo_home: float,
+    elo_away: float,
+    draw_factor: float = 0.0,
+    config: ModelConfig | None = None,
+) -> tuple[float, float, float]:
     """ELO 胜平负概率（含小组赛平局校准）。"""
+    cfg = _cfg(config)
     diff = elo_home - elo_away
     p_home_raw = 1.0 / (1.0 + 10 ** (-diff / 400))
     p_away_raw = 1.0 - p_home_raw
 
-    draw_base = GROUP_STAGE_DRAW_BASE + GROUP_STAGE_ROUND1_DRAW_BOOST
+    draw_base = cfg.group_stage_draw_base + cfg.group_stage_round1_draw_boost
     draw_base += draw_factor
     draw_base = _clamp(draw_base, 0.12, 0.32)
 
@@ -197,6 +209,9 @@ def elo_win_prob(elo_home: float, elo_away: float, draw_factor: float = 0.0) -> 
         draw_base *= 0.82
     elif gap < 80:
         draw_base *= 1.15
+
+    if gap > cfg.upset_elo_threshold:
+        draw_base -= cfg.favorite_draw_penalty
 
     remain = 1.0 - draw_base
     p_home = remain * p_home_raw
@@ -230,13 +245,62 @@ def blend_wdl(
     elo_wdl: tuple[float, float, float],
     poisson_wdl: tuple[float, float, float],
     elo_weight: float = 0.62,
+    config: ModelConfig | None = None,
+    elo_diff: float = 0.0,
 ) -> tuple[float, float, float]:
+    cfg = _cfg(config)
     w = elo_weight
     h = elo_wdl[0] * w + poisson_wdl[0] * (1 - w)
     d = elo_wdl[1] * w + poisson_wdl[1] * (1 - w)
     a = elo_wdl[2] * w + poisson_wdl[2] * (1 - w)
     t = h + d + a
+    h, d, a = h / t, d / t, a / t
+
+    if cfg.wdl_priors_by_elo_gap and cfg.historical_shrinkage > 0:
+        h, d, a = apply_historical_shrinkage(h, d, a, elo_diff, cfg)
+
+    return h, d, a
+
+
+def apply_historical_shrinkage(
+    p_h: float,
+    p_d: float,
+    p_a: float,
+    elo_diff: float,
+    config: ModelConfig,
+) -> tuple[float, float, float]:
+    """将模型输出向历史 ELO 分桶胜平负先验收缩，降低系统性偏差。"""
+    bucket = elo_gap_bucket(elo_diff)
+    prior = config.wdl_priors_by_elo_gap.get(bucket)
+    if not prior:
+        return p_h, p_d, p_a
+
+    sh = config.historical_shrinkage
+    h = p_h * (1 - sh) + prior["home"] * sh
+    d = p_d * (1 - sh) + prior["draw"] * sh
+    a = p_a * (1 - sh) + prior["away"] * sh
+    t = h + d + a
     return h / t, d / t, a / t
+
+
+def apply_upset_adjustment(
+    p_h: float,
+    p_d: float,
+    p_a: float,
+    elo_home: float,
+    elo_away: float,
+    config: ModelConfig,
+) -> tuple[float, float, float]:
+    """强队 ELO 显著领先时，向弱队注入小组赛冷门先验。"""
+    diff = elo_home - elo_away
+    if diff <= config.upset_elo_threshold:
+        return p_h, p_d, p_a
+    boost = config.upset_prob_boost * min(1.0, (diff - config.upset_elo_threshold) / 150)
+    p_a = min(p_a + boost, 0.35)
+    p_h = max(p_h - boost * 0.65, 0.25)
+    p_d = max(p_d - boost * 0.35, 0.12)
+    t = p_h + p_d + p_a
+    return p_h / t, p_d / t, p_a / t
 
 
 def pick_display_score(
@@ -358,14 +422,14 @@ def score_distribution(lam_h: float, lam_a: float, max_goals: int = 5) -> list[t
     return scores
 
 
-def prob_under_25(lam_h: float, lam_a: float, strength_diff: float = 0.0) -> float:
+def prob_under_25(lam_h: float, lam_a: float, strength_diff: float = 0.0, config: ModelConfig | None = None) -> float:
+    cfg = _cfg(config)
     under = 0.0
     for i in range(6):
         for j in range(6):
             if i + j < 2.5:
                 under += poisson_pmf(i, lam_h) * poisson_pmf(j, lam_a)
-    # 小组赛历史低比分倾向 + 泊松估计融合
-    blend = UNDER_25_BASE * 0.18 + under * 0.82
+    blend = cfg.under_25_base * 0.18 + under * 0.82
     if abs(strength_diff) < 0.08:
         blend += 0.03
     if strength_diff > 0.15:
@@ -473,7 +537,9 @@ def predict_match(
     teams: dict[str, Any],
     h2h_map: dict[str, dict[str, Any]] | None = None,
     benchmarks: dict[str, dict[str, Any]] | None = None,
+    config: ModelConfig | None = None,
 ) -> PredictionResult:
+    cfg = _cfg(config)
     home = teams[match["home"]]
     away = teams[match["away"]]
     h2h = (h2h_map or {}).get(f"{match['home']}_{match['away']}")
@@ -500,16 +566,19 @@ def predict_match(
     adj_elo_h = home["elo"] + strength_diff * 400
     adj_elo_a = away["elo"] - strength_diff * 400
     draw_factor = 0.02 if abs(strength_diff) < 0.08 else -0.01 if abs(strength_diff) > 0.15 else 0.0
-    elo_wdl = elo_win_prob(adj_elo_h, adj_elo_a, draw_factor)
+    if match["round"] == 1:
+        draw_factor += cfg.group_stage_round1_draw_boost * 0.5
+    elo_wdl = elo_win_prob(adj_elo_h, adj_elo_a, draw_factor, config=cfg)
 
     lam_h, lam_a = expected_goals(strength_diff, home, away, match["round"])
     scores = score_distribution(lam_h, lam_a)
     poisson_wdl = wdl_from_score_matrix(scores)
-    elo_w = 0.68 if abs(strength_diff) > 0.12 else 0.52
-    p_h, p_d, p_a = blend_wdl(elo_wdl, poisson_wdl, elo_weight=elo_w)
+    elo_w = cfg.elo_blend_strong if abs(strength_diff) > 0.12 else cfg.elo_blend_close
+    p_h, p_d, p_a = blend_wdl(elo_wdl, poisson_wdl, elo_weight=elo_w, config=cfg, elo_diff=adj_elo_h - adj_elo_a)
+    p_h, p_d, p_a = apply_upset_adjustment(p_h, p_d, p_a, adj_elo_h, adj_elo_a, cfg)
 
     score_h, score_a = pick_display_score(p_h, p_d, p_a, scores, strength_diff)
-    under25 = prob_under_25(lam_h, lam_a, strength_diff)
+    under25 = prob_under_25(lam_h, lam_a, strength_diff, config=cfg)
     handicap = asian_handicap_line(strength_diff, home["name"])
     analysis = build_analysis_extended(
         home, away, strength_diff, dims, match["round"], match.get("venue", ""), h2h,
@@ -559,12 +628,14 @@ def result_to_dict(r: PredictionResult) -> dict[str, Any]:
         "played": r.played,
         "openfootball": r.openfootball,
         "home": {
+            "key": r.home.key,
             "code": r.home.code,
             "name": r.home.name,
             "fifa_rank": r.home.raw["fifa_rank"],
             "elo": r.home.raw["elo"],
         },
         "away": {
+            "key": r.away.key,
             "code": r.away.code,
             "name": r.away.name,
             "fifa_rank": r.away.raw["fifa_rank"],
@@ -603,11 +674,6 @@ def result_to_dict(r: PredictionResult) -> dict[str, Any]:
     return d
 
 
-def load_json(path: Path) -> Any:
-    with path.open(encoding="utf-8") as f:
-        return json.load(f)
-
-
 def run_all(
     data_dir: Path | None = None,
     *,
@@ -637,6 +703,7 @@ def run_all(
         "meta": meta,
         "generated_by": "worldcup/predictor.py + awesome-football 多源数据库",
         "standings": bundle.get("standings", {}),
+        "players_by_team": bundle.get("players_by_team", {}),
         "predictions": predictions,
     }
 

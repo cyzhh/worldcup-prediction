@@ -47,7 +47,17 @@ gh auth login
 | 方式 | 说明 |
 |------|------|
 | **自动** | GitHub Actions 每 **6 小时**拉取 [openfootball](https://github.com/openfootball/worldcup) 最新赛果并重建页面 |
-| **手动** | 本地运行 `python build_all.py` 后 `git push`，或到 Actions 页点击 **Run workflow** |
+| **手动** | 本地运行 `.\update-and-push.ps1`（构建 + git push，**推荐**） |
+| **仅构建** | `python build_all.py` 后自行 `git push` |
+
+**说明**：只要 `git push` 到 `main`，Actions 会自动重新部署 Pages，**无需**再去 Actions 页手动点 Run。
+
+```powershell
+cd D:\CYZ\project\worldcup
+.\update-and-push.ps1
+# 或自定义提交说明：
+.\update-and-push.ps1 -Message "增加球员评分页"
+```
 
 仓库 **Settings → Pages → Build and deployment** 应选择 **GitHub Actions**。
 
@@ -57,6 +67,30 @@ gh auth login
 python build_all.py
 # 浏览器打开 index.html
 ```
+
+仅跑历史回测（2006–2022 五届小组赛 walk-forward）：
+
+```bash
+python backtest.py          # 含参数网格校准，约 1 分钟
+python backtest.py --fast   # 跳过校准，使用已有 model_calibration.json
+```
+
+回测报告：`output/backtest_report.json` · 校准参数：`output/model_calibration.json`
+
+## 算法与历史回测
+
+预测引擎在七维因子 + ELO/泊松融合基础上，增加了**历史校准层**：
+
+| 模块 | 作用 |
+|------|------|
+| `history_loader.py` | 解析 2006–2022 五届 `cup.txt` 小组赛赛果 |
+| `historical_teams.py` | 按**赛前** ELO、近 10 场战绩重建球队快照（无未来信息） |
+| `backtest.py` | Walk-forward 回测：逐场预测并与真实赛果对比 |
+| `model_config.py` | 存储回测校准后的平局率、ELO 融合权重、冷门修正等 |
+
+**回测方法**：对每届世界杯，仅使用该届之前的赛果计算 ELO/H2H；当届比赛按时间顺序逐场预测，二三轮注入实时积分榜战意。合并五届 240 场小组赛，网格搜索最优超参并写入 `model_calibration.json`，2026 预测自动加载。
+
+典型指标（校准后）：胜平负准确率 ~61%，Brier ~0.67，实际平局率 ~22%。
 
 ## 数据源
 

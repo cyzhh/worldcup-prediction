@@ -21,6 +21,7 @@ from openfootball_loader import (
     team_key,
 )
 from player_enrichment import aggregate_by_team, load_per90, load_squads
+from player_scores import build_players_by_team
 from standings import compute_standings
 
 ROOT = Path(__file__).parent
@@ -151,6 +152,7 @@ def build_db() -> dict[str, Any]:
     squads = load_squads()
     per90 = load_per90()
     player_agg = aggregate_by_team(squads, per90) if squads else {}
+    players_by_team = build_players_by_team(squads, per90) if squads else {}
 
     teams: dict[str, Any] = {}
     for key, base in seed.items():
@@ -192,6 +194,7 @@ def build_db() -> dict[str, Any]:
         "h2h": h2h,
         "elo_ratings": elo_map,
         "benchmarks": {"onside": onside},
+        "players_by_team": players_by_team,
     }
 
 

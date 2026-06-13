@@ -275,4 +275,5 @@ def _load_from_db(
         "standings": db.get("standings", {}),
         "benchmarks": db.get("benchmarks", {}),
         "stadiums": db.get("stadiums", {}),
+        "players_by_team": db.get("players_by_team", {}),
     }
