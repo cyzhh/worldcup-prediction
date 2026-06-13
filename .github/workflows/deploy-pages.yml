@@ -33,7 +33,7 @@ jobs:
           python sync_all_sources.py || true
           python build_teams_seed.py
           python db_builder.py
-          python backtest.py
+          python backtest.py --fast
           python predictor.py
           python generate_html.py
 

@@ -14,8 +14,8 @@
     "1986--mexico/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/1986--mexico/cup.txt"
   },
   "status": {
-    "2026--usa/cup.txt": "cached",
-    "2026/worldcup.json": "cached",
+    "2026--usa/cup.txt": "downloaded",
+    "2026/worldcup.json": "downloaded",
     "2022--qatar/cup.txt": "cached",
     "2018--russia/cup.txt": "cached",
     "2014--brazil/cup.txt": "cached",

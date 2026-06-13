@@ -28,6 +28,9 @@ SOURCES = {
     "1986--mexico/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/1986--mexico/cup.txt",
 }
 
+# 赛果进行中：每次构建都拉最新，避免本地/git 缓存落后 openfootball
+LIVE_REFRESH = {"2026/worldcup.json", "2026--usa/cup.txt"}
+
 
 def fetch(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": "worldcup-predictor/1.0"})
@@ -41,7 +44,7 @@ def sync(force: bool = False) -> dict[str, str]:
     for rel, url in SOURCES.items():
         dest = OUT / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
-        if dest.exists() and not force:
+        if dest.exists() and not force and rel not in LIVE_REFRESH:
             status[rel] = "cached"
             continue
         try:

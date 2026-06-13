@@ -7,6 +7,8 @@ $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
 Write-Host ">>> 1/2 build..." -ForegroundColor Cyan
+python sync_openfootball.py
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python db_builder.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python backtest.py --fast

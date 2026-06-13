@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T11:29:27.980987+00:00",
+  "generated_at": "2026-06-13T12:26:34.103892+00:00",
   "method": "walk-forward group stage backtest (1998-2022, ELO priors from 1986+)",
   "calibration": {
-    "group_stage_draw_base": 0.2,
-    "group_stage_round1_draw_boost": 0.06,
+    "group_stage_draw_base": 0.18,
+    "group_stage_round1_draw_boost": 0.02,
     "under_25_base": 0.55,
-    "elo_blend_strong": 0.68,
+    "elo_blend_strong": 0.6,
     "elo_blend_close": 0.52,
     "historical_shrinkage": 0.08,
     "upset_elo_threshold": 120.0,
@@ -14,7 +14,7 @@
     "dixon_coles_rho": -0.08,
     "player_prob_weight": 0.05,
     "host_elo_bonus": 35.0,
-    "draw_mass_blend": 0.55,
+    "draw_mass_blend": 0.4,
     "wdl_priors_by_elo_gap": {
       "moderate": {
         "home": 0.4615,
@@ -47,24 +47,24 @@
         "samples": 1
       }
     },
-    "calibrated_at": "2026-06-13T10:52:40.345447+00:00",
+    "calibrated_at": "2026-06-13T11:32:34.532962+00:00",
     "backtest_summary": {
-      "composite_score": 0.6615,
+      "composite_score": 0.667,
       "matches": 336,
-      "outcome_accuracy": 0.6458,
-      "exact_score_accuracy": 0.1161,
-      "brier_score": 0.6188,
-      "log_loss": 1.0359,
+      "outcome_accuracy": 0.6518,
+      "exact_score_accuracy": 0.128,
+      "brier_score": 0.6096,
+      "log_loss": 1.0229,
       "draw_rate_actual": 0.247,
       "draw_rate_predicted": 0.0
     }
   },
   "overall": {
     "matches": 336,
-    "outcome_accuracy": 0.6399,
-    "exact_score_accuracy": 0.119,
-    "brier_score": 0.6097,
-    "log_loss": 1.0235,
+    "outcome_accuracy": 0.6518,
+    "exact_score_accuracy": 0.128,
+    "brier_score": 0.6096,
+    "log_loss": 1.0229,
     "draw_rate_actual": 0.247,
     "draw_rate_predicted": 0.0,
     "wdl_priors_by_elo_gap": {
@@ -103,10 +103,10 @@
   "by_tournament": {
     "1998 法国世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.6667,
-      "exact_score_accuracy": 0.125,
-      "brier_score": 0.5986,
-      "log_loss": 1.0012,
+      "outcome_accuracy": 0.6875,
+      "exact_score_accuracy": 0.1458,
+      "brier_score": 0.598,
+      "log_loss": 1.0005,
       "draw_rate_actual": 0.3333,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -132,10 +132,10 @@
     },
     "2002 日韩世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.5625,
+      "outcome_accuracy": 0.5833,
       "exact_score_accuracy": 0.0833,
-      "brier_score": 0.6522,
-      "log_loss": 1.0805,
+      "brier_score": 0.6533,
+      "log_loss": 1.0826,
       "draw_rate_actual": 0.2917,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -155,10 +155,10 @@
     },
     "2006 德国世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.6875,
-      "exact_score_accuracy": 0.0833,
-      "brier_score": 0.5703,
-      "log_loss": 0.9655,
+      "outcome_accuracy": 0.7083,
+      "exact_score_accuracy": 0.1042,
+      "brier_score": 0.5682,
+      "log_loss": 0.963,
       "draw_rate_actual": 0.2292,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -184,10 +184,10 @@
     },
     "2010 南非世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.6667,
+      "outcome_accuracy": 0.6458,
       "exact_score_accuracy": 0.1667,
-      "brier_score": 0.644,
-      "log_loss": 1.0696,
+      "brier_score": 0.6452,
+      "log_loss": 1.0709,
       "draw_rate_actual": 0.2917,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -215,8 +215,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6042,
       "exact_score_accuracy": 0.125,
-      "brier_score": 0.5833,
-      "log_loss": 0.9836,
+      "brier_score": 0.5808,
+      "log_loss": 0.9796,
       "draw_rate_actual": 0.1875,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -248,9 +248,9 @@
     },
     "2018 俄罗斯世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.6458,
-      "exact_score_accuracy": 0.125,
-      "brier_score": 0.5927,
+      "outcome_accuracy": 0.6667,
+      "exact_score_accuracy": 0.1458,
+      "brier_score": 0.5932,
       "log_loss": 1.0014,
       "draw_rate_actual": 0.1875,
       "draw_rate_predicted": 0.0,
@@ -283,9 +283,9 @@
     },
     "2022 卡塔尔世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.6458,
+      "outcome_accuracy": 0.6667,
       "exact_score_accuracy": 0.125,
-      "brier_score": 0.627,
+      "brier_score": 0.6284,
       "log_loss": 1.0624,
       "draw_rate_actual": 0.2083,
       "draw_rate_predicted": 0.0,
@@ -352,8 +352,8 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 62.2,
-      "prob_draw": 22.0,
+      "prob_home": 64.2,
+      "prob_draw": 20.2,
       "prob_away": 15.7,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: Brazil-1.0",
@@ -476,8 +476,8 @@
       "score_home": 1,
       "score_away": 1,
       "prob_home": 35.1,
-      "prob_draw": 30.2,
-      "prob_away": 34.8,
+      "prob_draw": 29.9,
+      "prob_away": 35.0,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
@@ -598,8 +598,8 @@
       "score_home": 1,
       "score_away": 1,
       "prob_home": 30.5,
-      "prob_draw": 29.3,
-      "prob_away": 40.3,
+      "prob_draw": 29.4,
+      "prob_away": 40.1,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
@@ -719,9 +719,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 59.4,
-      "prob_draw": 22.0,
-      "prob_away": 18.6,
+      "prob_home": 60.3,
+      "prob_draw": 20.9,
+      "prob_away": 18.8,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: Brazil-1.0",
       "analysis": [
@@ -842,8 +842,8 @@
       "score_home": 1,
       "score_away": 1,
       "prob_home": 31.5,
-      "prob_draw": 29.6,
-      "prob_away": 38.9,
+      "prob_draw": 29.9,
+      "prob_away": 38.6,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
@@ -963,9 +963,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 60.7,
-      "prob_draw": 21.5,
-      "prob_away": 17.8,
+      "prob_home": 62.0,
+      "prob_draw": 20.1,
+      "prob_away": 17.9,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: Brazil-1.0",
       "analysis": [
@@ -1086,9 +1086,9 @@
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 38.5,
-      "prob_draw": 31.9,
-      "prob_away": 29.6,
+      "prob_home": 37.8,
+      "prob_draw": 32.2,
+      "prob_away": 30.0,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
@@ -1202,19 +1202,19 @@
         "key": "CHI",
         "code": "CHI",
         "name": "Chile",
-        "fifa_rank": 19,
+        "fifa_rank": 22,
         "elo": 1500.0
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
-      "score_away": 1,
-      "prob_home": 39.3,
-      "prob_draw": 28.7,
-      "prob_away": 32.0,
+      "predicted_score": "0 : 0",
+      "score_home": 0,
+      "score_away": 0,
+      "prob_home": 40.2,
+      "prob_draw": 27.9,
+      "prob_away": 31.9,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 15 位（Italy #4 vs Chile #19），纸面实力主队略优。",
+        "FIFA排名差距 18 位（Italy #4 vs Chile #22），纸面实力主队略优。",
         "ELO 分差 40.40000000000009 分，对应历史胜率约 55%。",
         "世界杯参赛经验：Italy 5 次 vs Chile 5 次。",
         "近10场战绩 Italy 3胜2平1负，Chile 4胜3平3负；xG差 +0.5 vs +0.2。",
@@ -1232,12 +1232,12 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 17.2
+          "prob": 17.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 17.0
+          "prob": 16.9
         },
         {
           "home": 1,
@@ -1254,7 +1254,7 @@
         {
           "name": "基本面实力",
           "home": 0.561,
-          "away": 0.501,
+          "away": 0.493,
           "weight": 0.27249864281601516
         },
         {

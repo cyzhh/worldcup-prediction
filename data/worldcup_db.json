@@ -1,6 +1,6 @@
 {
   "meta": {
-    "built_at": "2026-06-13T11:29:26.054345+00:00",
+    "built_at": "2026-06-13T12:26:31.873552+00:00",
     "tournament": "World Cup 2026",
     "sources": [
       "https://github.com/openfootball/worldcup",
@@ -3465,9 +3465,15 @@
       "away": "PAR",
       "home_name": "USA",
       "away_name": "Paraguay",
-      "played": false,
-      "actual_score": null,
-      "actual_ht": null,
+      "played": true,
+      "actual_score": {
+        "home": 4,
+        "away": 1
+      },
+      "actual_ht": [
+        3,
+        0
+      ],
       "venue_altitude_m": 0,
       "travel_km": {
         "USA": 0.0,
@@ -5719,28 +5725,15 @@
     "D": [
       {
         "team": "USA",
-        "played": 0,
-        "w": 0,
+        "played": 1,
+        "w": 1,
         "d": 0,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0,
-        "pts": 0,
+        "gf": 4,
+        "ga": 1,
+        "gd": 3,
+        "pts": 3,
         "rank": 1,
-        "qualification_zone": "direct"
-      },
-      {
-        "team": "PAR",
-        "played": 0,
-        "w": 0,
-        "d": 0,
-        "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0,
-        "pts": 0,
-        "rank": 2,
         "qualification_zone": "direct"
       },
       {
@@ -5753,8 +5746,8 @@
         "ga": 0,
         "gd": 0,
         "pts": 0,
-        "rank": 3,
-        "qualification_zone": "best_third"
+        "rank": 2,
+        "qualification_zone": "direct"
       },
       {
         "team": "TUR",
@@ -5765,6 +5758,19 @@
         "gf": 0,
         "ga": 0,
         "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "PAR",
+        "played": 1,
+        "w": 0,
+        "d": 0,
+        "l": 1,
+        "gf": 1,
+        "ga": 4,
+        "gd": -3,
         "pts": 0,
         "rank": 4,
         "qualification_zone": "out"
