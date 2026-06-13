@@ -2,11 +2,35 @@
 
 基于 [openfootball/awesome-football](https://github.com/openfootball/awesome-football) 多源数据与七维因子引擎的 A 股式概率化赛果预测看板。
 
-## 在线访问
+## 在线访问（GitHub Pages）
 
-部署 GitHub Pages 后，分享链接：
+### 第一次部署（三步）
 
-`https://<你的用户名>.github.io/worldcup/`
+```powershell
+cd D:\CYZ\project\worldcup
+
+# 1. 登录 GitHub（浏览器授权，只需一次）
+gh auth login
+
+# 2. 一键创建仓库 + 推送 + 开启 Pages
+.\deploy.ps1
+
+# 3. 等待 2~5 分钟，打开脚本输出的链接
+#    例如 https://你的用户名.github.io/worldcup/
+```
+
+### 分享给朋友
+
+把 Pages 链接发给朋友即可，**无需安装任何软件**。页面内嵌最新预测数据，打开即看。
+
+### 保持「实时」更新
+
+| 方式 | 说明 |
+|------|------|
+| **自动** | GitHub Actions 每 **6 小时**拉取 [openfootball](https://github.com/openfootball/worldcup) 最新赛果并重建页面 |
+| **手动** | 本地运行 `python build_all.py` 后 `git push`，或到 Actions 页点击 **Run workflow** |
+
+仓库 **Settings → Pages → Build and deployment** 应选择 **GitHub Actions**。
 
 ## 本地运行
 
