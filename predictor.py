@@ -190,17 +190,113 @@ def score_risk(team: dict[str, Any]) -> float:
     return _clamp(1.0 - team["squad"]["injury_risk"] * 0.6)
 
 
-def dixon_coles_tau(i: int, j: int, lam_h: float, lam_a: float, rho: float) -> float:
-    """Dixon-Coles 低比分修正因子（0-0 / 1-0 / 0-1 / 1-1）。"""
+def dixon_coles_tau(
+    i: int,
+    j: int,
+    lam_h: float,
+    lam_a: float,
+    rho: float,
+    strength_diff: float = 0.0,
+    config: ModelConfig | None = None,
+) -> float:
+    """Dixon-Coles 低比分修正（含动态 rho 与 2-0/0-2 扩展）。"""
+    cfg = _cfg(config)
+    sd = abs(strength_diff)
+    if sd < 0.08:
+        dynamic_rho = cfg.dixon_rho_close
+    elif sd > 0.18:
+        dynamic_rho = cfg.dixon_rho_strong
+    else:
+        dynamic_rho = rho
+
     if i == 0 and j == 0:
-        return 1.0 - lam_h * lam_a * rho
-    if i == 0 and j == 1:
-        return 1.0 + lam_a * rho
+        return 1.0 - lam_h * lam_a * dynamic_rho
     if i == 1 and j == 0:
-        return 1.0 + lam_h * rho
+        return 1.0 + lam_h * dynamic_rho
+    if i == 0 and j == 1:
+        return 1.0 + lam_a * dynamic_rho
     if i == 1 and j == 1:
-        return 1.0 - rho
+        return 1.0 - dynamic_rho
+    if i == 2 and j == 0:
+        return 1.0 + dynamic_rho * 0.3
+    if i == 0 and j == 2:
+        return 1.0 + dynamic_rho * 0.3
     return 1.0
+
+
+def compute_draw_probability(
+    strength_diff: float,
+    elo_gap: float,
+    round_num: int,
+    home: dict[str, Any],
+    away: dict[str, Any],
+    h2h: dict[str, Any] | None,
+    config: ModelConfig,
+) -> float:
+    """多因子平局基准概率。"""
+    base = config.group_stage_draw_base
+    sd = abs(strength_diff)
+
+    if sd < 0.05:
+        base += 0.10
+    elif sd < 0.10:
+        base += 0.06
+
+    gap = abs(elo_gap)
+    if gap < 40:
+        base += config.draw_elo_sensitivity
+    elif gap < 100:
+        base += config.draw_elo_sensitivity * 0.5
+    elif gap > 200:
+        base -= 0.06
+
+    form_h = _form_score(home["form"])
+    form_a = _form_score(away["form"])
+    if abs(form_h - form_a) < 0.08:
+        base += config.draw_form_sensitivity
+
+    h_style = home["tactics"].get("style", "")
+    a_style = away["tactics"].get("style", "")
+    if "密集防守" in h_style and "密集防守" in a_style:
+        base += 0.06
+
+    if round_num == 1:
+        base += config.group_stage_round1_draw_boost
+    elif round_num >= 3:
+        base -= 0.03
+
+    if h2h and h2h.get("draw_rate") is not None:
+        base = base * 0.7 + float(h2h["draw_rate"]) * 0.3
+
+    return _clamp(base, 0.10, 0.45)
+
+
+def get_blend_weights(
+    strength_diff: float,
+    round_num: int,
+    elo_gap: float,
+    config: ModelConfig,
+) -> tuple[float, float]:
+    """五档连续 ELO / 泊松融合权重。"""
+    sd = abs(strength_diff)
+    if sd > 0.20:
+        elo_w = 0.72
+    elif sd > 0.15:
+        elo_w = 0.68
+    elif sd > 0.10:
+        elo_w = 0.60
+    elif sd > 0.05:
+        elo_w = 0.54
+    else:
+        elo_w = 0.48
+
+    round_bonus = {1: 0.0, 2: config.poisson_round_decay, 3: config.poisson_round_decay * 2}.get(round_num, 0.0)
+    elo_w = _clamp(elo_w - round_bonus, 0.40, 0.75)
+
+    if abs(elo_gap) > 300:
+        elo_w = min(elo_w + 0.05, 0.78)
+
+    return elo_w, 1.0 - elo_w
 
 
 def apply_draw_mass_calibration(
@@ -209,10 +305,10 @@ def apply_draw_mass_calibration(
     p_a: float,
     config: ModelConfig,
 ) -> tuple[float, float, float]:
-    """将平局概率质量向世界杯小组赛历史频率（~22%）校正。"""
+    """将平局概率质量向小组赛历史频率双向校正。"""
     target = config.group_stage_draw_base
     blend = config.draw_mass_blend
-    if blend <= 0 or p_d <= target:
+    if blend <= 0:
         return p_h, p_d, p_a
     new_d = p_d * (1 - blend) + target * blend
     removed = p_d - new_d
@@ -231,16 +327,28 @@ def apply_player_calibration(
     home: dict[str, Any],
     away: dict[str, Any],
     config: ModelConfig,
+    players_by_team: dict[str, list[dict[str, Any]]] | None = None,
+    home_key: str = "",
+    away_key: str = "",
 ) -> tuple[float, float, float]:
-    """球员阵容深度差 → 胜平负二次微调（报告 3.4.2）。"""
-    sq_h = home["squad"].get("depth_score", 0.5)
-    sq_a = away["squad"].get("depth_score", 0.5)
-    delta = (sq_h - sq_a) * config.player_prob_weight
-    if abs(delta) < 0.005:
+    weight = config.player_top5_weight or config.player_prob_weight
+    h_score = a_score = None
+    if players_by_team:
+        hp = players_by_team.get(home_key) or players_by_team.get(home.get("code", ""))
+        ap = players_by_team.get(away_key) or players_by_team.get(away.get("code", ""))
+        if hp and ap:
+            h_score = sum(p.get("score", 50) for p in hp[:5]) / min(5, len(hp[:5]))
+            a_score = sum(p.get("score", 50) for p in ap[:5]) / min(5, len(ap[:5]))
+    if h_score is None or a_score is None:
+        h_score = home["squad"].get("depth_score", 0.5) * 100
+        a_score = away["squad"].get("depth_score", 0.5) * 100
+    score_diff = (h_score - a_score) / 100.0
+    adj = score_diff * weight
+    if abs(adj) < 0.005:
         return p_h, p_d, p_a
-    p_h = p_h + delta * 0.65
-    p_a = p_a - delta * 0.65
-    p_d = p_d - abs(delta) * 0.08
+    p_h = _clamp(p_h + adj)
+    p_a = _clamp(p_a - adj)
+    p_d = _clamp(p_d - abs(adj) * 0.08)
     t = p_h + p_d + p_a
     return p_h / t, p_d / t, p_a / t
 
@@ -275,6 +383,7 @@ def elo_win_prob(
     elo_away: float,
     draw_factor: float = 0.0,
     config: ModelConfig | None = None,
+    draw_base: float | None = None,
 ) -> tuple[float, float, float]:
     """ELO 胜平负概率（含小组赛平局校准）。"""
     cfg = _cfg(config)
@@ -282,18 +391,19 @@ def elo_win_prob(
     p_home_raw = 1.0 / (1.0 + 10 ** (-diff / 400))
     p_away_raw = 1.0 - p_home_raw
 
-    draw_base = cfg.group_stage_draw_base + cfg.group_stage_round1_draw_boost
-    draw_base += draw_factor
-    draw_base = _clamp(draw_base, 0.12, 0.32)
-
-    gap = abs(diff)
-    if gap > 200:
-        draw_base *= 0.82
-    elif gap < 80:
-        draw_base *= 1.15
-
-    if gap > cfg.upset_elo_threshold:
-        draw_base -= cfg.favorite_draw_penalty
+    if draw_base is not None:
+        draw_base = _clamp(draw_base + draw_factor, 0.10, 0.45)
+    else:
+        draw_base = cfg.group_stage_draw_base + cfg.group_stage_round1_draw_boost
+        draw_base += draw_factor
+        draw_base = _clamp(draw_base, 0.12, 0.32)
+        gap = abs(diff)
+        if gap > 200:
+            draw_base *= 0.82
+        elif gap < 80:
+            draw_base *= 1.15
+        if gap > cfg.upset_elo_threshold:
+            draw_base -= cfg.favorite_draw_penalty
 
     remain = 1.0 - draw_base
     p_home = remain * p_home_raw
@@ -501,12 +611,16 @@ def score_distribution(
     lam_a: float,
     max_goals: int = 5,
     rho: float = -0.08,
+    strength_diff: float = 0.0,
+    config: ModelConfig | None = None,
 ) -> list[tuple[int, int, float]]:
     raw: list[tuple[int, int, float]] = []
     total = 0.0
     for i in range(max_goals + 1):
         for j in range(max_goals + 1):
-            p = poisson_pmf(i, lam_h) * poisson_pmf(j, lam_a) * dixon_coles_tau(i, j, lam_h, lam_a, rho)
+            p = poisson_pmf(i, lam_h) * poisson_pmf(j, lam_a) * dixon_coles_tau(
+                i, j, lam_h, lam_a, rho, strength_diff, config
+            )
             raw.append((i, j, p))
             total += p
     if total <= 0:
@@ -525,7 +639,13 @@ def score_distribution(
     return scores
 
 
-def prob_under_25(lam_h: float, lam_a: float, strength_diff: float = 0.0, config: ModelConfig | None = None) -> float:
+def prob_under_25(
+    lam_h: float,
+    lam_a: float,
+    strength_diff: float = 0.0,
+    round_num: int = 1,
+    config: ModelConfig | None = None,
+) -> float:
     cfg = _cfg(config)
     under = 0.0
     for i in range(6):
@@ -534,7 +654,9 @@ def prob_under_25(lam_h: float, lam_a: float, strength_diff: float = 0.0, config
                 under += poisson_pmf(i, lam_h) * poisson_pmf(j, lam_a)
     blend = cfg.under_25_base * 0.18 + under * 0.82
     if abs(strength_diff) < 0.08:
-        blend += 0.03
+        blend += cfg.under_25_close_boost
+    if round_num == 1:
+        blend += cfg.under_25_round1_boost
     if strength_diff > 0.15:
         blend -= 0.04
     return _clamp(blend, 0.48, 0.72)
@@ -642,6 +764,7 @@ def predict_match(
     h2h_map: dict[str, dict[str, Any]] | None = None,
     benchmarks: dict[str, dict[str, Any]] | None = None,
     config: ModelConfig | None = None,
+    players_by_team: dict[str, list[dict[str, Any]]] | None = None,
 ) -> PredictionResult:
     cfg = _cfg(config)
     home = teams[match["home"]]
@@ -671,22 +794,31 @@ def predict_match(
     adj_elo_a = away["elo"] - strength_diff * 400
     if home["environment"].get("is_host"):
         adj_elo_h += cfg.host_elo_bonus
+    elo_gap = adj_elo_h - adj_elo_a
+    draw_base = compute_draw_probability(
+        strength_diff, elo_gap, match["round"], home, away, h2h, cfg
+    )
     draw_factor = 0.02 if abs(strength_diff) < 0.08 else -0.01 if abs(strength_diff) > 0.15 else 0.0
-    if match["round"] == 1:
-        draw_factor += cfg.group_stage_round1_draw_boost * 0.5
-    elo_wdl = elo_win_prob(adj_elo_h, adj_elo_a, draw_factor, config=cfg)
+    elo_wdl = elo_win_prob(adj_elo_h, adj_elo_a, draw_factor, config=cfg, draw_base=draw_base)
 
     lam_h, lam_a = expected_goals(strength_diff, home, away, match["round"])
-    scores = score_distribution(lam_h, lam_a, rho=cfg.dixon_coles_rho)
+    scores = score_distribution(
+        lam_h, lam_a, rho=cfg.dixon_coles_rho, strength_diff=strength_diff, config=cfg
+    )
     poisson_wdl = wdl_from_score_matrix(scores)
-    elo_w = cfg.elo_blend_strong if abs(strength_diff) > 0.12 else cfg.elo_blend_close
-    p_h, p_d, p_a = blend_wdl(elo_wdl, poisson_wdl, elo_weight=elo_w, config=cfg, elo_diff=adj_elo_h - adj_elo_a)
+    elo_w, _ = get_blend_weights(strength_diff, match["round"], elo_gap, cfg)
+    p_h, p_d, p_a = blend_wdl(elo_wdl, poisson_wdl, elo_weight=elo_w, config=cfg, elo_diff=elo_gap)
     p_h, p_d, p_a = apply_upset_adjustment(p_h, p_d, p_a, adj_elo_h, adj_elo_a, cfg)
     p_h, p_d, p_a = apply_draw_mass_calibration(p_h, p_d, p_a, cfg)
-    p_h, p_d, p_a = apply_player_calibration(p_h, p_d, p_a, home, away, cfg)
+    p_h, p_d, p_a = apply_player_calibration(
+        p_h, p_d, p_a, home, away, cfg,
+        players_by_team=players_by_team,
+        home_key=match["home"],
+        away_key=match["away"],
+    )
 
     score_h, score_a = pick_display_score(p_h, p_d, p_a, scores, strength_diff)
-    under25 = prob_under_25(lam_h, lam_a, strength_diff, config=cfg)
+    under25 = prob_under_25(lam_h, lam_a, strength_diff, match["round"], config=cfg)
     handicap, ah_line = asian_handicap_line(strength_diff, home["name"])
     analysis = build_analysis_extended(
         home, away, strength_diff, dims, match["round"], match.get("venue", ""), h2h,
@@ -812,6 +944,7 @@ def run_all(
     )
     h2h = bundle["h2h"]
     benchmarks = bundle.get("benchmarks", {})
+    players_by_team = bundle.get("players_by_team") or {}
 
     prior_results: list[dict[str, Any]] = []
     for t in ELO_PRIOR_TOURNAMENTS:
@@ -826,7 +959,7 @@ def run_all(
         if m["home"] not in teams or m["away"] not in teams:
             continue
         refresh_teams_form(teams, prior_results, current_results)
-        pred = predict_match(m, teams, h2h, benchmarks)
+        pred = predict_match(m, teams, h2h, benchmarks, players_by_team=players_by_team)
         predictions.append(result_to_dict(pred))
         if m.get("played") and m.get("actual_score"):
             act = m["actual_score"]

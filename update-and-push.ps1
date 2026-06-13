@@ -1,6 +1,8 @@
 #Requires -Version 5.1
 param(
-    [string]$Message = ""
+    [string]$Message = "",
+    [switch]$FastBacktest,
+    [switch]$EvalOnly
 )
 
 $ErrorActionPreference = "Stop"
@@ -11,7 +13,13 @@ python sync_openfootball.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python db_builder.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-python backtest.py --fast
+if ($EvalOnly) {
+    python backtest.py --eval-only
+} elseif ($FastBacktest) {
+    python backtest.py --fast
+} else {
+    python backtest.py
+}
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python predictor.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

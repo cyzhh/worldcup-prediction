@@ -419,7 +419,7 @@ def simulate_flat_bets(
 
     roi = (profit / staked) if staked else 0.0
     return {
-        "label": label,
+        "strategy": "flat_1x2",
         "bankroll_start": bankroll_start,
         "stake_per_bet": stake,
         "bets": bets,
@@ -433,45 +433,117 @@ def simulate_flat_bets(
     }
 
 
-def simulate_by_tournament(
-    all_predictions: list[dict[str, Any]],
-    config: ModelConfig | None = None,
-) -> dict[str, Any]:
-    """每届世界杯：精选三档策略，独立 2000 本金。"""
+def _group_by_tournament(all_predictions: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
     by_label: dict[str, list[dict[str, Any]]] = {}
     for p in all_predictions:
         label = p.get("tournament") or str(p.get("year", "unknown"))
         by_label.setdefault(label, []).append(p)
+    return by_label
 
-    tc = _tier_cfg()
+
+def _run_per_tournament(by_label, sim_fn):
     tournaments: dict[str, Any] = {}
     total_profit = 0.0
+    total_staked = 0.0
+    merged_leg_types: dict[str, dict[str, Any]] = {}
     for label in sorted(by_label.keys(), key=lambda x: by_label[x][0].get("year", 0)):
-        sim = simulate_tiered_bets(by_label[label], label=label, config=config, only_played=True, curated=True)
+        sim = sim_fn(by_label[label], label=label)
         tournaments[label] = {k: v for k, v in sim.items() if k != "details"}
         total_profit += sim["profit"]
-
-    overall_staked = sum(t["staked"] for t in tournaments.values())
-    return {
-        "config": {
-            "stake_per_leg": STAKE,
-            "bankroll_per_tournament": BANKROLL_START,
-            "reserve": RESERVE,
-            "budget_cap": BANKROLL_START - RESERVE,
-            "book_margin": BOOK_MARGIN,
-            "bet_rule": "三档分级：强10×3注 + 中5×2注，总额≤2000（留底200）",
-            "tier_thresholds": {
-                "strong": f"|strength_diff| > {tc['strong_strength']}",
-                "medium": f"{tc['medium_strength']}–{tc['strong_strength']}",
-                "weak": f"< {tc['medium_strength']}（精选策略跳过）",
-            },
-            "odds_source": "典型欧赔（强1X2 1.6 / 亚盘 1.9 / 大小 1.85）+ ELO 1X2 回退",
-        },
-        "disclaimer": "虚拟投注回测，非真实博彩建议；历史赔率未接入时使用典型市场线估算。",
-        "overall_profit_all_tournaments": round(total_profit, 2),
-        "overall_roi": round(total_profit / overall_staked, 4) if overall_staked else 0.0,
-        "by_tournament": tournaments,
+        total_staked += sim["staked"]
+        for leg_type, stats in (sim.get("by_leg_type") or {}).items():
+            m = merged_leg_types.setdefault(
+                leg_type, {"legs": 0, "wins": 0, "counted": 0, "staked": 0.0, "profit": 0.0}
+            )
+            for key in m:
+                if key in stats:
+                    m[key] += stats[key]
+    leg_breakdown = {
+        k: {
+            **v,
+            "staked": round(v["staked"], 2),
+            "profit": round(v["profit"], 2),
+            "hit_rate": round(v["wins"] / v["counted"], 4) if v["counted"] else None,
+        }
+        for k, v in merged_leg_types.items()
     }
+    return tournaments, total_profit, total_staked, leg_breakdown
+
+
+def simulate_betting_report(
+    all_predictions: list[dict[str, Any]],
+    config: ModelConfig | None = None,
+) -> dict[str, Any]:
+    """同时回测：单场 1X2 vs 三档精选。"""
+    tc = _tier_cfg()
+    by_label = _group_by_tournament(all_predictions)
+
+    flat_t, flat_profit, flat_staked, _ = _run_per_tournament(
+        by_label,
+        lambda preds, label: simulate_flat_bets(preds, label=label, config=config, only_played=True),
+    )
+    tiered_t, tiered_profit, tiered_staked, leg_breakdown = _run_per_tournament(
+        by_label,
+        lambda preds, label: simulate_tiered_bets(
+            preds, label=label, config=config, only_played=True, curated=True
+        ),
+    )
+
+    return {
+        "disclaimer": "虚拟投注回测，非真实博彩建议；历史赔率未接入时使用 ELO/典型市场线估算。",
+        "flat_1x2": {
+            "strategy": "flat_1x2",
+            "config": {
+                "stake_per_bet": STAKE,
+                "bankroll_per_tournament": BANKROLL_START,
+                "book_margin": BOOK_MARGIN,
+                "bet_rule": "每场 50 元押模型最高概率赛果（1X2），共 48 场",
+                "odds_source": "ELO 隐含欧赔 + 7% 抽水",
+            },
+            "overall_profit_all_tournaments": round(flat_profit, 2),
+            "overall_roi": round(flat_profit / flat_staked, 4) if flat_staked else 0.0,
+            "overall_staked": round(flat_staked, 2),
+            "by_tournament": flat_t,
+        },
+        "tiered_curated": {
+            "strategy": "tiered_curated",
+            "config": {
+                "stake_per_leg": STAKE,
+                "bankroll_per_tournament": BANKROLL_START,
+                "reserve": RESERVE,
+                "budget_cap": BANKROLL_START - RESERVE,
+                "bet_rule": "三档精选：强10×3注 + 中5×2注",
+                "tier_thresholds": {
+                    "strong": f"|strength_diff| > {tc['strong_strength']}",
+                    "medium": f"{tc['medium_strength']}–{tc['strong_strength']}",
+                    "weak": f"< {tc['medium_strength']}（跳过）",
+                },
+                "odds_source": "典型欧赔（1X2 1.6 / 亚盘 1.9 / 大小 1.85）",
+            },
+            "overall_profit_all_tournaments": round(tiered_profit, 2),
+            "overall_roi": round(tiered_profit / tiered_staked, 4) if tiered_staked else 0.0,
+            "overall_staked": round(tiered_staked, 2),
+            "leg_breakdown": leg_breakdown,
+            "by_tournament": tiered_t,
+        },
+        "comparison": {
+            "flat_profit": round(flat_profit, 2),
+            "tiered_profit": round(tiered_profit, 2),
+            "delta": round(tiered_profit - flat_profit, 2),
+            "why_tiered_underperforms": [
+                "1X2 模型有 walk-forward edge，亚盘/大小球未单独校准",
+                "强信号场追加亚盘要求净胜球，1 球小胜常赢 1X2 却输亚盘",
+                "三档使用固定典型赔率，未接入真实历史赔率",
+            ],
+        },
+    }
+
+
+def simulate_by_tournament(
+    all_predictions: list[dict[str, Any]],
+    config: ModelConfig | None = None,
+) -> dict[str, Any]:
+    return simulate_betting_report(all_predictions, config=config)
 
 
 def plan_2026_bets(predictions: list[dict[str, Any]]) -> dict[str, Any]:
@@ -510,15 +582,13 @@ def plan_2026_bets(predictions: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def simulate_2026(predictions: list[dict[str, Any]], config: ModelConfig | None = None) -> dict[str, Any]:
-    """2026：已赛三档结算 + 未赛精选计划。"""
     played = [p for p in predictions if p.get("played")]
-    settled = (
+    flat_settled = (
+        simulate_flat_bets(played, label="2026 世界杯", config=config, only_played=True) if played else None
+    )
+    tiered_settled = (
         simulate_tiered_bets(played, label="2026 世界杯", config=config, only_played=True, curated=True)
         if played
         else None
     )
-    plan = plan_2026_bets(predictions)
-    return {
-        "settled": settled,
-        "plan": plan,
-    }
+    return {"flat_1x2": flat_settled, "tiered_curated": tiered_settled, "plan": plan_2026_bets(predictions)}

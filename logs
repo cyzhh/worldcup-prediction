@@ -4,3 +4,10 @@
 2026-06-13 20:43:52 [INFO] worldcup.sync: 已同步 2026/worldcup.json
 2026-06-13 20:43:53 [INFO] worldcup.db_builder: 已构建 D:\CYZ\project\worldcup\data\worldcup_db.json
 2026-06-13 20:43:58 [INFO] worldcup.generate_html: 已生成 D:\CYZ\project\worldcup\index.html
+2026-06-13 21:26:47 [INFO] worldcup.generate_html: 已生成 D:\CYZ\project\worldcup\index.html
+2026-06-13 21:27:19 [INFO] worldcup.backtest: 历史回测参数校准（1998–2022 walk-forward）
+2026-06-13 21:38:26 [INFO] worldcup.generate_html: 已生成 D:\CYZ\project\worldcup\index.html
+2026-06-13 21:38:27 [INFO] worldcup.sync: 已同步 2026--usa/cup.txt
+2026-06-13 21:38:28 [INFO] worldcup.sync: 已同步 2026/worldcup.json
+2026-06-13 21:38:28 [INFO] worldcup.db_builder: 已构建 D:\CYZ\project\worldcup\data\worldcup_db.json
+2026-06-13 21:38:34 [INFO] worldcup.generate_html: 已生成 D:\CYZ\project\worldcup\index.html

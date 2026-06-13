@@ -32,6 +32,14 @@ _DEFAULTS_FALLBACK = {
     "host_elo_bonus": 35.0,
     # 将平局概率质量向历史频率收缩（缓解模型过度预测平局）
     "draw_mass_blend": 0.40,
+    "draw_elo_sensitivity": 0.08,
+    "draw_form_sensitivity": 0.04,
+    "poisson_round_decay": 0.03,
+    "dixon_rho_close": -0.112,
+    "dixon_rho_strong": -0.048,
+    "player_top5_weight": 0.08,
+    "under_25_round1_boost": 0.04,
+    "under_25_close_boost": 0.03,
 }
 
 DEFAULTS = {**_DEFAULTS_FALLBACK, **model_defaults()}
@@ -52,6 +60,14 @@ class ModelConfig:
     player_prob_weight: float = 0.05
     host_elo_bonus: float = 35.0
     draw_mass_blend: float = 0.40
+    draw_elo_sensitivity: float = 0.08
+    draw_form_sensitivity: float = 0.04
+    poisson_round_decay: float = 0.03
+    dixon_rho_close: float = -0.112
+    dixon_rho_strong: float = -0.048
+    player_top5_weight: float = 0.08
+    under_25_round1_boost: float = 0.04
+    under_25_close_boost: float = 0.03
     # 由回测填充：ELO 差分桶 → 历史胜/平/负率
     wdl_priors_by_elo_gap: dict[str, dict[str, float]] = field(default_factory=dict)
     calibrated_at: str | None = None

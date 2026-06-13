@@ -81,6 +81,14 @@ model:
   player_prob_weight: 0.05
   host_elo_bonus: 35.0
   draw_mass_blend: 0.40
+  draw_elo_sensitivity: 0.08
+  draw_form_sensitivity: 0.04
+  poisson_round_decay: 0.03
+  dixon_rho_close: -0.112
+  dixon_rho_strong: -0.048
+  player_top5_weight: 0.08
+  under_25_round1_boost: 0.04
+  under_25_close_boost: 0.03
 
 pipeline:
   expected_group_matches: 72

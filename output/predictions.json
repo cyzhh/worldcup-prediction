@@ -5,7 +5,7 @@
     "date_range": "2026.06.11 - 06.27",
     "subtitle": "awesome-football 多源融合 · 赛程/球员/球场/ELO/H2H/积分榜",
     "data_source": "https://github.com/openfootball/awesome-football",
-    "db_built_at": "2026-06-13T12:43:53.341268+00:00",
+    "db_built_at": "2026-06-13T13:38:28.735560+00:00",
     "sources": [
       "https://github.com/openfootball/worldcup",
       "https://github.com/openfootball/worldcup.json",
@@ -17229,8 +17229,8 @@
       "score_home": 2,
       "score_away": 0,
       "prob_home": 70.2,
-      "prob_draw": 19.8,
-      "prob_away": 10.0,
+      "prob_draw": 20.3,
+      "prob_away": 9.4,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 墨西哥-1.0",
@@ -17251,17 +17251,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 31.7
+          "prob": 31.8
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 28.6
+          "prob": 28.8
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 15.5
+          "prob": 15.2
         },
         {
           "home": 1,
@@ -17362,12 +17362,12 @@
         "fifa_rank": 38,
         "elo": 1587.4
       },
-      "predicted_score": "1 : 0",
+      "predicted_score": "1 : 1",
       "score_home": 1,
-      "score_away": 0,
-      "prob_home": 48.1,
-      "prob_draw": 25.9,
-      "prob_away": 26.1,
+      "score_away": 1,
+      "prob_home": 41.2,
+      "prob_draw": 36.0,
+      "prob_away": 22.8,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
@@ -17387,27 +17387,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 32.2
+          "prob": 32.7
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 20.8
+          "prob": 20.4
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 13.9
+          "prob": 13.7
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.9
+          "prob": 11.3
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 7.7
+          "prob": 7.5
         }
       ],
       "dimensions": [
@@ -17469,7 +17469,7 @@
       "actual_home": 2,
       "actual_away": 1,
       "result_hit": false,
-      "outcome_hit": true
+      "outcome_hit": false
     },
     {
       "match_id": 7,
@@ -17501,9 +17501,9 @@
       "predicted_score": "1 : 0",
       "score_home": 1,
       "score_away": 0,
-      "prob_home": 58.6,
-      "prob_draw": 25.5,
-      "prob_away": 15.8,
+      "prob_home": 51.6,
+      "prob_draw": 33.4,
+      "prob_away": 15.0,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
@@ -17523,12 +17523,12 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 46.7
+          "prob": 47.1
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 24.0
+          "prob": 23.7
         },
         {
           "home": 0,
@@ -17538,12 +17538,12 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 6.8
+          "prob": 6.6
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 6.3
+          "prob": 6.5
         }
       ],
       "dimensions": [
@@ -17637,9 +17637,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 73.6,
-      "prob_draw": 18.2,
-      "prob_away": 8.2,
+      "prob_home": 70.0,
+      "prob_draw": 21.0,
+      "prob_away": 9.0,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 美国-1.5",
@@ -17659,17 +17659,17 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 27.5
+          "prob": 28.6
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 25.1
+          "prob": 24.8
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 18.9
+          "prob": 18.6
         },
         {
           "home": 3,
@@ -17679,7 +17679,7 @@
         {
           "home": 1,
           "away": 1,
-          "prob": 6.1
+          "prob": 5.9
         }
       ],
       "dimensions": [
@@ -17773,9 +17773,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 15.6,
-      "prob_draw": 20.4,
-      "prob_away": 64.0,
+      "prob_home": 12.9,
+      "prob_draw": 20.5,
+      "prob_away": 66.7,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 卡塔尔+1.0",
@@ -17795,27 +17795,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 28.8
+          "prob": 28.5
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 25.8
+          "prob": 26.6
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 13.9
+          "prob": 13.7
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.6
+          "prob": 8.3
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 7.8
+          "prob": 7.9
         }
       ],
       "dimensions": [
@@ -17905,10 +17905,10 @@
       "score_home": 1,
       "score_away": 0,
       "prob_home": 55.7,
-      "prob_draw": 19.9,
-      "prob_away": 24.4,
-      "prob_under_25": 68.8,
-      "prob_over_25": 31.2,
+      "prob_draw": 21.5,
+      "prob_away": 22.9,
+      "prob_under_25": 72.0,
+      "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 巴西-1.0",
       "strength_diff": 0.1054,
       "asian_line_home": -1.0,
@@ -17926,12 +17926,12 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 16.8
+          "prob": 16.9
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 16.8
+          "prob": 16.9
         },
         {
           "home": 1,
@@ -17941,12 +17941,12 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 10.8
+          "prob": 10.6
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 10.1
+          "prob": 10.2
         }
       ],
       "dimensions": [
@@ -18035,9 +18035,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 17.7,
-      "prob_draw": 23.8,
-      "prob_away": 58.5,
+      "prob_home": 15.4,
+      "prob_draw": 28.5,
+      "prob_away": 56.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 海地+0.5",
@@ -18057,7 +18057,7 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 37.5
+          "prob": 37.6
         },
         {
           "home": 0,
@@ -18072,7 +18072,7 @@
         {
           "home": 0,
           "away": 2,
-          "prob": 9.5
+          "prob": 9.3
         },
         {
           "home": 1,
@@ -18163,12 +18163,12 @@
         "fifa_rank": 42,
         "elo": 1580.0
       },
-      "predicted_score": "0 : 0",
-      "score_home": 0,
-      "score_away": 0,
-      "prob_home": 41.5,
-      "prob_draw": 26.7,
-      "prob_away": 31.8,
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 36.1,
+      "prob_draw": 36.4,
+      "prob_away": 27.5,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
@@ -18188,27 +18188,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 31.5
+          "prob": 31.9
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 18.0
+          "prob": 17.6
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 16.6
+          "prob": 16.3
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 11.6
+          "prob": 12.0
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 5.8
+          "prob": 5.7
         }
       ],
       "dimensions": [
@@ -18297,11 +18297,11 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 76.1,
-      "prob_draw": 16.3,
-      "prob_away": 7.6,
-      "prob_under_25": 68.4,
-      "prob_over_25": 31.6,
+      "prob_home": 72.3,
+      "prob_draw": 19.7,
+      "prob_away": 8.0,
+      "prob_under_25": 72.0,
+      "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 德国-1.5",
       "strength_diff": 0.2865,
       "asian_line_home": -1.5,
@@ -18319,27 +18319,27 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 25.3
+          "prob": 26.5
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 21.5
+          "prob": 21.0
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 19.6
+          "prob": 19.3
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 10.7
+          "prob": 10.6
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 5.7
+          "prob": 5.5
         }
       ],
       "dimensions": [
@@ -18428,11 +18428,11 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 68.3,
-      "prob_draw": 18.3,
-      "prob_away": 13.3,
-      "prob_under_25": 67.1,
-      "prob_over_25": 32.9,
+      "prob_home": 68.2,
+      "prob_draw": 19.1,
+      "prob_away": 12.7,
+      "prob_under_25": 71.1,
+      "prob_over_25": 28.9,
       "asian_handicap": "亚盘: 荷兰-1.0",
       "strength_diff": 0.1587,
       "asian_line_home": -1.0,
@@ -18451,7 +18451,7 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 20.4
+          "prob": 20.5
         },
         {
           "home": 0,
@@ -18461,7 +18461,7 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 14.6
+          "prob": 14.3
         },
         {
           "home": 1,
@@ -18557,12 +18557,12 @@
         "fifa_rank": 31,
         "elo": 1698.4
       },
-      "predicted_score": "0 : 0",
-      "score_home": 0,
-      "score_away": 0,
-      "prob_home": 38.1,
-      "prob_draw": 27.2,
-      "prob_away": 34.6,
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 34.0,
+      "prob_draw": 37.1,
+      "prob_away": 28.9,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
@@ -18582,27 +18582,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 29.6
+          "prob": 30.1
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 20.1
+          "prob": 19.7
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 13.9
+          "prob": 13.7
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 11.6
+          "prob": 12.0
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 8.0
+          "prob": 7.7
         }
       ],
       "dimensions": [
@@ -18691,9 +18691,9 @@
       "predicted_score": "1 : 0",
       "score_home": 1,
       "score_away": 0,
-      "prob_home": 55.5,
-      "prob_draw": 23.0,
-      "prob_away": 21.5,
+      "prob_home": 52.7,
+      "prob_draw": 26.3,
+      "prob_away": 21.0,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 瑞典-1.0",
@@ -18713,27 +18713,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 29.6
+          "prob": 29.7
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 23.9
+          "prob": 24.0
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 11.5
+          "prob": 11.2
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 10.0
+          "prob": 10.1
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 9.9
+          "prob": 10.0
         }
       ],
       "dimensions": [
@@ -18822,11 +18822,11 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 76.3,
-      "prob_draw": 16.0,
-      "prob_away": 7.7,
-      "prob_under_25": 67.5,
-      "prob_over_25": 32.5,
+      "prob_home": 72.5,
+      "prob_draw": 19.6,
+      "prob_away": 7.9,
+      "prob_under_25": 71.5,
+      "prob_over_25": 28.5,
       "asian_handicap": "亚盘: 西班牙-1.5",
       "strength_diff": 0.2483,
       "asian_line_home": -1.5,
@@ -18844,27 +18844,27 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 24.9
+          "prob": 26.1
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 21.8
+          "prob": 21.3
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 18.9
+          "prob": 18.6
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 11.2
+          "prob": 11.1
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 5.6
+          "prob": 5.4
         }
       ],
       "dimensions": [
@@ -18953,9 +18953,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 73.4,
-      "prob_draw": 18.2,
-      "prob_away": 8.5,
+      "prob_home": 71.9,
+      "prob_draw": 18.5,
+      "prob_away": 9.6,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 比利时-1.5",
@@ -18975,27 +18975,27 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 27.4
+          "prob": 28.4
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 24.6
+          "prob": 24.3
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 19.2
+          "prob": 18.8
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 8.1
+          "prob": 8.0
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 6.1
+          "prob": 5.8
         }
       ],
       "dimensions": [
@@ -19084,9 +19084,9 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 11.2,
-      "prob_draw": 19.3,
-      "prob_away": 69.5,
+      "prob_home": 8.9,
+      "prob_draw": 19.7,
+      "prob_away": 71.4,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 沙特+1.0",
@@ -19107,22 +19107,22 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 25.0
+          "prob": 26.0
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 23.7
+          "prob": 23.4
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 16.5
+          "prob": 16.2
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.5
+          "prob": 8.2
         },
         {
           "home": 0,
@@ -19216,9 +19216,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 70.3,
-      "prob_draw": 19.8,
-      "prob_away": 9.9,
+      "prob_home": 66.4,
+      "prob_draw": 23.5,
+      "prob_away": 10.0,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 伊朗-1.0",
@@ -19238,17 +19238,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 30.4
+          "prob": 30.5
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 28.5
+          "prob": 28.7
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 16.2
+          "prob": 15.9
         },
         {
           "home": 1,
@@ -19347,9 +19347,9 @@
       "predicted_score": "1 : 0",
       "score_home": 1,
       "score_away": 0,
-      "prob_home": 54.6,
-      "prob_draw": 20.5,
-      "prob_away": 24.9,
+      "prob_home": 50.3,
+      "prob_draw": 26.6,
+      "prob_away": 23.0,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 法国-0.5",
@@ -19369,27 +19369,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 19.5
+          "prob": 19.6
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.8
+          "prob": 17.9
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 13.4
+          "prob": 13.5
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 11.2
+          "prob": 11.3
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 10.2
+          "prob": 10.0
         }
       ],
       "dimensions": [
@@ -19478,9 +19478,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 17.8,
-      "prob_draw": 20.7,
-      "prob_away": 61.4,
+      "prob_home": 15.9,
+      "prob_draw": 22.2,
+      "prob_away": 61.9,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 伊拉克+1.0",
@@ -19500,27 +19500,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 30.7
+          "prob": 30.4
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 25.8
+          "prob": 26.6
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 12.9
-        },
-        {
-          "home": 1,
-          "away": 1,
-          "prob": 8.6
+          "prob": 12.7
         },
         {
           "home": 1,
           "away": 0,
           "prob": 8.4
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 8.3
         }
       ],
       "dimensions": [
@@ -19609,11 +19609,11 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 73.6,
-      "prob_draw": 17.3,
-      "prob_away": 9.1,
-      "prob_under_25": 70.6,
-      "prob_over_25": 29.4,
+      "prob_home": 72.5,
+      "prob_draw": 18.0,
+      "prob_away": 9.5,
+      "prob_under_25": 72.0,
+      "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 阿根廷-1.5",
       "strength_diff": 0.2156,
       "asian_line_home": -1.5,
@@ -19631,27 +19631,27 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 26.3
+          "prob": 27.4
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 21.7
+          "prob": 21.3
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 20.6
+          "prob": 20.2
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 9.6
+          "prob": 9.5
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 5.9
+          "prob": 5.7
         }
       ],
       "dimensions": [
@@ -19740,9 +19740,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 72.0,
-      "prob_draw": 19.6,
-      "prob_away": 8.4,
+      "prob_home": 70.6,
+      "prob_draw": 20.3,
+      "prob_away": 9.2,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 奥地利-1.0",
@@ -19762,17 +19762,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 31.5
+          "prob": 31.6
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 28.6
+          "prob": 28.7
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 15.6
+          "prob": 15.3
         },
         {
           "home": 1,
@@ -19871,11 +19871,11 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 73.8,
-      "prob_draw": 17.6,
-      "prob_away": 8.6,
-      "prob_under_25": 71.7,
-      "prob_over_25": 28.3,
+      "prob_home": 70.9,
+      "prob_draw": 20.3,
+      "prob_away": 8.8,
+      "prob_under_25": 72.0,
+      "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 葡萄牙-1.5",
       "strength_diff": 0.207,
       "asian_line_home": -1.5,
@@ -19893,27 +19893,27 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 26.7
+          "prob": 27.8
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 22.8
+          "prob": 22.5
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 20.1
+          "prob": 19.7
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 9.0
+          "prob": 8.9
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 6.0
+          "prob": 5.7
         }
       ],
       "dimensions": [
@@ -19999,14 +19999,14 @@
         "fifa_rank": 10,
         "elo": 1885.5
       },
-      "predicted_score": "1 : 0",
+      "predicted_score": "1 : 1",
       "score_home": 1,
-      "score_away": 0,
-      "prob_home": 47.5,
-      "prob_draw": 23.8,
-      "prob_away": 28.6,
-      "prob_under_25": 69.7,
-      "prob_over_25": 30.3,
+      "score_away": 1,
+      "prob_home": 41.3,
+      "prob_draw": 33.8,
+      "prob_away": 24.9,
+      "prob_under_25": 72.0,
+      "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 英格兰-0.5",
       "strength_diff": 0.0438,
       "asian_line_home": -0.5,
@@ -20024,27 +20024,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 15.4
-        },
-        {
-          "home": 1,
-          "away": 0,
-          "prob": 14.9
+          "prob": 15.9
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 14.2
+          "prob": 14.7
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 14.4
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 10.8
+          "prob": 10.6
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 9.3
+          "prob": 9.1
         }
       ],
       "dimensions": [
@@ -20133,9 +20133,9 @@
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 40.3,
-      "prob_draw": 31.0,
-      "prob_away": 28.7,
+      "prob_home": 35.3,
+      "prob_draw": 38.7,
+      "prob_away": 26.0,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 加纳-1.0",
@@ -20165,7 +20165,7 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 11.3
+          "prob": 11.4
         },
         {
           "home": 1,
@@ -20264,9 +20264,9 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 11.2,
-      "prob_draw": 19.0,
-      "prob_away": 69.8,
+      "prob_home": 8.7,
+      "prob_draw": 19.8,
+      "prob_away": 71.4,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 乌兹别克斯坦+1.0",
@@ -20286,22 +20286,22 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 24.6
+          "prob": 25.6
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 22.4
+          "prob": 22.0
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 17.2
+          "prob": 16.9
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.4
+          "prob": 8.1
         },
         {
           "home": 0,
@@ -20392,12 +20392,12 @@
         "fifa_rank": 56,
         "elo": 1461.1
       },
-      "predicted_score": "1 : 0",
+      "predicted_score": "1 : 1",
       "score_home": 1,
-      "score_away": 0,
-      "prob_home": 53.5,
-      "prob_draw": 24.9,
-      "prob_away": 21.7,
+      "score_away": 1,
+      "prob_home": 49.6,
+      "prob_draw": 31.1,
+      "prob_away": 19.2,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 捷克-0.5",
@@ -20418,12 +20418,12 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 40.5
+          "prob": 40.6
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 25.3
+          "prob": 25.4
         },
         {
           "home": 0,
@@ -20433,7 +20433,7 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 9.0
+          "prob": 8.8
         },
         {
           "home": 1,
@@ -20528,8 +20528,8 @@
       "score_home": 2,
       "score_away": 0,
       "prob_home": 72.2,
-      "prob_draw": 18.2,
-      "prob_away": 9.6,
+      "prob_draw": 18.1,
+      "prob_away": 9.7,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 瑞士-1.0",
@@ -20550,17 +20550,17 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 27.2
+          "prob": 27.3
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 25.2
+          "prob": 25.3
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 18.4
+          "prob": 18.0
         },
         {
           "home": 3,
@@ -20659,9 +20659,9 @@
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 50.5,
-      "prob_draw": 28.1,
-      "prob_away": 21.4,
+      "prob_home": 44.8,
+      "prob_draw": 36.5,
+      "prob_away": 18.8,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 加拿大-0.5",
@@ -20682,7 +20682,7 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 51.0
+          "prob": 51.1
         },
         {
           "home": 1,
@@ -20697,7 +20697,7 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 5.9
+          "prob": 5.8
         },
         {
           "home": 1,
@@ -20791,9 +20791,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 64.0,
-      "prob_draw": 19.3,
-      "prob_away": 16.7,
+      "prob_home": 61.9,
+      "prob_draw": 21.2,
+      "prob_away": 16.9,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 墨西哥-1.0",
@@ -20825,7 +20825,7 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 12.5
+          "prob": 12.2
         },
         {
           "home": 1,
@@ -20924,9 +20924,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 65.3,
-      "prob_draw": 19.4,
-      "prob_away": 15.3,
+      "prob_home": 63.2,
+      "prob_draw": 21.4,
+      "prob_away": 15.4,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 美国-1.0",
@@ -20947,17 +20947,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 25.5
+          "prob": 25.6
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 23.6
+          "prob": 23.7
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 13.4
+          "prob": 13.2
         },
         {
           "home": 1,
@@ -21056,9 +21056,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 18.7,
-      "prob_draw": 21.5,
-      "prob_away": 59.8,
+      "prob_home": 16.4,
+      "prob_draw": 21.9,
+      "prob_away": 61.7,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 苏格兰+1.0",
@@ -21079,22 +21079,22 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 27.7
+          "prob": 27.8
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 24.9
+          "prob": 25.0
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 13.6
+          "prob": 13.3
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 9.2
+          "prob": 9.3
         },
         {
           "home": 1,
@@ -21185,12 +21185,12 @@
         "fifa_rank": 52,
         "elo": 1472.9
       },
-      "predicted_score": "1 : 0",
+      "predicted_score": "1 : 1",
       "score_home": 1,
-      "score_away": 0,
-      "prob_home": 54.5,
-      "prob_draw": 23.8,
-      "prob_away": 21.7,
+      "score_away": 1,
+      "prob_home": 48.9,
+      "prob_draw": 31.0,
+      "prob_away": 20.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 土耳其-0.5",
@@ -21211,12 +21211,12 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 29.4
+          "prob": 29.5
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 22.9
+          "prob": 23.0
         },
         {
           "home": 0,
@@ -21224,14 +21224,14 @@
           "prob": 11.0
         },
         {
-          "home": 2,
-          "away": 0,
+          "home": 1,
+          "away": 1,
           "prob": 10.6
         },
         {
-          "home": 1,
-          "away": 1,
-          "prob": 10.5
+          "home": 2,
+          "away": 0,
+          "prob": 10.4
         }
       ],
       "dimensions": [
@@ -21320,9 +21320,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 77.9,
-      "prob_draw": 14.7,
-      "prob_away": 7.4,
+      "prob_home": 76.4,
+      "prob_draw": 15.6,
+      "prob_away": 8.0,
       "prob_under_25": 64.2,
       "prob_over_25": 35.8,
       "asian_handicap": "亚盘: 巴西-1.5",
@@ -21343,27 +21343,27 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 23.1
+          "prob": 24.3
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 22.3
+          "prob": 21.8
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 16.4
+          "prob": 16.1
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 12.4
+          "prob": 12.3
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 5.8
+          "prob": 5.5
         }
       ],
       "dimensions": [
@@ -21452,8 +21452,8 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 69.7,
-      "prob_draw": 17.6,
+      "prob_home": 68.7,
+      "prob_draw": 18.7,
       "prob_away": 12.7,
       "prob_under_25": 65.9,
       "prob_over_25": 34.1,
@@ -21480,17 +21480,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 14.9
+          "prob": 15.0
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 14.5
+          "prob": 14.2
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 11.7
+          "prob": 11.8
         },
         {
           "home": 2,
@@ -21584,8 +21584,8 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 67.3,
-      "prob_draw": 19.2,
+      "prob_home": 66.0,
+      "prob_draw": 20.4,
       "prob_away": 13.5,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
@@ -21612,12 +21612,12 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 24.1
+          "prob": 24.2
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 14.4
+          "prob": 14.1
         },
         {
           "home": 1,
@@ -21716,9 +21716,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 70.7,
-      "prob_draw": 19.8,
-      "prob_away": 9.5,
+      "prob_home": 67.5,
+      "prob_draw": 22.9,
+      "prob_away": 9.6,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 厄瓜多尔-1.0",
@@ -21739,17 +21739,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 31.3
+          "prob": 31.4
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 28.2
+          "prob": 28.3
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 15.2
+          "prob": 14.9
         },
         {
           "home": 1,
@@ -21848,9 +21848,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 17.2,
-      "prob_draw": 22.0,
-      "prob_away": 60.8,
+      "prob_home": 17.1,
+      "prob_draw": 23.5,
+      "prob_away": 59.4,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 突尼斯+1.0",
@@ -21871,17 +21871,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 30.6
+          "prob": 30.7
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 25.4
+          "prob": 25.5
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 12.5
+          "prob": 12.3
         },
         {
           "home": 1,
@@ -21980,9 +21980,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 76.4,
-      "prob_draw": 15.8,
-      "prob_away": 7.8,
+      "prob_home": 76.0,
+      "prob_draw": 16.1,
+      "prob_away": 7.9,
       "prob_under_25": 67.7,
       "prob_over_25": 32.3,
       "asian_handicap": "亚盘: 西班牙-1.5",
@@ -22004,17 +22004,17 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 24.7
+          "prob": 25.9
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 21.3
+          "prob": 20.8
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 19.0
+          "prob": 18.7
         },
         {
           "home": 3,
@@ -22024,7 +22024,7 @@
         {
           "home": 1,
           "away": 1,
-          "prob": 6.1
+          "prob": 5.9
         }
       ],
       "dimensions": [
@@ -22113,9 +22113,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 69.3,
-      "prob_draw": 18.1,
-      "prob_away": 12.6,
+      "prob_home": 68.6,
+      "prob_draw": 17.9,
+      "prob_away": 13.4,
       "prob_under_25": 71.6,
       "prob_over_25": 28.4,
       "asian_handicap": "亚盘: 比利时-1.5",
@@ -22136,22 +22136,22 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 24.2
+          "prob": 25.1
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 22.6
+          "prob": 22.3
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 16.3
+          "prob": 16.1
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 9.0
+          "prob": 8.7
         },
         {
           "home": 0,
@@ -22245,9 +22245,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 74.7,
-      "prob_draw": 17.0,
-      "prob_away": 8.4,
+      "prob_home": 74.3,
+      "prob_draw": 16.7,
+      "prob_away": 9.0,
       "prob_under_25": 70.8,
       "prob_over_25": 29.2,
       "asian_handicap": "亚盘: 乌拉圭-1.5",
@@ -22268,27 +22268,27 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 26.0
+          "prob": 27.2
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 21.8
+          "prob": 21.5
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 20.0
+          "prob": 19.6
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 9.2
+          "prob": 9.1
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 6.3
+          "prob": 6.1
         }
       ],
       "dimensions": [
@@ -22377,9 +22377,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 18.7,
-      "prob_draw": 23.4,
-      "prob_away": 57.9,
+      "prob_home": 16.4,
+      "prob_draw": 28.1,
+      "prob_away": 55.5,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 新西兰+0.5",
@@ -22400,17 +22400,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 34.3
+          "prob": 34.7
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 25.1
+          "prob": 24.6
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 10.7
+          "prob": 10.4
         },
         {
           "home": 1,
@@ -22420,7 +22420,7 @@
         {
           "home": 1,
           "away": 1,
-          "prob": 8.7
+          "prob": 9.0
         }
       ],
       "dimensions": [
@@ -22509,9 +22509,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 72.7,
-      "prob_draw": 17.1,
-      "prob_away": 10.2,
+      "prob_home": 72.5,
+      "prob_draw": 17.4,
+      "prob_away": 10.1,
       "prob_under_25": 68.4,
       "prob_over_25": 31.6,
       "asian_handicap": "亚盘: 阿根廷-1.0",
@@ -22532,17 +22532,17 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 23.5
+          "prob": 23.6
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 19.6
+          "prob": 19.7
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 18.4
+          "prob": 18.0
         },
         {
           "home": 3,
@@ -22552,7 +22552,7 @@
         {
           "home": 1,
           "away": 1,
-          "prob": 8.3
+          "prob": 8.4
         }
       ],
       "dimensions": [
@@ -22641,9 +22641,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 79.5,
-      "prob_draw": 13.7,
-      "prob_away": 6.8,
+      "prob_home": 77.8,
+      "prob_draw": 15.1,
+      "prob_away": 7.1,
       "prob_under_25": 60.8,
       "prob_over_25": 39.2,
       "asian_handicap": "亚盘: 法国-1.5",
@@ -22662,29 +22662,29 @@
       ],
       "score_probs": [
         {
-          "home": 2,
-          "away": 0,
-          "prob": 22.9
-        },
-        {
           "home": 1,
           "away": 0,
-          "prob": 21.4
+          "prob": 22.6
         },
         {
-          "home": 0,
+          "home": 2,
           "away": 0,
-          "prob": 14.1
+          "prob": 22.4
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 13.9
+          "prob": 13.8
+        },
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 13.8
         },
         {
           "home": 4,
           "away": 0,
-          "prob": 6.4
+          "prob": 6.3
         }
       ],
       "dimensions": [
@@ -22773,9 +22773,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 19.1,
-      "prob_draw": 21.3,
-      "prob_away": 59.5,
+      "prob_home": 16.7,
+      "prob_draw": 25.1,
+      "prob_away": 58.2,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 挪威+0.5",
@@ -22796,17 +22796,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 27.1
+          "prob": 27.2
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 24.7
+          "prob": 24.8
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 13.7
+          "prob": 13.4
         },
         {
           "home": 1,
@@ -22905,9 +22905,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 17.6,
-      "prob_draw": 23.9,
-      "prob_away": 58.5,
+      "prob_home": 16.7,
+      "prob_draw": 29.5,
+      "prob_away": 53.8,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 约旦+0.5",
@@ -22928,27 +22928,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 36.3
+          "prob": 36.7
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 24.1
+          "prob": 23.7
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 11.1
-        },
-        {
-          "home": 0,
-          "away": 2,
-          "prob": 9.2
+          "prob": 11.0
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.8
+          "prob": 9.1
+        },
+        {
+          "home": 0,
+          "away": 2,
+          "prob": 8.9
         }
       ],
       "dimensions": [
@@ -23037,9 +23037,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 76.5,
-      "prob_draw": 16.0,
-      "prob_away": 7.5,
+      "prob_home": 73.4,
+      "prob_draw": 18.3,
+      "prob_away": 8.3,
       "prob_under_25": 68.3,
       "prob_over_25": 31.7,
       "asian_handicap": "亚盘: 葡萄牙-1.5",
@@ -23060,17 +23060,17 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 25.0
+          "prob": 26.1
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 21.1
+          "prob": 20.6
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 19.5
+          "prob": 19.2
         },
         {
           "home": 3,
@@ -23080,7 +23080,7 @@
         {
           "home": 1,
           "away": 1,
-          "prob": 6.1
+          "prob": 5.9
         }
       ],
       "dimensions": [
@@ -23169,9 +23169,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 73.5,
-      "prob_draw": 17.2,
-      "prob_away": 9.3,
+      "prob_home": 74.3,
+      "prob_draw": 16.8,
+      "prob_away": 8.9,
       "prob_under_25": 71.0,
       "prob_over_25": 29.0,
       "asian_handicap": "亚盘: 英格兰-1.5",
@@ -23192,17 +23192,17 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 26.2
+          "prob": 27.3
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 22.1
+          "prob": 21.8
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 19.9
+          "prob": 19.5
         },
         {
           "home": 3,
@@ -23212,7 +23212,7 @@
         {
           "home": 1,
           "away": 1,
-          "prob": 6.3
+          "prob": 6.1
         }
       ],
       "dimensions": [
@@ -23301,9 +23301,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 12.3,
-      "prob_draw": 20.0,
-      "prob_away": 67.7,
+      "prob_home": 9.5,
+      "prob_draw": 19.2,
+      "prob_away": 71.3,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 巴拿马+1.0",
@@ -23324,27 +23324,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 28.0
+          "prob": 27.7
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 25.3
+          "prob": 26.2
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 13.9
+          "prob": 13.6
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.9
+          "prob": 8.6
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 8.0
+          "prob": 8.1
         }
       ],
       "dimensions": [
@@ -23433,9 +23433,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 71.5,
-      "prob_draw": 18.1,
-      "prob_away": 10.4,
+      "prob_home": 71.8,
+      "prob_draw": 17.9,
+      "prob_away": 10.3,
       "prob_under_25": 71.2,
       "prob_over_25": 28.8,
       "asian_handicap": "亚盘: 哥伦比亚-1.0",
@@ -23456,17 +23456,17 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 24.6
+          "prob": 24.7
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 22.3
+          "prob": 22.4
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 17.3
+          "prob": 17.0
         },
         {
           "home": 1,
@@ -23565,9 +23565,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 67.5,
-      "prob_draw": 19.1,
-      "prob_away": 13.3,
+      "prob_home": 66.9,
+      "prob_draw": 18.9,
+      "prob_away": 14.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 瑞士-1.0",
@@ -23588,17 +23588,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 29.4
+          "prob": 29.6
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 28.0
+          "prob": 28.1
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 16.2
+          "prob": 15.9
         },
         {
           "home": 1,
@@ -23697,9 +23697,9 @@
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 32.9,
-      "prob_draw": 28.1,
-      "prob_away": 39.0,
+      "prob_home": 30.5,
+      "prob_draw": 34.6,
+      "prob_away": 34.9,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 波黑-0.5",
@@ -23735,12 +23735,12 @@
         {
           "home": 1,
           "away": 1,
-          "prob": 6.4
+          "prob": 6.5
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 4.9
+          "prob": 4.8
         }
       ],
       "dimensions": [
@@ -23829,9 +23829,9 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 12.6,
-      "prob_draw": 18.3,
-      "prob_away": 69.0,
+      "prob_home": 9.5,
+      "prob_draw": 16.6,
+      "prob_away": 73.9,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 苏格兰+1.0",
@@ -23852,22 +23852,22 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 23.4
+          "prob": 24.5
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 19.8
+          "prob": 19.5
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 18.0
+          "prob": 17.7
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.5
+          "prob": 8.2
         },
         {
           "home": 0,
@@ -23961,9 +23961,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 74.4,
-      "prob_draw": 17.6,
-      "prob_away": 8.0,
+      "prob_home": 72.8,
+      "prob_draw": 18.4,
+      "prob_away": 8.9,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 摩洛哥-1.5",
@@ -23984,27 +23984,27 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 26.8
+          "prob": 27.8
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 23.7
+          "prob": 23.4
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 19.1
+          "prob": 18.7
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 8.2
+          "prob": 8.1
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 6.4
+          "prob": 6.2
         }
       ],
       "dimensions": [
@@ -24093,9 +24093,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 18.4,
-      "prob_draw": 20.3,
-      "prob_away": 61.3,
+      "prob_home": 16.5,
+      "prob_draw": 20.9,
+      "prob_away": 62.6,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 捷克+1.0",
@@ -24116,22 +24116,22 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 25.3
+          "prob": 25.4
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 23.2
+          "prob": 23.3
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 13.1
+          "prob": 12.8
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.4
+          "prob": 10.5
         },
         {
           "home": 1,
@@ -24225,9 +24225,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 20.1,
-      "prob_draw": 23.0,
-      "prob_away": 56.9,
+      "prob_home": 17.5,
+      "prob_draw": 26.5,
+      "prob_away": 56.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 南非+0.5",
@@ -24248,17 +24248,17 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 34.5
+          "prob": 34.6
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 25.0
+          "prob": 25.1
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 10.6
+          "prob": 10.3
         },
         {
           "home": 1,
@@ -24357,9 +24357,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 15.0,
-      "prob_draw": 21.6,
-      "prob_away": 63.5,
+      "prob_home": 12.6,
+      "prob_draw": 21.4,
+      "prob_away": 66.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 库拉索+1.0",
@@ -24380,27 +24380,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 29.1
+          "prob": 29.2
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 25.4
+          "prob": 25.5
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 13.3
+          "prob": 13.1
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.9
+          "prob": 9.0
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 8.3
+          "prob": 8.4
         }
       ],
       "dimensions": [
@@ -24489,9 +24489,9 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 18.0,
-      "prob_draw": 19.0,
-      "prob_away": 63.0,
+      "prob_home": 15.6,
+      "prob_draw": 21.5,
+      "prob_away": 62.9,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 厄瓜多尔+1.0",
@@ -24513,17 +24513,17 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 24.1
+          "prob": 24.2
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 21.7
+          "prob": 21.8
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 17.0
+          "prob": 16.7
         },
         {
           "home": 1,
@@ -24619,12 +24619,12 @@
         "fifa_rank": 32,
         "elo": 1698.6
       },
-      "predicted_score": "1 : 0",
+      "predicted_score": "1 : 1",
       "score_home": 1,
-      "score_away": 0,
-      "prob_home": 43.2,
-      "prob_draw": 25.9,
-      "prob_away": 30.9,
+      "score_away": 1,
+      "prob_home": 38.7,
+      "prob_draw": 33.8,
+      "prob_away": 27.5,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
@@ -24645,27 +24645,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 23.1
+          "prob": 23.6
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.7
-        },
-        {
-          "home": 0,
-          "away": 1,
-          "prob": 13.7
+          "prob": 17.2
         },
         {
           "home": 1,
+          "away": 1,
+          "prob": 13.8
+        },
+        {
+          "home": 0,
           "away": 1,
           "prob": 13.4
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 8.2
+          "prob": 7.9
         }
       ],
       "dimensions": [
@@ -24754,9 +24754,9 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 11.4,
-      "prob_draw": 17.5,
-      "prob_away": 71.1,
+      "prob_home": 9.7,
+      "prob_draw": 16.1,
+      "prob_away": 74.2,
       "prob_under_25": 69.9,
       "prob_over_25": 30.1,
       "asian_handicap": "亚盘: 突尼斯+1.0",
@@ -24777,27 +24777,27 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 22.4
+          "prob": 23.5
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 19.0
+          "prob": 18.7
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 17.6
+          "prob": 17.3
         },
         {
           "home": 0,
           "away": 3,
-          "prob": 9.5
+          "prob": 9.4
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.2
+          "prob": 8.0
         }
       ],
       "dimensions": [
@@ -24886,9 +24886,9 @@
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 22.3,
-      "prob_draw": 20.7,
-      "prob_away": 57.0,
+      "prob_home": 19.9,
+      "prob_draw": 25.0,
+      "prob_away": 55.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 土耳其+0.5",
@@ -24909,12 +24909,12 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 20.2
+          "prob": 20.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 19.4
+          "prob": 19.5
         },
         {
           "home": 1,
@@ -24924,7 +24924,7 @@
         {
           "home": 0,
           "away": 2,
-          "prob": 11.7
+          "prob": 11.5
         },
         {
           "home": 1,
@@ -25015,12 +25015,12 @@
         "fifa_rank": 24,
         "elo": 1678.9
       },
-      "predicted_score": "0 : 0",
-      "score_home": 0,
-      "score_away": 0,
-      "prob_home": 19.5,
-      "prob_draw": 24.2,
-      "prob_away": 56.3,
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 18.1,
+      "prob_draw": 32.8,
+      "prob_away": 49.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
@@ -25041,12 +25041,12 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 37.1
+          "prob": 37.5
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 23.8
+          "prob": 23.4
         },
         {
           "home": 1,
@@ -25056,12 +25056,12 @@
         {
           "home": 1,
           "away": 1,
-          "prob": 8.8
+          "prob": 9.1
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 8.7
+          "prob": 8.5
         }
       ],
       "dimensions": [
@@ -25150,9 +25150,9 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 13.1,
-      "prob_draw": 18.6,
-      "prob_away": 68.3,
+      "prob_home": 10.8,
+      "prob_draw": 17.6,
+      "prob_away": 71.7,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 挪威+1.0",
@@ -25173,27 +25173,27 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 23.9
+          "prob": 24.0
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 21.0
+          "prob": 21.1
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 17.5
+          "prob": 17.1
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.6
+          "prob": 8.7
         },
         {
           "home": 0,
           "away": 3,
-          "prob": 7.6
+          "prob": 7.7
         }
       ],
       "dimensions": [
@@ -25282,9 +25282,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 77.0,
-      "prob_draw": 15.8,
-      "prob_away": 7.2,
+      "prob_home": 77.4,
+      "prob_draw": 14.9,
+      "prob_away": 7.7,
       "prob_under_25": 67.8,
       "prob_over_25": 32.2,
       "asian_handicap": "亚盘: 塞内加尔-1.5",
@@ -25305,27 +25305,27 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 24.7
+          "prob": 25.9
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 21.2
+          "prob": 20.8
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 19.1
+          "prob": 18.8
         },
         {
           "home": 3,
           "away": 0,
-          "prob": 10.7
+          "prob": 10.6
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 6.1
+          "prob": 5.9
         }
       ],
       "dimensions": [
@@ -25411,12 +25411,12 @@
         "fifa_rank": 3,
         "elo": 1976.4
       },
-      "predicted_score": "0 : 0",
-      "score_home": 0,
-      "score_away": 0,
-      "prob_home": 30.7,
-      "prob_draw": 24.6,
-      "prob_away": 44.7,
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 26.8,
+      "prob_draw": 30.5,
+      "prob_away": 42.7,
       "prob_under_25": 70.4,
       "prob_over_25": 29.6,
       "asian_handicap": "亚盘: 平手",
@@ -25437,27 +25437,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 15.9
+          "prob": 16.4
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 15.2
+          "prob": 14.7
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 14.2
+          "prob": 14.6
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 10.9
+          "prob": 10.7
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 9.4
+          "prob": 9.2
         }
       ],
       "dimensions": [
@@ -25546,9 +25546,9 @@
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 37.1,
-      "prob_draw": 30.2,
-      "prob_away": 32.7,
+      "prob_home": 31.5,
+      "prob_draw": 42.0,
+      "prob_away": 26.6,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 佛得角-0.5",
@@ -25569,27 +25569,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 46.9
+          "prob": 47.2
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 19.5
+          "prob": 19.2
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 15.1
+          "prob": 15.0
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 7.3
+          "prob": 7.5
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 4.4
+          "prob": 4.3
         }
       ],
       "dimensions": [
@@ -25675,12 +25675,12 @@
         "fifa_rank": 20,
         "elo": 1718.6
       },
-      "predicted_score": "0 : 0",
-      "score_home": 0,
-      "score_away": 0,
-      "prob_home": 25.1,
-      "prob_draw": 26.2,
-      "prob_away": 48.7,
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 22.3,
+      "prob_draw": 34.2,
+      "prob_away": 43.4,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
@@ -25701,27 +25701,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 36.5
+          "prob": 36.9
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 22.5
+          "prob": 22.1
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 12.7
+          "prob": 12.6
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 9.4
+          "prob": 9.7
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 7.9
+          "prob": 7.7
         }
       ],
       "dimensions": [
@@ -25810,9 +25810,9 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 9.5,
-      "prob_draw": 16.6,
-      "prob_away": 73.9,
+      "prob_home": 7.2,
+      "prob_draw": 15.5,
+      "prob_away": 77.2,
       "prob_under_25": 66.9,
       "prob_over_25": 33.1,
       "asian_handicap": "亚盘: 新西兰+1.0",
@@ -25833,27 +25833,27 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 21.1
+          "prob": 22.3
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 19.8
+          "prob": 19.4
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 15.5
+          "prob": 15.2
         },
         {
           "home": 0,
           "away": 3,
-          "prob": 10.8
+          "prob": 10.7
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 7.9
+          "prob": 7.6
         }
       ],
       "dimensions": [
@@ -25942,9 +25942,9 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 10.4,
-      "prob_draw": 18.5,
-      "prob_away": 71.2,
+      "prob_home": 7.7,
+      "prob_draw": 16.8,
+      "prob_away": 75.5,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 巴拿马+1.0",
@@ -25966,27 +25966,27 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 24.0
+          "prob": 25.0
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 21.3
+          "prob": 21.0
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 17.3
+          "prob": 17.0
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.7
+          "prob": 8.4
         },
         {
           "home": 0,
           "away": 3,
-          "prob": 7.5
+          "prob": 7.4
         }
       ],
       "dimensions": [
@@ -26075,9 +26075,9 @@
       "predicted_score": "2 : 0",
       "score_home": 2,
       "score_away": 0,
-      "prob_home": 71.2,
-      "prob_draw": 18.5,
-      "prob_away": 10.2,
+      "prob_home": 72.5,
+      "prob_draw": 17.4,
+      "prob_away": 10.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 克罗地亚-1.0",
@@ -26098,17 +26098,17 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 26.4
+          "prob": 26.5
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 25.5
+          "prob": 25.6
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 17.0
+          "prob": 16.6
         },
         {
           "home": 1,
@@ -26204,12 +26204,12 @@
         "fifa_rank": 6,
         "elo": 1944.3
       },
-      "predicted_score": "0 : 0",
-      "score_home": 0,
-      "score_away": 0,
-      "prob_home": 28.9,
-      "prob_draw": 23.7,
-      "prob_away": 47.4,
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 26.4,
+      "prob_draw": 30.7,
+      "prob_away": 42.9,
       "prob_under_25": 71.6,
       "prob_over_25": 28.4,
       "asian_handicap": "亚盘: 平手",
@@ -26230,27 +26230,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 16.7
+          "prob": 17.2
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 15.8
+          "prob": 15.3
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 14.0
+          "prob": 14.5
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 11.0
+          "prob": 10.8
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 9.6
+          "prob": 9.3
         }
       ],
       "dimensions": [
@@ -26339,9 +26339,9 @@
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 41.9,
-      "prob_draw": 28.0,
-      "prob_away": 30.1,
+      "prob_home": 35.1,
+      "prob_draw": 38.9,
+      "prob_away": 26.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
@@ -26362,27 +26362,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 35.8
+          "prob": 36.2
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 20.1
+          "prob": 19.8
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 15.1
+          "prob": 14.9
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.2
+          "prob": 10.5
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 6.4
+          "prob": 6.2
         }
       ],
       "dimensions": [
@@ -26468,12 +26468,12 @@
         "fifa_rank": 22,
         "elo": 1735.0
       },
-      "predicted_score": "0 : 0",
-      "score_home": 0,
-      "score_away": 0,
-      "prob_home": 23.1,
-      "prob_draw": 23.4,
-      "prob_away": 53.5,
+      "predicted_score": "1 : 1",
+      "score_home": 1,
+      "score_away": 1,
+      "prob_home": 21.3,
+      "prob_draw": 31.5,
+      "prob_away": 47.2,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 阿尔及利亚+0.5",
@@ -26494,27 +26494,27 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 31.2
+          "prob": 31.7
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 21.3
+          "prob": 20.9
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 13.1
+          "prob": 13.0
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.9
+          "prob": 11.3
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 8.5
+          "prob": 8.2
         }
       ],
       "dimensions": [
@@ -26603,9 +26603,9 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 9.0,
-      "prob_draw": 16.5,
-      "prob_away": 74.5,
+      "prob_home": 6.6,
+      "prob_draw": 15.5,
+      "prob_away": 77.9,
       "prob_under_25": 66.7,
       "prob_over_25": 33.3,
       "asian_handicap": "亚盘: 约旦+1.0",
@@ -26626,27 +26626,27 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 21.0
+          "prob": 22.2
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 19.9
+          "prob": 19.5
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 15.3
+          "prob": 15.0
         },
         {
           "home": 0,
           "away": 3,
-          "prob": 10.9
+          "prob": 10.8
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 7.8
+          "prob": 7.6
         }
       ],
       "dimensions": [

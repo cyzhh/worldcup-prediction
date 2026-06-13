@@ -17,7 +17,9 @@ from model_config import ModelConfig, elo_gap_bucket, save_config
 from openfootball_loader import build_h2h_from_history
 from elo_history import parse_cup_txt_results
 from predictor import predict_match, result_to_dict
-from betting_sim import simulate_by_tournament
+from betting_sim import simulate_betting_report
+
+simulate_by_tournament = simulate_betting_report
 from standings import compute_standings, motivation_context
 from wc_logging import setup_logging
 
@@ -180,81 +182,166 @@ def aggregate_metrics(all_preds: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def _score_for_calibration(metrics: dict[str, Any]) -> float:
-    """综合评分：胜平负准确率为主，Brier 为辅。"""
-    return metrics["outcome_accuracy"] * 0.65 + (1.0 - metrics["brier_score"] / 2.0) * 0.35
+def _walk_forward_cfg(cfg: ModelConfig) -> ModelConfig:
+    """回测/校准用：禁用 shrinkage 与全样本先验，避免泄露。"""
+    return ModelConfig.from_dict({**cfg.to_dict(), "historical_shrinkage": 0.0, "wdl_priors_by_elo_gap": {}})
 
 
-def calibrate_params() -> ModelConfig:
-    """网格搜索关键超参，以五届世界杯合并回测表现最优为准。"""
+def _score_for_calibration(
+    metrics: dict[str, Any],
+    preds: list[dict[str, Any]] | None = None,
+    cfg: ModelConfig | None = None,
+) -> float:
+    """校准目标：优先单场 1X2 虚拟 ROI/利润。"""
+    draw_f1 = float(metrics.get("draw_f1") or 0.0)
+    acc = float(metrics["outcome_accuracy"])
+    brier = float(metrics["brier_score"])
+    roi_score = profit_score = 0.0
+    if preds is not None and cfg is not None:
+        flat = simulate_betting_report(preds, config=cfg)["flat_1x2"]
+        flat_roi = float(flat.get("overall_roi") or 0.0)
+        flat_profit = float(flat.get("overall_profit_all_tournaments") or 0.0)
+        roi_score = max(0.0, min(1.0, (flat_roi + 0.05) / 0.20))
+        profit_score = max(0.0, min(1.0, (flat_profit + 500.0) / 3000.0))
+    return roi_score * 0.35 + profit_score * 0.20 + acc * 0.30 + (1.0 - brier / 2.0) * 0.10 + draw_f1 * 0.05
+
+
+def _evaluate_config(cfg: ModelConfig, tournaments, meta_by_id) -> tuple[float, dict[str, Any], list[dict[str, Any]]]:
+    eval_cfg = _walk_forward_cfg(cfg)
+    preds: list[dict[str, Any]] = []
+    for td in tournaments:
+        tmeta = meta_by_id[td.meta["id"]]
+        preds.extend(run_tournament_backtest(td, tmeta, eval_cfg))
+    metrics = aggregate_metrics(preds)
+    flat = simulate_betting_report(preds, config=eval_cfg)["flat_1x2"]
+    metrics["flat_betting_roi"] = flat.get("overall_roi")
+    metrics["flat_betting_profit"] = flat.get("overall_profit_all_tournaments")
+    return _score_for_calibration(metrics, preds, eval_cfg), metrics, preds
+
+
+def calibrate_params(fast: bool = False) -> ModelConfig:
     tournaments = load_all_tournaments()
     meta_by_id = {t["id"]: t for t in TOURNAMENTS}
+
+    if fast:
+        cfg = ModelConfig()
+        _, metrics, _ = _evaluate_config(cfg, tournaments, meta_by_id)
+        cfg.wdl_priors_by_elo_gap = metrics.get("wdl_priors_by_elo_gap", {})
+        cfg.calibrated_at = datetime.now(timezone.utc).isoformat()
+        cfg.backtest_summary = {
+            "composite_score": round(_score_for_calibration(metrics), 4),
+            **{k: v for k, v in metrics.items() if k != "wdl_priors_by_elo_gap"},
+            "calibration_mode": "fast_defaults",
+            "calibration_objective": "flat_1x2_roi_weighted",
+        }
+        return cfg
 
     best_cfg = ModelConfig()
     best_score = -1.0
     best_metrics: dict[str, Any] = {}
+    total_phase1 = 5 * 4 * 4 * 4
+    done = 0
+    draw_bases = [0.19, 0.21, 0.23, 0.25, 0.27]
+    round1_boosts = [0.03, 0.05, 0.07, 0.09]
+    shrinkages = [0.06, 0.10, 0.14, 0.18]
+    draw_blends = [0.25, 0.35, 0.45, 0.55]
 
-    draw_bases = [0.18, 0.20, 0.22, 0.24, 0.26]
-    round1_boosts = [0.02, 0.04, 0.06]
-    shrinkages = [0.0, 0.08, 0.12, 0.16]
-    elo_strongs = [0.60, 0.65, 0.68, 0.72]
-    draw_blends = [0.35, 0.45, 0.55]
-
+    print(f"    阶段1/2：核心参数 ({total_phase1} 组，目标=1X2 ROI)...")
     for db in draw_bases:
         for rb in round1_boosts:
             for sh in shrinkages:
-                for es in elo_strongs:
-                    for dbl in draw_blends:
-                        cfg = ModelConfig(
-                            group_stage_draw_base=db,
-                            group_stage_round1_draw_boost=rb,
-                            historical_shrinkage=sh,
-                            elo_blend_strong=es,
-                            draw_mass_blend=dbl,
+                for dbl in draw_blends:
+                    done += 1
+                    cfg = ModelConfig(
+                        group_stage_draw_base=db,
+                        group_stage_round1_draw_boost=rb,
+                        historical_shrinkage=sh,
+                        draw_mass_blend=dbl,
+                    )
+                    score, metrics, _ = _evaluate_config(cfg, tournaments, meta_by_id)
+                    if score > best_score:
+                        best_score = score
+                        best_cfg = cfg
+                        best_metrics = metrics
+                        print(
+                            f"      [{done}/{total_phase1}] score={score:.4f} · "
+                            f"准确率 {metrics['outcome_accuracy']:.1%} · "
+                            f"1X2 ROI {metrics.get('flat_betting_roi', 0):.1%} · "
+                            f"利润 {metrics.get('flat_betting_profit', 0):+.0f}"
                         )
-                        preds: list[dict[str, Any]] = []
-                        for td in tournaments:
-                            tmeta = meta_by_id[td.meta["id"]]
-                            preds.extend(run_tournament_backtest(td, tmeta, cfg))
-                        metrics = aggregate_metrics(preds)
-                        score = _score_for_calibration(metrics)
-                        if score > best_score:
-                            best_score = score
-                            best_cfg = cfg
-                            best_metrics = metrics
 
+    dixon_rhos = [-0.06, -0.08, -0.10, -0.12]
+    player_weights = [0.04, 0.06, 0.08, 0.10]
+    upset_boosts = [0.025, 0.035, 0.045]
+    phase2_cfg, phase2_score, phase2_metrics = best_cfg, best_score, best_metrics
+    print("    阶段2/2：Dixon/球员/冷门 (48 组)...")
+    for dr in dixon_rhos:
+        for pw in player_weights:
+            for ub in upset_boosts:
+                cfg = ModelConfig.from_dict(
+                    {
+                        **phase2_cfg.to_dict(),
+                        "dixon_coles_rho": dr,
+                        "dixon_rho_close": dr * 1.4,
+                        "dixon_rho_strong": dr * 0.6,
+                        "player_top5_weight": pw,
+                        "player_prob_weight": pw,
+                        "upset_prob_boost": ub,
+                    }
+                )
+                score, metrics, _ = _evaluate_config(cfg, tournaments, meta_by_id)
+                if score > phase2_score:
+                    phase2_score = score
+                    phase2_cfg = cfg
+                    phase2_metrics = metrics
+                    print(
+                        f"      新最优 score={score:.4f} · ROI {metrics.get('flat_betting_roi', 0):.1%} · "
+                        f"利润 {metrics.get('flat_betting_profit', 0):+.0f}"
+                    )
+
+    best_cfg = phase2_cfg
+    best_metrics = phase2_metrics
     best_cfg.wdl_priors_by_elo_gap = best_metrics.get("wdl_priors_by_elo_gap", {})
     if best_cfg.historical_shrinkage == 0.0 and best_cfg.wdl_priors_by_elo_gap:
-        best_cfg.historical_shrinkage = 0.08  # 仅用于 2026 前瞻预测，不参与回测评分
+        best_cfg.historical_shrinkage = 0.08
     best_cfg.calibrated_at = datetime.now(timezone.utc).isoformat()
     best_cfg.backtest_summary = {
-        "composite_score": round(best_score, 4),
+        "composite_score": round(phase2_score, 4),
         **{k: v for k, v in best_metrics.items() if k != "wdl_priors_by_elo_gap"},
+        "calibration_mode": "two_phase_grid",
+        "calibration_objective": "flat_1x2_roi_weighted",
     }
     return best_cfg
 
 
-def run_full_backtest(calibrate: bool = True) -> dict[str, Any]:
+def run_full_backtest(calibrate: bool = True, *, fast: bool = False) -> dict[str, Any]:
     tournaments = load_all_tournaments()
     meta_by_id = {t["id"]: t for t in TOURNAMENTS}
 
     if calibrate:
         log.info("历史回测参数校准（1998–2022 walk-forward）")
         print(">>> 历史回测参数校准（1998–2022 七届 walk-forward，ELO 先验自 1986 起）...")
-        cfg = calibrate_params()
+        cfg = calibrate_params(fast=fast)
         save_config(cfg)
         print(f"    最优平局基准: {cfg.group_stage_draw_base}, shrinkage: {cfg.historical_shrinkage}")
+        bs = cfg.backtest_summary or {}
+        if bs.get("flat_betting_roi") is not None:
+            print(
+                f"    校准目标(1X2): ROI {bs['flat_betting_roi']:.1%} · "
+                f"利润 {bs.get('flat_betting_profit', 0):+.0f} 元"
+            )
     else:
         from model_config import load_config
 
         cfg = load_config(force_reload=True)
+        print(">>> 使用已保存 model_calibration.json（跳过网格搜索）")
 
     by_tournament: dict[str, Any] = {}
     all_preds: list[dict[str, Any]] = []
+    eval_cfg = _walk_forward_cfg(cfg)
 
     for td in tournaments:
         tmeta = meta_by_id[td.meta["id"]]
-        eval_cfg = ModelConfig.from_dict({**cfg.to_dict(), "historical_shrinkage": 0.0, "wdl_priors_by_elo_gap": {}})
         preds = run_tournament_backtest(td, tmeta, eval_cfg)
         metrics = aggregate_metrics(preds)
         by_tournament[tmeta["label"]] = metrics
@@ -268,7 +355,7 @@ def run_full_backtest(calibrate: bool = True) -> dict[str, Any]:
         )
 
     overall = aggregate_metrics(all_preds)
-    betting = simulate_by_tournament(all_preds, config=cfg)
+    betting = simulate_betting_report(all_preds, config=eval_cfg)
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "method": "walk-forward group stage backtest (1998-2022, ELO priors from 1986+)",
@@ -288,15 +375,15 @@ def run_full_backtest(calibrate: bool = True) -> dict[str, Any]:
         f"平局 F1 {overall.get('draw_f1', 0):.3f} · "
         f"Brier {overall['brier_score']:.3f} · 实际平局率 {overall['draw_rate_actual']:.1%}"
     )
-    upset_rate = overall.get("upset_capture_rate")
-    if upset_rate is not None:
-        print(
-            f"冷门捕捉率 {upset_rate:.1%} "
-            f"({overall.get('upset_captured', 0)}/{overall.get('upset_matches', 0)} 场弱队胜)"
-        )
+    flat = betting.get("flat_1x2") or {}
+    tiered = betting.get("tiered_curated") or {}
     print(
-        f"虚拟投注(每届2000元/场50元): 七届合计盈亏 {betting['overall_profit_all_tournaments']:+.0f} 元 · "
-        f"ROI {betting['overall_roi']:.1%}"
+        f"虚拟投注 A（单场1X2）: 七届合计 {flat.get('overall_profit_all_tournaments', 0):+.0f} 元 · "
+        f"ROI {flat.get('overall_roi', 0):.1%}"
+    )
+    print(
+        f"虚拟投注 B（三档精选）: 七届合计 {tiered.get('overall_profit_all_tournaments', 0):+.0f} 元 · "
+        f"ROI {tiered.get('overall_roi', 0):.1%}"
     )
     return report
 
@@ -304,8 +391,12 @@ def run_full_backtest(calibrate: bool = True) -> dict[str, Any]:
 def main() -> None:
     import sys
 
-    fast = "--fast" in sys.argv
-    run_full_backtest(calibrate=not fast)
+    if "--eval-only" in sys.argv:
+        run_full_backtest(calibrate=False)
+    elif "--fast" in sys.argv:
+        run_full_backtest(calibrate=True, fast=True)
+    else:
+        run_full_backtest(calibrate=True, fast=False)
 
 
 if __name__ == "__main__":
