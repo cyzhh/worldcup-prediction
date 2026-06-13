@@ -188,6 +188,65 @@ def score_risk(team: dict[str, Any]) -> float:
     return _clamp(1.0 - team["squad"]["injury_risk"] * 0.6)
 
 
+def dixon_coles_tau(i: int, j: int, lam_h: float, lam_a: float, rho: float) -> float:
+    """Dixon-Coles 低比分修正因子（0-0 / 1-0 / 0-1 / 1-1）。"""
+    if i == 0 and j == 0:
+        return 1.0 - lam_h * lam_a * rho
+    if i == 0 and j == 1:
+        return 1.0 + lam_a * rho
+    if i == 1 and j == 0:
+        return 1.0 + lam_h * rho
+    if i == 1 and j == 1:
+        return 1.0 - rho
+    return 1.0
+
+
+def apply_player_calibration(
+    p_h: float,
+    p_d: float,
+    p_a: float,
+    home: dict[str, Any],
+    away: dict[str, Any],
+    config: ModelConfig,
+) -> tuple[float, float, float]:
+    """球员阵容深度差 → 胜平负二次微调（报告 3.4.2）。"""
+    sq_h = home["squad"].get("depth_score", 0.5)
+    sq_a = away["squad"].get("depth_score", 0.5)
+    delta = (sq_h - sq_a) * config.player_prob_weight
+    if abs(delta) < 0.005:
+        return p_h, p_d, p_a
+    p_h = p_h + delta * 0.65
+    p_a = p_a - delta * 0.65
+    p_d = p_d - abs(delta) * 0.08
+    t = p_h + p_d + p_a
+    return p_h / t, p_d / t, p_a / t
+
+
+def _round_dimension_weights(round_num: int, w: dict[str, float]) -> dict[str, float]:
+    """按小组赛轮次动态调整七维权重（报告 3.1.2）。"""
+    out = dict(w)
+    if round_num == 1:
+        out["form"] *= 0.85
+        out["tactical"] *= 0.90
+        out["fundamental"] *= 1.08
+        out["squad"] *= 1.10
+    elif round_num == 2:
+        out["form"] *= 1.12
+        out["tactical"] *= 1.08
+        out["motivation"] *= 1.15
+    elif round_num >= 3:
+        out["form"] *= 1.15
+        out["tactical"] *= 1.12
+        out["motivation"] *= 1.25
+        out["fundamental"] *= 0.92
+    return out
+
+
+def _renormalize_weights(w: dict[str, float]) -> dict[str, float]:
+    total = sum(w.values()) or 1.0
+    return {k: v / total for k, v in w.items()}
+
+
 def elo_win_prob(
     elo_home: float,
     elo_away: float,
@@ -363,15 +422,17 @@ def composite_strength(
 
     strength_gap_pct = abs(gap)
     w = dict(DIM_WEIGHTS)
+    w = _round_dimension_weights(round_num, w)
     if strength_gap_pct < 0.10:
-        w["tactical"] = 0.25
-        w["fundamental"] = 0.30
+        w["tactical"] = max(w["tactical"], 0.25)
+        w["fundamental"] = min(w["fundamental"], 0.30)
 
     risk_w = 0.05 + (home["squad"]["injury_risk"] + away["squad"]["injury_risk"]) * 0.08
     w["risk"] = min(risk_w, 0.12)
     scale = 1.0 - w["risk"]
     for k in ("fundamental", "form", "tactical", "squad", "environment", "motivation"):
         w[k] *= scale
+    w = _renormalize_weights(w)
 
     dims = [
         DimensionScore("基本面实力", fund_h, fund_a, w["fundamental"]),
@@ -412,12 +473,31 @@ def poisson_pmf(k: int, lam: float) -> float:
     return math.exp(-lam) * lam**k / math.factorial(k)
 
 
-def score_distribution(lam_h: float, lam_a: float, max_goals: int = 5) -> list[tuple[int, int, float]]:
-    scores: list[tuple[int, int, float]] = []
+def score_distribution(
+    lam_h: float,
+    lam_a: float,
+    max_goals: int = 5,
+    rho: float = -0.08,
+) -> list[tuple[int, int, float]]:
+    raw: list[tuple[int, int, float]] = []
+    total = 0.0
     for i in range(max_goals + 1):
         for j in range(max_goals + 1):
-            p = poisson_pmf(i, lam_h) * poisson_pmf(j, lam_a)
-            scores.append((i, j, p))
+            p = poisson_pmf(i, lam_h) * poisson_pmf(j, lam_a) * dixon_coles_tau(i, j, lam_h, lam_a, rho)
+            raw.append((i, j, p))
+            total += p
+    if total <= 0:
+        raw = []
+        total = 0.0
+        for i in range(max_goals + 1):
+            for j in range(max_goals + 1):
+                p = poisson_pmf(i, lam_h) * poisson_pmf(j, lam_a)
+                raw.append((i, j, p))
+                total += p
+        scores = [(i, j, p / total) for i, j, p in raw]
+        scores.sort(key=lambda x: x[2], reverse=True)
+        return scores
+    scores = [(i, j, p / total) for i, j, p in raw]
     scores.sort(key=lambda x: x[2], reverse=True)
     return scores
 
@@ -565,17 +645,20 @@ def predict_match(
 
     adj_elo_h = home["elo"] + strength_diff * 400
     adj_elo_a = away["elo"] - strength_diff * 400
+    if home["environment"].get("is_host"):
+        adj_elo_h += cfg.host_elo_bonus
     draw_factor = 0.02 if abs(strength_diff) < 0.08 else -0.01 if abs(strength_diff) > 0.15 else 0.0
     if match["round"] == 1:
         draw_factor += cfg.group_stage_round1_draw_boost * 0.5
     elo_wdl = elo_win_prob(adj_elo_h, adj_elo_a, draw_factor, config=cfg)
 
     lam_h, lam_a = expected_goals(strength_diff, home, away, match["round"])
-    scores = score_distribution(lam_h, lam_a)
+    scores = score_distribution(lam_h, lam_a, rho=cfg.dixon_coles_rho)
     poisson_wdl = wdl_from_score_matrix(scores)
     elo_w = cfg.elo_blend_strong if abs(strength_diff) > 0.12 else cfg.elo_blend_close
     p_h, p_d, p_a = blend_wdl(elo_wdl, poisson_wdl, elo_weight=elo_w, config=cfg, elo_diff=adj_elo_h - adj_elo_a)
     p_h, p_d, p_a = apply_upset_adjustment(p_h, p_d, p_a, adj_elo_h, adj_elo_a, cfg)
+    p_h, p_d, p_a = apply_player_calibration(p_h, p_d, p_a, home, away, cfg)
 
     score_h, score_a = pick_display_score(p_h, p_d, p_a, scores, strength_diff)
     under25 = prob_under_25(lam_h, lam_a, strength_diff, config=cfg)

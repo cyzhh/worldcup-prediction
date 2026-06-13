@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-13T09:05:55.278453+00:00",
+  "generated_at": "2026-06-13T09:14:57.549427+00:00",
   "method": "walk-forward group stage backtest (2006-2022)",
   "calibration": {
-    "group_stage_draw_base": 0.22,
+    "group_stage_draw_base": 0.2,
     "group_stage_round1_draw_boost": 0.02,
     "under_25_base": 0.55,
     "elo_blend_strong": 0.6,
@@ -11,6 +11,9 @@
     "upset_elo_threshold": 120.0,
     "upset_prob_boost": 0.035,
     "favorite_draw_penalty": 0.015,
+    "dixon_coles_rho": -0.08,
+    "player_prob_weight": 0.05,
+    "host_elo_bonus": 35.0,
     "wdl_priors_by_elo_gap": {
       "even": {
         "home": 0.4,
@@ -31,24 +34,24 @@
         "samples": 2
       }
     },
-    "calibrated_at": "2026-06-13T08:29:41.916964+00:00",
+    "calibrated_at": "2026-06-13T09:13:49.693656+00:00",
     "backtest_summary": {
-      "composite_score": 0.6314,
+      "composite_score": 0.6318,
       "matches": 240,
       "outcome_accuracy": 0.6125,
-      "exact_score_accuracy": 0.0875,
-      "brier_score": 0.6669,
-      "log_loss": 1.105,
+      "exact_score_accuracy": 0.0792,
+      "brier_score": 0.665,
+      "log_loss": 1.1016,
       "draw_rate_actual": 0.2208,
-      "draw_rate_predicted": 0.4417
+      "draw_rate_predicted": 0.4292
     }
   },
   "overall": {
     "matches": 240,
-    "outcome_accuracy": 0.6083,
-    "exact_score_accuracy": 0.0875,
-    "brier_score": 0.6672,
-    "log_loss": 1.1055,
+    "outcome_accuracy": 0.6125,
+    "exact_score_accuracy": 0.0792,
+    "brier_score": 0.6653,
+    "log_loss": 1.102,
     "draw_rate_actual": 0.2208,
     "draw_rate_predicted": 0.4417,
     "wdl_priors_by_elo_gap": {
@@ -77,8 +80,8 @@
       "matches": 48,
       "outcome_accuracy": 0.5,
       "exact_score_accuracy": 0.0625,
-      "brier_score": 0.6805,
-      "log_loss": 1.1192,
+      "brier_score": 0.6768,
+      "log_loss": 1.1134,
       "draw_rate_actual": 0.2292,
       "draw_rate_predicted": 1.0,
       "wdl_priors_by_elo_gap": {
@@ -93,11 +96,11 @@
     "2010 南非世界杯": {
       "matches": 48,
       "outcome_accuracy": 0.6875,
-      "exact_score_accuracy": 0.1458,
-      "brier_score": 0.6955,
-      "log_loss": 1.1458,
+      "exact_score_accuracy": 0.125,
+      "brier_score": 0.6943,
+      "log_loss": 1.1436,
       "draw_rate_actual": 0.2917,
-      "draw_rate_predicted": 0.2917,
+      "draw_rate_predicted": 0.2708,
       "wdl_priors_by_elo_gap": {
         "even": {
           "home": 0.3333,
@@ -116,11 +119,11 @@
     "2014 巴西世界杯": {
       "matches": 48,
       "outcome_accuracy": 0.6042,
-      "exact_score_accuracy": 0.0625,
-      "brier_score": 0.6177,
-      "log_loss": 1.0288,
+      "exact_score_accuracy": 0.0417,
+      "brier_score": 0.617,
+      "log_loss": 1.0276,
       "draw_rate_actual": 0.1875,
-      "draw_rate_predicted": 0.3125,
+      "draw_rate_predicted": 0.3333,
       "wdl_priors_by_elo_gap": {
         "slight": {
           "home": 0.3077,
@@ -138,12 +141,12 @@
     },
     "2018 俄罗斯世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.6667,
+      "outcome_accuracy": 0.6875,
       "exact_score_accuracy": 0.0833,
-      "brier_score": 0.6807,
-      "log_loss": 1.1357,
+      "brier_score": 0.6757,
+      "log_loss": 1.1253,
       "draw_rate_actual": 0.1875,
-      "draw_rate_predicted": 0.3333,
+      "draw_rate_predicted": 0.3542,
       "wdl_priors_by_elo_gap": {
         "even": {
           "home": 0.3636,
@@ -163,10 +166,10 @@
       "matches": 48,
       "outcome_accuracy": 0.5833,
       "exact_score_accuracy": 0.0833,
-      "brier_score": 0.6615,
-      "log_loss": 1.0979,
+      "brier_score": 0.6629,
+      "log_loss": 1.1,
       "draw_rate_actual": 0.2083,
-      "draw_rate_predicted": 0.2708,
+      "draw_rate_predicted": 0.25,
       "wdl_priors_by_elo_gap": {
         "even": {
           "home": 0.3448,
@@ -205,26 +208,26 @@
         "key": "GER",
         "code": "GER",
         "name": "Germany",
-        "fifa_rank": 28,
+        "fifa_rank": 30,
         "elo": 1500.0
       },
       "away": {
         "key": "CRC",
         "code": "CRC",
         "name": "Costa Rica",
-        "fifa_rank": 23,
+        "fifa_rank": 2,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 32.5,
-      "prob_draw": 37.4,
-      "prob_away": 30.1,
+      "prob_home": 32.7,
+      "prob_draw": 37.0,
+      "prob_away": 30.3,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 5 位（Germany #28 vs Costa Rica #23），纸面实力接近。",
+        "FIFA排名差距 28 位（Germany #30 vs Costa Rica #2），纸面实力主队略优。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Germany 2 次 vs Costa Rica 2 次。",
         "近10场战绩 Germany 4胜3平3负，Costa Rica 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -237,71 +240,71 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 33.5
-        },
-        {
-          "home": 1,
-          "away": 0,
-          "prob": 19.3
+          "prob": 34.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 17.4
+          "prob": 17.8
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 17.2
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.0
+          "prob": 10.8
         },
         {
-          "home": 2,
-          "away": 0,
-          "prob": 5.5
+          "home": 0,
+          "away": 2,
+          "prob": 5.2
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.465,
-          "away": 0.478,
-          "weight": 0.278184
+          "home": 0.46,
+          "away": 0.534,
+          "weight": 0.27249864281601516
         },
         {
           "name": "近期状态",
           "home": 0.512,
           "away": 0.512,
-          "weight": 0.23182
+          "weight": 0.19301987199467743
         },
         {
           "name": "战术风格",
           "home": 0.5,
           "away": 0.56,
-          "weight": 0.23182
+          "weight": 0.22708220234667933
         },
         {
           "name": "阵容深度",
           "home": 0.585,
           "away": 0.585,
-          "weight": 0.092728
+          "weight": 0.09991616903253892
         },
         {
           "name": "比赛环境",
           "home": 1.0,
           "away": 0.72,
-          "weight": 0.092728
+          "weight": 0.09083288093867174
         },
         {
           "name": "小组赛战意",
           "home": 0.5,
           "away": 0.5,
-          "weight": 0.046364
+          "weight": 0.04541644046933587
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.07272
+          "weight": 0.07123379240208146
         }
       ],
       "actual_score": "4 : 2",
@@ -327,26 +330,26 @@
         "key": "POL",
         "code": "POL",
         "name": "Poland",
-        "fifa_rank": 13,
+        "fifa_rank": 11,
         "elo": 1500.0
       },
       "away": {
         "key": "ECU",
         "code": "ECU",
         "name": "Ecuador",
-        "fifa_rank": 19,
+        "fifa_rank": 3,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 31.3,
-      "prob_draw": 37.4,
-      "prob_away": 31.3,
+      "prob_home": 30.4,
+      "prob_draw": 37.0,
+      "prob_away": 32.6,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 6 位（Poland #13 vs Ecuador #19），纸面实力接近。",
+        "FIFA排名差距 8 位（Poland #11 vs Ecuador #3），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Poland 2 次 vs Ecuador 2 次。",
         "近10场战绩 Poland 4胜3平3负，Ecuador 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -359,71 +362,71 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 33.5
-        },
-        {
-          "home": 1,
-          "away": 0,
-          "prob": 18.4
+          "prob": 34.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 18.2
+          "prob": 18.1
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 16.9
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.0
+          "prob": 10.8
         },
         {
-          "home": 2,
-          "away": 0,
-          "prob": 5.1
+          "home": 0,
+          "away": 2,
+          "prob": 5.4
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.505,
-          "away": 0.489,
-          "weight": 0.278184
+          "home": 0.51,
+          "away": 0.531,
+          "weight": 0.27249864281601516
         },
         {
           "name": "近期状态",
           "home": 0.512,
           "away": 0.512,
-          "weight": 0.23182
+          "weight": 0.19301987199467743
         },
         {
           "name": "战术风格",
           "home": 0.5,
           "away": 0.56,
-          "weight": 0.23182
+          "weight": 0.22708220234667933
         },
         {
           "name": "阵容深度",
           "home": 0.585,
           "away": 0.585,
-          "weight": 0.092728
+          "weight": 0.09991616903253892
         },
         {
           "name": "比赛环境",
           "home": 0.8,
           "away": 0.72,
-          "weight": 0.092728
+          "weight": 0.09083288093867174
         },
         {
           "name": "小组赛战意",
           "home": 0.5,
           "away": 0.5,
-          "weight": 0.046364
+          "weight": 0.04541644046933587
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.07272
+          "weight": 0.07123379240208146
         }
       ],
       "actual_score": "0 : 2",
@@ -449,26 +452,26 @@
         "key": "GER",
         "code": "GER",
         "name": "Germany",
-        "fifa_rank": 28,
+        "fifa_rank": 30,
         "elo": 1500.0
       },
       "away": {
         "key": "POL",
         "code": "POL",
         "name": "Poland",
-        "fifa_rank": 13,
+        "fifa_rank": 11,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 32.1,
-      "prob_draw": 36.0,
-      "prob_away": 31.9,
+      "prob_home": 33.9,
+      "prob_draw": 35.6,
+      "prob_away": 30.5,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 15 位（Germany #28 vs Poland #13），纸面实力主队略优。",
+        "FIFA排名差距 19 位（Germany #30 vs Poland #11），纸面实力主队略优。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Germany 2 次 vs Poland 2 次。",
         "近10场战绩 Germany 4胜3平3负，Poland 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -481,71 +484,71 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 31.0
-        },
-        {
-          "home": 1,
-          "away": 0,
-          "prob": 18.2
+          "prob": 31.9
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 18.1
+          "prob": 17.4
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 17.2
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.6
+          "prob": 11.5
         },
         {
-          "home": 2,
-          "away": 0,
+          "home": 0,
+          "away": 2,
           "prob": 5.4
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.465,
-          "away": 0.505,
-          "weight": 0.278184
+          "home": 0.46,
+          "away": 0.51,
+          "weight": 0.2573068908010733
         },
         {
           "name": "近期状态",
           "home": 0.512,
           "away": 0.512,
-          "weight": 0.23182
+          "weight": 0.2401530980810018
         },
         {
           "name": "战术风格",
           "home": 0.5,
           "away": 0.56,
-          "weight": 0.23182
+          "weight": 0.21442240900089443
         },
         {
           "name": "阵容深度",
           "home": 0.585,
           "away": 0.585,
-          "weight": 0.092728
+          "weight": 0.08576896360035778
         },
         {
           "name": "比赛环境",
           "home": 1.0,
           "away": 0.72,
-          "weight": 0.092728
+          "weight": 0.08576896360035778
         },
         {
           "name": "小组赛战意",
           "home": 0.5,
           "away": 0.5,
-          "weight": 0.046364
+          "weight": 0.04931715407020571
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.07272
+          "weight": 0.06726252084610924
         }
       ],
       "actual_score": "1 : 0",
@@ -571,26 +574,26 @@
         "key": "ECU",
         "code": "ECU",
         "name": "Ecuador",
-        "fifa_rank": 19,
+        "fifa_rank": 3,
         "elo": 1500.0
       },
       "away": {
         "key": "CRC",
         "code": "CRC",
         "name": "Costa Rica",
-        "fifa_rank": 23,
+        "fifa_rank": 2,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 31.4,
-      "prob_draw": 36.0,
-      "prob_away": 32.6,
+      "prob_home": 31.2,
+      "prob_draw": 35.6,
+      "prob_away": 33.2,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 4 位（Ecuador #19 vs Costa Rica #23），纸面实力接近。",
+        "FIFA排名差距 1 位（Ecuador #3 vs Costa Rica #2），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Ecuador 2 次 vs Costa Rica 2 次。",
         "近10场战绩 Ecuador 4胜3平3负，Costa Rica 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -603,71 +606,71 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 31.0
+          "prob": 31.9
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 18.6
+          "prob": 17.9
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.7
+          "prob": 16.7
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.6
+          "prob": 11.5
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 5.6
+          "prob": 5.7
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.489,
-          "away": 0.478,
-          "weight": 0.278184
+          "home": 0.531,
+          "away": 0.534,
+          "weight": 0.2573068908010733
         },
         {
           "name": "近期状态",
           "home": 0.512,
           "away": 0.512,
-          "weight": 0.23182
+          "weight": 0.2401530980810018
         },
         {
           "name": "战术风格",
           "home": 0.5,
           "away": 0.56,
-          "weight": 0.23182
+          "weight": 0.21442240900089443
         },
         {
           "name": "阵容深度",
           "home": 0.585,
           "away": 0.585,
-          "weight": 0.092728
+          "weight": 0.08576896360035778
         },
         {
           "name": "比赛环境",
           "home": 0.8,
           "away": 0.72,
-          "weight": 0.092728
+          "weight": 0.08576896360035778
         },
         {
           "name": "小组赛战意",
           "home": 0.5,
           "away": 0.54,
-          "weight": 0.046364
+          "weight": 0.04931715407020571
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.07272
+          "weight": 0.06726252084610924
         }
       ],
       "actual_score": "3 : 0",
@@ -693,26 +696,26 @@
         "key": "ECU",
         "code": "ECU",
         "name": "Ecuador",
-        "fifa_rank": 19,
+        "fifa_rank": 3,
         "elo": 1500.0
       },
       "away": {
         "key": "GER",
         "code": "GER",
         "name": "Germany",
-        "fifa_rank": 28,
+        "fifa_rank": 30,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 30.1,
-      "prob_draw": 36.0,
-      "prob_away": 34.0,
+      "prob_home": 31.8,
+      "prob_draw": 35.6,
+      "prob_away": 32.5,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 9 位（Ecuador #19 vs Germany #28），纸面实力接近。",
+        "FIFA排名差距 27 位（Ecuador #3 vs Germany #30），纸面实力主队显著占优。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Ecuador 2 次 vs Germany 2 次。",
         "近10场战绩 Ecuador 4胜3平3负，Germany 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -725,71 +728,71 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 31.0
+          "prob": 31.9
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 19.4
+          "prob": 17.5
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 16.9
+          "prob": 17.1
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.6
+          "prob": 11.5
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 6.1
+          "prob": 5.4
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.489,
-          "away": 0.465,
-          "weight": 0.278184
+          "home": 0.531,
+          "away": 0.46,
+          "weight": 0.25457753439099207
         },
         {
           "name": "近期状态",
           "home": 0.512,
           "away": 0.512,
-          "weight": 0.23182
+          "weight": 0.24397013712470073
         },
         {
           "name": "战术风格",
           "home": 0.5,
           "away": 0.56,
-          "weight": 0.23182
+          "weight": 0.21214794532582676
         },
         {
           "name": "阵容深度",
           "home": 0.585,
           "away": 0.585,
-          "weight": 0.092728
+          "weight": 0.08485917813033071
         },
         {
           "name": "比赛环境",
           "home": 0.8,
           "away": 0.9,
-          "weight": 0.092728
+          "weight": 0.08485917813033071
         },
         {
           "name": "小组赛战意",
           "home": 0.36,
           "away": 0.36,
-          "weight": 0.046364
+          "weight": 0.05303698633145669
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.07272
+          "weight": 0.06654904056636236
         }
       ],
       "actual_score": "0 : 3",
@@ -815,26 +818,26 @@
         "key": "CRC",
         "code": "CRC",
         "name": "Costa Rica",
-        "fifa_rank": 23,
+        "fifa_rank": 2,
         "elo": 1500.0
       },
       "away": {
         "key": "POL",
         "code": "POL",
         "name": "Poland",
-        "fifa_rank": 13,
+        "fifa_rank": 11,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 30.1,
-      "prob_draw": 36.0,
-      "prob_away": 33.9,
+      "prob_home": 32.0,
+      "prob_draw": 35.6,
+      "prob_away": 32.4,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 10 位（Costa Rica #23 vs Poland #13），纸面实力接近。",
+        "FIFA排名差距 9 位（Costa Rica #2 vs Poland #11），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Costa Rica 2 次 vs Poland 2 次。",
         "近10场战绩 Costa Rica 4胜3平3负，Poland 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -847,71 +850,71 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 31.0
+          "prob": 31.9
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 19.4
+          "prob": 17.4
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 16.9
+          "prob": 17.2
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.6
+          "prob": 11.5
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 6.0
+          "prob": 5.4
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.478,
-          "away": 0.505,
-          "weight": 0.278184
+          "home": 0.534,
+          "away": 0.51,
+          "weight": 0.25457753439099207
         },
         {
           "name": "近期状态",
           "home": 0.512,
           "away": 0.512,
-          "weight": 0.23182
+          "weight": 0.24397013712470073
         },
         {
           "name": "战术风格",
           "home": 0.5,
           "away": 0.56,
-          "weight": 0.23182
+          "weight": 0.21214794532582676
         },
         {
           "name": "阵容深度",
           "home": 0.585,
           "away": 0.585,
-          "weight": 0.092728
+          "weight": 0.08485917813033071
         },
         {
           "name": "比赛环境",
           "home": 0.8,
           "away": 0.72,
-          "weight": 0.092728
+          "weight": 0.08485917813033071
         },
         {
           "name": "小组赛战意",
           "home": 0.62,
           "away": 0.66,
-          "weight": 0.046364
+          "weight": 0.05303698633145669
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.07272
+          "weight": 0.06654904056636236
         }
       ],
       "actual_score": "1 : 2",
@@ -937,26 +940,26 @@
         "key": "ENG",
         "code": "ENG",
         "name": "England",
-        "fifa_rank": 11,
+        "fifa_rank": 22,
         "elo": 1500.0
       },
       "away": {
         "key": "PAR",
         "code": "PAR",
         "name": "Paraguay",
-        "fifa_rank": 30,
+        "fifa_rank": 27,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 32.6,
-      "prob_draw": 37.4,
-      "prob_away": 30.0,
+      "prob_home": 31.5,
+      "prob_draw": 37.0,
+      "prob_away": 31.6,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 19 位（England #11 vs Paraguay #30），纸面实力主队略优。",
+        "FIFA排名差距 5 位（England #22 vs Paraguay #27），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：England 2 次 vs Paraguay 2 次。",
         "近10场战绩 England 4胜3平3负，Paraguay 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -969,71 +972,71 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 33.5
+          "prob": 34.3
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 19.3
+          "prob": 17.6
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 17.3
+          "prob": 17.4
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.0
+          "prob": 10.8
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 5.6
+          "prob": 5.1
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.51,
-          "away": 0.46,
-          "weight": 0.278184
+          "home": 0.481,
+          "away": 0.468,
+          "weight": 0.27249864281601516
         },
         {
           "name": "近期状态",
           "home": 0.512,
           "away": 0.512,
-          "weight": 0.23182
+          "weight": 0.19301987199467743
         },
         {
           "name": "战术风格",
           "home": 0.5,
           "away": 0.56,
-          "weight": 0.23182
+          "weight": 0.22708220234667933
         },
         {
           "name": "阵容深度",
           "home": 0.585,
           "away": 0.585,
-          "weight": 0.092728
+          "weight": 0.09991616903253892
         },
         {
           "name": "比赛环境",
           "home": 0.8,
           "away": 0.72,
-          "weight": 0.092728
+          "weight": 0.09083288093867174
         },
         {
           "name": "小组赛战意",
           "home": 0.5,
-          "away": 0.47,
-          "weight": 0.046364
+          "away": 0.5,
+          "weight": 0.04541644046933587
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.07272
+          "weight": 0.07123379240208146
         }
       ],
       "actual_score": "1 : 0",
@@ -1059,26 +1062,26 @@
         "key": "TRI",
         "code": "TRI",
         "name": "Trinidad and Tobago",
-        "fifa_rank": 2,
+        "fifa_rank": 15,
         "elo": 1500.0
       },
       "away": {
         "key": "SWE",
         "code": "SWE",
         "name": "Sweden",
-        "fifa_rank": 18,
+        "fifa_rank": 9,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 32.2,
-      "prob_draw": 37.4,
-      "prob_away": 30.4,
+      "prob_home": 30.6,
+      "prob_draw": 37.0,
+      "prob_away": 32.5,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 16 位（Trinidad and Tobago #2 vs Sweden #18），纸面实力主队略优。",
+        "FIFA排名差距 6 位（Trinidad and Tobago #15 vs Sweden #9），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Trinidad and Tobago 2 次 vs Sweden 2 次。",
         "近10场战绩 Trinidad and Tobago 4胜3平3负，Sweden 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -1091,71 +1094,71 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 33.5
-        },
-        {
-          "home": 1,
-          "away": 0,
-          "prob": 19.0
+          "prob": 34.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 17.6
+          "prob": 18.0
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 17.0
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.0
+          "prob": 10.8
         },
         {
-          "home": 2,
-          "away": 0,
-          "prob": 5.4
+          "home": 0,
+          "away": 2,
+          "prob": 5.3
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.534,
-          "away": 0.491,
-          "weight": 0.278184
+          "home": 0.499,
+          "away": 0.515,
+          "weight": 0.27249864281601516
         },
         {
           "name": "近期状态",
           "home": 0.512,
           "away": 0.512,
-          "weight": 0.23182
+          "weight": 0.19301987199467743
         },
         {
           "name": "战术风格",
           "home": 0.5,
           "away": 0.56,
-          "weight": 0.23182
+          "weight": 0.22708220234667933
         },
         {
           "name": "阵容深度",
           "home": 0.585,
           "away": 0.585,
-          "weight": 0.092728
+          "weight": 0.09991616903253892
         },
         {
           "name": "比赛环境",
           "home": 0.8,
           "away": 0.72,
-          "weight": 0.092728
+          "weight": 0.09083288093867174
         },
         {
           "name": "小组赛战意",
           "home": 0.5,
           "away": 0.5,
-          "weight": 0.046364
+          "weight": 0.04541644046933587
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.07272
+          "weight": 0.07123379240208146
         }
       ],
       "actual_score": "0 : 0",

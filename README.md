@@ -4,6 +4,8 @@
 
 **在线看板**：https://cyzhh.github.io/worldcup-prediction/
 
+算法设计对齐项目内研究报告：`基于openfootball_awesome-football数据的2026世界杯小组赛概率预测算法研究报告.md`（稳定实力基准 + 非线性场景修正）。
+
 ---
 
 ## 快速开始
@@ -69,9 +71,12 @@ generate_html.py → index.html（内嵌 JSON，GitHub Pages 发布）
 | 小组赛战意 | 5% | 轮次（首轮偏保守）、实时积分榜（需抢分/可接受平局） |
 | 临场风险 | 0–12% | 双方伤病风险（动态权重） |
 
-**动态权重规则**：
+**动态权重规则**（报告 3.1.2）：
 
-- 双方基本面接近（\|gap\| < 0.10）→ 战术权重升至 25%，基本面降至 30%
+- **首轮**：降低近期状态 / 战术权重，提高基本面 / 阵容深度（新赛制参考价值有限）
+- **二轮**：提高近期状态、战术、战意权重
+- **三轮**：进一步强调战意与当届表现，略降基本面
+- 双方基本面接近（\|gap\| < 0.10）→ 战术权重 ≥25%，基本面 ≤30%
 - 伤病风险越高 → 「临场风险」维度权重越大
 
 **ELO 修正**：`strength_diff` 会转化为 ELO 调整量（±400 分），注入后续概率计算：
@@ -89,14 +94,15 @@ adj_elo_away = elo_away − strength_diff × 400
 
 基于调整后 ELO 计算主队胜率，再分配平局概率：
 
+- 2026 **联合东道主**（美/加/墨）额外 +35 ELO（`host_elo_bonus`）
 - 平局基准 = `group_stage_draw_base`（默认 22%，回测校准）
 - 首轮额外加成 `group_stage_round1_draw_boost`
 - 实力接近 → 平局概率 ×1.15；差距 >200 → ×0.82
 - 保留弱队爆冷区间（ELO 差 >180 时客队胜率 ≥5%）
 
-#### 2b. 泊松比分矩阵
+#### 2b. 泊松比分矩阵（含 Dixon-Coles 低比分修正）
 
-由 `strength_diff` 和双方攻防数据计算期望进球 λ_home、λ_lambda_away，生成 0–5 球的联合概率矩阵，汇总为泊松胜平负。
+由 `strength_diff` 和双方攻防数据计算期望进球 λ_home、λ_away，生成 0–5 球的联合概率矩阵；对 **0-0 / 1-0 / 0-1 / 1-1** 应用 Dixon-Coles 修正项（`dixon_coles_rho ≈ -0.08`），缓解传统泊松低估低比分的偏差。汇总为泊松胜平负。
 
 首轮 λ 乘以 0.95 / 0.92，体现小组赛首轮偏保守、低比分倾向。
 
@@ -117,6 +123,7 @@ adj_elo_away = elo_away − strength_diff × 400
 |------|------|
 | **历史先验收缩** | 按 ELO 差分桶（even / slight / moderate / large / extreme），将模型输出向历届真实胜平负率收缩（shrinkage ≈ 8%） |
 | **冷门修正** | ELO 差 >120 时，向弱队注入额外胜率（小组赛爆冷先验） |
+| **球员阵容微调** | 融合后按双方 `depth_score` 差二次调整胜平负（约 ±5%，报告 3.4.2） |
 | **参数网格搜索** | 平局基准、首轮加成、ELO 融合权重、收缩系数等，以胜平负准确率 + Brier 分数综合最优 |
 
 **回测方法（无未来信息泄露）**：
@@ -125,13 +132,13 @@ adj_elo_away = elo_away − strength_diff × 400
 - 当届比赛按**时间顺序**逐场预测；二、三轮注入**当届已踢场次**的积分榜战意
 - 回测报告：`output/backtest_report.json`
 
-**当前回测指标**（`model_calibration.json`）：
+**当前回测指标**（`model_calibration.json`，walk-forward 五届 240 场）：
 
 | 指标 | 数值 |
 |------|------|
 | 胜平负准确率 | **61.3%**（随机基准 33%） |
-| 精确比分准确率 | 8.8% |
-| Brier 分数 | 0.667（越低越好） |
+| 精确比分准确率 | 7.9% |
+| Brier 分数 | 0.665（越低越好） |
 | 实际平局率 | 22.1% |
 
 ---
@@ -161,7 +168,7 @@ adj_elo_away = elo_away − strength_diff × 400
 ```
 
 数据来源：[risingtransfers/world-cup-2026-data](https://github.com/risingtransfers/world-cup-2026-data) 身价 + per90 统计。  
-球员分**不直接参与**单场胜平负计算，但会通过 `player_enrichment.py` 聚合为球队「阵容深度」「近期进球/xG」等因子。
+球员分通过 `player_enrichment.py` 聚合为球队「阵容深度」；在胜平负融合后另有 **约 5% 阵容差微调**（`apply_player_calibration`）。
 
 ---
 
@@ -206,6 +213,8 @@ generate_html.py       →  index.html
 | `backtest.py` | Walk-forward 回测 + 参数网格校准 |
 | `generate_html.py` | 模板 + 内嵌 JSON → `index.html` |
 | `update-and-push.ps1` | 构建 + git push 一键部署 |
+
+Cursor 改代码后部署流程见项目 skill：`.cursor/skills/worldcup-pages/SKILL.md`。
 
 ---
 

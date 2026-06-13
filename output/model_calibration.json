@@ -1,5 +1,5 @@
 {
-  "group_stage_draw_base": 0.22,
+  "group_stage_draw_base": 0.2,
   "group_stage_round1_draw_boost": 0.02,
   "under_25_base": 0.55,
   "elo_blend_strong": 0.6,
@@ -8,6 +8,9 @@
   "upset_elo_threshold": 120.0,
   "upset_prob_boost": 0.035,
   "favorite_draw_penalty": 0.015,
+  "dixon_coles_rho": -0.08,
+  "player_prob_weight": 0.05,
+  "host_elo_bonus": 35.0,
   "wdl_priors_by_elo_gap": {
     "even": {
       "home": 0.4,
@@ -28,15 +31,15 @@
       "samples": 2
     }
   },
-  "calibrated_at": "2026-06-13T08:29:41.916964+00:00",
+  "calibrated_at": "2026-06-13T09:13:49.693656+00:00",
   "backtest_summary": {
-    "composite_score": 0.6314,
+    "composite_score": 0.6318,
     "matches": 240,
     "outcome_accuracy": 0.6125,
-    "exact_score_accuracy": 0.0875,
-    "brier_score": 0.6669,
-    "log_loss": 1.105,
+    "exact_score_accuracy": 0.0792,
+    "brier_score": 0.665,
+    "log_loss": 1.1016,
     "draw_rate_actual": 0.2208,
-    "draw_rate_predicted": 0.4417
+    "draw_rate_predicted": 0.4292
   }
 }

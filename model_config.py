@@ -22,6 +22,12 @@ DEFAULTS = {
     "upset_elo_threshold": 120.0,
     "upset_prob_boost": 0.035,
     "favorite_draw_penalty": 0.015,
+    # Dixon-Coles 低比分修正（报告 3.2.2）
+    "dixon_coles_rho": -0.08,
+    # 球员阵容差对胜平负的二次微调（报告 3.4.2，约 5%）
+    "player_prob_weight": 0.05,
+    # 2026 联合东道主 ELO 加成（报告 3.2.1）
+    "host_elo_bonus": 35.0,
 }
 
 
@@ -36,6 +42,9 @@ class ModelConfig:
     upset_elo_threshold: float = 120.0
     upset_prob_boost: float = 0.035
     favorite_draw_penalty: float = 0.015
+    dixon_coles_rho: float = -0.08
+    player_prob_weight: float = 0.05
+    host_elo_bonus: float = 35.0
     # 由回测填充：ELO 差分桶 → 历史胜/平/负率
     wdl_priors_by_elo_gap: dict[str, dict[str, float]] = field(default_factory=dict)
     calibrated_at: str | None = None
