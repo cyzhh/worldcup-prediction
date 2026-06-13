@@ -113,6 +113,8 @@
     }
     .player-panel { display: none; }
     .player-panel.active { display: block; }
+    .betting-panel { display: none; }
+    .betting-panel.active { display: block; }
     .matches-panel.active { display: block; }
     .matches-panel { display: none; }
     .player-table-wrap {
@@ -224,6 +226,7 @@
     <div class="view-tabs">
       <button class="view-tab active" data-view="matches">⚽ 比赛预测</button>
       <button class="view-tab" data-view="players">👤 球员评分</button>
+      <button class="view-tab" data-view="betting">💰 虚拟投注</button>
     </div>
     <div class="stats-bar" id="stats-bar"></div>
     <div class="matches-panel active" id="matches-panel">
@@ -232,6 +235,9 @@
     </div>
     <div class="player-panel" id="player-panel">
       <div id="player-content"></div>
+    </div>
+    <div class="betting-panel" id="betting-panel">
+      <div id="betting-content"></div>
     </div>
     <footer>
       数据索引 <a href="https://github.com/openfootball/awesome-football" target="_blank">awesome-football</a>
@@ -284,8 +290,10 @@
           btn.classList.add("active");
           document.getElementById("matches-panel").classList.toggle("active", activeView === "matches");
           document.getElementById("player-panel").classList.toggle("active", activeView === "players");
-          document.getElementById("stats-bar").style.display = "block";
+          document.getElementById("betting-panel").classList.toggle("active", activeView === "betting");
+          document.getElementById("stats-bar").style.display = activeView === "betting" ? "none" : "block";
           if (activeView === "players") renderPlayers();
+          else if (activeView === "betting") renderBetting();
           else { renderMatchToolbar(); renderMatches(); }
         });
       });
@@ -563,6 +571,82 @@
         html += matchCardHtml(m);
       }
       document.getElementById("matches").innerHTML = html || `<p style="text-align:center;color:var(--muted);padding:40px">无匹配比赛</p>`;
+    }
+
+    function pickLabel(pick) {
+      return { home: "主胜", draw: "平局", away: "客胜" }[pick] || pick;
+    }
+
+    function renderBetting() {
+      const cfg = DATA.backtest?.betting?.config || {};
+      const hist = DATA.backtest?.betting?.by_tournament || {};
+      const w26 = DATA.betting_2026 || {};
+      const settled = w26.settled;
+      const rows = Object.entries(hist).sort((a, b) => {
+        const ya = parseInt(a[0], 10) || 0;
+        const yb = parseInt(b[0], 10) || 0;
+        return ya - yb;
+      });
+
+      const histRows = rows.map(([label, t]) => {
+        const profit = t.profit ?? 0;
+        const cls = profit >= 0 ? "tag win" : "tag lose";
+        return `<tr>
+          <td>${label}</td>
+          <td>${t.bets ?? 0}</td>
+          <td>${t.wins ?? 0}${t.hit_rate != null ? ` (${(t.hit_rate * 100).toFixed(1)}%)` : ""}</td>
+          <td>${t.staked ?? 0} 元</td>
+          <td><span class="${cls}">${profit >= 0 ? "+" : ""}${profit} 元</span></td>
+          <td>${t.ending_bankroll ?? "—"} 元</td>
+          <td>${t.roi != null ? (t.roi * 100).toFixed(1) + "%" : "—"}</td>
+        </tr>`;
+      }).join("");
+
+      let w26Html = "<p style='color:var(--muted);padding:20px;text-align:center'>尚无已赛结算</p>";
+      if (settled) {
+        const p = settled.profit ?? 0;
+        w26Html = `
+          <div class="metrics-row" style="margin-bottom:16px">
+            <div class="metric-card">
+              <div class="metric-value ${p >= 0 ? "live" : ""}">${p >= 0 ? "+" : ""}${p} 元</div>
+              <div class="metric-label">2026 已赛盈亏</div>
+              <div class="metric-sub">${settled.bets} 场 · 命中 ${settled.wins} · 本金 ${settled.bankroll_start} 元</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">${settled.ending_bankroll ?? "—"} 元</div>
+              <div class="metric-label">当前虚拟余额</div>
+              <div class="metric-sub">每场固定 ${settled.stake_per_bet ?? 50} 元</div>
+            </div>
+          </div>`;
+        if (settled.details?.length) {
+          w26Html += `<div class="player-table-wrap"><div class="player-table-scroll"><table class="player-table">
+            <thead><tr><th>比赛</th><th>押注</th><th>赔率</th><th>盈亏</th><th>余额</th></tr></thead>
+            <tbody>${settled.details.map(d => `<tr>
+              <td>${d.title}</td><td>${pickLabel(d.pick)} @ ${d.odds}</td><td>${d.stake} 元</td>
+              <td><span class="${d.won ? "tag win" : "tag lose"}">${d.pnl >= 0 ? "+" : ""}${d.pnl} 元</span></td>
+              <td>${d.bankroll_after} 元</td></tr>`).join("")}</tbody></table></div></div>`;
+        }
+      }
+
+      const totalProfit = DATA.backtest?.betting?.overall_profit_all_tournaments;
+      document.getElementById("betting-content").innerHTML = `
+        <p style="text-align:center;color:var(--muted);font-size:0.82rem;margin-bottom:16px">
+          规则：每届独立本金 <strong>${cfg.bankroll_per_tournament ?? 2000}</strong> 元 · 每场 <strong>${cfg.stake_per_bet ?? 50}</strong> 元 ·
+          押模型最高概率赛果 · ${cfg.odds_source || "ELO 市场欧赔"}
+        </p>
+        ${totalProfit != null ? `<p style="text-align:center;margin-bottom:16px">1998–2022 七届合计盈亏：
+          <strong style="color:${totalProfit >= 0 ? "var(--green)" : "#f87171"}">${totalProfit >= 0 ? "+" : ""}${totalProfit} 元</strong></p>` : ""}
+        <div class="player-table-wrap" style="margin-bottom:24px">
+          <div class="player-table-head"><h2>历届世界杯小组赛（虚拟 1X2）</h2></div>
+          <div class="player-table-scroll">
+          <table class="player-table">
+            <thead><tr><th>届次</th><th>场次</th><th>命中</th><th>总投入</th><th>盈亏</th><th>期末余额</th><th>ROI</th></tr></thead>
+            <tbody>${histRows || "<tr><td colspan='7' style='text-align:center;color:var(--muted)'>暂无回测数据</td></tr>"}</tbody>
+          </table></div>
+        </div>
+        <div class="player-table-head" style="margin-bottom:12px"><h2>2026 当届（进行中）</h2></div>
+        ${w26Html}
+        <p style="text-align:center;color:var(--muted);font-size:0.72rem;margin-top:20px">${DATA.backtest?.betting?.disclaimer || "虚拟回测，非投注建议"}</p>`;
     }
 
     function renderMetrics() {

@@ -15,6 +15,7 @@ from model_config import ModelConfig, elo_gap_bucket, save_config
 from openfootball_loader import build_h2h_from_history
 from elo_history import parse_cup_txt_results
 from predictor import predict_match, result_to_dict
+from betting_sim import simulate_by_tournament
 from standings import compute_standings, motivation_context
 
 ROOT = Path(__file__).parent
@@ -256,12 +257,14 @@ def run_full_backtest(calibrate: bool = True) -> dict[str, Any]:
         )
 
     overall = aggregate_metrics(all_preds)
+    betting = simulate_by_tournament(all_preds, config=cfg)
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "method": "walk-forward group stage backtest (1998-2022, ELO priors from 1986+)",
         "calibration": cfg.to_dict(),
         "overall": overall,
         "by_tournament": by_tournament,
+        "betting": betting,
         "sample_predictions": all_preds[:8],
     }
 
@@ -271,6 +274,10 @@ def run_full_backtest(calibrate: bool = True) -> dict[str, Any]:
     print(
         f"合并回测: 胜平负准确率 {overall['outcome_accuracy']:.1%} · "
         f"Brier {overall['brier_score']:.3f} · 实际平局率 {overall['draw_rate_actual']:.1%}"
+    )
+    print(
+        f"虚拟投注(每届2000元/场50元): 七届合计盈亏 {betting['overall_profit_all_tournaments']:+.0f} 元 · "
+        f"ROI {betting['overall_roi']:.1%}"
     )
     return report
 

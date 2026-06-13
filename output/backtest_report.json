@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T12:26:34.103892+00:00",
+  "generated_at": "2026-06-13T12:32:34.509309+00:00",
   "method": "walk-forward group stage backtest (1998-2022, ELO priors from 1986+)",
   "calibration": {
     "group_stage_draw_base": 0.18,
@@ -63,8 +63,8 @@
     "matches": 336,
     "outcome_accuracy": 0.6518,
     "exact_score_accuracy": 0.128,
-    "brier_score": 0.6096,
-    "log_loss": 1.0229,
+    "brier_score": 0.6097,
+    "log_loss": 1.023,
     "draw_rate_actual": 0.247,
     "draw_rate_predicted": 0.0,
     "wdl_priors_by_elo_gap": {
@@ -134,8 +134,8 @@
       "matches": 48,
       "outcome_accuracy": 0.5833,
       "exact_score_accuracy": 0.0833,
-      "brier_score": 0.6533,
-      "log_loss": 1.0826,
+      "brier_score": 0.653,
+      "log_loss": 1.0821,
       "draw_rate_actual": 0.2917,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -157,8 +157,8 @@
       "matches": 48,
       "outcome_accuracy": 0.7083,
       "exact_score_accuracy": 0.1042,
-      "brier_score": 0.5682,
-      "log_loss": 0.963,
+      "brier_score": 0.5691,
+      "log_loss": 0.9643,
       "draw_rate_actual": 0.2292,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -186,8 +186,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6458,
       "exact_score_accuracy": 0.1667,
-      "brier_score": 0.6452,
-      "log_loss": 1.0709,
+      "brier_score": 0.6451,
+      "log_loss": 1.0708,
       "draw_rate_actual": 0.2917,
       "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
@@ -320,6 +320,104 @@
           "away": 0.0,
           "samples": 1
         }
+      }
+    }
+  },
+  "betting": {
+    "config": {
+      "stake_per_bet": 50.0,
+      "bankroll_per_tournament": 2000.0,
+      "book_margin": 0.07,
+      "bet_rule": "每场押模型最高概率赛果（1X2）",
+      "odds_source": "ELO 隐含欧赔 + 7% 抽水（历史届次无公开赔率时的市场基准）"
+    },
+    "disclaimer": "虚拟投注回测，非真实博彩建议；历史赔率未接入时使用 ELO 市场线近似。",
+    "overall_profit_all_tournaments": 926.0,
+    "overall_roi": 0.0551,
+    "by_tournament": {
+      "1998 法国世界杯": {
+        "label": "1998 法国世界杯",
+        "bankroll_start": 2000.0,
+        "stake_per_bet": 50.0,
+        "bets": 48,
+        "wins": 26,
+        "hit_rate": 0.5417,
+        "staked": 2400.0,
+        "profit": 478.0,
+        "ending_bankroll": 2478.0,
+        "roi": 0.1992
+      },
+      "2002 日韩世界杯": {
+        "label": "2002 日韩世界杯",
+        "bankroll_start": 2000.0,
+        "stake_per_bet": 50.0,
+        "bets": 48,
+        "wins": 21,
+        "hit_rate": 0.4375,
+        "staked": 2400.0,
+        "profit": -91.0,
+        "ending_bankroll": 1909.0,
+        "roi": -0.0379
+      },
+      "2006 德国世界杯": {
+        "label": "2006 德国世界杯",
+        "bankroll_start": 2000.0,
+        "stake_per_bet": 50.0,
+        "bets": 48,
+        "wins": 26,
+        "hit_rate": 0.5417,
+        "staked": 2400.0,
+        "profit": 274.5,
+        "ending_bankroll": 2274.5,
+        "roi": 0.1144
+      },
+      "2010 南非世界杯": {
+        "label": "2010 南非世界杯",
+        "bankroll_start": 2000.0,
+        "stake_per_bet": 50.0,
+        "bets": 48,
+        "wins": 20,
+        "hit_rate": 0.4167,
+        "staked": 2400.0,
+        "profit": -411.0,
+        "ending_bankroll": 1589.0,
+        "roi": -0.1713
+      },
+      "2014 巴西世界杯": {
+        "label": "2014 巴西世界杯",
+        "bankroll_start": 2000.0,
+        "stake_per_bet": 50.0,
+        "bets": 48,
+        "wins": 25,
+        "hit_rate": 0.5208,
+        "staked": 2400.0,
+        "profit": 87.0,
+        "ending_bankroll": 2087.0,
+        "roi": 0.0362
+      },
+      "2018 俄罗斯世界杯": {
+        "label": "2018 俄罗斯世界杯",
+        "bankroll_start": 2000.0,
+        "stake_per_bet": 50.0,
+        "bets": 48,
+        "wins": 28,
+        "hit_rate": 0.5833,
+        "staked": 2400.0,
+        "profit": 440.0,
+        "ending_bankroll": 2440.0,
+        "roi": 0.1833
+      },
+      "2022 卡塔尔世界杯": {
+        "label": "2022 卡塔尔世界杯",
+        "bankroll_start": 2000.0,
+        "stake_per_bet": 50.0,
+        "bets": 48,
+        "wins": 26,
+        "hit_rate": 0.5417,
+        "staked": 2400.0,
+        "profit": 148.5,
+        "ending_bankroll": 2148.5,
+        "roi": 0.0619
       }
     }
   },
@@ -1073,26 +1171,26 @@
         "key": "CMR",
         "code": "CMR",
         "name": "Cameroon",
-        "fifa_rank": 28,
+        "fifa_rank": 27,
         "elo": 1483.3
       },
       "away": {
         "key": "AUT",
         "code": "AUT",
         "name": "Austria",
-        "fifa_rank": 27,
+        "fifa_rank": 28,
         "elo": 1483.3
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 37.8,
-      "prob_draw": 32.2,
-      "prob_away": 30.0,
+      "prob_home": 38.0,
+      "prob_draw": 32.1,
+      "prob_away": 29.9,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 1 位（Cameroon #28 vs Austria #27），纸面实力接近。",
+        "FIFA排名差距 1 位（Cameroon #27 vs Austria #28），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Cameroon 5 次 vs Austria 5 次。",
         "近10场战绩 Cameroon 1胜1平3负，Austria 1胜0平2负；xG差 -1.8 vs -0.2。",
@@ -1105,22 +1203,22 @@
         {
           "home": 0,
           "away": 0,
-          "prob": 53.2
+          "prob": 53.0
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 23.3
+          "prob": 23.4
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 9.6
+          "prob": 9.5
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 5.5
+          "prob": 5.6
         },
         {
           "home": 1,
@@ -1131,8 +1229,8 @@
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.467,
-          "away": 0.47,
+          "home": 0.47,
+          "away": 0.467,
           "weight": 0.27249864281601516
         },
         {
@@ -1202,19 +1300,19 @@
         "key": "CHI",
         "code": "CHI",
         "name": "Chile",
-        "fifa_rank": 22,
+        "fifa_rank": 23,
         "elo": 1500.0
       },
       "predicted_score": "0 : 0",
       "score_home": 0,
       "score_away": 0,
-      "prob_home": 40.2,
+      "prob_home": 40.3,
       "prob_draw": 27.9,
-      "prob_away": 31.9,
+      "prob_away": 31.8,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 18 位（Italy #4 vs Chile #22），纸面实力主队略优。",
+        "FIFA排名差距 19 位（Italy #4 vs Chile #23），纸面实力主队略优。",
         "ELO 分差 40.40000000000009 分，对应历史胜率约 55%。",
         "世界杯参赛经验：Italy 5 次 vs Chile 5 次。",
         "近10场战绩 Italy 3胜2平1负，Chile 4胜3平3负；xG差 +0.5 vs +0.2。",
@@ -1232,7 +1330,7 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 17.3
+          "prob": 17.4
         },
         {
           "home": 0,
@@ -1247,14 +1345,14 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 5.6
+          "prob": 5.7
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
           "home": 0.561,
-          "away": 0.493,
+          "away": 0.49,
           "weight": 0.27249864281601516
         },
         {
