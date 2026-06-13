@@ -1,0 +1,298 @@
+{
+  "MEX": {
+    "code": "MX",
+    "name": "墨西哥",
+    "fifa_rank": 14,
+    "elo": 1845,
+    "opta_index": 82,
+    "squad_value_m": 210,
+    "wc_appearances": 18,
+    "wc_group_avg_pts": 1.8,
+    "qualifier_win_rate": 0.72,
+    "qualifier_gd": 18,
+    "form": {
+      "wins": 6,
+      "draws": 3,
+      "losses": 1,
+      "goals_for": 2.1,
+      "goals_against": 0.8,
+      "xg_diff": 1.3,
+      "ppda": 9.2,
+      "home_win_rate": 0.9
+    },
+    "tactics": {
+      "formation": "4-3-3",
+      "style": "传控渗透 + 边路突破",
+      "efficiency": 0.78
+    },
+    "squad": {
+      "depth_score": 0.82,
+      "key_players": ["洛萨诺", "埃德森·阿尔瓦雷斯", "希门尼斯"],
+      "injury_risk": 0.05
+    },
+    "environment": {
+      "is_host": true,
+      "altitude_m": 2240,
+      "climate_adapt": 0.95
+    }
+  },
+  "RSA": {
+    "code": "ZA",
+    "name": "南非",
+    "fifa_rank": 56,
+    "elo": 1420,
+    "opta_index": 68,
+    "squad_value_m": 45,
+    "wc_appearances": 4,
+    "wc_group_avg_pts": 0.9,
+    "qualifier_win_rate": 0.55,
+    "qualifier_gd": 4,
+    "form": {
+      "wins": 4,
+      "draws": 2,
+      "losses": 4,
+      "goals_for": 1.2,
+      "goals_against": 1.5,
+      "xg_diff": -0.4,
+      "ppda": 12.5,
+      "away_unbeaten_rate": 0.5
+    },
+    "tactics": {
+      "formation": "5-4-1",
+      "style": "密集防守 + 快速反击",
+      "efficiency": 0.62
+    },
+    "squad": {
+      "depth_score": 0.55,
+      "key_players": ["恩科西", "莫科埃纳"],
+      "injury_risk": 0.35
+    },
+    "environment": {
+      "is_host": false,
+      "altitude_m": 0,
+      "climate_adapt": 0.65
+    }
+  },
+  "KOR": {
+    "code": "KR",
+    "name": "韩国",
+    "fifa_rank": 23,
+    "elo": 1725,
+    "opta_index": 76,
+    "squad_value_m": 180,
+    "wc_appearances": 12,
+    "wc_group_avg_pts": 1.4,
+    "qualifier_win_rate": 0.65,
+    "qualifier_gd": 12,
+    "form": {
+      "wins": 5,
+      "draws": 3,
+      "losses": 2,
+      "goals_for": 1.6,
+      "goals_against": 1.1,
+      "xg_diff": 0.5,
+      "ppda": 10.1,
+      "home_win_rate": 0.7
+    },
+    "tactics": {
+      "formation": "4-2-3-1",
+      "style": "高位逼抢 + 快速转换",
+      "efficiency": 0.72
+    },
+    "squad": {
+      "depth_score": 0.75,
+      "key_players": ["孙兴慜", "李刚仁", "金玟哉"],
+      "injury_risk": 0.1
+    },
+    "environment": {
+      "is_host": false,
+      "altitude_m": 0,
+      "climate_adapt": 0.8
+    }
+  },
+  "CZE": {
+    "code": "CZ",
+    "name": "捷克",
+    "fifa_rank": 38,
+    "elo": 1610,
+    "opta_index": 72,
+    "squad_value_m": 120,
+    "wc_appearances": 2,
+    "wc_group_avg_pts": 1.0,
+    "qualifier_win_rate": 0.58,
+    "qualifier_gd": 8,
+    "form": {
+      "wins": 4,
+      "draws": 4,
+      "losses": 2,
+      "goals_for": 1.4,
+      "goals_against": 1.2,
+      "xg_diff": 0.2,
+      "ppda": 11.0,
+      "away_unbeaten_rate": 0.6
+    },
+    "tactics": {
+      "formation": "4-3-3",
+      "style": "中场控制 + 定位球",
+      "efficiency": 0.68
+    },
+    "squad": {
+      "depth_score": 0.68,
+      "key_players": ["绍切克", "克拉尔"],
+      "injury_risk": 0.12
+    },
+    "environment": {
+      "is_host": false,
+      "altitude_m": 0,
+      "climate_adapt": 0.85
+    }
+  },
+  "CAN": {
+    "code": "CA",
+    "name": "加拿大",
+    "fifa_rank": 27,
+    "elo": 1680,
+    "opta_index": 74,
+    "squad_value_m": 150,
+    "wc_appearances": 3,
+    "wc_group_avg_pts": 0.5,
+    "qualifier_win_rate": 0.62,
+    "qualifier_gd": 10,
+    "form": {
+      "wins": 5,
+      "draws": 2,
+      "losses": 3,
+      "goals_for": 1.8,
+      "goals_against": 1.3,
+      "xg_diff": 0.4,
+      "ppda": 10.5,
+      "home_win_rate": 0.75
+    },
+    "tactics": {
+      "formation": "4-4-2",
+      "style": "快速反击 + 边路速度",
+      "efficiency": 0.7
+    },
+    "squad": {
+      "depth_score": 0.7,
+      "key_players": ["戴维斯", "戴维", "布坎南"],
+      "injury_risk": 0.15
+    },
+    "environment": {
+      "is_host": true,
+      "altitude_m": 0,
+      "climate_adapt": 0.9
+    }
+  },
+  "QAT": {
+    "code": "QA",
+    "name": "卡塔尔",
+    "fifa_rank": 35,
+    "elo": 1630,
+    "opta_index": 70,
+    "squad_value_m": 25,
+    "wc_appearances": 2,
+    "wc_group_avg_pts": 0.3,
+    "qualifier_win_rate": 0.6,
+    "qualifier_gd": 6,
+    "form": {
+      "wins": 4,
+      "draws": 3,
+      "losses": 3,
+      "goals_for": 1.3,
+      "goals_against": 1.4,
+      "xg_diff": -0.1,
+      "ppda": 11.8,
+      "away_unbeaten_rate": 0.45
+    },
+    "tactics": {
+      "formation": "4-1-4-1",
+      "style": "控球组织 + 短传渗透",
+      "efficiency": 0.65
+    },
+    "squad": {
+      "depth_score": 0.58,
+      "key_players": ["阿菲夫", "阿尔莫伊兹"],
+      "injury_risk": 0.08
+    },
+    "environment": {
+      "is_host": false,
+      "altitude_m": 0,
+      "climate_adapt": 0.7
+    }
+  },
+  "USA": {
+    "code": "US",
+    "name": "美国",
+    "fifa_rank": 11,
+    "elo": 1880,
+    "opta_index": 84,
+    "squad_value_m": 280,
+    "wc_appearances": 12,
+    "wc_group_avg_pts": 1.2,
+    "qualifier_win_rate": 0.75,
+    "qualifier_gd": 20,
+    "form": {
+      "wins": 7,
+      "draws": 2,
+      "losses": 1,
+      "goals_for": 2.0,
+      "goals_against": 0.9,
+      "xg_diff": 1.0,
+      "ppda": 9.5,
+      "home_win_rate": 0.85
+    },
+    "tactics": {
+      "formation": "4-3-3",
+      "style": "高位压迫 + 体能优势",
+      "efficiency": 0.8
+    },
+    "squad": {
+      "depth_score": 0.85,
+      "key_players": ["普利西奇", "麦肯尼", "雷纳"],
+      "injury_risk": 0.1
+    },
+    "environment": {
+      "is_host": true,
+      "altitude_m": 0,
+      "climate_adapt": 0.92
+    }
+  },
+  "PAR": {
+    "code": "PY",
+    "name": "巴拉圭",
+    "fifa_rank": 52,
+    "elo": 1450,
+    "opta_index": 66,
+    "squad_value_m": 55,
+    "wc_appearances": 9,
+    "wc_group_avg_pts": 1.0,
+    "qualifier_win_rate": 0.52,
+    "qualifier_gd": 3,
+    "form": {
+      "wins": 4,
+      "draws": 3,
+      "losses": 3,
+      "goals_for": 1.1,
+      "goals_against": 1.2,
+      "xg_diff": -0.2,
+      "ppda": 12.0,
+      "away_unbeaten_rate": 0.4
+    },
+    "tactics": {
+      "formation": "5-3-2",
+      "style": "铁血防守 + 定位球",
+      "efficiency": 0.6
+    },
+    "squad": {
+      "depth_score": 0.52,
+      "key_players": ["阿尔米兰", "桑切斯"],
+      "injury_risk": 0.18
+    },
+    "environment": {
+      "is_host": false,
+      "altitude_m": 0,
+      "climate_adapt": 0.75
+    }
+  }
+}

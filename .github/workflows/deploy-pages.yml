@@ -1,0 +1,58 @@
+name: 构建并部署 GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    # 每 6 小时自动拉取 openfootball 最新赛果并重建页面
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 同步数据并生成预测页面
+        run: |
+          python sync_openfootball.py
+          python sync_all_sources.py || true
+          python build_teams_seed.py
+          python db_builder.py
+          python predictor.py
+          python generate_html.py
+
+      - name: 打包静态站点
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          touch _site/.nojekyll
+          echo "Deployed at $(date -u +%Y-%m-%dT%H:%M:%SZ)" > _site/build.txt
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

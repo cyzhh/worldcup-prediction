@@ -1,0 +1,20 @@
+{
+  "sources": {
+    "2026--usa/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt",
+    "2026/worldcup.json": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json",
+    "2022--qatar/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2022--qatar/cup.txt",
+    "2018--russia/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2018--russia/cup.txt",
+    "2014--brazil/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2014--brazil/cup.txt",
+    "2010--south-africa/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2010--south-africa/cup.txt",
+    "2006--germany/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2006--germany/cup.txt"
+  },
+  "status": {
+    "2026--usa/cup.txt": "cached",
+    "2026/worldcup.json": "cached",
+    "2022--qatar/cup.txt": "cached",
+    "2018--russia/cup.txt": "cached",
+    "2014--brazil/cup.txt": "cached",
+    "2010--south-africa/cup.txt": "cached",
+    "2006--germany/cup.txt": "cached"
+  }
+}

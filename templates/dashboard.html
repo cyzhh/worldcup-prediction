@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 FIFA 世界杯 小组赛量化预测</title>
+  <style>
+    :root {
+      --bg: #0a0c1a;
+      --card: #12182b;
+      --card-inner: #0d1117;
+      --text: #e8edf5;
+      --muted: #8b95a8;
+      --accent: #4facfe;
+      --green: #22c55e;
+      --border: rgba(255, 255, 255, 0.06);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .page { max-width: 920px; margin: 0 auto; padding: 48px 20px 80px; }
+    header { text-align: center; margin-bottom: 28px; }
+    header h1 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; margin-bottom: 12px; }
+    header p { color: var(--muted); font-size: 0.9rem; }
+    .filters {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px;
+    }
+    .filter-btn {
+      background: transparent; border: 1px solid var(--border); color: var(--muted);
+      padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 0.82rem;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      border-color: var(--accent); color: var(--text); background: rgba(79,172,254,0.12);
+    }
+    .stats-bar {
+      text-align: center; color: var(--muted); font-size: 0.8rem; margin-bottom: 20px;
+    }
+    .match-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 20px 24px 24px; margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    }
+    .match-card.played { border-color: rgba(34, 197, 94, 0.25); }
+    .match-header {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+      font-size: 0.95rem; color: #b8c5d9; margin-bottom: 18px; font-weight: 500;
+    }
+    .badge-status {
+      font-size: 0.72rem; padding: 2px 8px; border-radius: 10px; font-weight: 600;
+    }
+    .badge-status.done { background: rgba(34,197,94,0.2); color: #4ade80; }
+    .badge-status.upcoming { background: rgba(148,163,184,0.15); color: #94a3b8; }
+    .match-body {
+      background: var(--card-inner); border-radius: 10px; padding: 20px 24px;
+      border: 1px solid var(--border);
+    }
+    .teams-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .team { flex: 1; min-width: 140px; }
+    .team.away { text-align: right; }
+    .team-code-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+    .team-stats { font-size: 0.82rem; color: var(--muted); }
+    .score-col { text-align: center; }
+    .score-label { font-size: 0.72rem; color: var(--muted); margin-bottom: 4px; }
+    .score-badge {
+      background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+      color: #fff; font-size: 1.75rem; font-weight: 800;
+      padding: 10px 28px; border-radius: 10px; letter-spacing: 0.15em;
+      box-shadow: 0 4px 20px rgba(79, 172, 254, 0.35); white-space: nowrap;
+    }
+    .score-badge.actual {
+      background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
+      margin-top: 8px; font-size: 1.4rem;
+    }
+    .tags {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; justify-content: center;
+    }
+    .tag {
+      font-size: 0.78rem; padding: 5px 12px; border-radius: 20px; font-weight: 600;
+    }
+    .tag.win  { background: rgba(34,197,94,0.18); color: #4ade80; border: 1px solid rgba(34,197,94,0.35); }
+    .tag.draw { background: rgba(234,179,8,0.18); color: #facc15; border: 1px solid rgba(234,179,8,0.35); }
+    .tag.lose { background: rgba(239,68,68,0.18); color: #f87171; border: 1px solid rgba(239,68,68,0.35); }
+    .tag.ou   { background: rgba(168,85,247,0.18); color: #c084fc; border: 1px solid rgba(168,85,247,0.35); }
+    .tag.ah   { background: rgba(6,182,212,0.18); color: #22d3ee; border: 1px solid rgba(6,182,212,0.35); }
+    .tag.hit  { background: rgba(34,197,94,0.12); color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
+    .analysis { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); }
+    .analysis-title { font-size: 0.88rem; color: #94a3b8; margin-bottom: 12px; }
+    .analysis ol { padding-left: 1.25rem; color: #9ca8bc; font-size: 0.84rem; }
+    .analysis li { margin-bottom: 8px; }
+    .analysis li::marker { color: var(--accent); font-weight: 600; }
+    footer {
+      text-align: center; color: var(--muted); font-size: 0.75rem;
+      margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) {
+      .teams-row { flex-direction: column; text-align: center; }
+      .team.away { text-align: center; }
+      .score-badge { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1 id="page-title">2026 FIFA 世界杯 小组赛量化预测</h1>
+      <p id="page-subtitle"></p>
+    </header>
+    <div class="filters" id="filters"></div>
+    <div class="stats-bar" id="stats-bar"></div>
+    <main id="matches"></main>
+    <footer>
+      数据索引 <a href="https://github.com/openfootball/awesome-football" target="_blank">awesome-football</a>
+      · 赛程 <a href="https://github.com/openfootball/worldcup" target="_blank">openfootball/worldcup</a>
+      · 球员 <a href="https://github.com/risingtransfers/world-cup-2026-data" target="_blank">risingtransfers</a>
+      · 基准 <a href="https://onsidearena.com/data" target="_blank">Onside</a>
+      · 七维因子量化引擎 · 概率输出非投资建议
+    </footer>
+  </div>
+  <script>
+    const DATA = /*__PREDICTIONS__*/;
+    let activeGroup = "ALL";
+    let activeStatus = "ALL";
+
+    function renderFilters() {
+      const groups = [...new Set(DATA.predictions.map(m => m.group).filter(Boolean))].sort();
+      const el = document.getElementById("filters");
+      const btns = [
+        `<button class="filter-btn active" data-group="ALL">全部 (${DATA.predictions.length})</button>`,
+        ...groups.map(g => {
+          const n = DATA.predictions.filter(m => m.group === g).length;
+          return `<button class="filter-btn" data-group="${g}">${g}组 (${n})</button>`;
+        }),
+        `<button class="filter-btn" data-status="played">已赛</button>`,
+        `<button class="filter-btn" data-status="upcoming">未赛</button>`,
+      ];
+      el.innerHTML = btns.join("");
+      el.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          if (btn.dataset.group) {
+            activeGroup = btn.dataset.group;
+            activeStatus = "ALL";
+          } else {
+            activeStatus = btn.dataset.status;
+            activeGroup = "ALL";
+          }
+          el.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderMatches();
+        });
+      });
+    }
+
+    function filtered() {
+      return DATA.predictions.filter(m => {
+        if (activeGroup !== "ALL" && m.group !== activeGroup) return false;
+        if (activeStatus === "played" && !m.played) return false;
+        if (activeStatus === "upcoming" && m.played) return false;
+        return true;
+      });
+    }
+
+    function renderMatches() {
+      const list = filtered();
+      const played = list.filter(m => m.played);
+      const hits = played.filter(m => m.result_hit).length;
+      document.getElementById("stats-bar").textContent =
+        `显示 ${list.length} 场 · 已赛 ${played.length} 场` +
+        (played.length ? ` · 比分命中 ${hits}/${played.length}` : "");
+
+      document.getElementById("matches").innerHTML = list.map(m => {
+        const ouLabel = m.prob_under_25 >= 50 ? "小2.5球" : "大2.5球";
+        const ouPct = m.prob_under_25 >= 50 ? m.prob_under_25 : (100 - m.prob_under_25).toFixed(1);
+        const status = m.played
+          ? `<span class="badge-status done">已赛 实际 ${m.actual_score}</span>`
+          : `<span class="badge-status upcoming">未赛</span>`;
+        const benchTag = m.benchmark_onside && m.benchmark_onside.prob_home
+          ? `<span class="tag ah">Onside: ${m.benchmark_onside.prob_home}/${m.benchmark_onside.prob_draw}/${m.benchmark_onside.prob_away}%</span>`
+          : "";
+        const hitTag = m.played && m.result_hit
+          ? `<span class="tag hit">比分命中 ✓</span>`
+          : m.played && m.outcome_hit
+            ? `<span class="tag hit">赛果方向命中</span>` : "";
+        const actualBlock = m.played ? `
+          <div class="score-label">实际比分</div>
+          <div class="score-badge actual">${m.actual_home} : ${m.actual_away}</div>` : "";
+
+        return `
+          <article class="match-card ${m.played ? "played" : ""}">
+            <div class="match-header">
+              <span>⚽</span>
+              <span>${m.title}</span>
+              <span>· ${m.subtitle}</span>
+              ${status}
+            </div>
+            <div class="match-body">
+              <div class="teams-row">
+                <div class="team home">
+                  <div class="team-code-name">${m.home.code} ${m.home.name}</div>
+                  <div class="team-stats">FIFA #${m.home.fifa_rank} | ELO ${m.home.elo}</div>
+                </div>
+                <div class="score-col">
+                  <div class="score-label">模型预测</div>
+                  <div class="score-badge">${m.score_home} : ${m.score_away}</div>
+                  ${actualBlock}
+                </div>
+                <div class="team away">
+                  <div class="team-code-name">${m.away.code} ${m.away.name}</div>
+                  <div class="team-stats">FIFA #${m.away.fifa_rank} | ELO ${m.away.elo}</div>
+                </div>
+              </div>
+              <div class="tags">
+                <span class="tag win">${m.home.name}胜 ${m.prob_home}%</span>
+                <span class="tag draw">平局 ${m.prob_draw}%</span>
+                <span class="tag lose">${m.away.name}胜 ${m.prob_away}%</span>
+                <span class="tag ou">大小球: ${ouLabel} ${ouPct}%</span>
+                <span class="tag ah">${m.asian_handicap}</span>
+                ${benchTag}
+                ${hitTag}
+              </div>
+              <div class="analysis">
+                <div class="analysis-title">📊 客观分析依据</div>
+                <ol>${m.analysis.map(a => `<li>${a}</li>`).join("")}</ol>
+              </div>
+            </div>
+          </article>`;
+      }).join("");
+    }
+
+    function render() {
+      const meta = DATA.meta || {};
+      document.getElementById("page-subtitle").textContent =
+        `${meta.subtitle || ""} | ${meta.date_range || ""} | ${meta.squads_players || "?"} 名球员 · ${meta.total_group_matches || DATA.predictions.length} 场`;
+      renderFilters();
+      renderMatches();
+    }
+    render();
+  </script>
+</body>
+</html>

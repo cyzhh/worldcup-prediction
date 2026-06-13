@@ -1,0 +1,178 @@
+{
+  "Mexico City": {
+    "name": "Estadio Azteca",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "capacity": 87523,
+    "altitude_m": 2240,
+    "lat": 19.3029,
+    "lon": -99.1505,
+    "timezone": "UTC-6",
+    "surface": "grass"
+  },
+  "Guadalajara (Zapopan)": {
+    "name": "Estadio Akron",
+    "city": "Guadalajara",
+    "country": "Mexico",
+    "capacity": 49850,
+    "altitude_m": 1560,
+    "lat": 20.6818,
+    "lon": -103.4622,
+    "timezone": "UTC-6",
+    "surface": "grass"
+  },
+  "Monterrey (Guadalupe)": {
+    "name": "Estadio BBVA",
+    "city": "Monterrey",
+    "country": "Mexico",
+    "capacity": 53500,
+    "altitude_m": 540,
+    "lat": 25.7244,
+    "lon": -100.2428,
+    "timezone": "UTC-6",
+    "surface": "grass"
+  },
+  "Atlanta": {
+    "name": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "USA",
+    "capacity": 71000,
+    "altitude_m": 320,
+    "lat": 33.7554,
+    "lon": -84.4008,
+    "timezone": "UTC-4",
+    "surface": "artificial"
+  },
+  "Boston (Foxborough)": {
+    "name": "Gillette Stadium",
+    "city": "Foxborough",
+    "country": "USA",
+    "capacity": 65878,
+    "altitude_m": 50,
+    "lat": 42.0909,
+    "lon": -71.2643,
+    "timezone": "UTC-4",
+    "surface": "artificial"
+  },
+  "Dallas (Arlington)": {
+    "name": "AT&T Stadium",
+    "city": "Arlington",
+    "country": "USA",
+    "capacity": 80000,
+    "altitude_m": 180,
+    "lat": 32.7473,
+    "lon": -97.0945,
+    "timezone": "UTC-5",
+    "surface": "artificial"
+  },
+  "Houston": {
+    "name": "NRG Stadium",
+    "city": "Houston",
+    "country": "USA",
+    "capacity": 72220,
+    "altitude_m": 15,
+    "lat": 29.6847,
+    "lon": -95.4107,
+    "timezone": "UTC-5",
+    "surface": "artificial"
+  },
+  "Kansas City": {
+    "name": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "USA",
+    "capacity": 76416,
+    "altitude_m": 270,
+    "lat": 39.0489,
+    "lon": -94.4839,
+    "timezone": "UTC-5",
+    "surface": "grass"
+  },
+  "Los Angeles (Inglewood)": {
+    "name": "SoFi Stadium",
+    "city": "Inglewood",
+    "country": "USA",
+    "capacity": 70240,
+    "altitude_m": 30,
+    "lat": 33.9535,
+    "lon": -118.3392,
+    "timezone": "UTC-7",
+    "surface": "artificial"
+  },
+  "Miami (Miami Gardens)": {
+    "name": "Hard Rock Stadium",
+    "city": "Miami Gardens",
+    "country": "USA",
+    "capacity": 65326,
+    "altitude_m": 3,
+    "lat": 25.9581,
+    "lon": -80.2389,
+    "timezone": "UTC-4",
+    "surface": "grass"
+  },
+  "New York/New Jersey (East Rutherford)": {
+    "name": "MetLife Stadium",
+    "city": "East Rutherford",
+    "country": "USA",
+    "capacity": 82500,
+    "altitude_m": 3,
+    "lat": 40.8128,
+    "lon": -74.0742,
+    "timezone": "UTC-4",
+    "surface": "artificial"
+  },
+  "Philadelphia": {
+    "name": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "USA",
+    "capacity": 69796,
+    "altitude_m": 12,
+    "lat": 39.9008,
+    "lon": -75.1675,
+    "timezone": "UTC-4",
+    "surface": "grass"
+  },
+  "San Francisco Bay Area (Santa Clara)": {
+    "name": "Levi's Stadium",
+    "city": "Santa Clara",
+    "country": "USA",
+    "capacity": 68500,
+    "altitude_m": 7,
+    "lat": 37.4032,
+    "lon": -121.9698,
+    "timezone": "UTC-7",
+    "surface": "grass"
+  },
+  "Seattle": {
+    "name": "Lumen Field",
+    "city": "Seattle",
+    "country": "USA",
+    "capacity": 69000,
+    "altitude_m": 15,
+    "lat": 47.5952,
+    "lon": -122.3316,
+    "timezone": "UTC-7",
+    "surface": "artificial"
+  },
+  "Toronto": {
+    "name": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada",
+    "capacity": 45000,
+    "altitude_m": 90,
+    "lat": 43.6332,
+    "lon": -79.4186,
+    "timezone": "UTC-4",
+    "surface": "grass"
+  },
+  "Vancouver": {
+    "name": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada",
+    "capacity": 54500,
+    "altitude_m": 5,
+    "lat": 49.2768,
+    "lon": -123.1120,
+    "timezone": "UTC-7",
+    "surface": "artificial"
+  }
+}

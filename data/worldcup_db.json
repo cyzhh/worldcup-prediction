@@ -1,0 +1,8117 @@
+{
+  "meta": {
+    "built_at": "2026-06-13T01:29:50.197890+00:00",
+    "tournament": "World Cup 2026",
+    "sources": [
+      "https://github.com/openfootball/worldcup",
+      "https://github.com/openfootball/worldcup.json",
+      "https://github.com/openfootball/awesome-football",
+      "https://github.com/risingtransfers/world-cup-2026-data",
+      "https://onsidearena.com/data",
+      "local/stadiums_2026.json"
+    ],
+    "teams_count": 48,
+    "matches_count": 72,
+    "squads_players": 1363,
+    "h2h_pairs": 183,
+    "onside_benchmarks": 72,
+    "history_tournaments": [
+      "2010--south-africa",
+      "2014--brazil",
+      "2006--germany",
+      "2018--russia",
+      "2022--qatar"
+    ]
+  },
+  "groups": {
+    "A": [
+      "MEX",
+      "RSA",
+      "KOR",
+      "CZE"
+    ],
+    "B": [
+      "CAN",
+      "BIH",
+      "QAT",
+      "SUI"
+    ],
+    "C": [
+      "BRA",
+      "MAR",
+      "HAI",
+      "SCO"
+    ],
+    "D": [
+      "USA",
+      "PAR",
+      "AUS",
+      "TUR"
+    ],
+    "E": [
+      "GER",
+      "CUW",
+      "CIV",
+      "ECU"
+    ],
+    "F": [
+      "NED",
+      "JPN",
+      "SWE",
+      "TUN"
+    ],
+    "G": [
+      "BEL",
+      "EGY",
+      "IRN",
+      "NZL"
+    ],
+    "H": [
+      "ESP",
+      "CPV",
+      "KSA",
+      "URU"
+    ],
+    "I": [
+      "FRA",
+      "SEN",
+      "IRQ",
+      "NOR"
+    ],
+    "J": [
+      "ARG",
+      "ALG",
+      "AUT",
+      "JOR"
+    ],
+    "K": [
+      "POR",
+      "COD",
+      "UZB",
+      "COL"
+    ],
+    "L": [
+      "ENG",
+      "CRO",
+      "GHA",
+      "PAN"
+    ]
+  },
+  "stadiums": {
+    "Mexico City": {
+      "name": "Estadio Azteca",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "capacity": 87523,
+      "altitude_m": 2240,
+      "lat": 19.3029,
+      "lon": -99.1505,
+      "timezone": "UTC-6",
+      "surface": "grass"
+    },
+    "Guadalajara (Zapopan)": {
+      "name": "Estadio Akron",
+      "city": "Guadalajara",
+      "country": "Mexico",
+      "capacity": 49850,
+      "altitude_m": 1560,
+      "lat": 20.6818,
+      "lon": -103.4622,
+      "timezone": "UTC-6",
+      "surface": "grass"
+    },
+    "Monterrey (Guadalupe)": {
+      "name": "Estadio BBVA",
+      "city": "Monterrey",
+      "country": "Mexico",
+      "capacity": 53500,
+      "altitude_m": 540,
+      "lat": 25.7244,
+      "lon": -100.2428,
+      "timezone": "UTC-6",
+      "surface": "grass"
+    },
+    "Atlanta": {
+      "name": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "country": "USA",
+      "capacity": 71000,
+      "altitude_m": 320,
+      "lat": 33.7554,
+      "lon": -84.4008,
+      "timezone": "UTC-4",
+      "surface": "artificial"
+    },
+    "Boston (Foxborough)": {
+      "name": "Gillette Stadium",
+      "city": "Foxborough",
+      "country": "USA",
+      "capacity": 65878,
+      "altitude_m": 50,
+      "lat": 42.0909,
+      "lon": -71.2643,
+      "timezone": "UTC-4",
+      "surface": "artificial"
+    },
+    "Dallas (Arlington)": {
+      "name": "AT&T Stadium",
+      "city": "Arlington",
+      "country": "USA",
+      "capacity": 80000,
+      "altitude_m": 180,
+      "lat": 32.7473,
+      "lon": -97.0945,
+      "timezone": "UTC-5",
+      "surface": "artificial"
+    },
+    "Houston": {
+      "name": "NRG Stadium",
+      "city": "Houston",
+      "country": "USA",
+      "capacity": 72220,
+      "altitude_m": 15,
+      "lat": 29.6847,
+      "lon": -95.4107,
+      "timezone": "UTC-5",
+      "surface": "artificial"
+    },
+    "Kansas City": {
+      "name": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "country": "USA",
+      "capacity": 76416,
+      "altitude_m": 270,
+      "lat": 39.0489,
+      "lon": -94.4839,
+      "timezone": "UTC-5",
+      "surface": "grass"
+    },
+    "Los Angeles (Inglewood)": {
+      "name": "SoFi Stadium",
+      "city": "Inglewood",
+      "country": "USA",
+      "capacity": 70240,
+      "altitude_m": 30,
+      "lat": 33.9535,
+      "lon": -118.3392,
+      "timezone": "UTC-7",
+      "surface": "artificial"
+    },
+    "Miami (Miami Gardens)": {
+      "name": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "country": "USA",
+      "capacity": 65326,
+      "altitude_m": 3,
+      "lat": 25.9581,
+      "lon": -80.2389,
+      "timezone": "UTC-4",
+      "surface": "grass"
+    },
+    "New York/New Jersey (East Rutherford)": {
+      "name": "MetLife Stadium",
+      "city": "East Rutherford",
+      "country": "USA",
+      "capacity": 82500,
+      "altitude_m": 3,
+      "lat": 40.8128,
+      "lon": -74.0742,
+      "timezone": "UTC-4",
+      "surface": "artificial"
+    },
+    "Philadelphia": {
+      "name": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "country": "USA",
+      "capacity": 69796,
+      "altitude_m": 12,
+      "lat": 39.9008,
+      "lon": -75.1675,
+      "timezone": "UTC-4",
+      "surface": "grass"
+    },
+    "San Francisco Bay Area (Santa Clara)": {
+      "name": "Levi's Stadium",
+      "city": "Santa Clara",
+      "country": "USA",
+      "capacity": 68500,
+      "altitude_m": 7,
+      "lat": 37.4032,
+      "lon": -121.9698,
+      "timezone": "UTC-7",
+      "surface": "grass"
+    },
+    "Seattle": {
+      "name": "Lumen Field",
+      "city": "Seattle",
+      "country": "USA",
+      "capacity": 69000,
+      "altitude_m": 15,
+      "lat": 47.5952,
+      "lon": -122.3316,
+      "timezone": "UTC-7",
+      "surface": "artificial"
+    },
+    "Toronto": {
+      "name": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada",
+      "capacity": 45000,
+      "altitude_m": 90,
+      "lat": 43.6332,
+      "lon": -79.4186,
+      "timezone": "UTC-4",
+      "surface": "grass"
+    },
+    "Vancouver": {
+      "name": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada",
+      "capacity": 54500,
+      "altitude_m": 5,
+      "lat": 49.2768,
+      "lon": -123.112,
+      "timezone": "UTC-7",
+      "surface": "artificial"
+    }
+  },
+  "teams": {
+    "MEX": {
+      "code": "MX",
+      "name": "墨西哥",
+      "fifa_rank": 14,
+      "elo": 1812.0,
+      "opta_index": 82,
+      "tier": 2,
+      "squad_value_m": 113.2,
+      "wc_appearances": 18,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 18,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 2.4,
+        "goals_against": 1.1,
+        "xg_diff": -0.06,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 0.74,
+        "key_players": [
+          "Santiago Gimenez",
+          "Obed Vargas",
+          "Johan Vásquez",
+          "Álvaro Fidalgo",
+          "Raúl Jiménez"
+        ],
+        "injury_risk": 0.085
+      },
+      "environment": {
+        "is_host": true,
+        "altitude_m": 0,
+        "climate_adapt": 0.92
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 27.5,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "RSA": {
+      "code": "ZA",
+      "name": "南非",
+      "fifa_rank": 56,
+      "elo": 1461.1,
+      "opta_index": 68,
+      "tier": 4,
+      "squad_value_m": 87.7,
+      "wc_appearances": 4,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 4,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 1.29,
+        "goals_against": 1.4,
+        "xg_diff": -0.08,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 0.663,
+        "key_players": [
+          "Ime Okon",
+          "Lyle Foster",
+          "Yaya Sithole",
+          "Oswin Appollis",
+          "Thalente Mbatha"
+        ],
+        "injury_risk": 0.066
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 28,
+      "avg_age": 25.6,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "KOR": {
+      "code": "KR",
+      "name": "韩国",
+      "fifa_rank": 23,
+      "elo": 1681.9,
+      "opta_index": 76,
+      "tier": 3,
+      "squad_value_m": 127.0,
+      "wc_appearances": 12,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 15,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 1.76,
+        "goals_against": 1.2,
+        "xg_diff": -0.06,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.781,
+        "key_players": [
+          "Hee-chan Hwang",
+          "Min-jae Kim",
+          "Kang-in Lee",
+          "Jens Castrop",
+          "Gue-sung Cho"
+        ],
+        "injury_risk": 0.085
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 27,
+      "avg_age": 27.5,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "CZE": {
+      "code": "CZ",
+      "name": "捷克",
+      "fifa_rank": 38,
+      "elo": 1624.4,
+      "opta_index": 72,
+      "tier": 3,
+      "squad_value_m": 148.0,
+      "wc_appearances": 2,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 10,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 2.67,
+        "goals_against": 1.2,
+        "xg_diff": -0.05,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.813,
+        "key_players": [
+          "Ladislav Krejci",
+          "Robin Hranac",
+          "Pavel Sulc",
+          "Patrik Schick",
+          "Tomáš Souček"
+        ],
+        "injury_risk": 0.086
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 24,
+      "avg_age": 27.6,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "CAN": {
+      "code": "CA",
+      "name": "加拿大",
+      "fifa_rank": 27,
+      "elo": 1657.0,
+      "opta_index": 74,
+      "tier": 3,
+      "squad_value_m": 156.8,
+      "wc_appearances": 3,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 13,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 2.41,
+        "goals_against": 1.2,
+        "xg_diff": -0.05,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.87,
+        "key_players": [
+          "Tani Oluwaseyi",
+          "Alphonso Davies",
+          "Jacen Russell-Rowe",
+          "Derek Cornelius",
+          "Jonathan David"
+        ],
+        "injury_risk": 0.072
+      },
+      "environment": {
+        "is_host": true,
+        "altitude_m": 0,
+        "climate_adapt": 0.92
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 33,
+      "avg_age": 26.2,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "BIH": {
+      "code": "BA",
+      "name": "波黑",
+      "fifa_rank": 75,
+      "elo": 1380.0,
+      "opta_index": 65,
+      "tier": 4,
+      "squad_value_m": 189.7,
+      "wc_appearances": 2,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 0,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 2.42,
+        "goals_against": 1.4,
+        "xg_diff": -0.06,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 0.969,
+        "key_players": [
+          "Armin Gigovic",
+          "Dzenis Burnic",
+          "Nikola Vasilj",
+          "Ermedin Demirovic",
+          "Nikola Katic"
+        ],
+        "injury_risk": 0.071
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 27,
+      "avg_age": 26.1,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "QAT": {
+      "code": "QA",
+      "name": "卡塔尔",
+      "fifa_rank": 35,
+      "elo": 1599.1,
+      "opta_index": 70,
+      "tier": 3,
+      "squad_value_m": 85.1,
+      "wc_appearances": 2,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 11,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 1.77,
+        "goals_against": 1.2,
+        "xg_diff": -0.07,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.655,
+        "key_players": [
+          "Khalid Ali Sabah",
+          "Shehab Ellethy",
+          "Mahmoud Abunada",
+          "Edmílson Junior",
+          "Meshaal Barsham"
+        ],
+        "injury_risk": 0.095
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 51,
+      "avg_age": 28.5,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "SUI": {
+      "code": "CH",
+      "name": "瑞士",
+      "fifa_rank": 19,
+      "elo": 1807.2,
+      "opta_index": 78,
+      "tier": 2,
+      "squad_value_m": 345.3,
+      "wc_appearances": 12,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 16,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 1.92,
+        "goals_against": 1.1,
+        "xg_diff": -0.06,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Johan Manzambi",
+          "Noah Okafor",
+          "Dan Ndoye",
+          "Djibril Sow",
+          "Michel Aebischer"
+        ],
+        "injury_risk": 0.088
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.76
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 27.8,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "BRA": {
+      "code": "BR",
+      "name": "巴西",
+      "fifa_rank": 5,
+      "elo": 2031.5,
+      "opta_index": 92,
+      "tier": 1,
+      "squad_value_m": 246.7,
+      "wc_appearances": 22,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 21,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 2.71,
+        "goals_against": 0.9,
+        "xg_diff": -0.05,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Rayan",
+          "Gabriel Martinelli",
+          "Bremer",
+          "Vinicius Junior",
+          "Wesley"
+        ],
+        "injury_risk": 0.096
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 27,
+      "avg_age": 28.6,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "MAR": {
+      "code": "MA",
+      "name": "摩洛哥",
+      "fifa_rank": 13,
+      "elo": 1861.0,
+      "opta_index": 81,
+      "tier": 2,
+      "squad_value_m": 293.3,
+      "wc_appearances": 6,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 18,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 2.25,
+        "goals_against": 1.1,
+        "xg_diff": -0.05,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Brahim Díaz",
+          "Chadi Riad",
+          "Azzedine Ounahi",
+          "Neil El Aynaoui",
+          "Samir El Mourabet"
+        ],
+        "injury_risk": 0.064
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.76
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 36,
+      "avg_age": 25.4,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "HAI": {
+      "code": "HT",
+      "name": "海地",
+      "fifa_rank": 87,
+      "elo": 1320.0,
+      "opta_index": 62,
+      "tier": 5,
+      "squad_value_m": 75.9,
+      "wc_appearances": 1,
+      "wc_group_avg_pts": 0.6,
+      "qualifier_win_rate": 0.38,
+      "qualifier_gd": 0,
+      "form": {
+        "wins": 2,
+        "draws": 3,
+        "losses": 5,
+        "goals_for": 2.05,
+        "goals_against": 1.6,
+        "xg_diff": -0.06,
+        "ppda": 15.0,
+        "home_win_rate": 0.6
+      },
+      "tactics": {
+        "formation": "5-3-2",
+        "style": "低位防守 + 长传",
+        "efficiency": 0.55
+      },
+      "squad": {
+        "depth_score": 0.535,
+        "key_players": [
+          "Wilson Isidor",
+          "Carlens Arcus",
+          "Jean-Ricner Bellegarde",
+          "Josué Casimir",
+          "Derrick Etienne Jr."
+        ],
+        "injury_risk": 0.083
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7000000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 20,
+      "avg_age": 27.3,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "SCO": {
+      "code": "SX",
+      "name": "苏格兰",
+      "fifa_rank": 36,
+      "elo": 1620.0,
+      "opta_index": 71,
+      "tier": 3,
+      "squad_value_m": 178.9,
+      "wc_appearances": 8,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 10,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 2.24,
+        "goals_against": 1.2,
+        "xg_diff": -0.06,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.937,
+        "key_players": [
+          "Billy Gilmour",
+          "Ché Adams",
+          "Ben Gannon-Doak",
+          "Aaron Hickey",
+          "John McGinn"
+        ],
+        "injury_risk": 0.096
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 27,
+      "avg_age": 28.6,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "USA": {
+      "code": "US",
+      "name": "美国",
+      "fifa_rank": 11,
+      "elo": 1858.9,
+      "opta_index": 84,
+      "tier": 2,
+      "squad_value_m": 257.4,
+      "wc_appearances": 12,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 19,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 2.28,
+        "goals_against": 1.1,
+        "xg_diff": -0.06,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Malik Tillman",
+          "Tanner Tessmann",
+          "Giovanni Reyna",
+          "Christian Pulisic",
+          "Joe Scally"
+        ],
+        "injury_risk": 0.071
+      },
+      "environment": {
+        "is_host": true,
+        "altitude_m": 0,
+        "climate_adapt": 0.92
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 31,
+      "avg_age": 26.1,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "PAR": {
+      "code": "PY",
+      "name": "巴拉圭",
+      "fifa_rank": 52,
+      "elo": 1444.8,
+      "opta_index": 66,
+      "tier": 4,
+      "squad_value_m": 89.2,
+      "wc_appearances": 9,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 5,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 1.8,
+        "goals_against": 1.4,
+        "xg_diff": -0.06,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 0.621,
+        "key_players": [
+          "Julio Enciso",
+          "Omar Alderete",
+          "Diego Gómez",
+          "Antonio Sanabria",
+          "Isidro Pitta"
+        ],
+        "injury_risk": 0.092
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 23,
+      "avg_age": 28.2,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "AUS": {
+      "code": "AU",
+      "name": "澳大利亚",
+      "fifa_rank": 24,
+      "elo": 1683.8,
+      "opta_index": 75,
+      "tier": 3,
+      "squad_value_m": 129.5,
+      "wc_appearances": 6,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 14,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 1.69,
+        "goals_against": 1.2,
+        "xg_diff": -0.06,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.788,
+        "key_players": [
+          "Connor Metcalfe",
+          "Alessandro Circati",
+          "Cristian Volpato",
+          "Mathew Ryan",
+          "Jackson Irvine"
+        ],
+        "injury_risk": 0.078
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 33,
+      "avg_age": 26.8,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "TUR": {
+      "code": "TR",
+      "name": "土耳其",
+      "fifa_rank": 42,
+      "elo": 1580.0,
+      "opta_index": 70,
+      "tier": 3,
+      "squad_value_m": 193.3,
+      "wc_appearances": 2,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 8,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 2.21,
+        "goals_against": 1.2,
+        "xg_diff": -0.05,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.98,
+        "key_players": [
+          "Zeki Çelik",
+          "Arda Güler",
+          "Salih Özcan",
+          "Kenan Yıldız",
+          "Can Uzun"
+        ],
+        "injury_risk": 0.082
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 27.2,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "GER": {
+      "code": "DE",
+      "name": "德国",
+      "fifa_rank": 8,
+      "elo": 1874.9,
+      "opta_index": 86,
+      "tier": 1,
+      "squad_value_m": 357.1,
+      "wc_appearances": 20,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 20,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 2.57,
+        "goals_against": 0.9,
+        "xg_diff": -0.04,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Nico Schlotterbeck",
+          "Aleksandar Pavlovic",
+          "Nadiem Amiri",
+          "Kai Havertz",
+          "Malick Thiaw"
+        ],
+        "injury_risk": 0.082
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 28,
+      "avg_age": 27.2,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "CUW": {
+      "code": "CW",
+      "name": "库拉索",
+      "fifa_rank": 90,
+      "elo": 1280.0,
+      "opta_index": 60,
+      "tier": 5,
+      "squad_value_m": 69.9,
+      "wc_appearances": 1,
+      "wc_group_avg_pts": 0.6,
+      "qualifier_win_rate": 0.38,
+      "qualifier_gd": 0,
+      "form": {
+        "wins": 2,
+        "draws": 3,
+        "losses": 5,
+        "goals_for": 1.53,
+        "goals_against": 1.6,
+        "xg_diff": -0.07,
+        "ppda": 15.0,
+        "home_win_rate": 0.6
+      },
+      "tactics": {
+        "formation": "5-3-2",
+        "style": "低位防守 + 长传",
+        "efficiency": 0.55
+      },
+      "squad": {
+        "depth_score": 0.579,
+        "key_players": [
+          "Riechedly Bazoer",
+          "Shurandy Sambo",
+          "Sherel Floranus",
+          "Deveron Fonville",
+          "Brandley Kuwas"
+        ],
+        "injury_risk": 0.08
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7000000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 24,
+      "avg_age": 27.0,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "CIV": {
+      "code": "CI",
+      "name": "科特迪瓦",
+      "fifa_rank": 37,
+      "elo": 1602.6,
+      "opta_index": 72,
+      "tier": 3,
+      "squad_value_m": 230.5,
+      "wc_appearances": 4,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 10,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 2.02,
+        "goals_against": 1.2,
+        "xg_diff": -0.06,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Bazoumana Touré",
+          "Evan Ndicka",
+          "Amad Diallo",
+          "Nicolas Pépé",
+          "Odilon Kossounou"
+        ],
+        "injury_risk": 0.063
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 27,
+      "avg_age": 25.3,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "ECU": {
+      "code": "EC",
+      "name": "厄瓜多尔",
+      "fifa_rank": 31,
+      "elo": 1680.1,
+      "opta_index": 73,
+      "tier": 3,
+      "squad_value_m": 133.6,
+      "wc_appearances": 4,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 12,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 2.12,
+        "goals_against": 1.2,
+        "xg_diff": -0.06,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.801,
+        "key_players": [
+          "Moisés Caicedo",
+          "Pervis Estupiñán",
+          "Nilson Angulo",
+          "Jeremy Arévalo",
+          "Willian Pacho"
+        ],
+        "injury_risk": 0.065
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 33,
+      "avg_age": 25.5,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "NED": {
+      "code": "NL",
+      "name": "荷兰",
+      "fifa_rank": 7,
+      "elo": 1961.7,
+      "opta_index": 87,
+      "tier": 1,
+      "squad_value_m": 371.0,
+      "wc_appearances": 11,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 20,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 1.97,
+        "goals_against": 0.9,
+        "xg_diff": -0.06,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Ryan Gravenberch",
+          "Tijjani Reijnders",
+          "Jan Paul van Hecke",
+          "Bart Verbruggen",
+          "Robin Roefs"
+        ],
+        "injury_risk": 0.08
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 33,
+      "avg_age": 27.0,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "JPN": {
+      "code": "JP",
+      "name": "日本",
+      "fifa_rank": 18,
+      "elo": 1800.3,
+      "opta_index": 79,
+      "tier": 2,
+      "squad_value_m": 214.6,
+      "wc_appearances": 8,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 16,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 2.18,
+        "goals_against": 1.1,
+        "xg_diff": -0.06,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Ayumu Seko",
+          "Kaishu Sano",
+          "Yuito Suzuki",
+          "Hiroki Ito",
+          "Zion Suzuki"
+        ],
+        "injury_risk": 0.082
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.76
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 27.2,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "SWE": {
+      "code": "SE",
+      "name": "瑞典",
+      "fifa_rank": 32,
+      "elo": 1649.5,
+      "opta_index": 73,
+      "tier": 3,
+      "squad_value_m": 227.1,
+      "wc_appearances": 12,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 12,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 1.89,
+        "goals_against": 1.2,
+        "xg_diff": -0.06,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Yasin Ayari",
+          "Hjalmar Ekdal",
+          "Alexander Bernhardsson",
+          "Alexander Isak",
+          "Victor Lindelöf"
+        ],
+        "injury_risk": 0.071
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 26.1,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "TUN": {
+      "code": "TN",
+      "name": "突尼斯",
+      "fifa_rank": 41,
+      "elo": 1586.4,
+      "opta_index": 70,
+      "tier": 3,
+      "squad_value_m": 135.1,
+      "wc_appearances": 6,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 9,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 1.61,
+        "goals_against": 1.2,
+        "xg_diff": -0.07,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.744,
+        "key_players": [
+          "Hannibal",
+          "Elias Saad",
+          "Rani Khedira",
+          "Ellyes Skhiri",
+          "Montassar Talbi"
+        ],
+        "injury_risk": 0.066
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 22,
+      "avg_age": 25.6,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "BEL": {
+      "code": "BE",
+      "name": "比利时",
+      "fifa_rank": 15,
+      "elo": 1840.3,
+      "opta_index": 83,
+      "tier": 2,
+      "squad_value_m": 265.7,
+      "wc_appearances": 14,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 17,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 1.66,
+        "goals_against": 1.1,
+        "xg_diff": -0.06,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Youri Tielemans",
+          "Mike Penders",
+          "Amadou Onana",
+          "Koni De Winter",
+          "Leandro Trossard"
+        ],
+        "injury_risk": 0.081
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.76
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 27.1,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "EGY": {
+      "code": "EG",
+      "name": "埃及",
+      "fifa_rank": 33,
+      "elo": 1614.8,
+      "opta_index": 72,
+      "tier": 3,
+      "squad_value_m": 108.8,
+      "wc_appearances": 3,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 11,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 2.0,
+        "goals_against": 1.2,
+        "xg_diff": -0.06,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.726,
+        "key_players": [
+          "Mostafa Mohamed",
+          "Mohamed Abdelmonem",
+          "Mohamed Salah",
+          "Haissem Hassan",
+          "Omar Marmoush"
+        ],
+        "injury_risk": 0.096
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 31,
+      "avg_age": 28.6,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "IRN": {
+      "code": "IR",
+      "name": "伊朗",
+      "fifa_rank": 20,
+      "elo": 1691.2,
+      "opta_index": 77,
+      "tier": 2,
+      "squad_value_m": 44.8,
+      "wc_appearances": 6,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 16,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 2.03,
+        "goals_against": 1.1,
+        "xg_diff": -0.06,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 0.534,
+        "key_players": [
+          "Mohammad Ghorbani",
+          "Saman Ghoddos",
+          "Alireza Jahanbakhsh",
+          "Mohammad Mohebi",
+          "Amirmohammad Razzaghinia"
+        ],
+        "injury_risk": 0.101
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.76
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 31,
+      "avg_age": 29.1,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "NZL": {
+      "code": "NZ",
+      "name": "新西兰",
+      "fifa_rank": 103,
+      "elo": 1280.5,
+      "opta_index": 58,
+      "tier": 5,
+      "squad_value_m": 62.2,
+      "wc_appearances": 3,
+      "wc_group_avg_pts": 0.6,
+      "qualifier_win_rate": 0.38,
+      "qualifier_gd": 0,
+      "form": {
+        "wins": 2,
+        "draws": 3,
+        "losses": 5,
+        "goals_for": 1.8,
+        "goals_against": 1.6,
+        "xg_diff": -0.06,
+        "ppda": 15.0,
+        "home_win_rate": 0.6
+      },
+      "tactics": {
+        "formation": "5-3-2",
+        "style": "低位防守 + 长传",
+        "efficiency": 0.55
+      },
+      "squad": {
+        "depth_score": 0.587,
+        "key_players": [
+          "Callum McCowatt",
+          "Ryan Thomas",
+          "Chris Wood",
+          "Ben Waine",
+          "Callan Elliot"
+        ],
+        "injury_risk": 0.076
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7000000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 26.6,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "ESP": {
+      "code": "ES",
+      "name": "西班牙",
+      "fifa_rank": 3,
+      "elo": 2014.8,
+      "opta_index": 90,
+      "tier": 1,
+      "squad_value_m": 450.9,
+      "wc_appearances": 16,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 21,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 2.21,
+        "goals_against": 0.9,
+        "xg_diff": -0.05,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Ferran Torres",
+          "Yéremy Pino",
+          "Nico Williams",
+          "Mikel Oyarzabal",
+          "Pau Cubarsí"
+        ],
+        "injury_risk": 0.071
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 33,
+      "avg_age": 26.1,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "CPV": {
+      "code": "CV",
+      "name": "佛得角",
+      "fifa_rank": 65,
+      "elo": 1400.0,
+      "opta_index": 66,
+      "tier": 4,
+      "squad_value_m": 78.8,
+      "wc_appearances": 1,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 1,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 1.86,
+        "goals_against": 1.4,
+        "xg_diff": -0.07,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 0.621,
+        "key_players": [
+          "Logan Costa",
+          "Dailon Livramento",
+          "Jovane Cabral",
+          "Wagner Pina",
+          "Ryan Mendes"
+        ],
+        "injury_risk": 0.104
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 25,
+      "avg_age": 29.4,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "KSA": {
+      "code": "SA",
+      "name": "沙特",
+      "fifa_rank": 58,
+      "elo": 1423.8,
+      "opta_index": 67,
+      "tier": 4,
+      "squad_value_m": 68.2,
+      "wc_appearances": 6,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 3,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 1.73,
+        "goals_against": 1.4,
+        "xg_diff": -0.06,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 0.605,
+        "key_players": [
+          "Saud Abdulhamid",
+          "Ziyad Al-Johani",
+          "Naif Masoud",
+          "Nasser Al-Dawsari",
+          "Sultan Mandash"
+        ],
+        "injury_risk": 0.085
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 33,
+      "avg_age": 27.5,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "URU": {
+      "code": "UY",
+      "name": "乌拉圭",
+      "fifa_rank": 9,
+      "elo": 1911.6,
+      "opta_index": 85,
+      "tier": 1,
+      "squad_value_m": 172.1,
+      "wc_appearances": 14,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 19,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 2.12,
+        "goals_against": 0.9,
+        "xg_diff": -0.06,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 0.916,
+        "key_players": [
+          "Mathías Olivera",
+          "Ronald Araujo",
+          "Manuel Ugarte",
+          "Santiago Bueno",
+          "José María Giménez"
+        ],
+        "injury_risk": 0.09
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 30,
+      "avg_age": 28.0,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "FRA": {
+      "code": "FR",
+      "name": "法国",
+      "fifa_rank": 2,
+      "elo": 1978.3,
+      "opta_index": 91,
+      "tier": 1,
+      "squad_value_m": 316.1,
+      "wc_appearances": 16,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 22,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 2.6,
+        "goals_against": 0.9,
+        "xg_diff": -0.04,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Aurélien Tchouaméni",
+          "Jean-Philippe Mateta",
+          "Robin Risser",
+          "Adrien Rabiot",
+          "Lucas Hernández"
+        ],
+        "injury_risk": 0.076
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 26.6,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "SEN": {
+      "code": "SN",
+      "name": "塞内加尔",
+      "fifa_rank": 17,
+      "elo": 1816.1,
+      "opta_index": 80,
+      "tier": 2,
+      "squad_value_m": 312.0,
+      "wc_appearances": 3,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 17,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 2.13,
+        "goals_against": 1.1,
+        "xg_diff": -0.06,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Ibrahim Mbaye",
+          "Pape Matar Sarr",
+          "Habib Diarra",
+          "Boulaye Dia",
+          "Mamadou Sarr"
+        ],
+        "injury_risk": 0.077
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.76
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 29,
+      "avg_age": 26.7,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "IRQ": {
+      "code": "IQ",
+      "name": "伊拉克",
+      "fifa_rank": 59,
+      "elo": 1405.0,
+      "opta_index": 67,
+      "tier": 4,
+      "squad_value_m": 35.7,
+      "wc_appearances": 1,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 3,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 1.65,
+        "goals_against": 1.4,
+        "xg_diff": -0.08,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 0.415,
+        "key_players": [
+          "Kevin Yakob",
+          "Ali Jasim",
+          "Zidane Iqbal",
+          "Amir Al-Ammari",
+          "Marko Farji"
+        ],
+        "injury_risk": 0.069
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 20,
+      "avg_age": 25.9,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "NOR": {
+      "code": "NO",
+      "name": "挪威",
+      "fifa_rank": 45,
+      "elo": 1531.3,
+      "opta_index": 69,
+      "tier": 3,
+      "squad_value_m": 256.7,
+      "wc_appearances": 3,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 7,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 1.9,
+        "goals_against": 1.2,
+        "xg_diff": -0.06,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Antonio Nusa",
+          "Jørgen Strand Larsen",
+          "Sander Berge",
+          "Oscar Bobb",
+          "Leo Østigård"
+        ],
+        "injury_risk": 0.067
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 29,
+      "avg_age": 25.7,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "ARG": {
+      "code": "AR",
+      "name": "阿根廷",
+      "fifa_rank": 1,
+      "elo": 2097.6,
+      "opta_index": 93,
+      "tier": 1,
+      "squad_value_m": 325.2,
+      "wc_appearances": 18,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 22,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 2.1,
+        "goals_against": 0.9,
+        "xg_diff": -0.06,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Thiago Almada",
+          "Nico González",
+          "Cristian Romero",
+          "Julián Alvarez",
+          "Alexis Mac Allister"
+        ],
+        "injury_risk": 0.088
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 34,
+      "avg_age": 27.8,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "ALG": {
+      "code": "DZ",
+      "name": "阿尔及利亚",
+      "fifa_rank": 43,
+      "elo": 1565.2,
+      "opta_index": 69,
+      "tier": 3,
+      "squad_value_m": 221.4,
+      "wc_appearances": 4,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 8,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 2.24,
+        "goals_against": 1.2,
+        "xg_diff": -0.05,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Adil Aouchiche",
+          "Hicham Boudaoui",
+          "Rafik Belghali",
+          "Nabil Bentaleb",
+          "Ramy Bensebaini"
+        ],
+        "injury_risk": 0.059
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 28,
+      "avg_age": 24.9,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "AUT": {
+      "code": "AT",
+      "name": "奥地利",
+      "fifa_rank": 22,
+      "elo": 1735.0,
+      "opta_index": 76,
+      "tier": 2,
+      "squad_value_m": 247.0,
+      "wc_appearances": 3,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 15,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 1.95,
+        "goals_against": 1.1,
+        "xg_diff": -0.06,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Phillipp Mwene",
+          "Kevin Danso",
+          "Konrad Laimer",
+          "Xaver Schlager",
+          "Sasa Kalajdzic"
+        ],
+        "injury_risk": 0.091
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.76
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 28.1,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "JOR": {
+      "code": "JO",
+      "name": "约旦",
+      "fifa_rank": 70,
+      "elo": 1370.0,
+      "opta_index": 64,
+      "tier": 4,
+      "squad_value_m": 49.9,
+      "wc_appearances": 1,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 0,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 1.56,
+        "goals_against": 1.4,
+        "xg_diff": -0.07,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 0.503,
+        "key_players": [
+          "Mousa Tamari",
+          "Ibrahim Sabra",
+          "Ali Al-Azaizeh",
+          "Yazan Alarab",
+          "Nizar Al-Rashdan"
+        ],
+        "injury_risk": 0.09
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 23,
+      "avg_age": 28.0,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "POR": {
+      "code": "PT",
+      "name": "葡萄牙",
+      "fifa_rank": 6,
+      "elo": 1900.4,
+      "opta_index": 88,
+      "tier": 1,
+      "squad_value_m": 265.7,
+      "wc_appearances": 8,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 20,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 2.34,
+        "goals_against": 0.9,
+        "xg_diff": -0.05,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Pedro Neto",
+          "Samú Costa",
+          "Francisco Conceição",
+          "Vitinha",
+          "Diogo Dalot"
+        ],
+        "injury_risk": 0.085
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 27,
+      "avg_age": 27.5,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "COD": {
+      "code": "CD",
+      "name": "刚果（金）",
+      "fifa_rank": 62,
+      "elo": 1415.0,
+      "opta_index": 66,
+      "tier": 4,
+      "squad_value_m": 146.8,
+      "wc_appearances": 1,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 2,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 2.16,
+        "goals_against": 1.4,
+        "xg_diff": -0.06,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 0.809,
+        "key_players": [
+          "Ngal'ayel Mukau",
+          "Aaron Wan-Bissaka",
+          "Arthur Masuaku",
+          "Noah Sadiki",
+          "Axel Tuanzebe"
+        ],
+        "injury_risk": 0.099
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 24,
+      "avg_age": 28.9,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "UZB": {
+      "code": "UZ",
+      "name": "乌兹别克斯坦",
+      "fifa_rank": 66,
+      "elo": 1395.0,
+      "opta_index": 65,
+      "tier": 4,
+      "squad_value_m": 48.7,
+      "wc_appearances": 1,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 0,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 1.86,
+        "goals_against": 1.4,
+        "xg_diff": -0.07,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 0.5,
+        "key_players": [
+          "Abdukodir Khusanov",
+          "Abbosbek Fayzullaev",
+          "Eldor Shomurodov",
+          "Aziz Ganiev",
+          "Oston Urunov"
+        ],
+        "injury_risk": 0.07
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 23,
+      "avg_age": 26.0,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "COL": {
+      "code": "CO",
+      "name": "哥伦比亚",
+      "fifa_rank": 12,
+      "elo": 1883.4,
+      "opta_index": 82,
+      "tier": 2,
+      "squad_value_m": 146.7,
+      "wc_appearances": 6,
+      "wc_group_avg_pts": 1.3,
+      "qualifier_win_rate": 0.62,
+      "qualifier_gd": 18,
+      "form": {
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goals_for": 2.07,
+        "goals_against": 1.1,
+        "xg_diff": -0.06,
+        "ppda": 12.0,
+        "home_win_rate": 0.75
+      },
+      "tactics": {
+        "formation": "4-2-3-1",
+        "style": "快速转换 + 边路进攻",
+        "efficiency": 0.75
+      },
+      "squad": {
+        "depth_score": 0.84,
+        "key_players": [
+          "Yerson Mosquera",
+          "Luis Díaz",
+          "Yerry Mina",
+          "Daniel Muñoz",
+          "Deiver Machado"
+        ],
+        "injury_risk": 0.102
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.76
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 30,
+      "avg_age": 29.2,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "ENG": {
+      "code": "GB",
+      "name": "英格兰",
+      "fifa_rank": 4,
+      "elo": 1982.1,
+      "opta_index": 89,
+      "tier": 1,
+      "squad_value_m": 518.8,
+      "wc_appearances": 16,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 21,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 2.52,
+        "goals_against": 0.9,
+        "xg_diff": -0.05,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "James Garner",
+          "Morgan Rogers",
+          "Anthony Gordon",
+          "Noni Madueke",
+          "Adam Wharton"
+        ],
+        "injury_risk": 0.079
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 40,
+      "avg_age": 26.9,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "CRO": {
+      "code": "HR",
+      "name": "克罗地亚",
+      "fifa_rank": 10,
+      "elo": 1879.8,
+      "opta_index": 84,
+      "tier": 1,
+      "squad_value_m": 268.9,
+      "wc_appearances": 6,
+      "wc_group_avg_pts": 1.6,
+      "qualifier_win_rate": 0.7,
+      "qualifier_gd": 19,
+      "form": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goals_for": 2.85,
+        "goals_against": 0.9,
+        "xg_diff": -0.05,
+        "ppda": 11.0,
+        "home_win_rate": 0.7999999999999999
+      },
+      "tactics": {
+        "formation": "4-3-3",
+        "style": "高位压迫 + 控球组织",
+        "efficiency": 0.82
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Luka Vuskovic",
+          "Josip Stanisic",
+          "Martin Baturina",
+          "Nikola Moro",
+          "Igor Matanovic"
+        ],
+        "injury_risk": 0.089
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.78
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 26,
+      "avg_age": 27.9,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "GHA": {
+      "code": "GH",
+      "name": "加纳",
+      "fifa_rank": 68,
+      "elo": 1456.1,
+      "opta_index": 65,
+      "tier": 4,
+      "squad_value_m": 256.5,
+      "wc_appearances": 4,
+      "wc_group_avg_pts": 0.8,
+      "qualifier_win_rate": 0.46,
+      "qualifier_gd": 0,
+      "form": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "goals_for": 1.88,
+        "goals_against": 1.4,
+        "xg_diff": -0.06,
+        "ppda": 14.0,
+        "home_win_rate": 0.6499999999999999
+      },
+      "tactics": {
+        "formation": "5-4-1",
+        "style": "密集防守 + 反击",
+        "efficiency": 0.62
+      },
+      "squad": {
+        "depth_score": 1.0,
+        "key_players": [
+          "Ibrahim Sulemana",
+          "Marvin Senaya",
+          "Thomas Partey",
+          "Iñaki Williams",
+          "Antoine Semenyo"
+        ],
+        "injury_risk": 0.07
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.7200000000000001
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 37,
+      "avg_age": 26.0,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    },
+    "PAN": {
+      "code": "PA",
+      "name": "巴拿马",
+      "fifa_rank": 41,
+      "elo": 1567.0,
+      "opta_index": 70,
+      "tier": 3,
+      "squad_value_m": 35.6,
+      "wc_appearances": 2,
+      "wc_group_avg_pts": 1.1,
+      "qualifier_win_rate": 0.54,
+      "qualifier_gd": 9,
+      "form": {
+        "wins": 4,
+        "draws": 3,
+        "losses": 3,
+        "goals_for": 1.63,
+        "goals_against": 1.2,
+        "xg_diff": -0.07,
+        "ppda": 13.0,
+        "home_win_rate": 0.7
+      },
+      "tactics": {
+        "formation": "4-4-2",
+        "style": "中场绞杀 + 定位球",
+        "efficiency": 0.68
+      },
+      "squad": {
+        "depth_score": 0.445,
+        "key_players": [
+          "Amir Murillo",
+          "Ismael Díaz",
+          "Edgardo Fariña",
+          "José Córdoba",
+          "Yoel Bárcenas"
+        ],
+        "injury_risk": 0.093
+      },
+      "environment": {
+        "is_host": false,
+        "altitude_m": 0,
+        "climate_adapt": 0.74
+      },
+      "elo_source": "openfootball_history_multi_wc",
+      "squad_size": 22,
+      "avg_age": 28.3,
+      "data_sources": [
+        "seed",
+        "risingtransfers/world-cup-2026-data"
+      ]
+    }
+  },
+  "matches": [
+    {
+      "id": 1,
+      "openfootball": {
+        "group": "Group A",
+        "round": "Matchday 1",
+        "date": "2026-06-11",
+        "time": "13:00 UTC-6",
+        "ground": "Mexico City"
+      },
+      "title": "Mexico vs South Africa",
+      "subtitle": "6月11日 · Matchday 1 · Group A",
+      "round": 1,
+      "group": "A",
+      "datetime": "2026-06-11T13:00 UTC-6",
+      "venue": "Mexico City",
+      "home": "MEX",
+      "away": "RSA",
+      "home_name": "Mexico",
+      "away_name": "South Africa",
+      "played": true,
+      "actual_score": {
+        "home": 2,
+        "away": 0
+      },
+      "actual_ht": [
+        1,
+        0
+      ],
+      "venue_altitude_m": 2240,
+      "travel_km": {
+        "MEX": 0.0,
+        "RSA": 0.0
+      },
+      "venue_meta": {
+        "name": "Estadio Azteca",
+        "city": "Mexico City",
+        "country": "Mexico",
+        "capacity": 87523,
+        "altitude_m": 2240,
+        "lat": 19.3029,
+        "lon": -99.1505,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 2,
+      "openfootball": {
+        "group": "Group A",
+        "round": "Matchday 1",
+        "date": "2026-06-11",
+        "time": "20:00 UTC-6",
+        "ground": "Guadalajara (Zapopan)"
+      },
+      "title": "South Korea vs Czech Republic",
+      "subtitle": "6月11日 · Matchday 1 · Group A",
+      "round": 1,
+      "group": "A",
+      "datetime": "2026-06-11T20:00 UTC-6",
+      "venue": "Guadalajara (Zapopan)",
+      "home": "KOR",
+      "away": "CZE",
+      "home_name": "South Korea",
+      "away_name": "Czech Republic",
+      "played": true,
+      "actual_score": {
+        "home": 2,
+        "away": 1
+      },
+      "actual_ht": [
+        0,
+        0
+      ],
+      "venue_altitude_m": 1560,
+      "travel_km": {
+        "KOR": 0.0,
+        "CZE": 0.0
+      },
+      "venue_meta": {
+        "name": "Estadio Akron",
+        "city": "Guadalajara",
+        "country": "Mexico",
+        "capacity": 49850,
+        "altitude_m": 1560,
+        "lat": 20.6818,
+        "lon": -103.4622,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 3,
+      "openfootball": {
+        "group": "Group A",
+        "round": "Matchday 8",
+        "date": "2026-06-18",
+        "time": "12:00 UTC-4",
+        "ground": "Atlanta"
+      },
+      "title": "Czech Republic vs South Africa",
+      "subtitle": "6月18日 · Matchday 8 · Group A",
+      "round": 2,
+      "group": "A",
+      "datetime": "2026-06-18T12:00 UTC-4",
+      "venue": "Atlanta",
+      "home": "CZE",
+      "away": "RSA",
+      "home_name": "Czech Republic",
+      "away_name": "South Africa",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "CZE": 2373.0,
+        "RSA": 2171.0
+      },
+      "venue_meta": {
+        "name": "Mercedes-Benz Stadium",
+        "city": "Atlanta",
+        "country": "USA",
+        "capacity": 71000,
+        "altitude_m": 320,
+        "lat": 33.7554,
+        "lon": -84.4008,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 4,
+      "openfootball": {
+        "group": "Group A",
+        "round": "Matchday 8",
+        "date": "2026-06-18",
+        "time": "19:00 UTC-6",
+        "ground": "Guadalajara (Zapopan)"
+      },
+      "title": "Mexico vs South Korea",
+      "subtitle": "6月18日 · Matchday 8 · Group A",
+      "round": 2,
+      "group": "A",
+      "datetime": "2026-06-18T19:00 UTC-6",
+      "venue": "Guadalajara (Zapopan)",
+      "home": "MEX",
+      "away": "KOR",
+      "home_name": "Mexico",
+      "away_name": "South Korea",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 1560,
+      "travel_km": {
+        "MEX": 476.0,
+        "KOR": 0.0
+      },
+      "venue_meta": {
+        "name": "Estadio Akron",
+        "city": "Guadalajara",
+        "country": "Mexico",
+        "capacity": 49850,
+        "altitude_m": 1560,
+        "lat": 20.6818,
+        "lon": -103.4622,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 5,
+      "openfootball": {
+        "group": "Group A",
+        "round": "Matchday 14",
+        "date": "2026-06-24",
+        "time": "19:00 UTC-6",
+        "ground": "Mexico City"
+      },
+      "title": "Czech Republic vs Mexico",
+      "subtitle": "6月24日 · Matchday 14 · Group A",
+      "round": 3,
+      "group": "A",
+      "datetime": "2026-06-24T19:00 UTC-6",
+      "venue": "Mexico City",
+      "home": "CZE",
+      "away": "MEX",
+      "home_name": "Czech Republic",
+      "away_name": "Mexico",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 2240,
+      "travel_km": {
+        "CZE": 2171.0,
+        "MEX": 476.0
+      },
+      "venue_meta": {
+        "name": "Estadio Azteca",
+        "city": "Mexico City",
+        "country": "Mexico",
+        "capacity": 87523,
+        "altitude_m": 2240,
+        "lat": 19.3029,
+        "lon": -99.1505,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 6,
+      "openfootball": {
+        "group": "Group A",
+        "round": "Matchday 14",
+        "date": "2026-06-24",
+        "time": "19:00 UTC-6",
+        "ground": "Monterrey (Guadalupe)"
+      },
+      "title": "South Africa vs South Korea",
+      "subtitle": "6月24日 · Matchday 14 · Group A",
+      "round": 3,
+      "group": "A",
+      "datetime": "2026-06-24T19:00 UTC-6",
+      "venue": "Monterrey (Guadalupe)",
+      "home": "RSA",
+      "away": "KOR",
+      "home_name": "South Africa",
+      "away_name": "South Korea",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 540,
+      "travel_km": {
+        "RSA": 1768.0,
+        "KOR": 650.0
+      },
+      "venue_meta": {
+        "name": "Estadio BBVA",
+        "city": "Monterrey",
+        "country": "Mexico",
+        "capacity": 53500,
+        "altitude_m": 540,
+        "lat": 25.7244,
+        "lon": -100.2428,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 7,
+      "openfootball": {
+        "group": "Group B",
+        "round": "Matchday 2",
+        "date": "2026-06-12",
+        "time": "15:00 UTC-4",
+        "ground": "Toronto"
+      },
+      "title": "Canada vs Bosnia & Herzegovina",
+      "subtitle": "6月12日 · Matchday 2 · Group B",
+      "round": 1,
+      "group": "B",
+      "datetime": "2026-06-12T15:00 UTC-4",
+      "venue": "Toronto",
+      "home": "CAN",
+      "away": "BIH",
+      "home_name": "Canada",
+      "away_name": "Bosnia & Herzegovina",
+      "played": true,
+      "actual_score": {
+        "home": 1,
+        "away": 1
+      },
+      "actual_ht": [
+        0,
+        1
+      ],
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "CAN": 0.0,
+        "BIH": 0.0
+      },
+      "venue_meta": {
+        "name": "BMO Field",
+        "city": "Toronto",
+        "country": "Canada",
+        "capacity": 45000,
+        "altitude_m": 90,
+        "lat": 43.6332,
+        "lon": -79.4186,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 8,
+      "openfootball": {
+        "group": "Group B",
+        "round": "Matchday 3",
+        "date": "2026-06-13",
+        "time": "12:00 UTC-7",
+        "ground": "San Francisco Bay Area (Santa Clara)"
+      },
+      "title": "Qatar vs Switzerland",
+      "subtitle": "6月13日 · Matchday 3 · Group B",
+      "round": 1,
+      "group": "B",
+      "datetime": "2026-06-13T12:00 UTC-7",
+      "venue": "San Francisco Bay Area (Santa Clara)",
+      "home": "QAT",
+      "away": "SUI",
+      "home_name": "Qatar",
+      "away_name": "Switzerland",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "QAT": 0.0,
+        "SUI": 0.0
+      },
+      "venue_meta": {
+        "name": "Levi's Stadium",
+        "city": "Santa Clara",
+        "country": "USA",
+        "capacity": 68500,
+        "altitude_m": 7,
+        "lat": 37.4032,
+        "lon": -121.9698,
+        "timezone": "UTC-7",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 9,
+      "openfootball": {
+        "group": "Group B",
+        "round": "Matchday 8",
+        "date": "2026-06-18",
+        "time": "12:00 UTC-7",
+        "ground": "Los Angeles (Inglewood)"
+      },
+      "title": "Switzerland vs Bosnia & Herzegovina",
+      "subtitle": "6月18日 · Matchday 8 · Group B",
+      "round": 2,
+      "group": "B",
+      "datetime": "2026-06-18T12:00 UTC-7",
+      "venue": "Los Angeles (Inglewood)",
+      "home": "SUI",
+      "away": "BIH",
+      "home_name": "Switzerland",
+      "away_name": "Bosnia & Herzegovina",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "SUI": 505.0,
+        "BIH": 3504.0
+      },
+      "venue_meta": {
+        "name": "SoFi Stadium",
+        "city": "Inglewood",
+        "country": "USA",
+        "capacity": 70240,
+        "altitude_m": 30,
+        "lat": 33.9535,
+        "lon": -118.3392,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 10,
+      "openfootball": {
+        "group": "Group B",
+        "round": "Matchday 8",
+        "date": "2026-06-18",
+        "time": "15:00 UTC-7",
+        "ground": "Vancouver"
+      },
+      "title": "Canada vs Qatar",
+      "subtitle": "6月18日 · Matchday 8 · Group B",
+      "round": 2,
+      "group": "B",
+      "datetime": "2026-06-18T15:00 UTC-7",
+      "venue": "Vancouver",
+      "home": "CAN",
+      "away": "QAT",
+      "home_name": "Canada",
+      "away_name": "Qatar",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "CAN": 3357.0,
+        "QAT": 1323.0
+      },
+      "venue_meta": {
+        "name": "BC Place",
+        "city": "Vancouver",
+        "country": "Canada",
+        "capacity": 54500,
+        "altitude_m": 5,
+        "lat": 49.2768,
+        "lon": -123.112,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 11,
+      "openfootball": {
+        "group": "Group B",
+        "round": "Matchday 14",
+        "date": "2026-06-24",
+        "time": "12:00 UTC-7",
+        "ground": "Vancouver"
+      },
+      "title": "Switzerland vs Canada",
+      "subtitle": "6月24日 · Matchday 14 · Group B",
+      "round": 3,
+      "group": "B",
+      "datetime": "2026-06-24T12:00 UTC-7",
+      "venue": "Vancouver",
+      "home": "SUI",
+      "away": "CAN",
+      "home_name": "Switzerland",
+      "away_name": "Canada",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "SUI": 1749.0,
+        "CAN": 0.0
+      },
+      "venue_meta": {
+        "name": "BC Place",
+        "city": "Vancouver",
+        "country": "Canada",
+        "capacity": 54500,
+        "altitude_m": 5,
+        "lat": 49.2768,
+        "lon": -123.112,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 12,
+      "openfootball": {
+        "group": "Group B",
+        "round": "Matchday 14",
+        "date": "2026-06-24",
+        "time": "12:00 UTC-7",
+        "ground": "Seattle"
+      },
+      "title": "Bosnia & Herzegovina vs Qatar",
+      "subtitle": "6月24日 · Matchday 14 · Group B",
+      "round": 3,
+      "group": "B",
+      "datetime": "2026-06-24T12:00 UTC-7",
+      "venue": "Seattle",
+      "home": "BIH",
+      "away": "QAT",
+      "home_name": "Bosnia & Herzegovina",
+      "away_name": "Qatar",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "BIH": 1553.0,
+        "QAT": 196.0
+      },
+      "venue_meta": {
+        "name": "Lumen Field",
+        "city": "Seattle",
+        "country": "USA",
+        "capacity": 69000,
+        "altitude_m": 15,
+        "lat": 47.5952,
+        "lon": -122.3316,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 13,
+      "openfootball": {
+        "group": "Group C",
+        "round": "Matchday 3",
+        "date": "2026-06-13",
+        "time": "18:00 UTC-4",
+        "ground": "New York/New Jersey (East Rutherford)"
+      },
+      "title": "Brazil vs Morocco",
+      "subtitle": "6月13日 · Matchday 3 · Group C",
+      "round": 1,
+      "group": "C",
+      "datetime": "2026-06-13T18:00 UTC-4",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "home": "BRA",
+      "away": "MAR",
+      "home_name": "Brazil",
+      "away_name": "Morocco",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "BRA": 0.0,
+        "MAR": 0.0
+      },
+      "venue_meta": {
+        "name": "MetLife Stadium",
+        "city": "East Rutherford",
+        "country": "USA",
+        "capacity": 82500,
+        "altitude_m": 3,
+        "lat": 40.8128,
+        "lon": -74.0742,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 14,
+      "openfootball": {
+        "group": "Group C",
+        "round": "Matchday 3",
+        "date": "2026-06-13",
+        "time": "21:00 UTC-4",
+        "ground": "Boston (Foxborough)"
+      },
+      "title": "Haiti vs Scotland",
+      "subtitle": "6月13日 · Matchday 3 · Group C",
+      "round": 1,
+      "group": "C",
+      "datetime": "2026-06-13T21:00 UTC-4",
+      "venue": "Boston (Foxborough)",
+      "home": "HAI",
+      "away": "SCO",
+      "home_name": "Haiti",
+      "away_name": "Scotland",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "HAI": 0.0,
+        "SCO": 0.0
+      },
+      "venue_meta": {
+        "name": "Gillette Stadium",
+        "city": "Foxborough",
+        "country": "USA",
+        "capacity": 65878,
+        "altitude_m": 50,
+        "lat": 42.0909,
+        "lon": -71.2643,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 15,
+      "openfootball": {
+        "group": "Group C",
+        "round": "Matchday 9",
+        "date": "2026-06-19",
+        "time": "18:00 UTC-4",
+        "ground": "Boston (Foxborough)"
+      },
+      "title": "Scotland vs Morocco",
+      "subtitle": "6月19日 · Matchday 9 · Group C",
+      "round": 2,
+      "group": "C",
+      "datetime": "2026-06-19T18:00 UTC-4",
+      "venue": "Boston (Foxborough)",
+      "home": "SCO",
+      "away": "MAR",
+      "home_name": "Scotland",
+      "away_name": "Morocco",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "SCO": 0.0,
+        "MAR": 274.0
+      },
+      "venue_meta": {
+        "name": "Gillette Stadium",
+        "city": "Foxborough",
+        "country": "USA",
+        "capacity": 65878,
+        "altitude_m": 50,
+        "lat": 42.0909,
+        "lon": -71.2643,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 16,
+      "openfootball": {
+        "group": "Group C",
+        "round": "Matchday 9",
+        "date": "2026-06-19",
+        "time": "20:30 UTC-4",
+        "ground": "Philadelphia"
+      },
+      "title": "Brazil vs Haiti",
+      "subtitle": "6月19日 · Matchday 9 · Group C",
+      "round": 2,
+      "group": "C",
+      "datetime": "2026-06-19T20:30 UTC-4",
+      "venue": "Philadelphia",
+      "home": "BRA",
+      "away": "HAI",
+      "home_name": "Brazil",
+      "away_name": "Haiti",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "BRA": 137.0,
+        "HAI": 408.0
+      },
+      "venue_meta": {
+        "name": "Lincoln Financial Field",
+        "city": "Philadelphia",
+        "country": "USA",
+        "capacity": 69796,
+        "altitude_m": 12,
+        "lat": 39.9008,
+        "lon": -75.1675,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 17,
+      "openfootball": {
+        "group": "Group C",
+        "round": "Matchday 14",
+        "date": "2026-06-24",
+        "time": "18:00 UTC-4",
+        "ground": "Miami (Miami Gardens)"
+      },
+      "title": "Scotland vs Brazil",
+      "subtitle": "6月24日 · Matchday 14 · Group C",
+      "round": 3,
+      "group": "C",
+      "datetime": "2026-06-24T18:00 UTC-4",
+      "venue": "Miami (Miami Gardens)",
+      "home": "SCO",
+      "away": "BRA",
+      "home_name": "Scotland",
+      "away_name": "Brazil",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "SCO": 1973.0,
+        "BRA": 1620.0
+      },
+      "venue_meta": {
+        "name": "Hard Rock Stadium",
+        "city": "Miami Gardens",
+        "country": "USA",
+        "capacity": 65326,
+        "altitude_m": 3,
+        "lat": 25.9581,
+        "lon": -80.2389,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 18,
+      "openfootball": {
+        "group": "Group C",
+        "round": "Matchday 14",
+        "date": "2026-06-24",
+        "time": "18:00 UTC-4",
+        "ground": "Atlanta"
+      },
+      "title": "Morocco vs Haiti",
+      "subtitle": "6月24日 · Matchday 14 · Group C",
+      "round": 3,
+      "group": "C",
+      "datetime": "2026-06-24T18:00 UTC-4",
+      "venue": "Atlanta",
+      "home": "MAR",
+      "away": "HAI",
+      "home_name": "Morocco",
+      "away_name": "Haiti",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "MAR": 1476.0,
+        "HAI": 1068.0
+      },
+      "venue_meta": {
+        "name": "Mercedes-Benz Stadium",
+        "city": "Atlanta",
+        "country": "USA",
+        "capacity": 71000,
+        "altitude_m": 320,
+        "lat": 33.7554,
+        "lon": -84.4008,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 19,
+      "openfootball": {
+        "group": "Group D",
+        "round": "Matchday 2",
+        "date": "2026-06-12",
+        "time": "18:00 UTC-7",
+        "ground": "Los Angeles (Inglewood)"
+      },
+      "title": "USA vs Paraguay",
+      "subtitle": "6月12日 · Matchday 2 · Group D",
+      "round": 1,
+      "group": "D",
+      "datetime": "2026-06-12T18:00 UTC-7",
+      "venue": "Los Angeles (Inglewood)",
+      "home": "USA",
+      "away": "PAR",
+      "home_name": "USA",
+      "away_name": "Paraguay",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "USA": 0.0,
+        "PAR": 0.0
+      },
+      "venue_meta": {
+        "name": "SoFi Stadium",
+        "city": "Inglewood",
+        "country": "USA",
+        "capacity": 70240,
+        "altitude_m": 30,
+        "lat": 33.9535,
+        "lon": -118.3392,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 20,
+      "openfootball": {
+        "group": "Group D",
+        "round": "Matchday 3",
+        "date": "2026-06-13",
+        "time": "21:00 UTC-7",
+        "ground": "Vancouver"
+      },
+      "title": "Australia vs Turkey",
+      "subtitle": "6月13日 · Matchday 3 · Group D",
+      "round": 1,
+      "group": "D",
+      "datetime": "2026-06-13T21:00 UTC-7",
+      "venue": "Vancouver",
+      "home": "AUS",
+      "away": "TUR",
+      "home_name": "Australia",
+      "away_name": "Turkey",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "AUS": 0.0,
+        "TUR": 0.0
+      },
+      "venue_meta": {
+        "name": "BC Place",
+        "city": "Vancouver",
+        "country": "Canada",
+        "capacity": 54500,
+        "altitude_m": 5,
+        "lat": 49.2768,
+        "lon": -123.112,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 21,
+      "openfootball": {
+        "group": "Group D",
+        "round": "Matchday 9",
+        "date": "2026-06-19",
+        "time": "12:00 UTC-7",
+        "ground": "Seattle"
+      },
+      "title": "USA vs Australia",
+      "subtitle": "6月19日 · Matchday 9 · Group D",
+      "round": 2,
+      "group": "D",
+      "datetime": "2026-06-19T12:00 UTC-7",
+      "venue": "Seattle",
+      "home": "USA",
+      "away": "AUS",
+      "home_name": "USA",
+      "away_name": "Australia",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "USA": 1553.0,
+        "AUS": 196.0
+      },
+      "venue_meta": {
+        "name": "Lumen Field",
+        "city": "Seattle",
+        "country": "USA",
+        "capacity": 69000,
+        "altitude_m": 15,
+        "lat": 47.5952,
+        "lon": -122.3316,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 22,
+      "openfootball": {
+        "group": "Group D",
+        "round": "Matchday 9",
+        "date": "2026-06-19",
+        "time": "20:00 UTC-7",
+        "ground": "San Francisco Bay Area (Santa Clara)"
+      },
+      "title": "Turkey vs Paraguay",
+      "subtitle": "6月19日 · Matchday 9 · Group D",
+      "round": 2,
+      "group": "D",
+      "datetime": "2026-06-19T20:00 UTC-7",
+      "venue": "San Francisco Bay Area (Santa Clara)",
+      "home": "TUR",
+      "away": "PAR",
+      "home_name": "Turkey",
+      "away_name": "Paraguay",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "TUR": 1323.0,
+        "PAR": 505.0
+      },
+      "venue_meta": {
+        "name": "Levi's Stadium",
+        "city": "Santa Clara",
+        "country": "USA",
+        "capacity": 68500,
+        "altitude_m": 7,
+        "lat": 37.4032,
+        "lon": -121.9698,
+        "timezone": "UTC-7",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 23,
+      "openfootball": {
+        "group": "Group D",
+        "round": "Matchday 15",
+        "date": "2026-06-25",
+        "time": "19:00 UTC-7",
+        "ground": "Los Angeles (Inglewood)"
+      },
+      "title": "Turkey vs USA",
+      "subtitle": "6月25日 · Matchday 15 · Group D",
+      "round": 3,
+      "group": "D",
+      "datetime": "2026-06-25T19:00 UTC-7",
+      "venue": "Los Angeles (Inglewood)",
+      "home": "TUR",
+      "away": "USA",
+      "home_name": "Turkey",
+      "away_name": "USA",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "TUR": 505.0,
+        "USA": 1553.0
+      },
+      "venue_meta": {
+        "name": "SoFi Stadium",
+        "city": "Inglewood",
+        "country": "USA",
+        "capacity": 70240,
+        "altitude_m": 30,
+        "lat": 33.9535,
+        "lon": -118.3392,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 24,
+      "openfootball": {
+        "group": "Group D",
+        "round": "Matchday 15",
+        "date": "2026-06-25",
+        "time": "19:00 UTC-7",
+        "ground": "San Francisco Bay Area (Santa Clara)"
+      },
+      "title": "Paraguay vs Australia",
+      "subtitle": "6月25日 · Matchday 15 · Group D",
+      "round": 3,
+      "group": "D",
+      "datetime": "2026-06-25T19:00 UTC-7",
+      "venue": "San Francisco Bay Area (Santa Clara)",
+      "home": "PAR",
+      "away": "AUS",
+      "home_name": "Paraguay",
+      "away_name": "Australia",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "PAR": 0.0,
+        "AUS": 1134.0
+      },
+      "venue_meta": {
+        "name": "Levi's Stadium",
+        "city": "Santa Clara",
+        "country": "USA",
+        "capacity": 68500,
+        "altitude_m": 7,
+        "lat": 37.4032,
+        "lon": -121.9698,
+        "timezone": "UTC-7",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 25,
+      "openfootball": {
+        "group": "Group E",
+        "round": "Matchday 4",
+        "date": "2026-06-14",
+        "time": "12:00 UTC-5",
+        "ground": "Houston"
+      },
+      "title": "Germany vs Curaçao",
+      "subtitle": "6月14日 · Matchday 4 · Group E",
+      "round": 1,
+      "group": "E",
+      "datetime": "2026-06-14T12:00 UTC-5",
+      "venue": "Houston",
+      "home": "GER",
+      "away": "CUW",
+      "home_name": "Germany",
+      "away_name": "Curaçao",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "GER": 0.0,
+        "CUW": 0.0
+      },
+      "venue_meta": {
+        "name": "NRG Stadium",
+        "city": "Houston",
+        "country": "USA",
+        "capacity": 72220,
+        "altitude_m": 15,
+        "lat": 29.6847,
+        "lon": -95.4107,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 26,
+      "openfootball": {
+        "group": "Group E",
+        "round": "Matchday 4",
+        "date": "2026-06-14",
+        "time": "19:00 UTC-4",
+        "ground": "Philadelphia"
+      },
+      "title": "Ivory Coast vs Ecuador",
+      "subtitle": "6月14日 · Matchday 4 · Group E",
+      "round": 1,
+      "group": "E",
+      "datetime": "2026-06-14T19:00 UTC-4",
+      "venue": "Philadelphia",
+      "home": "CIV",
+      "away": "ECU",
+      "home_name": "Ivory Coast",
+      "away_name": "Ecuador",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "CIV": 0.0,
+        "ECU": 0.0
+      },
+      "venue_meta": {
+        "name": "Lincoln Financial Field",
+        "city": "Philadelphia",
+        "country": "USA",
+        "capacity": 69796,
+        "altitude_m": 12,
+        "lat": 39.9008,
+        "lon": -75.1675,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 27,
+      "openfootball": {
+        "group": "Group E",
+        "round": "Matchday 10",
+        "date": "2026-06-20",
+        "time": "16:00 UTC-4",
+        "ground": "Toronto"
+      },
+      "title": "Germany vs Ivory Coast",
+      "subtitle": "6月20日 · Matchday 10 · Group E",
+      "round": 2,
+      "group": "E",
+      "datetime": "2026-06-20T16:00 UTC-4",
+      "venue": "Toronto",
+      "home": "GER",
+      "away": "CIV",
+      "home_name": "Germany",
+      "away_name": "Ivory Coast",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "GER": 2100.0,
+        "CIV": 544.0
+      },
+      "venue_meta": {
+        "name": "BMO Field",
+        "city": "Toronto",
+        "country": "Canada",
+        "capacity": 45000,
+        "altitude_m": 90,
+        "lat": 43.6332,
+        "lon": -79.4186,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 28,
+      "openfootball": {
+        "group": "Group E",
+        "round": "Matchday 10",
+        "date": "2026-06-20",
+        "time": "19:00 UTC-5",
+        "ground": "Kansas City"
+      },
+      "title": "Ecuador vs Curaçao",
+      "subtitle": "6月20日 · Matchday 10 · Group E",
+      "round": 2,
+      "group": "E",
+      "datetime": "2026-06-20T19:00 UTC-5",
+      "venue": "Kansas City",
+      "home": "ECU",
+      "away": "CUW",
+      "home_name": "Ecuador",
+      "away_name": "Curaçao",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "ECU": 1657.0,
+        "CUW": 1045.0
+      },
+      "venue_meta": {
+        "name": "Arrowhead Stadium",
+        "city": "Kansas City",
+        "country": "USA",
+        "capacity": 76416,
+        "altitude_m": 270,
+        "lat": 39.0489,
+        "lon": -94.4839,
+        "timezone": "UTC-5",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 29,
+      "openfootball": {
+        "group": "Group E",
+        "round": "Matchday 15",
+        "date": "2026-06-25",
+        "time": "16:00 UTC-4",
+        "ground": "Philadelphia"
+      },
+      "title": "Curaçao vs Ivory Coast",
+      "subtitle": "6月25日 · Matchday 15 · Group E",
+      "round": 3,
+      "group": "E",
+      "datetime": "2026-06-25T16:00 UTC-4",
+      "venue": "Philadelphia",
+      "home": "CUW",
+      "away": "CIV",
+      "home_name": "Curaçao",
+      "away_name": "Ivory Coast",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "CUW": 1657.0,
+        "CIV": 544.0
+      },
+      "venue_meta": {
+        "name": "Lincoln Financial Field",
+        "city": "Philadelphia",
+        "country": "USA",
+        "capacity": 69796,
+        "altitude_m": 12,
+        "lat": 39.9008,
+        "lon": -75.1675,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 30,
+      "openfootball": {
+        "group": "Group E",
+        "round": "Matchday 15",
+        "date": "2026-06-25",
+        "time": "16:00 UTC-4",
+        "ground": "New York/New Jersey (East Rutherford)"
+      },
+      "title": "Ecuador vs Germany",
+      "subtitle": "6月25日 · Matchday 15 · Group E",
+      "round": 3,
+      "group": "E",
+      "datetime": "2026-06-25T16:00 UTC-4",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "home": "ECU",
+      "away": "GER",
+      "home_name": "Ecuador",
+      "away_name": "Germany",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "ECU": 1747.0,
+        "GER": 540.0
+      },
+      "venue_meta": {
+        "name": "MetLife Stadium",
+        "city": "East Rutherford",
+        "country": "USA",
+        "capacity": 82500,
+        "altitude_m": 3,
+        "lat": 40.8128,
+        "lon": -74.0742,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 31,
+      "openfootball": {
+        "group": "Group F",
+        "round": "Matchday 4",
+        "date": "2026-06-14",
+        "time": "15:00 UTC-5",
+        "ground": "Dallas (Arlington)"
+      },
+      "title": "Netherlands vs Japan",
+      "subtitle": "6月14日 · Matchday 4 · Group F",
+      "round": 1,
+      "group": "F",
+      "datetime": "2026-06-14T15:00 UTC-5",
+      "venue": "Dallas (Arlington)",
+      "home": "NED",
+      "away": "JPN",
+      "home_name": "Netherlands",
+      "away_name": "Japan",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "NED": 0.0,
+        "JPN": 0.0
+      },
+      "venue_meta": {
+        "name": "AT&T Stadium",
+        "city": "Arlington",
+        "country": "USA",
+        "capacity": 80000,
+        "altitude_m": 180,
+        "lat": 32.7473,
+        "lon": -97.0945,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 32,
+      "openfootball": {
+        "group": "Group F",
+        "round": "Matchday 4",
+        "date": "2026-06-14",
+        "time": "20:00 UTC-6",
+        "ground": "Monterrey (Guadalupe)"
+      },
+      "title": "Sweden vs Tunisia",
+      "subtitle": "6月14日 · Matchday 4 · Group F",
+      "round": 1,
+      "group": "F",
+      "datetime": "2026-06-14T20:00 UTC-6",
+      "venue": "Monterrey (Guadalupe)",
+      "home": "SWE",
+      "away": "TUN",
+      "home_name": "Sweden",
+      "away_name": "Tunisia",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 540,
+      "travel_km": {
+        "SWE": 0.0,
+        "TUN": 0.0
+      },
+      "venue_meta": {
+        "name": "Estadio BBVA",
+        "city": "Monterrey",
+        "country": "Mexico",
+        "capacity": 53500,
+        "altitude_m": 540,
+        "lat": 25.7244,
+        "lon": -100.2428,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 33,
+      "openfootball": {
+        "group": "Group F",
+        "round": "Matchday 10",
+        "date": "2026-06-20",
+        "time": "12:00 UTC-5",
+        "ground": "Houston"
+      },
+      "title": "Netherlands vs Sweden",
+      "subtitle": "6月20日 · Matchday 10 · Group F",
+      "round": 2,
+      "group": "F",
+      "datetime": "2026-06-20T12:00 UTC-5",
+      "venue": "Houston",
+      "home": "NED",
+      "away": "SWE",
+      "home_name": "Netherlands",
+      "away_name": "Sweden",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "NED": 376.0,
+        "SWE": 648.0
+      },
+      "venue_meta": {
+        "name": "NRG Stadium",
+        "city": "Houston",
+        "country": "USA",
+        "capacity": 72220,
+        "altitude_m": 15,
+        "lat": 29.6847,
+        "lon": -95.4107,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 34,
+      "openfootball": {
+        "group": "Group F",
+        "round": "Matchday 10",
+        "date": "2026-06-20",
+        "time": "22:00 UTC-6",
+        "ground": "Monterrey (Guadalupe)"
+      },
+      "title": "Tunisia vs Japan",
+      "subtitle": "6月20日 · Matchday 10 · Group F",
+      "round": 2,
+      "group": "F",
+      "datetime": "2026-06-20T22:00 UTC-6",
+      "venue": "Monterrey (Guadalupe)",
+      "home": "TUN",
+      "away": "JPN",
+      "home_name": "Tunisia",
+      "away_name": "Japan",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 540,
+      "travel_km": {
+        "TUN": 0.0,
+        "JPN": 838.0
+      },
+      "venue_meta": {
+        "name": "Estadio BBVA",
+        "city": "Monterrey",
+        "country": "Mexico",
+        "capacity": 53500,
+        "altitude_m": 540,
+        "lat": 25.7244,
+        "lon": -100.2428,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 35,
+      "openfootball": {
+        "group": "Group F",
+        "round": "Matchday 15",
+        "date": "2026-06-25",
+        "time": "18:00 UTC-5",
+        "ground": "Dallas (Arlington)"
+      },
+      "title": "Japan vs Sweden",
+      "subtitle": "6月25日 · Matchday 15 · Group F",
+      "round": 3,
+      "group": "F",
+      "datetime": "2026-06-25T18:00 UTC-5",
+      "venue": "Dallas (Arlington)",
+      "home": "JPN",
+      "away": "SWE",
+      "home_name": "Japan",
+      "away_name": "Sweden",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "JPN": 838.0,
+        "SWE": 376.0
+      },
+      "venue_meta": {
+        "name": "AT&T Stadium",
+        "city": "Arlington",
+        "country": "USA",
+        "capacity": 80000,
+        "altitude_m": 180,
+        "lat": 32.7473,
+        "lon": -97.0945,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 36,
+      "openfootball": {
+        "group": "Group F",
+        "round": "Matchday 15",
+        "date": "2026-06-25",
+        "time": "18:00 UTC-5",
+        "ground": "Kansas City"
+      },
+      "title": "Tunisia vs Netherlands",
+      "subtitle": "6月25日 · Matchday 15 · Group F",
+      "round": 3,
+      "group": "F",
+      "datetime": "2026-06-25T18:00 UTC-5",
+      "venue": "Kansas City",
+      "home": "TUN",
+      "away": "NED",
+      "home_name": "Tunisia",
+      "away_name": "Netherlands",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "TUN": 1576.0,
+        "NED": 1045.0
+      },
+      "venue_meta": {
+        "name": "Arrowhead Stadium",
+        "city": "Kansas City",
+        "country": "USA",
+        "capacity": 76416,
+        "altitude_m": 270,
+        "lat": 39.0489,
+        "lon": -94.4839,
+        "timezone": "UTC-5",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 37,
+      "openfootball": {
+        "group": "Group G",
+        "round": "Matchday 5",
+        "date": "2026-06-15",
+        "time": "12:00 UTC-7",
+        "ground": "Seattle"
+      },
+      "title": "Belgium vs Egypt",
+      "subtitle": "6月15日 · Matchday 5 · Group G",
+      "round": 1,
+      "group": "G",
+      "datetime": "2026-06-15T12:00 UTC-7",
+      "venue": "Seattle",
+      "home": "BEL",
+      "away": "EGY",
+      "home_name": "Belgium",
+      "away_name": "Egypt",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "BEL": 0.0,
+        "EGY": 0.0
+      },
+      "venue_meta": {
+        "name": "Lumen Field",
+        "city": "Seattle",
+        "country": "USA",
+        "capacity": 69000,
+        "altitude_m": 15,
+        "lat": 47.5952,
+        "lon": -122.3316,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 38,
+      "openfootball": {
+        "group": "Group G",
+        "round": "Matchday 5",
+        "date": "2026-06-15",
+        "time": "18:00 UTC-7",
+        "ground": "Los Angeles (Inglewood)"
+      },
+      "title": "Iran vs New Zealand",
+      "subtitle": "6月15日 · Matchday 5 · Group G",
+      "round": 1,
+      "group": "G",
+      "datetime": "2026-06-15T18:00 UTC-7",
+      "venue": "Los Angeles (Inglewood)",
+      "home": "IRN",
+      "away": "NZL",
+      "home_name": "Iran",
+      "away_name": "New Zealand",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "IRN": 0.0,
+        "NZL": 0.0
+      },
+      "venue_meta": {
+        "name": "SoFi Stadium",
+        "city": "Inglewood",
+        "country": "USA",
+        "capacity": 70240,
+        "altitude_m": 30,
+        "lat": 33.9535,
+        "lon": -118.3392,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 39,
+      "openfootball": {
+        "group": "Group G",
+        "round": "Matchday 11",
+        "date": "2026-06-21",
+        "time": "12:00 UTC-7",
+        "ground": "Los Angeles (Inglewood)"
+      },
+      "title": "Belgium vs Iran",
+      "subtitle": "6月21日 · Matchday 11 · Group G",
+      "round": 2,
+      "group": "G",
+      "datetime": "2026-06-21T12:00 UTC-7",
+      "venue": "Los Angeles (Inglewood)",
+      "home": "BEL",
+      "away": "IRN",
+      "home_name": "Belgium",
+      "away_name": "Iran",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "BEL": 1553.0,
+        "IRN": 0.0
+      },
+      "venue_meta": {
+        "name": "SoFi Stadium",
+        "city": "Inglewood",
+        "country": "USA",
+        "capacity": 70240,
+        "altitude_m": 30,
+        "lat": 33.9535,
+        "lon": -118.3392,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 40,
+      "openfootball": {
+        "group": "Group G",
+        "round": "Matchday 11",
+        "date": "2026-06-21",
+        "time": "18:00 UTC-7",
+        "ground": "Vancouver"
+      },
+      "title": "New Zealand vs Egypt",
+      "subtitle": "6月21日 · Matchday 11 · Group G",
+      "round": 2,
+      "group": "G",
+      "datetime": "2026-06-21T18:00 UTC-7",
+      "venue": "Vancouver",
+      "home": "NZL",
+      "away": "EGY",
+      "home_name": "New Zealand",
+      "away_name": "Egypt",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "NZL": 1749.0,
+        "EGY": 196.0
+      },
+      "venue_meta": {
+        "name": "BC Place",
+        "city": "Vancouver",
+        "country": "Canada",
+        "capacity": 54500,
+        "altitude_m": 5,
+        "lat": 49.2768,
+        "lon": -123.112,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 41,
+      "openfootball": {
+        "group": "Group G",
+        "round": "Matchday 16",
+        "date": "2026-06-26",
+        "time": "20:00 UTC-7",
+        "ground": "Seattle"
+      },
+      "title": "Egypt vs Iran",
+      "subtitle": "6月26日 · Matchday 16 · Group G",
+      "round": 3,
+      "group": "G",
+      "datetime": "2026-06-26T20:00 UTC-7",
+      "venue": "Seattle",
+      "home": "EGY",
+      "away": "IRN",
+      "home_name": "Egypt",
+      "away_name": "Iran",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "EGY": 196.0,
+        "IRN": 1553.0
+      },
+      "venue_meta": {
+        "name": "Lumen Field",
+        "city": "Seattle",
+        "country": "USA",
+        "capacity": 69000,
+        "altitude_m": 15,
+        "lat": 47.5952,
+        "lon": -122.3316,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 42,
+      "openfootball": {
+        "group": "Group G",
+        "round": "Matchday 16",
+        "date": "2026-06-26",
+        "time": "20:00 UTC-7",
+        "ground": "Vancouver"
+      },
+      "title": "New Zealand vs Belgium",
+      "subtitle": "6月26日 · Matchday 16 · Group G",
+      "round": 3,
+      "group": "G",
+      "datetime": "2026-06-26T20:00 UTC-7",
+      "venue": "Vancouver",
+      "home": "NZL",
+      "away": "BEL",
+      "home_name": "New Zealand",
+      "away_name": "Belgium",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "NZL": 0.0,
+        "BEL": 1749.0
+      },
+      "venue_meta": {
+        "name": "BC Place",
+        "city": "Vancouver",
+        "country": "Canada",
+        "capacity": 54500,
+        "altitude_m": 5,
+        "lat": 49.2768,
+        "lon": -123.112,
+        "timezone": "UTC-7",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 43,
+      "openfootball": {
+        "group": "Group H",
+        "round": "Matchday 5",
+        "date": "2026-06-15",
+        "time": "12:00 UTC-4",
+        "ground": "Atlanta"
+      },
+      "title": "Spain vs Cape Verde",
+      "subtitle": "6月15日 · Matchday 5 · Group H",
+      "round": 1,
+      "group": "H",
+      "datetime": "2026-06-15T12:00 UTC-4",
+      "venue": "Atlanta",
+      "home": "ESP",
+      "away": "CPV",
+      "home_name": "Spain",
+      "away_name": "Cape Verde",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "ESP": 0.0,
+        "CPV": 0.0
+      },
+      "venue_meta": {
+        "name": "Mercedes-Benz Stadium",
+        "city": "Atlanta",
+        "country": "USA",
+        "capacity": 71000,
+        "altitude_m": 320,
+        "lat": 33.7554,
+        "lon": -84.4008,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 44,
+      "openfootball": {
+        "group": "Group H",
+        "round": "Matchday 5",
+        "date": "2026-06-15",
+        "time": "18:00 UTC-4",
+        "ground": "Miami (Miami Gardens)"
+      },
+      "title": "Saudi Arabia vs Uruguay",
+      "subtitle": "6月15日 · Matchday 5 · Group H",
+      "round": 1,
+      "group": "H",
+      "datetime": "2026-06-15T18:00 UTC-4",
+      "venue": "Miami (Miami Gardens)",
+      "home": "KSA",
+      "away": "URU",
+      "home_name": "Saudi Arabia",
+      "away_name": "Uruguay",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "KSA": 0.0,
+        "URU": 0.0
+      },
+      "venue_meta": {
+        "name": "Hard Rock Stadium",
+        "city": "Miami Gardens",
+        "country": "USA",
+        "capacity": 65326,
+        "altitude_m": 3,
+        "lat": 25.9581,
+        "lon": -80.2389,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 45,
+      "openfootball": {
+        "group": "Group H",
+        "round": "Matchday 11",
+        "date": "2026-06-21",
+        "time": "12:00 UTC-4",
+        "ground": "Atlanta"
+      },
+      "title": "Spain vs Saudi Arabia",
+      "subtitle": "6月21日 · Matchday 11 · Group H",
+      "round": 2,
+      "group": "H",
+      "datetime": "2026-06-21T12:00 UTC-4",
+      "venue": "Atlanta",
+      "home": "ESP",
+      "away": "KSA",
+      "home_name": "Spain",
+      "away_name": "Saudi Arabia",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "ESP": 0.0,
+        "KSA": 955.0
+      },
+      "venue_meta": {
+        "name": "Mercedes-Benz Stadium",
+        "city": "Atlanta",
+        "country": "USA",
+        "capacity": 71000,
+        "altitude_m": 320,
+        "lat": 33.7554,
+        "lon": -84.4008,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 46,
+      "openfootball": {
+        "group": "Group H",
+        "round": "Matchday 11",
+        "date": "2026-06-21",
+        "time": "18:00 UTC-4",
+        "ground": "Miami (Miami Gardens)"
+      },
+      "title": "Uruguay vs Cape Verde",
+      "subtitle": "6月21日 · Matchday 11 · Group H",
+      "round": 2,
+      "group": "H",
+      "datetime": "2026-06-21T18:00 UTC-4",
+      "venue": "Miami (Miami Gardens)",
+      "home": "URU",
+      "away": "CPV",
+      "home_name": "Uruguay",
+      "away_name": "Cape Verde",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "URU": 0.0,
+        "CPV": 955.0
+      },
+      "venue_meta": {
+        "name": "Hard Rock Stadium",
+        "city": "Miami Gardens",
+        "country": "USA",
+        "capacity": 65326,
+        "altitude_m": 3,
+        "lat": 25.9581,
+        "lon": -80.2389,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 47,
+      "openfootball": {
+        "group": "Group H",
+        "round": "Matchday 16",
+        "date": "2026-06-26",
+        "time": "19:00 UTC-5",
+        "ground": "Houston"
+      },
+      "title": "Cape Verde vs Saudi Arabia",
+      "subtitle": "6月26日 · Matchday 16 · Group H",
+      "round": 3,
+      "group": "H",
+      "datetime": "2026-06-26T19:00 UTC-5",
+      "venue": "Houston",
+      "home": "CPV",
+      "away": "KSA",
+      "home_name": "Cape Verde",
+      "away_name": "Saudi Arabia",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "CPV": 1547.0,
+        "KSA": 1135.0
+      },
+      "venue_meta": {
+        "name": "NRG Stadium",
+        "city": "Houston",
+        "country": "USA",
+        "capacity": 72220,
+        "altitude_m": 15,
+        "lat": 29.6847,
+        "lon": -95.4107,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 48,
+      "openfootball": {
+        "group": "Group H",
+        "round": "Matchday 16",
+        "date": "2026-06-26",
+        "time": "18:00 UTC-6",
+        "ground": "Guadalajara (Zapopan)"
+      },
+      "title": "Uruguay vs Spain",
+      "subtitle": "6月26日 · Matchday 16 · Group H",
+      "round": 3,
+      "group": "H",
+      "datetime": "2026-06-26T18:00 UTC-6",
+      "venue": "Guadalajara (Zapopan)",
+      "home": "URU",
+      "away": "ESP",
+      "home_name": "Uruguay",
+      "away_name": "Spain",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 1560,
+      "travel_km": {
+        "URU": 2439.0,
+        "ESP": 2373.0
+      },
+      "venue_meta": {
+        "name": "Estadio Akron",
+        "city": "Guadalajara",
+        "country": "Mexico",
+        "capacity": 49850,
+        "altitude_m": 1560,
+        "lat": 20.6818,
+        "lon": -103.4622,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 49,
+      "openfootball": {
+        "group": "Group I",
+        "round": "Matchday 6",
+        "date": "2026-06-16",
+        "time": "15:00 UTC-4",
+        "ground": "New York/New Jersey (East Rutherford)"
+      },
+      "title": "France vs Senegal",
+      "subtitle": "6月16日 · Matchday 6 · Group I",
+      "round": 1,
+      "group": "I",
+      "datetime": "2026-06-16T15:00 UTC-4",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "home": "FRA",
+      "away": "SEN",
+      "home_name": "France",
+      "away_name": "Senegal",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "FRA": 0.0,
+        "SEN": 0.0
+      },
+      "venue_meta": {
+        "name": "MetLife Stadium",
+        "city": "East Rutherford",
+        "country": "USA",
+        "capacity": 82500,
+        "altitude_m": 3,
+        "lat": 40.8128,
+        "lon": -74.0742,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 50,
+      "openfootball": {
+        "group": "Group I",
+        "round": "Matchday 6",
+        "date": "2026-06-16",
+        "time": "18:00 UTC-4",
+        "ground": "Boston (Foxborough)"
+      },
+      "title": "Iraq vs Norway",
+      "subtitle": "6月16日 · Matchday 6 · Group I",
+      "round": 1,
+      "group": "I",
+      "datetime": "2026-06-16T18:00 UTC-4",
+      "venue": "Boston (Foxborough)",
+      "home": "IRQ",
+      "away": "NOR",
+      "home_name": "Iraq",
+      "away_name": "Norway",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "IRQ": 0.0,
+        "NOR": 0.0
+      },
+      "venue_meta": {
+        "name": "Gillette Stadium",
+        "city": "Foxborough",
+        "country": "USA",
+        "capacity": 65878,
+        "altitude_m": 50,
+        "lat": 42.0909,
+        "lon": -71.2643,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 51,
+      "openfootball": {
+        "group": "Group I",
+        "round": "Matchday 12",
+        "date": "2026-06-22",
+        "time": "17:00 UTC-4",
+        "ground": "Philadelphia"
+      },
+      "title": "France vs Iraq",
+      "subtitle": "6月22日 · Matchday 12 · Group I",
+      "round": 2,
+      "group": "I",
+      "datetime": "2026-06-22T17:00 UTC-4",
+      "venue": "Philadelphia",
+      "home": "FRA",
+      "away": "IRQ",
+      "home_name": "France",
+      "away_name": "Iraq",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "FRA": 137.0,
+        "IRQ": 408.0
+      },
+      "venue_meta": {
+        "name": "Lincoln Financial Field",
+        "city": "Philadelphia",
+        "country": "USA",
+        "capacity": 69796,
+        "altitude_m": 12,
+        "lat": 39.9008,
+        "lon": -75.1675,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 52,
+      "openfootball": {
+        "group": "Group I",
+        "round": "Matchday 12",
+        "date": "2026-06-22",
+        "time": "20:00 UTC-4",
+        "ground": "New York/New Jersey (East Rutherford)"
+      },
+      "title": "Norway vs Senegal",
+      "subtitle": "6月22日 · Matchday 12 · Group I",
+      "round": 2,
+      "group": "I",
+      "datetime": "2026-06-22T20:00 UTC-4",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "home": "NOR",
+      "away": "SEN",
+      "home_name": "Norway",
+      "away_name": "Senegal",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "NOR": 274.0,
+        "SEN": 0.0
+      },
+      "venue_meta": {
+        "name": "MetLife Stadium",
+        "city": "East Rutherford",
+        "country": "USA",
+        "capacity": 82500,
+        "altitude_m": 3,
+        "lat": 40.8128,
+        "lon": -74.0742,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 53,
+      "openfootball": {
+        "group": "Group I",
+        "round": "Matchday 16",
+        "date": "2026-06-26",
+        "time": "15:00 UTC-4",
+        "ground": "Boston (Foxborough)"
+      },
+      "title": "Norway vs France",
+      "subtitle": "6月26日 · Matchday 16 · Group I",
+      "round": 3,
+      "group": "I",
+      "datetime": "2026-06-26T15:00 UTC-4",
+      "venue": "Boston (Foxborough)",
+      "home": "NOR",
+      "away": "FRA",
+      "home_name": "Norway",
+      "away_name": "France",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "NOR": 274.0,
+        "FRA": 408.0
+      },
+      "venue_meta": {
+        "name": "Gillette Stadium",
+        "city": "Foxborough",
+        "country": "USA",
+        "capacity": 65878,
+        "altitude_m": 50,
+        "lat": 42.0909,
+        "lon": -71.2643,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 54,
+      "openfootball": {
+        "group": "Group I",
+        "round": "Matchday 16",
+        "date": "2026-06-26",
+        "time": "15:00 UTC-4",
+        "ground": "Toronto"
+      },
+      "title": "Senegal vs Iraq",
+      "subtitle": "6月26日 · Matchday 16 · Group I",
+      "round": 3,
+      "group": "I",
+      "datetime": "2026-06-26T15:00 UTC-4",
+      "venue": "Toronto",
+      "home": "SEN",
+      "away": "IRQ",
+      "home_name": "Senegal",
+      "away_name": "Iraq",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "SEN": 540.0,
+        "IRQ": 544.0
+      },
+      "venue_meta": {
+        "name": "BMO Field",
+        "city": "Toronto",
+        "country": "Canada",
+        "capacity": 45000,
+        "altitude_m": 90,
+        "lat": 43.6332,
+        "lon": -79.4186,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 55,
+      "openfootball": {
+        "group": "Group J",
+        "round": "Matchday 6",
+        "date": "2026-06-16",
+        "time": "20:00 UTC-5",
+        "ground": "Kansas City"
+      },
+      "title": "Argentina vs Algeria",
+      "subtitle": "6月16日 · Matchday 6 · Group J",
+      "round": 1,
+      "group": "J",
+      "datetime": "2026-06-16T20:00 UTC-5",
+      "venue": "Kansas City",
+      "home": "ARG",
+      "away": "ALG",
+      "home_name": "Argentina",
+      "away_name": "Algeria",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "ARG": 0.0,
+        "ALG": 0.0
+      },
+      "venue_meta": {
+        "name": "Arrowhead Stadium",
+        "city": "Kansas City",
+        "country": "USA",
+        "capacity": 76416,
+        "altitude_m": 270,
+        "lat": 39.0489,
+        "lon": -94.4839,
+        "timezone": "UTC-5",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 56,
+      "openfootball": {
+        "group": "Group J",
+        "round": "Matchday 6",
+        "date": "2026-06-16",
+        "time": "21:00 UTC-7",
+        "ground": "San Francisco Bay Area (Santa Clara)"
+      },
+      "title": "Austria vs Jordan",
+      "subtitle": "6月16日 · Matchday 6 · Group J",
+      "round": 1,
+      "group": "J",
+      "datetime": "2026-06-16T21:00 UTC-7",
+      "venue": "San Francisco Bay Area (Santa Clara)",
+      "home": "AUT",
+      "away": "JOR",
+      "home_name": "Austria",
+      "away_name": "Jordan",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "AUT": 0.0,
+        "JOR": 0.0
+      },
+      "venue_meta": {
+        "name": "Levi's Stadium",
+        "city": "Santa Clara",
+        "country": "USA",
+        "capacity": 68500,
+        "altitude_m": 7,
+        "lat": 37.4032,
+        "lon": -121.9698,
+        "timezone": "UTC-7",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 57,
+      "openfootball": {
+        "group": "Group J",
+        "round": "Matchday 12",
+        "date": "2026-06-22",
+        "time": "12:00 UTC-5",
+        "ground": "Dallas (Arlington)"
+      },
+      "title": "Argentina vs Austria",
+      "subtitle": "6月22日 · Matchday 12 · Group J",
+      "round": 2,
+      "group": "J",
+      "datetime": "2026-06-22T12:00 UTC-5",
+      "venue": "Dallas (Arlington)",
+      "home": "ARG",
+      "away": "AUT",
+      "home_name": "Argentina",
+      "away_name": "Austria",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "ARG": 739.0,
+        "AUT": 2315.0
+      },
+      "venue_meta": {
+        "name": "AT&T Stadium",
+        "city": "Arlington",
+        "country": "USA",
+        "capacity": 80000,
+        "altitude_m": 180,
+        "lat": 32.7473,
+        "lon": -97.0945,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 58,
+      "openfootball": {
+        "group": "Group J",
+        "round": "Matchday 12",
+        "date": "2026-06-22",
+        "time": "20:00 UTC-7",
+        "ground": "San Francisco Bay Area (Santa Clara)"
+      },
+      "title": "Jordan vs Algeria",
+      "subtitle": "6月22日 · Matchday 12 · Group J",
+      "round": 2,
+      "group": "J",
+      "datetime": "2026-06-22T20:00 UTC-7",
+      "venue": "San Francisco Bay Area (Santa Clara)",
+      "home": "JOR",
+      "away": "ALG",
+      "home_name": "Jordan",
+      "away_name": "Algeria",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "JOR": 0.0,
+        "ALG": 2399.0
+      },
+      "venue_meta": {
+        "name": "Levi's Stadium",
+        "city": "Santa Clara",
+        "country": "USA",
+        "capacity": 68500,
+        "altitude_m": 7,
+        "lat": 37.4032,
+        "lon": -121.9698,
+        "timezone": "UTC-7",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 59,
+      "openfootball": {
+        "group": "Group J",
+        "round": "Matchday 17",
+        "date": "2026-06-27",
+        "time": "21:00 UTC-5",
+        "ground": "Kansas City"
+      },
+      "title": "Algeria vs Austria",
+      "subtitle": "6月27日 · Matchday 17 · Group J",
+      "round": 3,
+      "group": "J",
+      "datetime": "2026-06-27T21:00 UTC-5",
+      "venue": "Kansas City",
+      "home": "ALG",
+      "away": "AUT",
+      "home_name": "Algeria",
+      "away_name": "Austria",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "ALG": 2399.0,
+        "AUT": 739.0
+      },
+      "venue_meta": {
+        "name": "Arrowhead Stadium",
+        "city": "Kansas City",
+        "country": "USA",
+        "capacity": 76416,
+        "altitude_m": 270,
+        "lat": 39.0489,
+        "lon": -94.4839,
+        "timezone": "UTC-5",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 60,
+      "openfootball": {
+        "group": "Group J",
+        "round": "Matchday 17",
+        "date": "2026-06-27",
+        "time": "21:00 UTC-5",
+        "ground": "Dallas (Arlington)"
+      },
+      "title": "Jordan vs Argentina",
+      "subtitle": "6月27日 · Matchday 17 · Group J",
+      "round": 3,
+      "group": "J",
+      "datetime": "2026-06-27T21:00 UTC-5",
+      "venue": "Dallas (Arlington)",
+      "home": "JOR",
+      "away": "ARG",
+      "home_name": "Jordan",
+      "away_name": "Argentina",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "JOR": 2315.0,
+        "ARG": 0.0
+      },
+      "venue_meta": {
+        "name": "AT&T Stadium",
+        "city": "Arlington",
+        "country": "USA",
+        "capacity": 80000,
+        "altitude_m": 180,
+        "lat": 32.7473,
+        "lon": -97.0945,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 61,
+      "openfootball": {
+        "group": "Group K",
+        "round": "Matchday 7",
+        "date": "2026-06-17",
+        "time": "12:00 UTC-5",
+        "ground": "Houston"
+      },
+      "title": "Portugal vs DR Congo",
+      "subtitle": "6月17日 · Matchday 7 · Group K",
+      "round": 1,
+      "group": "K",
+      "datetime": "2026-06-17T12:00 UTC-5",
+      "venue": "Houston",
+      "home": "POR",
+      "away": "COD",
+      "home_name": "Portugal",
+      "away_name": "DR Congo",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "POR": 0.0,
+        "COD": 0.0
+      },
+      "venue_meta": {
+        "name": "NRG Stadium",
+        "city": "Houston",
+        "country": "USA",
+        "capacity": 72220,
+        "altitude_m": 15,
+        "lat": 29.6847,
+        "lon": -95.4107,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 62,
+      "openfootball": {
+        "group": "Group K",
+        "round": "Matchday 7",
+        "date": "2026-06-17",
+        "time": "20:00 UTC-6",
+        "ground": "Mexico City"
+      },
+      "title": "Uzbekistan vs Colombia",
+      "subtitle": "6月17日 · Matchday 7 · Group K",
+      "round": 1,
+      "group": "K",
+      "datetime": "2026-06-17T20:00 UTC-6",
+      "venue": "Mexico City",
+      "home": "UZB",
+      "away": "COL",
+      "home_name": "Uzbekistan",
+      "away_name": "Colombia",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 2240,
+      "travel_km": {
+        "UZB": 0.0,
+        "COL": 0.0
+      },
+      "venue_meta": {
+        "name": "Estadio Azteca",
+        "city": "Mexico City",
+        "country": "Mexico",
+        "capacity": 87523,
+        "altitude_m": 2240,
+        "lat": 19.3029,
+        "lon": -99.1505,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 63,
+      "openfootball": {
+        "group": "Group K",
+        "round": "Matchday 13",
+        "date": "2026-06-23",
+        "time": "12:00 UTC-5",
+        "ground": "Houston"
+      },
+      "title": "Portugal vs Uzbekistan",
+      "subtitle": "6月23日 · Matchday 13 · Group K",
+      "round": 2,
+      "group": "K",
+      "datetime": "2026-06-23T12:00 UTC-5",
+      "venue": "Houston",
+      "home": "POR",
+      "away": "UZB",
+      "home_name": "Portugal",
+      "away_name": "Uzbekistan",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "POR": 0.0,
+        "UZB": 1215.0
+      },
+      "venue_meta": {
+        "name": "NRG Stadium",
+        "city": "Houston",
+        "country": "USA",
+        "capacity": 72220,
+        "altitude_m": 15,
+        "lat": 29.6847,
+        "lon": -95.4107,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 64,
+      "openfootball": {
+        "group": "Group K",
+        "round": "Matchday 13",
+        "date": "2026-06-23",
+        "time": "20:00 UTC-6",
+        "ground": "Guadalajara (Zapopan)"
+      },
+      "title": "Colombia vs DR Congo",
+      "subtitle": "6月23日 · Matchday 13 · Group K",
+      "round": 2,
+      "group": "K",
+      "datetime": "2026-06-23T20:00 UTC-6",
+      "venue": "Guadalajara (Zapopan)",
+      "home": "COL",
+      "away": "COD",
+      "home_name": "Colombia",
+      "away_name": "DR Congo",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 1560,
+      "travel_km": {
+        "COL": 476.0,
+        "COD": 1287.0
+      },
+      "venue_meta": {
+        "name": "Estadio Akron",
+        "city": "Guadalajara",
+        "country": "Mexico",
+        "capacity": 49850,
+        "altitude_m": 1560,
+        "lat": 20.6818,
+        "lon": -103.4622,
+        "timezone": "UTC-6",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 65,
+      "openfootball": {
+        "group": "Group K",
+        "round": "Matchday 17",
+        "date": "2026-06-27",
+        "time": "19:30 UTC-4",
+        "ground": "Miami (Miami Gardens)"
+      },
+      "title": "Colombia vs Portugal",
+      "subtitle": "6月27日 · Matchday 17 · Group K",
+      "round": 3,
+      "group": "K",
+      "datetime": "2026-06-27T19:30 UTC-4",
+      "venue": "Miami (Miami Gardens)",
+      "home": "COL",
+      "away": "POR",
+      "home_name": "Colombia",
+      "away_name": "Portugal",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "COL": 2439.0,
+        "POR": 1547.0
+      },
+      "venue_meta": {
+        "name": "Hard Rock Stadium",
+        "city": "Miami Gardens",
+        "country": "USA",
+        "capacity": 65326,
+        "altitude_m": 3,
+        "lat": 25.9581,
+        "lon": -80.2389,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 66,
+      "openfootball": {
+        "group": "Group K",
+        "round": "Matchday 17",
+        "date": "2026-06-27",
+        "time": "19:30 UTC-4",
+        "ground": "Atlanta"
+      },
+      "title": "DR Congo vs Uzbekistan",
+      "subtitle": "6月27日 · Matchday 17 · Group K",
+      "round": 3,
+      "group": "K",
+      "datetime": "2026-06-27T19:30 UTC-4",
+      "venue": "Atlanta",
+      "home": "COD",
+      "away": "UZB",
+      "home_name": "DR Congo",
+      "away_name": "Uzbekistan",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "COD": 2373.0,
+        "UZB": 1135.0
+      },
+      "venue_meta": {
+        "name": "Mercedes-Benz Stadium",
+        "city": "Atlanta",
+        "country": "USA",
+        "capacity": 71000,
+        "altitude_m": 320,
+        "lat": 33.7554,
+        "lon": -84.4008,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 67,
+      "openfootball": {
+        "group": "Group L",
+        "round": "Matchday 7",
+        "date": "2026-06-17",
+        "time": "15:00 UTC-5",
+        "ground": "Dallas (Arlington)"
+      },
+      "title": "England vs Croatia",
+      "subtitle": "6月17日 · Matchday 7 · Group L",
+      "round": 1,
+      "group": "L",
+      "datetime": "2026-06-17T15:00 UTC-5",
+      "venue": "Dallas (Arlington)",
+      "home": "ENG",
+      "away": "CRO",
+      "home_name": "England",
+      "away_name": "Croatia",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "ENG": 0.0,
+        "CRO": 0.0
+      },
+      "venue_meta": {
+        "name": "AT&T Stadium",
+        "city": "Arlington",
+        "country": "USA",
+        "capacity": 80000,
+        "altitude_m": 180,
+        "lat": 32.7473,
+        "lon": -97.0945,
+        "timezone": "UTC-5",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 68,
+      "openfootball": {
+        "group": "Group L",
+        "round": "Matchday 7",
+        "date": "2026-06-17",
+        "time": "19:00 UTC-4",
+        "ground": "Toronto"
+      },
+      "title": "Ghana vs Panama",
+      "subtitle": "6月17日 · Matchday 7 · Group L",
+      "round": 1,
+      "group": "L",
+      "datetime": "2026-06-17T19:00 UTC-4",
+      "venue": "Toronto",
+      "home": "GHA",
+      "away": "PAN",
+      "home_name": "Ghana",
+      "away_name": "Panama",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "GHA": 0.0,
+        "PAN": 0.0
+      },
+      "venue_meta": {
+        "name": "BMO Field",
+        "city": "Toronto",
+        "country": "Canada",
+        "capacity": 45000,
+        "altitude_m": 90,
+        "lat": 43.6332,
+        "lon": -79.4186,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 69,
+      "openfootball": {
+        "group": "Group L",
+        "round": "Matchday 13",
+        "date": "2026-06-23",
+        "time": "16:00 UTC-4",
+        "ground": "Boston (Foxborough)"
+      },
+      "title": "England vs Ghana",
+      "subtitle": "6月23日 · Matchday 13 · Group L",
+      "round": 2,
+      "group": "L",
+      "datetime": "2026-06-23T16:00 UTC-4",
+      "venue": "Boston (Foxborough)",
+      "home": "ENG",
+      "away": "GHA",
+      "home_name": "England",
+      "away_name": "Ghana",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "ENG": 2494.0,
+        "GHA": 686.0
+      },
+      "venue_meta": {
+        "name": "Gillette Stadium",
+        "city": "Foxborough",
+        "country": "USA",
+        "capacity": 65878,
+        "altitude_m": 50,
+        "lat": 42.0909,
+        "lon": -71.2643,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 70,
+      "openfootball": {
+        "group": "Group L",
+        "round": "Matchday 13",
+        "date": "2026-06-23",
+        "time": "19:00 UTC-4",
+        "ground": "Toronto"
+      },
+      "title": "Panama vs Croatia",
+      "subtitle": "6月23日 · Matchday 13 · Group L",
+      "round": 2,
+      "group": "L",
+      "datetime": "2026-06-23T19:00 UTC-4",
+      "venue": "Toronto",
+      "home": "PAN",
+      "away": "CRO",
+      "home_name": "Panama",
+      "away_name": "Croatia",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "PAN": 0.0,
+        "CRO": 1955.0
+      },
+      "venue_meta": {
+        "name": "BMO Field",
+        "city": "Toronto",
+        "country": "Canada",
+        "capacity": 45000,
+        "altitude_m": 90,
+        "lat": 43.6332,
+        "lon": -79.4186,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    },
+    {
+      "id": 71,
+      "openfootball": {
+        "group": "Group L",
+        "round": "Matchday 17",
+        "date": "2026-06-27",
+        "time": "17:00 UTC-4",
+        "ground": "New York/New Jersey (East Rutherford)"
+      },
+      "title": "Panama vs England",
+      "subtitle": "6月27日 · Matchday 17 · Group L",
+      "round": 3,
+      "group": "L",
+      "datetime": "2026-06-27T17:00 UTC-4",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "home": "PAN",
+      "away": "ENG",
+      "home_name": "Panama",
+      "away_name": "England",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "PAN": 540.0,
+        "ENG": 274.0
+      },
+      "venue_meta": {
+        "name": "MetLife Stadium",
+        "city": "East Rutherford",
+        "country": "USA",
+        "capacity": 82500,
+        "altitude_m": 3,
+        "lat": 40.8128,
+        "lon": -74.0742,
+        "timezone": "UTC-4",
+        "surface": "artificial"
+      }
+    },
+    {
+      "id": 72,
+      "openfootball": {
+        "group": "Group L",
+        "round": "Matchday 17",
+        "date": "2026-06-27",
+        "time": "17:00 UTC-4",
+        "ground": "Philadelphia"
+      },
+      "title": "Croatia vs Ghana",
+      "subtitle": "6月27日 · Matchday 17 · Group L",
+      "round": 3,
+      "group": "L",
+      "datetime": "2026-06-27T17:00 UTC-4",
+      "venue": "Philadelphia",
+      "home": "CRO",
+      "away": "GHA",
+      "home_name": "Croatia",
+      "away_name": "Ghana",
+      "played": false,
+      "actual_score": null,
+      "actual_ht": null,
+      "venue_altitude_m": 0,
+      "travel_km": {
+        "CRO": 544.0,
+        "GHA": 408.0
+      },
+      "venue_meta": {
+        "name": "Lincoln Financial Field",
+        "city": "Philadelphia",
+        "country": "USA",
+        "capacity": 69796,
+        "altitude_m": 12,
+        "lat": 39.9008,
+        "lon": -75.1675,
+        "timezone": "UTC-4",
+        "surface": "grass"
+      }
+    }
+  ],
+  "standings": {
+    "A": [
+      {
+        "team": "MEX",
+        "played": 1,
+        "w": 1,
+        "d": 0,
+        "l": 0,
+        "gf": 2,
+        "ga": 0,
+        "gd": 2,
+        "pts": 3,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "KOR",
+        "played": 1,
+        "w": 1,
+        "d": 0,
+        "l": 0,
+        "gf": 2,
+        "ga": 1,
+        "gd": 1,
+        "pts": 3,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "CZE",
+        "played": 1,
+        "w": 0,
+        "d": 0,
+        "l": 1,
+        "gf": 1,
+        "ga": 2,
+        "gd": -1,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "RSA",
+        "played": 1,
+        "w": 0,
+        "d": 0,
+        "l": 1,
+        "gf": 0,
+        "ga": 2,
+        "gd": -2,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "B": [
+      {
+        "team": "CAN",
+        "played": 1,
+        "w": 0,
+        "d": 1,
+        "l": 0,
+        "gf": 1,
+        "ga": 1,
+        "gd": 0,
+        "pts": 1,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "BIH",
+        "played": 1,
+        "w": 0,
+        "d": 1,
+        "l": 0,
+        "gf": 1,
+        "ga": 1,
+        "gd": 0,
+        "pts": 1,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "QAT",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "SUI",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "C": [
+      {
+        "team": "BRA",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "MAR",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "HAI",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "SCO",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "D": [
+      {
+        "team": "USA",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "PAR",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "AUS",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "TUR",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "E": [
+      {
+        "team": "GER",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "CUW",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "CIV",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "ECU",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "F": [
+      {
+        "team": "NED",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "JPN",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "SWE",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "TUN",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "G": [
+      {
+        "team": "BEL",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "EGY",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "IRN",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "NZL",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "H": [
+      {
+        "team": "ESP",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "CPV",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "KSA",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "URU",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "I": [
+      {
+        "team": "FRA",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "SEN",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "IRQ",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "NOR",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "J": [
+      {
+        "team": "ARG",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "ALG",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "AUT",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "JOR",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "K": [
+      {
+        "team": "POR",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "COD",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "UZB",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "COL",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ],
+    "L": [
+      {
+        "team": "ENG",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 1,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "CRO",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 2,
+        "qualification_zone": "direct"
+      },
+      {
+        "team": "GHA",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 3,
+        "qualification_zone": "best_third"
+      },
+      {
+        "team": "PAN",
+        "played": 0,
+        "w": 0,
+        "d": 0,
+        "l": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "pts": 0,
+        "rank": 4,
+        "qualification_zone": "out"
+      }
+    ]
+  },
+  "h2h": {
+    "RSA_MEX": {
+      "home_edge": -0.099,
+      "history": [
+        "South Africa 1-1 Mexico"
+      ],
+      "record": "0W1D0L"
+    },
+    "URU_FRA": {
+      "home_edge": -0.099,
+      "history": [
+        "Uruguay 0-0 France"
+      ],
+      "record": "0W1D0L"
+    },
+    "RSA_URU": {
+      "home_edge": -0.099,
+      "history": [
+        "South Africa 0-3 Uruguay"
+      ],
+      "record": "0W0D1L"
+    },
+    "FRA_MEX": {
+      "home_edge": -0.099,
+      "history": [
+        "France 0-2 Mexico"
+      ],
+      "record": "0W0D1L"
+    },
+    "MEX_URU": {
+      "home_edge": -0.099,
+      "history": [
+        "Mexico 0-1 Uruguay"
+      ],
+      "record": "0W0D1L"
+    },
+    "FRA_RSA": {
+      "home_edge": -0.099,
+      "history": [
+        "France 1-2 South Africa"
+      ],
+      "record": "0W0D1L"
+    },
+    "KOR_GRE": {
+      "home_edge": 0.201,
+      "history": [
+        "South Korea 2-0 Greece"
+      ],
+      "record": "1W0D0L"
+    },
+    "ARG_NIG": {
+      "home_edge": 0.201,
+      "history": [
+        "Argentina 1-0 Nigeria"
+      ],
+      "record": "1W0D0L"
+    },
+    "ARG_KOR": {
+      "home_edge": 0.201,
+      "history": [
+        "Argentina 4-1 South Korea"
+      ],
+      "record": "1W0D0L"
+    },
+    "GRE_NIG": {
+      "home_edge": 0.201,
+      "history": [
+        "Greece 2-1 Nigeria"
+      ],
+      "record": "1W0D0L"
+    },
+    "NIG_KOR": {
+      "home_edge": -0.099,
+      "history": [
+        "Nigeria 2-2 South Korea"
+      ],
+      "record": "0W1D0L"
+    },
+    "GRE_ARG": {
+      "home_edge": -0.099,
+      "history": [
+        "Greece 0-2 Argentina"
+      ],
+      "record": "0W0D1L"
+    },
+    "ENG_USA": {
+      "home_edge": -0.099,
+      "history": [
+        "England 1-1 USA",
+        "England 0-0 USA"
+      ],
+      "record": "0W2D0L"
+    },
+    "ALG_SLO": {
+      "home_edge": -0.099,
+      "history": [
+        "Algeria 0-1 Slovenia"
+      ],
+      "record": "0W0D1L"
+    },
+    "SLO_USA": {
+      "home_edge": -0.099,
+      "history": [
+        "Slovenia 2-2 USA"
+      ],
+      "record": "0W1D0L"
+    },
+    "ENG_ALG": {
+      "home_edge": -0.099,
+      "history": [
+        "England 0-0 Algeria"
+      ],
+      "record": "0W1D0L"
+    },
+    "USA_ALG": {
+      "home_edge": 0.201,
+      "history": [
+        "USA 1-0 Algeria"
+      ],
+      "record": "1W0D0L"
+    },
+    "SLO_ENG": {
+      "home_edge": -0.099,
+      "history": [
+        "Slovenia 0-1 England"
+      ],
+      "record": "0W0D1L"
+    },
+    "SER_GHA": {
+      "home_edge": -0.099,
+      "history": [
+        "Serbia 0-1 Ghana"
+      ],
+      "record": "0W0D1L"
+    },
+    "GER_AUS": {
+      "home_edge": 0.201,
+      "history": [
+        "Germany 4-0 Australia"
+      ],
+      "record": "1W0D0L"
+    },
+    "GER_SER": {
+      "home_edge": -0.099,
+      "history": [
+        "Germany 0-1 Serbia"
+      ],
+      "record": "0W0D1L"
+    },
+    "GHA_AUS": {
+      "home_edge": -0.099,
+      "history": [
+        "Ghana 1-1 Australia"
+      ],
+      "record": "0W1D0L"
+    },
+    "AUS_SER": {
+      "home_edge": 0.201,
+      "history": [
+        "Australia 2-1 Serbia"
+      ],
+      "record": "1W0D0L"
+    },
+    "GHA_GER": {
+      "home_edge": -0.099,
+      "history": [
+        "Ghana 0-1 Germany"
+      ],
+      "record": "0W0D1L"
+    },
+    "NED_DEN": {
+      "home_edge": 0.201,
+      "history": [
+        "Netherlands 2-0 Denmark"
+      ],
+      "record": "1W0D0L"
+    },
+    "JPN_CAM": {
+      "home_edge": 0.201,
+      "history": [
+        "Japan 1-0 Cameroon"
+      ],
+      "record": "1W0D0L"
+    },
+    "NED_JPN": {
+      "home_edge": 0.201,
+      "history": [
+        "Netherlands 1-0 Japan"
+      ],
+      "record": "1W0D0L"
+    },
+    "CAM_DEN": {
+      "home_edge": -0.099,
+      "history": [
+        "Cameroon 1-2 Denmark"
+      ],
+      "record": "0W0D1L"
+    },
+    "DEN_JPN": {
+      "home_edge": -0.099,
+      "history": [
+        "Denmark 1-3 Japan"
+      ],
+      "record": "0W0D1L"
+    },
+    "CAM_NED": {
+      "home_edge": -0.099,
+      "history": [
+        "Cameroon 1-2 Netherlands"
+      ],
+      "record": "0W0D1L"
+    },
+    "ITA_PAR": {
+      "home_edge": -0.099,
+      "history": [
+        "Italy 1-1 Paraguay"
+      ],
+      "record": "0W1D0L"
+    },
+    "NZL_SLO": {
+      "home_edge": -0.099,
+      "history": [
+        "New Zealand 1-1 Slovakia"
+      ],
+      "record": "0W1D0L"
+    },
+    "SLO_PAR": {
+      "home_edge": -0.099,
+      "history": [
+        "Slovakia 0-2 Paraguay"
+      ],
+      "record": "0W0D1L"
+    },
+    "ITA_NZL": {
+      "home_edge": -0.099,
+      "history": [
+        "Italy 1-1 New Zealand"
+      ],
+      "record": "0W1D0L"
+    },
+    "SLO_ITA": {
+      "home_edge": 0.201,
+      "history": [
+        "Slovakia 3-2 Italy"
+      ],
+      "record": "1W0D0L"
+    },
+    "PAR_NZL": {
+      "home_edge": -0.099,
+      "history": [
+        "Paraguay 0-0 New Zealand"
+      ],
+      "record": "0W1D0L"
+    },
+    "CIV_POR": {
+      "home_edge": -0.099,
+      "history": [
+        "Côte d'Ivoire 0-0 Portugal"
+      ],
+      "record": "0W1D0L"
+    },
+    "BRA_NOR": {
+      "home_edge": 0.201,
+      "history": [
+        "Brazil 2-1 North Korea"
+      ],
+      "record": "1W0D0L"
+    },
+    "BRA_CIV": {
+      "home_edge": 0.201,
+      "history": [
+        "Brazil 3-1 Côte d'Ivoire"
+      ],
+      "record": "1W0D0L"
+    },
+    "POR_NOR": {
+      "home_edge": 0.201,
+      "history": [
+        "Portugal 7-0 North Korea"
+      ],
+      "record": "1W0D0L"
+    },
+    "POR_BRA": {
+      "home_edge": -0.099,
+      "history": [
+        "Portugal 0-0 Brazil"
+      ],
+      "record": "0W1D0L"
+    },
+    "NOR_CIV": {
+      "home_edge": -0.099,
+      "history": [
+        "North Korea 0-3 Côte d'Ivoire"
+      ],
+      "record": "0W0D1L"
+    },
+    "HON_CHI": {
+      "home_edge": -0.099,
+      "history": [
+        "Honduras 0-1 Chile"
+      ],
+      "record": "0W0D1L"
+    },
+    "ESP_SUI": {
+      "home_edge": -0.099,
+      "history": [
+        "Spain 0-1 Switzerland"
+      ],
+      "record": "0W0D1L"
+    },
+    "CHI_SUI": {
+      "home_edge": 0.201,
+      "history": [
+        "Chile 1-0 Switzerland"
+      ],
+      "record": "1W0D0L"
+    },
+    "ESP_HON": {
+      "home_edge": 0.201,
+      "history": [
+        "Spain 2-0 Honduras"
+      ],
+      "record": "1W0D0L"
+    },
+    "CHI_ESP": {
+      "home_edge": -0.099,
+      "history": [
+        "Chile 1-2 Spain"
+      ],
+      "record": "0W0D1L"
+    },
+    "SUI_HON": {
+      "home_edge": -0.099,
+      "history": [
+        "Switzerland 0-0 Honduras"
+      ],
+      "record": "0W1D0L"
+    },
+    "UTC_UNK": {
+      "home_edge": 0.034,
+      "history": [
+        "UTC-3  Japan v Greece 0-0 ",
+        "UTC-4  Japan v Colombia 1-4 ",
+        "UTC-3   Greece v Côte d'Ivoire 2-1 "
+      ],
+      "record": "8W2D8L"
+    },
+    "UTC_COS": {
+      "home_edge": -0.024,
+      "history": [
+        "UTC-3   Italy 0-1 Costa Rica",
+        "UTC+3      Brazil 2-0 Costa Rica",
+        "UTC+3      Switzerland 2-2 Costa Rica"
+      ],
+      "record": "1W1D2L"
+    },
+    "UTC_ITA": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC-4  England 1-2 Italy"
+      ],
+      "record": "0W0D1L"
+    },
+    "UTC_ENG": {
+      "home_edge": 0.001,
+      "history": [
+        "UTC-3  Uruguay 2-1 England",
+        "UTC-3   Costa Rica 0-0 England",
+        "UTC+3         Tunisia 1-2 England"
+      ],
+      "record": "1W1D1L"
+    },
+    "UTC_URU": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC-3  Italy 0-1 Uruguay",
+        "UTC+5     Egypt 0-1 Uruguay"
+      ],
+      "record": "0W0D2L"
+    },
+    "UTC_ECU": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC-3   Switzerland 2-1 Ecuador",
+        "UTC-3   Honduras 1-2 Ecuador"
+      ],
+      "record": "1W0D1L"
+    },
+    "UTC_HON": {
+      "home_edge": 0.201,
+      "history": [
+        "UTC-3  France 3-0 Honduras"
+      ],
+      "record": "1W0D0L"
+    },
+    "UTC_FRA": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC-3  Switzerland 2-5 France",
+        "UTC-3   Ecuador 0-0 France",
+        "UTC+3    Denmark 0-0 France"
+      ],
+      "record": "0W2D1L"
+    },
+    "UTC_SUI": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC-4   Honduras 0-3 Switzerland",
+        "UTC+3      Brazil 1-1 Switzerland",
+        "UTC+2      Serbia 1-2 Switzerland"
+      ],
+      "record": "0W1D2L"
+    },
+    "UTC_BOS": {
+      "home_edge": 0.201,
+      "history": [
+        "UTC-3   Argentina 2-1 Bosnia-Herzegovina",
+        "UTC-4  Nigeria 1-0 Bosnia-Herzegovina"
+      ],
+      "record": "2W0D0L"
+    },
+    "UTC_NIG": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC-3  Iran 0-0 Nigeria",
+        "UTC+2     Croatia 2-0 Nigeria"
+      ],
+      "record": "1W1D0L"
+    },
+    "UTC_IRN": {
+      "home_edge": 0.101,
+      "history": [
+        "UTC-3  Argentina 1-0 Iran",
+        "UTC-3  Bosnia-Herzegovina 3-1 Iran",
+        "UTC+3    Morocco 0-1 Iran"
+      ],
+      "record": "2W0D1L"
+    },
+    "UTC_ARG": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC-3  Nigeria 2-3 Argentina",
+        "UTC+3     Nigeria 1-2 Argentina"
+      ],
+      "record": "0W0D2L"
+    },
+    "UTC_POR": {
+      "home_edge": 0.001,
+      "history": [
+        "UTC-3  Germany 4-0 Portugal",
+        "UTC-4  USA 2-2 Portugal",
+        "UTC+3    Iran 1-1 Portugal"
+      ],
+      "record": "1W2D0L"
+    },
+    "UTC_USA": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC-3  Ghana 1-2 USA"
+      ],
+      "record": "0W0D1L"
+    },
+    "UTC_GHA": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC-3  Germany 2-2 Ghana",
+        "UTC-3   Portugal 2-1 Ghana"
+      ],
+      "record": "1W1D0L"
+    },
+    "UTC_GER": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC-3  USA 0-1 Germany",
+        "UTC+3       South Korea 2-0 Germany"
+      ],
+      "record": "1W0D1L"
+    },
+    "UTC_ALG": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC-3  Belgium 2-1 Algeria",
+        "UTC-3  South Korea 2-4 Algeria"
+      ],
+      "record": "1W0D1L"
+    },
+    "UTC_KOR": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC-4  Russia 1-1 South Korea",
+        "UTC+3       Sweden 1-0 South Korea"
+      ],
+      "record": "1W1D0L"
+    },
+    "UTC_RUS": {
+      "home_edge": 0.101,
+      "history": [
+        "UTC-3  Belgium 1-0 Russia",
+        "UTC-3  Algeria 1-1 Russia",
+        "UTC+4     Uruguay 3-0 Russia"
+      ],
+      "record": "2W1D0L"
+    },
+    "UTC_BEL": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC-3  South Korea 0-1 Belgium",
+        "UTC+2         England 0-1 Belgium"
+      ],
+      "record": "0W0D2L"
+    },
+    "FRI_COS": {
+      "home_edge": 0.201,
+      "history": [
+        "Fri Jun 9     Germany 4-2 Costa Rica"
+      ],
+      "record": "1W0D0L"
+    },
+    "FRI_ECU": {
+      "home_edge": -0.099,
+      "history": [
+        "Fri Jun 9     Poland 0-2 Ecuador"
+      ],
+      "record": "0W0D1L"
+    },
+    "WED_POL": {
+      "home_edge": 0.201,
+      "history": [
+        "Wed Jun 14   Germany 1-0 Poland"
+      ],
+      "record": "1W0D0L"
+    },
+    "THU_COS": {
+      "home_edge": 0.201,
+      "history": [
+        "Thu Jun 15   Ecuador 3-0 Costa Rica"
+      ],
+      "record": "1W0D0L"
+    },
+    "TUE_GER": {
+      "home_edge": -0.099,
+      "history": [
+        "Tue Jun 20   Ecuador 0-3 Germany"
+      ],
+      "record": "0W0D1L"
+    },
+    "TUE_POL": {
+      "home_edge": -0.099,
+      "history": [
+        "Tue Jun 20   Costa Rica 1-2 Poland"
+      ],
+      "record": "0W0D1L"
+    },
+    "SAT_PAR": {
+      "home_edge": 0.201,
+      "history": [
+        "Sat Jun 10    England 1-0 Paraguay"
+      ],
+      "record": "1W0D0L"
+    },
+    "TRI_SWE": {
+      "home_edge": -0.099,
+      "history": [
+        "Trinidad and Tobago 0-0 Sweden"
+      ],
+      "record": "0W1D0L"
+    },
+    "THU_TRI": {
+      "home_edge": 0.201,
+      "history": [
+        "Thu Jun 15   England 2-0 Trinidad and Tobago"
+      ],
+      "record": "1W0D0L"
+    },
+    "THU_PAR": {
+      "home_edge": 0.201,
+      "history": [
+        "Thu Jun 15   Sweden 1-0 Paraguay"
+      ],
+      "record": "1W0D0L"
+    },
+    "TUE_ENG": {
+      "home_edge": -0.099,
+      "history": [
+        "Tue Jun 20   Sweden 2-2 England"
+      ],
+      "record": "0W1D0L"
+    },
+    "TUE_TRI": {
+      "home_edge": 0.201,
+      "history": [
+        "Tue Jun 20   Paraguay 2-0 Trinidad and Tobago"
+      ],
+      "record": "1W0D0L"
+    },
+    "SAT_CIV": {
+      "home_edge": 0.201,
+      "history": [
+        "Sat Jun 10    Argentina 2-1 Côte d'Ivoire"
+      ],
+      "record": "1W0D0L"
+    },
+    "SUN_NED": {
+      "home_edge": -0.099,
+      "history": [
+        "Sun Jun 11    Serbia and Montenegro 0-1 Netherlands"
+      ],
+      "record": "0W0D1L"
+    },
+    "FRI_SER": {
+      "home_edge": 0.201,
+      "history": [
+        "Fri Jun 16   Argentina 6-0 Serbia and Montenegro"
+      ],
+      "record": "1W0D0L"
+    },
+    "FRI_CIV": {
+      "home_edge": 0.201,
+      "history": [
+        "Fri Jun 16   Netherlands 2-1 Côte d'Ivoire"
+      ],
+      "record": "1W0D0L"
+    },
+    "NED_ARG": {
+      "home_edge": -0.099,
+      "history": [
+        "Netherlands 0-0 Argentina"
+      ],
+      "record": "0W1D0L"
+    },
+    "WED_SER": {
+      "home_edge": 0.201,
+      "history": [
+        "Wed Jun 21   Côte d'Ivoire 3-2 Serbia and Montenegro"
+      ],
+      "record": "1W0D0L"
+    },
+    "SUN_IRN": {
+      "home_edge": 0.201,
+      "history": [
+        "Sun Jun 11     Mexico 3-1 Iran"
+      ],
+      "record": "1W0D0L"
+    },
+    "SUN_POR": {
+      "home_edge": -0.099,
+      "history": [
+        "Sun Jun 11     Angola 0-1 Portugal"
+      ],
+      "record": "0W0D1L"
+    },
+    "MEX_ANG": {
+      "home_edge": -0.099,
+      "history": [
+        "Mexico 0-0 Angola"
+      ],
+      "record": "0W1D0L"
+    },
+    "SAT_IRN": {
+      "home_edge": 0.201,
+      "history": [
+        "Sat Jun 17    Portugal 2-0 Iran"
+      ],
+      "record": "1W0D0L"
+    },
+    "WED_MEX": {
+      "home_edge": 0.201,
+      "history": [
+        "Wed Jun 21    Portugal 2-1 Mexico"
+      ],
+      "record": "1W0D0L"
+    },
+    "WED_ANG": {
+      "home_edge": -0.099,
+      "history": [
+        "Wed Jun 21    Iran 1-1 Angola"
+      ],
+      "record": "0W1D0L"
+    },
+    "MON_GHA": {
+      "home_edge": 0.201,
+      "history": [
+        "Mon Jun 12    Italy 2-0 Ghana"
+      ],
+      "record": "1W0D0L"
+    },
+    "MON_CZE": {
+      "home_edge": -0.099,
+      "history": [
+        "Mon Jun 12    USA 0-3 Czech Republic"
+      ],
+      "record": "0W0D1L"
+    },
+    "SAT_USA": {
+      "home_edge": -0.099,
+      "history": [
+        "Sat Jun 17    Italy 1-1 USA"
+      ],
+      "record": "0W1D0L"
+    },
+    "SAT_GHA": {
+      "home_edge": -0.099,
+      "history": [
+        "Sat Jun 17    Czech Republic 0-2 Ghana"
+      ],
+      "record": "0W0D1L"
+    },
+    "THU_ITA": {
+      "home_edge": -0.099,
+      "history": [
+        "Thu Jun 22    Czech Republic 0-2 Italy"
+      ],
+      "record": "0W0D1L"
+    },
+    "THU_USA": {
+      "home_edge": 0.201,
+      "history": [
+        "Thu Jun 22    Ghana 2-1 USA"
+      ],
+      "record": "1W0D0L"
+    },
+    "TUE_CRO": {
+      "home_edge": 0.201,
+      "history": [
+        "Tue Jun 13    Brazil 1-0 Croatia"
+      ],
+      "record": "1W0D0L"
+    },
+    "MON_JPN": {
+      "home_edge": 0.201,
+      "history": [
+        "Mon Jun 12    Australia 3-1 Japan"
+      ],
+      "record": "1W0D0L"
+    },
+    "SUN_AUS": {
+      "home_edge": 0.201,
+      "history": [
+        "Sun Jun 18    Brazil 2-0 Australia"
+      ],
+      "record": "1W0D0L"
+    },
+    "JPN_CRO": {
+      "home_edge": -0.099,
+      "history": [
+        "Japan 0-0 Croatia"
+      ],
+      "record": "0W1D0L"
+    },
+    "THU_BRA": {
+      "home_edge": -0.099,
+      "history": [
+        "Thu Jun 22    Japan 1-4 Brazil"
+      ],
+      "record": "0W0D1L"
+    },
+    "THU_AUS": {
+      "home_edge": -0.099,
+      "history": [
+        "Thu Jun 22    Croatia 2-2 Australia"
+      ],
+      "record": "0W1D0L"
+    },
+    "FRA_SUI": {
+      "home_edge": -0.099,
+      "history": [
+        "France 0-0 Switzerland"
+      ],
+      "record": "0W1D0L"
+    },
+    "TUE_TOG": {
+      "home_edge": 0.201,
+      "history": [
+        "Tue Jun 13    South Korea 2-1 Togo"
+      ],
+      "record": "1W0D0L"
+    },
+    "SUN_KOR": {
+      "home_edge": -0.099,
+      "history": [
+        "Sun Jun 18    France 1-1 South Korea"
+      ],
+      "record": "0W1D0L"
+    },
+    "MON_SUI": {
+      "home_edge": -0.099,
+      "history": [
+        "Mon Jun 19    Togo 0-2 Switzerland"
+      ],
+      "record": "0W0D1L"
+    },
+    "FRI_FRA": {
+      "home_edge": -0.099,
+      "history": [
+        "Fri Jun 23    Togo 0-2 France"
+      ],
+      "record": "0W0D1L"
+    },
+    "FRI_KOR": {
+      "home_edge": 0.201,
+      "history": [
+        "Fri Jun 23    Switzerland 2-0 South Korea"
+      ],
+      "record": "1W0D0L"
+    },
+    "WED_UKR": {
+      "home_edge": 0.201,
+      "history": [
+        "Wed Jun 14    Spain 4-0 Ukraine"
+      ],
+      "record": "1W0D0L"
+    },
+    "WED_KSA": {
+      "home_edge": -0.099,
+      "history": [
+        "Wed Jun 14    Tunisia 2-2 Saudi Arabia"
+      ],
+      "record": "0W1D0L"
+    },
+    "MON_TUN": {
+      "home_edge": 0.201,
+      "history": [
+        "Mon Jun 19    Spain 3-1 Tunisia"
+      ],
+      "record": "1W0D0L"
+    },
+    "MON_UKR": {
+      "home_edge": -0.099,
+      "history": [
+        "Mon Jun 19    Saudi Arabia 0-4 Ukraine"
+      ],
+      "record": "0W0D1L"
+    },
+    "FRI_ESP": {
+      "home_edge": -0.099,
+      "history": [
+        "Fri Jun 23    Saudi Arabia 0-1 Spain"
+      ],
+      "record": "0W0D1L"
+    },
+    "FRI_TUN": {
+      "home_edge": 0.201,
+      "history": [
+        "Fri Jun 23    Ukraine 1-0 Tunisia"
+      ],
+      "record": "1W0D0L"
+    },
+    "UTC_KSA": {
+      "home_edge": 0.201,
+      "history": [
+        "UTC+3     Russia 5-0 Saudi Arabia",
+        "UTC+3     Uruguay 1-0 Saudi Arabia"
+      ],
+      "record": "2W0D0L"
+    },
+    "UTC_EGY": {
+      "home_edge": 0.201,
+      "history": [
+        "UTC+3     Russia 3-1 Egypt",
+        "UTC+3     Saudi Arabia 2-1 Egypt"
+      ],
+      "record": "2W0D0L"
+    },
+    "UTC_ESP": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+3    Portugal 3-3 Spain",
+        "UTC+3    Iran 0-1 Spain"
+      ],
+      "record": "0W1D1L"
+    },
+    "UTC_MAR": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC+3    Portugal 1-0 Morocco",
+        "UTC+2    Spain 2-2 Morocco"
+      ],
+      "record": "1W1D0L"
+    },
+    "UTC_AUS": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC+3    France 2-1 Australia",
+        "UTC+4    Denmark 1-1 Australia"
+      ],
+      "record": "1W1D0L"
+    },
+    "UTC_DEN": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+3    Peru 0-1 Denmark"
+      ],
+      "record": "0W0D1L"
+    },
+    "UTC_PER": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC+5    France 1-0 Peru",
+        "UTC+3    Australia 0-2 Peru"
+      ],
+      "record": "1W0D1L"
+    },
+    "UTC_ICE": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC+3     Argentina 1-1 Iceland",
+        "UTC+3     Nigeria 2-0 Iceland"
+      ],
+      "record": "1W1D0L"
+    },
+    "UTC_CRO": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+3     Argentina 0-3 Croatia",
+        "UTC+3     Iceland 1-2 Croatia"
+      ],
+      "record": "0W0D2L"
+    },
+    "UTC_SER": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+4      Costa Rica 0-1 Serbia"
+      ],
+      "record": "0W0D1L"
+    },
+    "UTC_BRA": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+3      Serbia 0-2 Brazil"
+      ],
+      "record": "0W0D1L"
+    },
+    "UTC_MEX": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+3       Germany 0-1 Mexico",
+        "UTC+3       South Korea 1-2 Mexico"
+      ],
+      "record": "0W0D2L"
+    },
+    "UTC_SWE": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC+3       Germany 2-1 Sweden",
+        "UTC+5       Mexico 0-3 Sweden"
+      ],
+      "record": "1W0D1L"
+    },
+    "UTC_PAN": {
+      "home_edge": 0.201,
+      "history": [
+        "UTC+3         Belgium 3-0 Panama",
+        "UTC+3         England 6-1 Panama"
+      ],
+      "record": "2W0D0L"
+    },
+    "UTC_TUN": {
+      "home_edge": 0.051,
+      "history": [
+        "UTC+3         Belgium 5-2 Tunisia",
+        "UTC+3         Panama 1-2 Tunisia"
+      ],
+      "record": "1W0D1L"
+    },
+    "UTC_JPN": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+3         Colombia 1-2 Japan"
+      ],
+      "record": "0W0D1L"
+    },
+    "UTC_SEN": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+3         Poland 1-2 Senegal",
+        "UTC+5         Japan 2-2 Senegal"
+      ],
+      "record": "0W1D1L"
+    },
+    "UTC_COL": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+3         Poland 0-3 Colombia",
+        "UTC+4         Senegal 0-1 Colombia"
+      ],
+      "record": "0W0D2L"
+    },
+    "UTC_POL": {
+      "home_edge": -0.099,
+      "history": [
+        "UTC+3         Japan 0-1 Poland"
+      ],
+      "record": "0W0D1L"
+    },
+    "QAT_ECU": {
+      "home_edge": -0.099,
+      "history": [
+        "Qatar 0-2 Ecuador"
+      ],
+      "record": "0W0D1L"
+    },
+    "SEN_NED": {
+      "home_edge": -0.099,
+      "history": [
+        "Senegal 0-2 Netherlands"
+      ],
+      "record": "0W0D1L"
+    },
+    "QAT_SEN": {
+      "home_edge": -0.099,
+      "history": [
+        "Qatar 1-3 Senegal"
+      ],
+      "record": "0W0D1L"
+    },
+    "NED_ECU": {
+      "home_edge": -0.099,
+      "history": [
+        "Netherlands 1-1 Ecuador"
+      ],
+      "record": "0W1D0L"
+    },
+    "ECU_SEN": {
+      "home_edge": -0.099,
+      "history": [
+        "Ecuador 1-2 Senegal"
+      ],
+      "record": "0W0D1L"
+    },
+    "NED_QAT": {
+      "home_edge": 0.201,
+      "history": [
+        "Netherlands 2-0 Qatar"
+      ],
+      "record": "1W0D0L"
+    },
+    "ENG_IRN": {
+      "home_edge": 0.201,
+      "history": [
+        "England 6-2 Iran"
+      ],
+      "record": "1W0D0L"
+    },
+    "USA_WAL": {
+      "home_edge": -0.099,
+      "history": [
+        "USA 1-1 Wales"
+      ],
+      "record": "0W1D0L"
+    },
+    "WAL_IRN": {
+      "home_edge": -0.099,
+      "history": [
+        "Wales 0-2 Iran"
+      ],
+      "record": "0W0D1L"
+    },
+    "WAL_ENG": {
+      "home_edge": -0.099,
+      "history": [
+        "Wales 0-3 England"
+      ],
+      "record": "0W0D1L"
+    },
+    "IRN_USA": {
+      "home_edge": -0.099,
+      "history": [
+        "Iran 0-1 USA"
+      ],
+      "record": "0W0D1L"
+    },
+    "ARG_KSA": {
+      "home_edge": -0.099,
+      "history": [
+        "Argentina 1-2 Saudi Arabia"
+      ],
+      "record": "0W0D1L"
+    },
+    "MEX_POL": {
+      "home_edge": -0.099,
+      "history": [
+        "Mexico 0-0 Poland"
+      ],
+      "record": "0W1D0L"
+    },
+    "POL_KSA": {
+      "home_edge": 0.201,
+      "history": [
+        "Poland 2-0 Saudi Arabia"
+      ],
+      "record": "1W0D0L"
+    },
+    "ARG_MEX": {
+      "home_edge": 0.201,
+      "history": [
+        "Argentina 2-0 Mexico"
+      ],
+      "record": "1W0D0L"
+    },
+    "POL_ARG": {
+      "home_edge": -0.099,
+      "history": [
+        "Poland 0-2 Argentina"
+      ],
+      "record": "0W0D1L"
+    },
+    "KSA_MEX": {
+      "home_edge": -0.099,
+      "history": [
+        "Saudi Arabia 1-2 Mexico"
+      ],
+      "record": "0W0D1L"
+    },
+    "DEN_TUN": {
+      "home_edge": -0.099,
+      "history": [
+        "Denmark 0-0 Tunisia"
+      ],
+      "record": "0W1D0L"
+    },
+    "FRA_AUS": {
+      "home_edge": 0.201,
+      "history": [
+        "France 4-1 Australia"
+      ],
+      "record": "1W0D0L"
+    },
+    "TUN_AUS": {
+      "home_edge": -0.099,
+      "history": [
+        "Tunisia 0-1 Australia"
+      ],
+      "record": "0W0D1L"
+    },
+    "FRA_DEN": {
+      "home_edge": 0.201,
+      "history": [
+        "France 2-1 Denmark"
+      ],
+      "record": "1W0D0L"
+    },
+    "AUS_DEN": {
+      "home_edge": 0.201,
+      "history": [
+        "Australia 1-0 Denmark"
+      ],
+      "record": "1W0D0L"
+    },
+    "TUN_FRA": {
+      "home_edge": 0.201,
+      "history": [
+        "Tunisia 1-0 France"
+      ],
+      "record": "1W0D0L"
+    },
+    "GER_JPN": {
+      "home_edge": -0.099,
+      "history": [
+        "Germany 1-2 Japan"
+      ],
+      "record": "0W0D1L"
+    },
+    "ESP_COS": {
+      "home_edge": 0.201,
+      "history": [
+        "Spain 7-0 Costa Rica"
+      ],
+      "record": "1W0D0L"
+    },
+    "JPN_COS": {
+      "home_edge": -0.099,
+      "history": [
+        "Japan 0-1 Costa Rica"
+      ],
+      "record": "0W0D1L"
+    },
+    "ESP_GER": {
+      "home_edge": -0.099,
+      "history": [
+        "Spain 1-1 Germany"
+      ],
+      "record": "0W1D0L"
+    },
+    "JPN_ESP": {
+      "home_edge": 0.201,
+      "history": [
+        "Japan 2-1 Spain"
+      ],
+      "record": "1W0D0L"
+    },
+    "COS_GER": {
+      "home_edge": -0.099,
+      "history": [
+        "Costa Rica 2-4 Germany"
+      ],
+      "record": "0W0D1L"
+    },
+    "MAR_CRO": {
+      "home_edge": -0.099,
+      "history": [
+        "Morocco 0-0 Croatia"
+      ],
+      "record": "0W1D0L"
+    },
+    "BEL_CAN": {
+      "home_edge": 0.201,
+      "history": [
+        "Belgium 1-0 Canada"
+      ],
+      "record": "1W0D0L"
+    },
+    "BEL_MAR": {
+      "home_edge": -0.099,
+      "history": [
+        "Belgium 0-2 Morocco"
+      ],
+      "record": "0W0D1L"
+    },
+    "CRO_CAN": {
+      "home_edge": 0.201,
+      "history": [
+        "Croatia 4-1 Canada"
+      ],
+      "record": "1W0D0L"
+    },
+    "CRO_BEL": {
+      "home_edge": -0.099,
+      "history": [
+        "Croatia 0-0 Belgium"
+      ],
+      "record": "0W1D0L"
+    },
+    "CAN_MAR": {
+      "home_edge": -0.099,
+      "history": [
+        "Canada 1-2 Morocco"
+      ],
+      "record": "0W0D1L"
+    },
+    "SUI_CAM": {
+      "home_edge": 0.201,
+      "history": [
+        "Switzerland 1-0 Cameroon"
+      ],
+      "record": "1W0D0L"
+    },
+    "BRA_SER": {
+      "home_edge": 0.201,
+      "history": [
+        "Brazil 2-0 Serbia"
+      ],
+      "record": "1W0D0L"
+    },
+    "CAM_SER": {
+      "home_edge": -0.099,
+      "history": [
+        "Cameroon 3-3 Serbia"
+      ],
+      "record": "0W1D0L"
+    },
+    "BRA_SUI": {
+      "home_edge": 0.201,
+      "history": [
+        "Brazil 1-0 Switzerland"
+      ],
+      "record": "1W0D0L"
+    },
+    "SER_SUI": {
+      "home_edge": -0.099,
+      "history": [
+        "Serbia 2-3 Switzerland"
+      ],
+      "record": "0W0D1L"
+    },
+    "CAM_BRA": {
+      "home_edge": 0.201,
+      "history": [
+        "Cameroon 1-0 Brazil"
+      ],
+      "record": "1W0D0L"
+    },
+    "URU_KOR": {
+      "home_edge": -0.099,
+      "history": [
+        "Uruguay 0-0 South Korea"
+      ],
+      "record": "0W1D0L"
+    },
+    "POR_GHA": {
+      "home_edge": 0.201,
+      "history": [
+        "Portugal 3-2 Ghana"
+      ],
+      "record": "1W0D0L"
+    },
+    "KOR_GHA": {
+      "home_edge": -0.099,
+      "history": [
+        "South Korea 2-3 Ghana"
+      ],
+      "record": "0W0D1L"
+    },
+    "POR_URU": {
+      "home_edge": 0.201,
+      "history": [
+        "Portugal 2-0 Uruguay"
+      ],
+      "record": "1W0D0L"
+    },
+    "GHA_URU": {
+      "home_edge": -0.099,
+      "history": [
+        "Ghana 0-2 Uruguay"
+      ],
+      "record": "0W0D1L"
+    },
+    "KOR_POR": {
+      "home_edge": 0.201,
+      "history": [
+        "South Korea 2-1 Portugal"
+      ],
+      "record": "1W0D0L"
+    }
+  },
+  "elo_ratings": {
+    "MEX": 1812.0,
+    "RSA": 1461.1,
+    "KOR": 1681.9,
+    "CZE": 1624.4,
+    "CAN": 1657.0,
+    "BIH": 1380.0,
+    "QAT": 1599.1,
+    "SUI": 1807.2,
+    "BRA": 2031.5,
+    "MAR": 1861.0,
+    "HAI": 1320.0,
+    "SCO": 1620.0,
+    "USA": 1858.9,
+    "PAR": 1444.8,
+    "AUS": 1683.8,
+    "TUR": 1580.0,
+    "GER": 1874.9,
+    "CUW": 1280.0,
+    "CIV": 1602.6,
+    "ECU": 1680.1,
+    "NED": 1961.7,
+    "JPN": 1800.3,
+    "SWE": 1649.5,
+    "TUN": 1586.4,
+    "BEL": 1840.3,
+    "EGY": 1614.8,
+    "IRN": 1691.2,
+    "NZL": 1280.5,
+    "ESP": 2014.8,
+    "CPV": 1400.0,
+    "KSA": 1423.8,
+    "URU": 1911.6,
+    "FRA": 1978.3,
+    "SEN": 1816.1,
+    "IRQ": 1405.0,
+    "NOR": 1531.3,
+    "ARG": 2097.6,
+    "ALG": 1565.2,
+    "AUT": 1735.0,
+    "JOR": 1370.0,
+    "POR": 1900.4,
+    "COD": 1415.0,
+    "UZB": 1395.0,
+    "COL": 1883.4,
+    "ENG": 1982.1,
+    "CRO": 1879.8,
+    "GHA": 1456.1,
+    "PAN": 1567.0,
+    "GRE": 1506.9,
+    "NIG": 1489.5,
+    "SLO": 1512.3,
+    "SER": 1494.7,
+    "DEN": 1524.6,
+    "CAM": 1500.5,
+    "ITA": 1511.2,
+    "HON": 1479.9,
+    "CHI": 1541.8,
+    "UTC": 1556.9,
+    "UNK": 1512.5,
+    "COS": 1527.0,
+    "BOS": 1476.0,
+    "RUS": 1488.9,
+    "FRI": 1563.1,
+    "WED": 1548.3,
+    "POL": 1547.9,
+    "THU": 1543.8,
+    "TUE": 1542.9,
+    "SAT": 1536.7,
+    "TRI": 1478.2,
+    "SUN": 1542.2,
+    "ANG": 1517.8,
+    "MON": 1508.9,
+    "TOG": 1488.3,
+    "UKR": 1509.7,
+    "PER": 1517.7,
+    "ICE": 1499.8,
+    "WAL": 1499.7
+  },
+  "benchmarks": {
+    "onside": {
+      "MEX_RSA": {
+        "prob_home": 88.0,
+        "prob_draw": 7.0,
+        "prob_away": 5.0,
+        "verdict": "fav_won",
+        "source": "onsidearena.com"
+      },
+      "KOR_CZE": {
+        "prob_home": 49.0,
+        "prob_draw": 25.0,
+        "prob_away": 26.0,
+        "verdict": "fav_won",
+        "source": "onsidearena.com"
+      },
+      "CAN_BIH": {
+        "prob_home": 79.0,
+        "prob_draw": 13.0,
+        "prob_away": 8.0,
+        "verdict": "draw",
+        "source": "onsidearena.com"
+      },
+      "USA_PAR": {
+        "prob_home": 70.0,
+        "prob_draw": 17.0,
+        "prob_away": 13.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "QAT_SUI": {
+        "prob_home": 8.0,
+        "prob_draw": 13.0,
+        "prob_away": 79.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "BRA_MAR": {
+        "prob_home": 44.0,
+        "prob_draw": 26.0,
+        "prob_away": 30.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "HAI_SCO": {
+        "prob_home": 7.0,
+        "prob_draw": 12.0,
+        "prob_away": 81.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "AUS_TUR": {
+        "prob_home": 27.0,
+        "prob_draw": 25.0,
+        "prob_away": 48.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "GER_CUW": {
+        "prob_home": 95.0,
+        "prob_draw": 3.0,
+        "prob_away": 2.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "NED_JPN": {
+        "prob_home": 57.0,
+        "prob_draw": 23.0,
+        "prob_away": 20.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "CIV_ECU": {
+        "prob_home": 23.0,
+        "prob_draw": 24.0,
+        "prob_away": 53.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "SWE_TUN": {
+        "prob_home": 49.0,
+        "prob_draw": 25.0,
+        "prob_away": 26.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "ESP_CPV": {
+        "prob_home": 94.0,
+        "prob_draw": 4.0,
+        "prob_away": 2.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "BEL_EGY": {
+        "prob_home": 63.0,
+        "prob_draw": 21.0,
+        "prob_away": 16.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "KSA_URU": {
+        "prob_home": 6.0,
+        "prob_draw": 10.0,
+        "prob_away": 84.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "IRN_NZL": {
+        "prob_home": 92.0,
+        "prob_draw": 5.0,
+        "prob_away": 3.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "FRA_SEN": {
+        "prob_home": 56.0,
+        "prob_draw": 23.0,
+        "prob_away": 21.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "IRQ_NOR": {
+        "prob_home": 12.0,
+        "prob_draw": 17.0,
+        "prob_away": 71.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "ARG_ALG": {
+        "prob_home": 70.0,
+        "prob_draw": 17.0,
+        "prob_away": 13.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "AUT_JOR": {
+        "prob_home": 81.0,
+        "prob_draw": 12.0,
+        "prob_away": 7.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "POR_COD": {
+        "prob_home": 82.0,
+        "prob_draw": 11.0,
+        "prob_away": 7.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "ENG_CRO": {
+        "prob_home": 47.0,
+        "prob_draw": 26.0,
+        "prob_away": 27.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "GHA_PAN": {
+        "prob_home": 8.0,
+        "prob_draw": 14.0,
+        "prob_away": 78.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "UZB_COL": {
+        "prob_home": 8.0,
+        "prob_draw": 13.0,
+        "prob_away": 79.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "CZE_RSA": {
+        "prob_home": 62.0,
+        "prob_draw": 21.0,
+        "prob_away": 17.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "SUI_BIH": {
+        "prob_home": 83.0,
+        "prob_draw": 11.0,
+        "prob_away": 6.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "CAN_QAT": {
+        "prob_home": 75.0,
+        "prob_draw": 15.0,
+        "prob_away": 10.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "MEX_KOR": {
+        "prob_home": 60.0,
+        "prob_draw": 22.0,
+        "prob_away": 18.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "USA_AUS": {
+        "prob_home": 62.0,
+        "prob_draw": 21.0,
+        "prob_away": 17.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "SCO_MAR": {
+        "prob_home": 13.0,
+        "prob_draw": 17.0,
+        "prob_away": 70.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "BRA_HAI": {
+        "prob_home": 96.0,
+        "prob_draw": 3.0,
+        "prob_away": 1.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "TUR_PAR": {
+        "prob_home": 57.0,
+        "prob_draw": 23.0,
+        "prob_away": 20.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "NED_SWE": {
+        "prob_home": 72.0,
+        "prob_draw": 16.0,
+        "prob_away": 12.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "GER_CIV": {
+        "prob_home": 68.0,
+        "prob_draw": 18.0,
+        "prob_away": 14.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "ECU_CUW": {
+        "prob_home": 91.0,
+        "prob_draw": 6.0,
+        "prob_away": 3.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "TUN_JPN": {
+        "prob_home": 15.0,
+        "prob_draw": 20.0,
+        "prob_away": 65.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "ESP_KSA": {
+        "prob_home": 92.0,
+        "prob_draw": 5.0,
+        "prob_away": 3.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "BEL_IRN": {
+        "prob_home": 57.0,
+        "prob_draw": 23.0,
+        "prob_away": 20.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "URU_CPV": {
+        "prob_home": 88.0,
+        "prob_draw": 8.0,
+        "prob_away": 4.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "NZL_EGY": {
+        "prob_home": 4.0,
+        "prob_draw": 6.0,
+        "prob_away": 90.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "ARG_AUT": {
+        "prob_home": 60.0,
+        "prob_draw": 22.0,
+        "prob_away": 18.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "FRA_IRQ": {
+        "prob_home": 91.0,
+        "prob_draw": 6.0,
+        "prob_away": 3.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "NOR_SEN": {
+        "prob_home": 24.0,
+        "prob_draw": 25.0,
+        "prob_away": 51.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "JOR_ALG": {
+        "prob_home": 11.0,
+        "prob_draw": 15.0,
+        "prob_away": 74.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "POR_UZB": {
+        "prob_home": 85.0,
+        "prob_draw": 10.0,
+        "prob_away": 5.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "ENG_GHA": {
+        "prob_home": 95.0,
+        "prob_draw": 3.0,
+        "prob_away": 2.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "PAN_CRO": {
+        "prob_home": 15.0,
+        "prob_draw": 19.0,
+        "prob_away": 66.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "COL_COD": {
+        "prob_home": 75.0,
+        "prob_draw": 15.0,
+        "prob_away": 10.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "SUI_CAN": {
+        "prob_home": 43.0,
+        "prob_draw": 26.0,
+        "prob_away": 31.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "BIH_QAT": {
+        "prob_home": 31.0,
+        "prob_draw": 27.0,
+        "prob_away": 42.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "MAR_HAI": {
+        "prob_home": 95.0,
+        "prob_draw": 3.0,
+        "prob_away": 2.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "SCO_BRA": {
+        "prob_home": 10.0,
+        "prob_draw": 14.0,
+        "prob_away": 76.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "RSA_KOR": {
+        "prob_home": 11.0,
+        "prob_draw": 16.0,
+        "prob_away": 73.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "CZE_MEX": {
+        "prob_home": 12.0,
+        "prob_draw": 17.0,
+        "prob_away": 71.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "CUW_CIV": {
+        "prob_home": 6.0,
+        "prob_draw": 10.0,
+        "prob_away": 84.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "ECU_GER": {
+        "prob_home": 23.0,
+        "prob_draw": 25.0,
+        "prob_away": 52.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "TUN_NED": {
+        "prob_home": 7.0,
+        "prob_draw": 12.0,
+        "prob_away": 81.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "JPN_SWE": {
+        "prob_home": 53.0,
+        "prob_draw": 24.0,
+        "prob_away": 23.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "TUR_USA": {
+        "prob_home": 25.0,
+        "prob_draw": 25.0,
+        "prob_away": 50.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "PAR_AUS": {
+        "prob_home": 28.0,
+        "prob_draw": 26.0,
+        "prob_away": 46.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "NOR_FRA": {
+        "prob_home": 13.0,
+        "prob_draw": 18.0,
+        "prob_away": 69.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "SEN_IRQ": {
+        "prob_home": 82.0,
+        "prob_draw": 11.0,
+        "prob_away": 7.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "CPV_KSA": {
+        "prob_home": 29.0,
+        "prob_draw": 27.0,
+        "prob_away": 44.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "URU_ESP": {
+        "prob_home": 22.0,
+        "prob_draw": 24.0,
+        "prob_away": 54.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "NZL_BEL": {
+        "prob_home": 1.0,
+        "prob_draw": 3.0,
+        "prob_away": 96.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "EGY_IRN": {
+        "prob_home": 31.0,
+        "prob_draw": 26.0,
+        "prob_away": 43.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "PAN_ENG": {
+        "prob_home": 10.0,
+        "prob_draw": 15.0,
+        "prob_away": 75.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "CRO_GHA": {
+        "prob_home": 92.0,
+        "prob_draw": 5.0,
+        "prob_away": 3.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "COL_POR": {
+        "prob_home": 28.0,
+        "prob_draw": 25.0,
+        "prob_away": 47.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "COD_UZB": {
+        "prob_home": 42.0,
+        "prob_draw": 26.0,
+        "prob_away": 32.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "ALG_AUT": {
+        "prob_home": 28.0,
+        "prob_draw": 25.0,
+        "prob_away": 47.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      },
+      "JOR_ARG": {
+        "prob_home": 3.0,
+        "prob_draw": 5.0,
+        "prob_away": 92.0,
+        "verdict": "",
+        "source": "onsidearena.com"
+      }
+    }
+  }
+}
