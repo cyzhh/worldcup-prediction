@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T09:00:23.240651+00:00",
+  "generated_at": "2026-06-13T09:05:55.278453+00:00",
   "method": "walk-forward group stage backtest (2006-2022)",
   "calibration": {
     "group_stage_draw_base": 0.22,
@@ -47,8 +47,8 @@
     "matches": 240,
     "outcome_accuracy": 0.6083,
     "exact_score_accuracy": 0.0875,
-    "brier_score": 0.6674,
-    "log_loss": 1.1058,
+    "brier_score": 0.6672,
+    "log_loss": 1.1055,
     "draw_rate_actual": 0.2208,
     "draw_rate_predicted": 0.4417,
     "wdl_priors_by_elo_gap": {
@@ -77,8 +77,8 @@
       "matches": 48,
       "outcome_accuracy": 0.5,
       "exact_score_accuracy": 0.0625,
-      "brier_score": 0.6812,
-      "log_loss": 1.1203,
+      "brier_score": 0.6805,
+      "log_loss": 1.1192,
       "draw_rate_actual": 0.2292,
       "draw_rate_predicted": 1.0,
       "wdl_priors_by_elo_gap": {
@@ -94,8 +94,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6875,
       "exact_score_accuracy": 0.1458,
-      "brier_score": 0.6962,
-      "log_loss": 1.1469,
+      "brier_score": 0.6955,
+      "log_loss": 1.1458,
       "draw_rate_actual": 0.2917,
       "draw_rate_predicted": 0.2917,
       "wdl_priors_by_elo_gap": {
@@ -117,8 +117,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6042,
       "exact_score_accuracy": 0.0625,
-      "brier_score": 0.6175,
-      "log_loss": 1.0285,
+      "brier_score": 0.6177,
+      "log_loss": 1.0288,
       "draw_rate_actual": 0.1875,
       "draw_rate_predicted": 0.3125,
       "wdl_priors_by_elo_gap": {
@@ -140,8 +140,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6667,
       "exact_score_accuracy": 0.0833,
-      "brier_score": 0.6806,
-      "log_loss": 1.1354,
+      "brier_score": 0.6807,
+      "log_loss": 1.1357,
       "draw_rate_actual": 0.1875,
       "draw_rate_predicted": 0.3333,
       "wdl_priors_by_elo_gap": {
@@ -205,26 +205,26 @@
         "key": "GER",
         "code": "GER",
         "name": "Germany",
-        "fifa_rank": 22,
+        "fifa_rank": 28,
         "elo": 1500.0
       },
       "away": {
         "key": "CRC",
         "code": "CRC",
         "name": "Costa Rica",
-        "fifa_rank": 20,
+        "fifa_rank": 23,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 32.8,
+      "prob_home": 32.5,
       "prob_draw": 37.4,
-      "prob_away": 29.8,
+      "prob_away": 30.1,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 2 位（Germany #22 vs Costa Rica #20），纸面实力接近。",
+        "FIFA排名差距 5 位（Germany #28 vs Costa Rica #23），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Germany 2 次 vs Costa Rica 2 次。",
         "近10场战绩 Germany 4胜3平3负，Costa Rica 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -242,12 +242,12 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 19.4
+          "prob": 19.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 17.2
+          "prob": 17.4
         },
         {
           "home": 1,
@@ -257,14 +257,14 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 5.6
+          "prob": 5.5
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.481,
-          "away": 0.486,
+          "home": 0.465,
+          "away": 0.478,
           "weight": 0.278184
         },
         {
@@ -327,26 +327,26 @@
         "key": "POL",
         "code": "POL",
         "name": "Poland",
-        "fifa_rank": 26,
+        "fifa_rank": 13,
         "elo": 1500.0
       },
       "away": {
         "key": "ECU",
         "code": "ECU",
         "name": "Ecuador",
-        "fifa_rank": 27,
+        "fifa_rank": 19,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 30.9,
+      "prob_home": 31.3,
       "prob_draw": 37.4,
-      "prob_away": 31.7,
+      "prob_away": 31.3,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 1 位（Poland #26 vs Ecuador #27），纸面实力接近。",
+        "FIFA排名差距 6 位（Poland #13 vs Ecuador #19），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Poland 2 次 vs Ecuador 2 次。",
         "近10场战绩 Poland 4胜3平3负，Ecuador 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -362,13 +362,13 @@
           "prob": 33.5
         },
         {
-          "home": 0,
-          "away": 1,
-          "prob": 18.5
-        },
-        {
           "home": 1,
           "away": 0,
+          "prob": 18.4
+        },
+        {
+          "home": 0,
+          "away": 1,
           "prob": 18.2
         },
         {
@@ -377,16 +377,16 @@
           "prob": 10.0
         },
         {
-          "home": 0,
-          "away": 2,
+          "home": 2,
+          "away": 0,
           "prob": 5.1
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.47,
-          "away": 0.468,
+          "home": 0.505,
+          "away": 0.489,
           "weight": 0.278184
         },
         {
@@ -449,26 +449,26 @@
         "key": "GER",
         "code": "GER",
         "name": "Germany",
-        "fifa_rank": 22,
+        "fifa_rank": 28,
         "elo": 1500.0
       },
       "away": {
         "key": "POL",
         "code": "POL",
         "name": "Poland",
-        "fifa_rank": 26,
+        "fifa_rank": 13,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 33.8,
+      "prob_home": 32.1,
       "prob_draw": 36.0,
-      "prob_away": 30.2,
+      "prob_away": 31.9,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 4 位（Germany #22 vs Poland #26），纸面实力接近。",
+        "FIFA排名差距 15 位（Germany #28 vs Poland #13），纸面实力主队略优。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Germany 2 次 vs Poland 2 次。",
         "近10场战绩 Germany 4胜3平3负，Poland 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -486,12 +486,12 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 19.3
+          "prob": 18.2
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 17.0
+          "prob": 18.1
         },
         {
           "home": 1,
@@ -501,14 +501,14 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 6.0
+          "prob": 5.4
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.481,
-          "away": 0.47,
+          "home": 0.465,
+          "away": 0.505,
           "weight": 0.278184
         },
         {
@@ -571,26 +571,26 @@
         "key": "ECU",
         "code": "ECU",
         "name": "Ecuador",
-        "fifa_rank": 27,
+        "fifa_rank": 19,
         "elo": 1500.0
       },
       "away": {
         "key": "CRC",
         "code": "CRC",
         "name": "Costa Rica",
-        "fifa_rank": 20,
+        "fifa_rank": 23,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 30.4,
+      "prob_home": 31.4,
       "prob_draw": 36.0,
-      "prob_away": 33.6,
+      "prob_away": 32.6,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 7 位（Ecuador #27 vs Costa Rica #20），纸面实力接近。",
+        "FIFA排名差距 4 位（Ecuador #19 vs Costa Rica #23），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Ecuador 2 次 vs Costa Rica 2 次。",
         "近10场战绩 Ecuador 4胜3平3负，Costa Rica 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -608,12 +608,12 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 19.2
+          "prob": 18.6
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.1
+          "prob": 17.7
         },
         {
           "home": 1,
@@ -623,14 +623,14 @@
         {
           "home": 0,
           "away": 2,
-          "prob": 5.9
+          "prob": 5.6
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.468,
-          "away": 0.486,
+          "home": 0.489,
+          "away": 0.478,
           "weight": 0.278184
         },
         {
@@ -693,26 +693,26 @@
         "key": "ECU",
         "code": "ECU",
         "name": "Ecuador",
-        "fifa_rank": 27,
+        "fifa_rank": 19,
         "elo": 1500.0
       },
       "away": {
         "key": "GER",
         "code": "GER",
         "name": "Germany",
-        "fifa_rank": 22,
+        "fifa_rank": 28,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 28.9,
-      "prob_draw": 35.9,
-      "prob_away": 35.2,
+      "prob_home": 30.1,
+      "prob_draw": 36.0,
+      "prob_away": 34.0,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 5 位（Ecuador #27 vs Germany #22），纸面实力接近。",
+        "FIFA排名差距 9 位（Ecuador #19 vs Germany #28），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Ecuador 2 次 vs Germany 2 次。",
         "近10场战绩 Ecuador 4胜3平3负，Germany 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -730,29 +730,29 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 20.2
+          "prob": 19.4
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 16.1
+          "prob": 16.9
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.5
+          "prob": 10.6
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 6.6
+          "prob": 6.1
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.468,
-          "away": 0.481,
+          "home": 0.489,
+          "away": 0.465,
           "weight": 0.278184
         },
         {
@@ -815,26 +815,26 @@
         "key": "CRC",
         "code": "CRC",
         "name": "Costa Rica",
-        "fifa_rank": 20,
+        "fifa_rank": 23,
         "elo": 1500.0
       },
       "away": {
         "key": "POL",
         "code": "POL",
         "name": "Poland",
-        "fifa_rank": 26,
+        "fifa_rank": 13,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 31.5,
+      "prob_home": 30.1,
       "prob_draw": 36.0,
-      "prob_away": 32.5,
+      "prob_away": 33.9,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 6 位（Costa Rica #20 vs Poland #26），纸面实力接近。",
+        "FIFA排名差距 10 位（Costa Rica #23 vs Poland #13），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Costa Rica 2 次 vs Poland 2 次。",
         "近10场战绩 Costa Rica 4胜3平3负，Poland 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -852,12 +852,12 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 18.5
+          "prob": 19.4
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.9
+          "prob": 16.9
         },
         {
           "home": 1,
@@ -867,14 +867,14 @@
         {
           "home": 0,
           "away": 2,
-          "prob": 5.5
+          "prob": 6.0
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.486,
-          "away": 0.47,
+          "home": 0.478,
+          "away": 0.505,
           "weight": 0.278184
         },
         {
@@ -937,26 +937,26 @@
         "key": "ENG",
         "code": "ENG",
         "name": "England",
-        "fifa_rank": 4,
+        "fifa_rank": 11,
         "elo": 1500.0
       },
       "away": {
         "key": "PAR",
         "code": "PAR",
         "name": "Paraguay",
-        "fifa_rank": 10,
+        "fifa_rank": 30,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 31.3,
+      "prob_home": 32.6,
       "prob_draw": 37.4,
-      "prob_away": 31.3,
+      "prob_away": 30.0,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 6 位（England #4 vs Paraguay #10），纸面实力接近。",
+        "FIFA排名差距 19 位（England #11 vs Paraguay #30），纸面实力主队略优。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：England 2 次 vs Paraguay 2 次。",
         "近10场战绩 England 4胜3平3负，Paraguay 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -974,12 +974,12 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 18.4
+          "prob": 19.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 18.2
+          "prob": 17.3
         },
         {
           "home": 1,
@@ -989,14 +989,14 @@
         {
           "home": 2,
           "away": 0,
-          "prob": 5.1
+          "prob": 5.6
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.528,
-          "away": 0.513,
+          "home": 0.51,
+          "away": 0.46,
           "weight": 0.278184
         },
         {
@@ -1026,7 +1026,7 @@
         {
           "name": "小组赛战意",
           "home": 0.5,
-          "away": 0.5,
+          "away": 0.47,
           "weight": 0.046364
         },
         {
@@ -1059,26 +1059,26 @@
         "key": "TRI",
         "code": "TRI",
         "name": "Trinidad and Tobago",
-        "fifa_rank": 9,
+        "fifa_rank": 2,
         "elo": 1500.0
       },
       "away": {
         "key": "SWE",
         "code": "SWE",
         "name": "Sweden",
-        "fifa_rank": 24,
+        "fifa_rank": 18,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 32.1,
+      "prob_home": 32.2,
       "prob_draw": 37.4,
-      "prob_away": 30.5,
+      "prob_away": 30.4,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 15 位（Trinidad and Tobago #9 vs Sweden #24），纸面实力主队略优。",
+        "FIFA排名差距 16 位（Trinidad and Tobago #2 vs Sweden #18），纸面实力主队略优。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
         "世界杯参赛经验：Trinidad and Tobago 2 次 vs Sweden 2 次。",
         "近10场战绩 Trinidad and Tobago 4胜3平3负，Sweden 4胜3平3负；xG差 +0.2 vs +0.2。",
@@ -1101,7 +1101,7 @@
         {
           "home": 0,
           "away": 1,
-          "prob": 17.7
+          "prob": 17.6
         },
         {
           "home": 1,
@@ -1117,8 +1117,8 @@
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.515,
-          "away": 0.476,
+          "home": 0.534,
+          "away": 0.491,
           "weight": 0.278184
         },
         {

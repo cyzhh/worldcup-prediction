@@ -27,16 +27,6 @@
     header { text-align: center; margin-bottom: 28px; }
     header h1 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; margin-bottom: 12px; }
     header p { color: var(--muted); font-size: 0.9rem; }
-    .filters {
-      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px;
-    }
-    .filter-btn {
-      background: transparent; border: 1px solid var(--border); color: var(--muted);
-      padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 0.82rem;
-    }
-    .filter-btn.active, .filter-btn:hover {
-      border-color: var(--accent); color: var(--text); background: rgba(79,172,254,0.12);
-    }
     .stats-bar {
       text-align: center; color: var(--muted); font-size: 0.8rem; margin-bottom: 20px;
     }
@@ -153,6 +143,33 @@
       justify-content: center; margin-bottom: 20px; padding: 14px 16px;
       background: var(--card); border: 1px solid var(--border); border-radius: 12px;
     }
+    .match-toolbar {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+      justify-content: center; margin-bottom: 16px; padding: 14px 16px;
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    }
+    .toolbar-select {
+      min-width: 140px; max-width: 200px;
+      background: var(--card-inner); border: 1px solid var(--border); border-radius: 10px;
+      color: var(--text); padding: 10px 12px; font-size: 0.88rem; cursor: pointer;
+    }
+    .toolbar-select:focus { border-color: var(--accent); outline: none; }
+    .status-pills {
+      display: flex; gap: 6px; flex-wrap: wrap;
+    }
+    .status-pill {
+      background: transparent; border: 1px solid var(--border); color: var(--muted);
+      padding: 8px 14px; border-radius: 20px; cursor: pointer; font-size: 0.82rem;
+    }
+    .status-pill.active, .status-pill:hover {
+      border-color: var(--accent); color: var(--text); background: rgba(79,172,254,0.12);
+    }
+    .date-divider {
+      font-size: 0.88rem; font-weight: 600; color: var(--accent);
+      padding: 8px 4px 12px; margin-top: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .date-divider:first-child { margin-top: 0; }
     .player-search {
       flex: 1; min-width: 200px; max-width: 320px;
       background: var(--card-inner); border: 1px solid var(--border); border-radius: 10px;
@@ -167,8 +184,9 @@
     .player-select:focus { border-color: var(--accent); outline: none; }
     .player-table-scroll { overflow-x: auto; }
     @media (max-width: 600px) {
-      .player-toolbar { flex-direction: column; align-items: stretch; }
-      .player-search, .player-select { max-width: none; width: 100%; }
+      .player-toolbar, .match-toolbar { flex-direction: column; align-items: stretch; }
+      .player-search, .player-select, .toolbar-select { max-width: none; width: 100%; }
+      .status-pills { justify-content: center; }
     }
     footer {
       text-align: center; color: var(--muted); font-size: 0.75rem;
@@ -192,9 +210,9 @@
       <button class="view-tab active" data-view="matches">⚽ 比赛预测</button>
       <button class="view-tab" data-view="players">👤 球员评分</button>
     </div>
-    <div class="filters" id="filters"></div>
     <div class="stats-bar" id="stats-bar"></div>
     <div class="matches-panel active" id="matches-panel">
+      <div id="match-toolbar"></div>
       <main id="matches"></main>
     </div>
     <div class="player-panel" id="player-panel">
@@ -216,7 +234,7 @@
     "date_range": "2026.06.11 - 06.27",
     "subtitle": "awesome-football 多源融合 · 赛程/球员/球场/ELO/H2H/积分榜",
     "data_source": "https://github.com/openfootball/awesome-football",
-    "db_built_at": "2026-06-13T09:00:22.828389+00:00",
+    "db_built_at": "2026-06-13T09:05:54.527872+00:00",
     "sources": [
       "https://github.com/openfootball/worldcup",
       "https://github.com/openfootball/worldcup.json",
@@ -26694,6 +26712,7 @@
 };
     let activeGroup = "ALL";
     let activeStatus = "ALL";
+    let activeDate = "ALL";
     let activeView = "matches";
     let activeTeam = "ALL";
     let playerSearch = "";
@@ -26732,9 +26751,9 @@
           btn.classList.add("active");
           document.getElementById("matches-panel").classList.toggle("active", activeView === "matches");
           document.getElementById("player-panel").classList.toggle("active", activeView === "players");
-          document.getElementById("filters").style.display = activeView === "matches" ? "flex" : "none";
+          document.getElementById("stats-bar").style.display = "block";
           if (activeView === "players") renderPlayers();
-          else renderMatches();
+          else { renderMatchToolbar(); renderMatches(); }
         });
       });
     }
@@ -26830,53 +26849,102 @@
       });
     }
 
-    function renderFilters() {
-      const groups = [...new Set(DATA.predictions.map(m => m.group).filter(Boolean))].sort();
-      const el = document.getElementById("filters");
-      const btns = [
-        `<button class="filter-btn active" data-group="ALL">全部 (${DATA.predictions.length})</button>`,
+    function matchDate(m) {
+      return m.openfootball?.date || "";
+    }
+
+    function matchSortKey(m) {
+      const d = matchDate(m) || "9999-99-99";
+      const t = (m.openfootball?.time || "00:00").replace(/\s*UTC.*/, "");
+      return `${d}T${t}`;
+    }
+
+    function formatDateLabel(iso) {
+      if (!iso) return "日期待定";
+      const p = iso.split("-");
+      return `${parseInt(p[1], 10)}月${parseInt(p[2], 10)}日`;
+    }
+
+    function renderMatchToolbar() {
+      const all = DATA.predictions || [];
+      const groups = [...new Set(all.map(m => m.group).filter(Boolean))].sort();
+      const dates = [...new Set(all.map(matchDate).filter(Boolean))].sort();
+
+      const groupOpts = [
+        `<option value="ALL"${activeGroup === "ALL" ? " selected" : ""}>全部小组 (${all.length})</option>`,
         ...groups.map(g => {
-          const n = DATA.predictions.filter(m => m.group === g).length;
-          return `<button class="filter-btn" data-group="${g}">${g}组 (${n})</button>`;
+          const n = all.filter(m => m.group === g).length;
+          return `<option value="${g}"${activeGroup === g ? " selected" : ""}>${g} 组 · ${n} 场</option>`;
         }),
-        `<button class="filter-btn" data-status="played">已赛</button>`,
-        `<button class="filter-btn" data-status="upcoming">未赛</button>`,
-      ];
-      el.innerHTML = btns.join("");
-      el.querySelectorAll(".filter-btn").forEach(btn => {
+      ].join("");
+
+      const dateOpts = [
+        `<option value="ALL"${activeDate === "ALL" ? " selected" : ""}>全部日期 (${all.length})</option>`,
+        ...dates.map(d => {
+          const n = all.filter(m => matchDate(m) === d).length;
+          const played = all.filter(m => matchDate(m) === d && m.played).length;
+          return `<option value="${d}"${activeDate === d ? " selected" : ""}>${formatDateLabel(d)} · ${n} 场${played ? ` (${played} 已赛)` : ""}</option>`;
+        }),
+      ].join("");
+
+      const statusBtns = ["ALL", "played", "upcoming"].map(s => {
+        const labels = { ALL: "全部", played: "已赛", upcoming: "未赛" };
+        const counts = {
+          ALL: filteredPreview(s).length,
+          played: filteredPreview(s).filter(m => m.played).length,
+          upcoming: filteredPreview(s).filter(m => !m.played).length,
+        };
+        const label = s === "ALL" ? labels[s] : `${labels[s]} ${counts[s]}`;
+        return `<button type="button" class="status-pill${activeStatus === s ? " active" : ""}" data-status="${s}">${label}</button>`;
+      }).join("");
+
+      function filteredPreview(status) {
+        return all.filter(m => {
+          if (activeGroup !== "ALL" && m.group !== activeGroup) return false;
+          if (activeDate !== "ALL" && matchDate(m) !== activeDate) return false;
+          if (status === "played" && !m.played) return false;
+          if (status === "upcoming" && m.played) return false;
+          return true;
+        });
+      }
+
+      document.getElementById("match-toolbar").innerHTML = `
+        <select class="toolbar-select" id="match-group-select">${groupOpts}</select>
+        <select class="toolbar-select" id="match-date-select">${dateOpts}</select>
+        <div class="status-pills">${statusBtns}</div>`;
+
+      document.getElementById("match-group-select").addEventListener("change", e => {
+        activeGroup = e.target.value;
+        renderMatchToolbar();
+        renderMatches();
+      });
+      document.getElementById("match-date-select").addEventListener("change", e => {
+        activeDate = e.target.value;
+        renderMatchToolbar();
+        renderMatches();
+      });
+      document.querySelectorAll("#match-toolbar .status-pill").forEach(btn => {
         btn.addEventListener("click", () => {
-          if (btn.dataset.group) {
-            activeGroup = btn.dataset.group;
-            activeStatus = "ALL";
-          } else {
-            activeStatus = btn.dataset.status;
-            activeGroup = "ALL";
-          }
-          el.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-          btn.classList.add("active");
+          activeStatus = btn.dataset.status;
+          renderMatchToolbar();
           renderMatches();
         });
       });
     }
 
     function filtered() {
-      return DATA.predictions.filter(m => {
-        if (activeGroup !== "ALL" && m.group !== activeGroup) return false;
-        if (activeStatus === "played" && !m.played) return false;
-        if (activeStatus === "upcoming" && m.played) return false;
-        return true;
-      });
+      return DATA.predictions
+        .filter(m => {
+          if (activeGroup !== "ALL" && m.group !== activeGroup) return false;
+          if (activeDate !== "ALL" && matchDate(m) !== activeDate) return false;
+          if (activeStatus === "played" && !m.played) return false;
+          if (activeStatus === "upcoming" && m.played) return false;
+          return true;
+        })
+        .sort((a, b) => matchSortKey(a).localeCompare(matchSortKey(b)));
     }
 
-    function renderMatches() {
-      const list = filtered();
-      const played = list.filter(m => m.played);
-      const hits = played.filter(m => m.result_hit).length;
-      document.getElementById("stats-bar").textContent =
-        `显示 ${list.length} 场 · 已赛 ${played.length} 场` +
-        (played.length ? ` · 比分命中 ${hits}/${played.length}` : "");
-
-      document.getElementById("matches").innerHTML = list.map(m => {
+    function matchCardHtml(m) {
         const ouLabel = m.prob_under_25 >= 50 ? "小2.5球" : "大2.5球";
         const ouPct = m.prob_under_25 >= 50 ? m.prob_under_25 : (100 - m.prob_under_25).toFixed(1);
         const status = m.played
@@ -26934,7 +27002,34 @@
               </div>
             </div>
           </article>`;
-      }).join("");
+    }
+
+    function renderMatches() {
+      const list = filtered();
+      const played = list.filter(m => m.played);
+      const hits = played.filter(m => m.result_hit).length;
+      const parts = [];
+      if (activeGroup !== "ALL") parts.push(`${activeGroup} 组`);
+      if (activeDate !== "ALL") parts.push(formatDateLabel(activeDate));
+      if (activeStatus === "played") parts.push("已赛");
+      if (activeStatus === "upcoming") parts.push("未赛");
+      const filterDesc = parts.length ? parts.join(" · ") : "全部赛程";
+      document.getElementById("stats-bar").textContent =
+        `${filterDesc} · 显示 ${list.length} 场 · 已赛 ${played.length} 场` +
+        (played.length ? ` · 比分命中 ${hits}/${played.length}` : "");
+
+      let html = "";
+      let lastDate = null;
+      for (const m of list) {
+        const d = matchDate(m);
+        if (activeDate === "ALL" && d && d !== lastDate) {
+          const dayCount = list.filter(x => matchDate(x) === d).length;
+          html += `<div class="date-divider">📅 ${formatDateLabel(d)} · ${dayCount} 场</div>`;
+          lastDate = d;
+        }
+        html += matchCardHtml(m);
+      }
+      document.getElementById("matches").innerHTML = html || `<p style="text-align:center;color:var(--muted);padding:40px">无匹配比赛</p>`;
     }
 
     function render() {
@@ -26942,7 +27037,7 @@
       document.getElementById("page-subtitle").textContent =
         `${meta.subtitle || ""} | ${meta.date_range || ""} | ${meta.squads_players || "?"} 名球员 · ${meta.total_group_matches || DATA.predictions.length} 场`;
       renderViewTabs();
-      renderFilters();
+      renderMatchToolbar();
       renderMatches();
     }
     render();
