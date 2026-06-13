@@ -3,10 +3,10 @@
 
 from __future__ import annotations
 
-import re
 from pathlib import Path
 from typing import Any
 
+from football_txt_parser import parse_all_results
 from team_registry import NAME_TO_KEY, team_key
 
 K_FACTOR = 32
@@ -15,30 +15,7 @@ HOME_ADV = 65
 
 def parse_cup_txt_results(text: str) -> list[dict[str, Any]]:
     """解析 cup.txt 中带比分的行（兼容多种 Football.TXT 格式）。"""
-    results: list[dict[str, Any]] = []
-    pat_ht = re.compile(
-        r"^\s*(?:\d{2}:\d{2}\s+)?"
-        r"(.+?)\s+(\d+)-(\d+)\s+\((\d+)-(\d+)\)\s+(.+?)\s+@"
-    )
-    pat_simple = re.compile(
-        r"^\s*(?:\w{3}\s+\w{3}\s+\d+\s+)?(?:\d{2}:\d{2}\s+)?"
-        r"(.+?)\s+(\d+)-(\d+)\s+(.+?)\s+@"
-    )
-    for line in text.splitlines():
-        m = pat_ht.match(line)
-        if m:
-            t1, gh, ga, _, _, t2 = m.groups()
-            results.append(
-                {"team1": t1.strip(), "team2": t2.strip(), "score_home": int(gh), "score_away": int(ga)}
-            )
-            continue
-        m = pat_simple.match(line)
-        if m:
-            t1, gh, ga, t2 = m.groups()
-            results.append(
-                {"team1": t1.strip(), "team2": t2.strip(), "score_home": int(gh), "score_away": int(ga)}
-            )
-    return results
+    return parse_all_results(text)
 
 
 def _expected(elo_a: float, elo_b: float) -> float:

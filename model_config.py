@@ -28,6 +28,8 @@ DEFAULTS = {
     "player_prob_weight": 0.05,
     # 2026 联合东道主 ELO 加成（报告 3.2.1）
     "host_elo_bonus": 35.0,
+    # 将平局概率质量向历史频率收缩（缓解模型过度预测平局）
+    "draw_mass_blend": 0.40,
 }
 
 
@@ -45,6 +47,7 @@ class ModelConfig:
     dixon_coles_rho: float = -0.08
     player_prob_weight: float = 0.05
     host_elo_bonus: float = 35.0
+    draw_mass_blend: float = 0.40
     # 由回测填充：ELO 差分桶 → 历史胜/平/负率
     wdl_priors_by_elo_gap: dict[str, dict[str, float]] = field(default_factory=dict)
     calibrated_at: str | None = None

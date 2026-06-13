@@ -35,51 +35,68 @@ def _collect_prior_results(cup_files: list[Path]) -> list[dict[str, Any]]:
 
 
 def _form_from_history(team_key_str: str, prior_results: list[dict[str, Any]], window: int = 10) -> dict[str, Any]:
-    """从赛前历史赛果估算近态（W/D/L + 进球）。"""
-    wins = draws = losses = 0
+    """从赛前历史赛果估算近态（指数衰减加权，越近权重越高）。"""
+    decay = 0.88
+    wins = draws = losses = 0.0
     gf = ga = 0.0
+    weight_sum = 0.0
     count = 0
+
     for r in reversed(prior_results):
         k1, k2 = team_key(r["team1"]), team_key(r["team2"])
         if k1 != team_key_str and k2 != team_key_str:
             continue
         gh, ga_sc = r["score_home"], r["score_away"]
+        w = decay ** count
         if k1 == team_key_str:
             tg, og = gh, ga_sc
             if gh > ga_sc:
-                wins += 1
+                wins += w
             elif gh < ga_sc:
-                losses += 1
+                losses += w
             else:
-                draws += 1
+                draws += w
         else:
             tg, og = ga_sc, gh
             if ga_sc > gh:
-                wins += 1
+                wins += w
             elif ga_sc < gh:
-                losses += 1
+                losses += w
             else:
-                draws += 1
-        gf += tg
-        ga += og
+                draws += w
+        gf += tg * w
+        ga += og * w
+        weight_sum += w
         count += 1
         if count >= window:
             break
 
-    if count == 0:
+    if weight_sum <= 0:
         return _form_for_tier(3)
 
-    total = wins + draws + losses
+    wdl = wins + draws + losses
     return {
-        "wins": wins,
-        "draws": draws,
-        "losses": losses,
-        "goals_for": round(gf / total, 2),
-        "goals_against": round(ga / total, 2),
-        "xg_diff": round((gf - ga) / total * 0.85, 2),
+        "wins": int(round(wins)),
+        "draws": int(round(draws)),
+        "losses": int(round(losses)),
+        "goals_for": round(gf / weight_sum, 2),
+        "goals_against": round(ga / weight_sum, 2),
+        "xg_diff": round((gf - ga) / weight_sum * 0.85, 2),
         "ppda": 10.5,
         "home_win_rate": 0.55,
     }
+
+
+def refresh_teams_form(
+    teams: dict[str, dict[str, Any]],
+    prior_results: list[dict[str, Any]],
+    current_results: list[dict[str, Any]],
+    window: int = 10,
+) -> None:
+    """将当届已赛结果并入 form（二、三轮预测用当届真实状态）。"""
+    combined = prior_results + current_results
+    for key in teams:
+        teams[key]["form"] = _form_from_history(key, combined, window=window)
 
 
 def build_elo_as_of(prior_cup_files: list[Path], team_keys: set[str]) -> dict[str, float]:

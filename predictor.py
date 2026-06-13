@@ -201,6 +201,27 @@ def dixon_coles_tau(i: int, j: int, lam_h: float, lam_a: float, rho: float) -> f
     return 1.0
 
 
+def apply_draw_mass_calibration(
+    p_h: float,
+    p_d: float,
+    p_a: float,
+    config: ModelConfig,
+) -> tuple[float, float, float]:
+    """将平局概率质量向世界杯小组赛历史频率（~22%）校正。"""
+    target = config.group_stage_draw_base
+    blend = config.draw_mass_blend
+    if blend <= 0 or p_d <= target:
+        return p_h, p_d, p_a
+    new_d = p_d * (1 - blend) + target * blend
+    removed = p_d - new_d
+    share = p_h / (p_h + p_a) if (p_h + p_a) > 1e-9 else 0.5
+    p_h += removed * share
+    p_a += removed * (1 - share)
+    p_d = new_d
+    t = p_h + p_d + p_a
+    return p_h / t, p_d / t, p_a / t
+
+
 def apply_player_calibration(
     p_h: float,
     p_d: float,
@@ -658,6 +679,7 @@ def predict_match(
     elo_w = cfg.elo_blend_strong if abs(strength_diff) > 0.12 else cfg.elo_blend_close
     p_h, p_d, p_a = blend_wdl(elo_wdl, poisson_wdl, elo_weight=elo_w, config=cfg, elo_diff=adj_elo_h - adj_elo_a)
     p_h, p_d, p_a = apply_upset_adjustment(p_h, p_d, p_a, adj_elo_h, adj_elo_a, cfg)
+    p_h, p_d, p_a = apply_draw_mass_calibration(p_h, p_d, p_a, cfg)
     p_h, p_d, p_a = apply_player_calibration(p_h, p_d, p_a, home, away, cfg)
 
     score_h, score_a = pick_display_score(p_h, p_d, p_a, scores, strength_diff)
@@ -757,6 +779,11 @@ def result_to_dict(r: PredictionResult) -> dict[str, Any]:
     return d
 
 
+def _match_sort_key(m: dict[str, Any]) -> str:
+    of = m.get("openfootball") or {}
+    return f"{of.get('date', '9999')}_{of.get('time', '00:00')}_{m.get('id', 0):04d}"
+
+
 def run_all(
     data_dir: Path | None = None,
     *,
@@ -765,9 +792,12 @@ def run_all(
     only_unplayed: bool = False,
 ) -> dict[str, Any]:
     """从 openfootball 数据加载赛程并运行预测。"""
+    from elo_history import parse_cup_txt_results
+    from historical_teams import refresh_teams_form
+    from history_loader import ELO_PRIOR_TOURNAMENTS, OF_DIR
     from openfootball_loader import load_schedule
 
-    meta, teams, bundle = load_schedule(
+    meta, teams_raw, bundle = load_schedule(
         group=group,
         matchday=matchday,
         only_unplayed=only_unplayed,
@@ -775,12 +805,31 @@ def run_all(
     h2h = bundle["h2h"]
     benchmarks = bundle.get("benchmarks", {})
 
+    prior_results: list[dict[str, Any]] = []
+    for t in ELO_PRIOR_TOURNAMENTS:
+        cup_path = OF_DIR / t["id"] / "cup.txt"
+        if cup_path.exists():
+            prior_results.extend(parse_cup_txt_results(cup_path.read_text(encoding="utf-8")))
+
+    teams = {k: dict(v) for k, v in teams_raw.items()}
+    current_results: list[dict[str, Any]] = []
     predictions = []
-    for m in bundle["matches"]:
+    for m in sorted(bundle["matches"], key=_match_sort_key):
         if m["home"] not in teams or m["away"] not in teams:
             continue
+        refresh_teams_form(teams, prior_results, current_results)
         pred = predict_match(m, teams, h2h, benchmarks)
         predictions.append(result_to_dict(pred))
+        if m.get("played") and m.get("actual_score"):
+            act = m["actual_score"]
+            current_results.append(
+                {
+                    "team1": m.get("home_name") or teams[m["home"]]["name"],
+                    "team2": m.get("away_name") or teams[m["away"]]["name"],
+                    "score_home": act["home"],
+                    "score_away": act["away"],
+                }
+            )
 
     return {
         "meta": meta,

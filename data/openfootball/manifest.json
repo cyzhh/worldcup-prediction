@@ -6,7 +6,12 @@
     "2018--russia/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2018--russia/cup.txt",
     "2014--brazil/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2014--brazil/cup.txt",
     "2010--south-africa/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2010--south-africa/cup.txt",
-    "2006--germany/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2006--germany/cup.txt"
+    "2006--germany/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2006--germany/cup.txt",
+    "2002--south-korea-n-japan/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/2002--south-korea-n-japan/cup.txt",
+    "1998--france/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/1998--france/cup.txt",
+    "1994--usa/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/1994--usa/cup.txt",
+    "1990--italy/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/1990--italy/cup.txt",
+    "1986--mexico/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/1986--mexico/cup.txt"
   },
   "status": {
     "2026--usa/cup.txt": "cached",
@@ -15,6 +20,11 @@
     "2018--russia/cup.txt": "cached",
     "2014--brazil/cup.txt": "cached",
     "2010--south-africa/cup.txt": "cached",
-    "2006--germany/cup.txt": "cached"
+    "2006--germany/cup.txt": "cached",
+    "2002--south-korea-n-japan/cup.txt": "cached",
+    "1998--france/cup.txt": "cached",
+    "1994--usa/cup.txt": "cached",
+    "1990--italy/cup.txt": "cached",
+    "1986--mexico/cup.txt": "cached"
   }
 }

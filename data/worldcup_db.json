@@ -1,6 +1,6 @@
 {
   "meta": {
-    "built_at": "2026-06-13T09:14:57.106806+00:00",
+    "built_at": "2026-06-13T11:28:25.095172+00:00",
     "tournament": "World Cup 2026",
     "sources": [
       "https://github.com/openfootball/worldcup",
@@ -13,7 +13,7 @@
     "teams_count": 48,
     "matches_count": 72,
     "squads_players": 1363,
-    "h2h_pairs": 183,
+    "h2h_pairs": 231,
     "onside_benchmarks": 72,
     "history_tournaments": [
       "2010--south-africa",
@@ -280,7 +280,7 @@
       "code": "MX",
       "name": "墨西哥",
       "fifa_rank": 14,
-      "elo": 1811.9,
+      "elo": 1850.4,
       "opta_index": 82,
       "tier": 2,
       "squad_value_m": 113.2,
@@ -323,8 +323,8 @@
       "squad_size": 26,
       "avg_age": 27.5,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "RSA": {
@@ -374,15 +374,15 @@
       "squad_size": 28,
       "avg_age": 25.6,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "KOR": {
       "code": "KR",
       "name": "韩国",
       "fifa_rank": 23,
-      "elo": 1681.6,
+      "elo": 1696.5,
       "opta_index": 76,
       "tier": 3,
       "squad_value_m": 127.0,
@@ -425,15 +425,15 @@
       "squad_size": 27,
       "avg_age": 27.5,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "CZE": {
       "code": "CZ",
       "name": "捷克",
       "fifa_rank": 38,
-      "elo": 1624.4,
+      "elo": 1587.4,
       "opta_index": 72,
       "tier": 3,
       "squad_value_m": 148.0,
@@ -476,15 +476,15 @@
       "squad_size": 24,
       "avg_age": 27.6,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "CAN": {
       "code": "CA",
       "name": "加拿大",
       "fifa_rank": 27,
-      "elo": 1657.0,
+      "elo": 1658.3,
       "opta_index": 74,
       "tier": 3,
       "squad_value_m": 156.8,
@@ -527,15 +527,15 @@
       "squad_size": 33,
       "avg_age": 26.2,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "BIH": {
       "code": "BA",
       "name": "波黑",
       "fifa_rank": 75,
-      "elo": 1364.9,
+      "elo": 1399.3,
       "opta_index": 65,
       "tier": 4,
       "squad_value_m": 189.7,
@@ -578,15 +578,15 @@
       "squad_size": 27,
       "avg_age": 26.1,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "QAT": {
       "code": "QA",
       "name": "卡塔尔",
       "fifa_rank": 35,
-      "elo": 1599.1,
+      "elo": 1599.9,
       "opta_index": 70,
       "tier": 3,
       "squad_value_m": 85.1,
@@ -629,15 +629,15 @@
       "squad_size": 51,
       "avg_age": 28.5,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "SUI": {
       "code": "CH",
       "name": "瑞士",
       "fifa_rank": 19,
-      "elo": 1807.8,
+      "elo": 1815.8,
       "opta_index": 78,
       "tier": 2,
       "squad_value_m": 345.3,
@@ -680,15 +680,15 @@
       "squad_size": 26,
       "avg_age": 27.8,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "BRA": {
       "code": "BR",
       "name": "巴西",
       "fifa_rank": 5,
-      "elo": 2031.3,
+      "elo": 2029.6,
       "opta_index": 92,
       "tier": 1,
       "squad_value_m": 246.7,
@@ -731,15 +731,15 @@
       "squad_size": 27,
       "avg_age": 28.6,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "MAR": {
       "code": "MA",
       "name": "摩洛哥",
       "fifa_rank": 13,
-      "elo": 1860.7,
+      "elo": 1867.8,
       "opta_index": 81,
       "tier": 2,
       "squad_value_m": 293.3,
@@ -782,8 +782,8 @@
       "squad_size": 36,
       "avg_age": 25.4,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "HAI": {
@@ -833,8 +833,8 @@
       "squad_size": 20,
       "avg_age": 27.3,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "SCO": {
@@ -884,15 +884,15 @@
       "squad_size": 27,
       "avg_age": 28.6,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "USA": {
       "code": "US",
       "name": "美国",
       "fifa_rank": 11,
-      "elo": 1858.7,
+      "elo": 1812.7,
       "opta_index": 84,
       "tier": 2,
       "squad_value_m": 257.4,
@@ -935,15 +935,15 @@
       "squad_size": 31,
       "avg_age": 26.1,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "PAR": {
       "code": "PY",
       "name": "巴拉圭",
       "fifa_rank": 52,
-      "elo": 1443.7,
+      "elo": 1472.9,
       "opta_index": 66,
       "tier": 4,
       "squad_value_m": 89.2,
@@ -986,15 +986,15 @@
       "squad_size": 23,
       "avg_age": 28.2,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "AUS": {
       "code": "AU",
       "name": "澳大利亚",
       "fifa_rank": 24,
-      "elo": 1683.5,
+      "elo": 1678.9,
       "opta_index": 75,
       "tier": 3,
       "squad_value_m": 129.5,
@@ -1037,8 +1037,8 @@
       "squad_size": 33,
       "avg_age": 26.8,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "TUR": {
@@ -1088,15 +1088,15 @@
       "squad_size": 26,
       "avg_age": 27.2,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "GER": {
       "code": "DE",
       "name": "德国",
       "fifa_rank": 8,
-      "elo": 1874.7,
+      "elo": 1878.6,
       "opta_index": 86,
       "tier": 1,
       "squad_value_m": 357.1,
@@ -1139,8 +1139,8 @@
       "squad_size": 28,
       "avg_age": 27.2,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "CUW": {
@@ -1190,15 +1190,15 @@
       "squad_size": 24,
       "avg_age": 27.0,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "CIV": {
       "code": "CI",
       "name": "科特迪瓦",
       "fifa_rank": 37,
-      "elo": 1600.6,
+      "elo": 1636.6,
       "opta_index": 72,
       "tier": 3,
       "squad_value_m": 230.5,
@@ -1241,15 +1241,15 @@
       "squad_size": 27,
       "avg_age": 25.3,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "ECU": {
       "code": "EC",
       "name": "厄瓜多尔",
       "fifa_rank": 31,
-      "elo": 1680.1,
+      "elo": 1698.4,
       "opta_index": 73,
       "tier": 3,
       "squad_value_m": 133.6,
@@ -1292,15 +1292,15 @@
       "squad_size": 33,
       "avg_age": 25.5,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "NED": {
       "code": "NL",
       "name": "荷兰",
       "fifa_rank": 7,
-      "elo": 1961.7,
+      "elo": 1992.2,
       "opta_index": 87,
       "tier": 1,
       "squad_value_m": 371.0,
@@ -1343,15 +1343,15 @@
       "squad_size": 33,
       "avg_age": 27.0,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "JPN": {
       "code": "JP",
       "name": "日本",
       "fifa_rank": 18,
-      "elo": 1800.3,
+      "elo": 1748.4,
       "opta_index": 79,
       "tier": 2,
       "squad_value_m": 214.6,
@@ -1394,15 +1394,15 @@
       "squad_size": 26,
       "avg_age": 27.2,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "SWE": {
       "code": "SE",
       "name": "瑞典",
       "fifa_rank": 32,
-      "elo": 1649.4,
+      "elo": 1698.6,
       "opta_index": 73,
       "tier": 3,
       "squad_value_m": 227.1,
@@ -1445,15 +1445,15 @@
       "squad_size": 26,
       "avg_age": 26.1,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "TUN": {
       "code": "TN",
       "name": "突尼斯",
       "fifa_rank": 41,
-      "elo": 1586.3,
+      "elo": 1590.2,
       "opta_index": 70,
       "tier": 3,
       "squad_value_m": 135.1,
@@ -1496,15 +1496,15 @@
       "squad_size": 22,
       "avg_age": 25.6,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "BEL": {
       "code": "BE",
       "name": "比利时",
       "fifa_rank": 15,
-      "elo": 1840.1,
+      "elo": 1869.4,
       "opta_index": 83,
       "tier": 2,
       "squad_value_m": 265.7,
@@ -1547,15 +1547,15 @@
       "squad_size": 26,
       "avg_age": 27.1,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "EGY": {
       "code": "EG",
       "name": "埃及",
       "fifa_rank": 33,
-      "elo": 1614.4,
+      "elo": 1596.2,
       "opta_index": 72,
       "tier": 3,
       "squad_value_m": 108.8,
@@ -1598,15 +1598,15 @@
       "squad_size": 31,
       "avg_age": 28.6,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "IRN": {
       "code": "IR",
       "name": "伊朗",
       "fifa_rank": 20,
-      "elo": 1690.6,
+      "elo": 1718.6,
       "opta_index": 77,
       "tier": 2,
       "squad_value_m": 44.8,
@@ -1649,8 +1649,8 @@
       "squad_size": 31,
       "avg_age": 29.1,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "NZL": {
@@ -1700,15 +1700,15 @@
       "squad_size": 26,
       "avg_age": 26.6,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "ESP": {
       "code": "ES",
       "name": "西班牙",
       "fifa_rank": 3,
-      "elo": 2014.7,
+      "elo": 1976.4,
       "opta_index": 90,
       "tier": 1,
       "squad_value_m": 450.9,
@@ -1751,8 +1751,8 @@
       "squad_size": 33,
       "avg_age": 26.1,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "CPV": {
@@ -1802,15 +1802,15 @@
       "squad_size": 25,
       "avg_age": 29.4,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "KSA": {
       "code": "SA",
       "name": "沙特",
       "fifa_rank": 58,
-      "elo": 1423.5,
+      "elo": 1434.6,
       "opta_index": 67,
       "tier": 4,
       "squad_value_m": 68.2,
@@ -1853,15 +1853,15 @@
       "squad_size": 33,
       "avg_age": 27.5,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "URU": {
       "code": "UY",
       "name": "乌拉圭",
       "fifa_rank": 9,
-      "elo": 1911.4,
+      "elo": 1908.9,
       "opta_index": 85,
       "tier": 1,
       "squad_value_m": 172.1,
@@ -1904,15 +1904,15 @@
       "squad_size": 30,
       "avg_age": 28.0,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "FRA": {
       "code": "FR",
       "name": "法国",
       "fifa_rank": 2,
-      "elo": 1978.2,
+      "elo": 1976.1,
       "opta_index": 91,
       "tier": 1,
       "squad_value_m": 316.1,
@@ -1955,15 +1955,15 @@
       "squad_size": 26,
       "avg_age": 26.6,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "SEN": {
       "code": "SN",
       "name": "塞内加尔",
       "fifa_rank": 17,
-      "elo": 1816.1,
+      "elo": 1808.1,
       "opta_index": 80,
       "tier": 2,
       "squad_value_m": 312.0,
@@ -2006,8 +2006,8 @@
       "squad_size": 29,
       "avg_age": 26.7,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "IRQ": {
@@ -2057,8 +2057,8 @@
       "squad_size": 20,
       "avg_age": 25.9,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "NOR": {
@@ -2108,15 +2108,15 @@
       "squad_size": 29,
       "avg_age": 25.7,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "ARG": {
       "code": "AR",
       "name": "阿根廷",
       "fifa_rank": 1,
-      "elo": 2097.5,
+      "elo": 2061.5,
       "opta_index": 93,
       "tier": 1,
       "squad_value_m": 325.2,
@@ -2159,15 +2159,15 @@
       "squad_size": 34,
       "avg_age": 27.8,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "ALG": {
       "code": "DZ",
       "name": "阿尔及利亚",
       "fifa_rank": 43,
-      "elo": 1564.7,
+      "elo": 1570.2,
       "opta_index": 69,
       "tier": 3,
       "squad_value_m": 221.4,
@@ -2210,8 +2210,8 @@
       "squad_size": 28,
       "avg_age": 24.9,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "AUT": {
@@ -2261,8 +2261,8 @@
       "squad_size": 26,
       "avg_age": 28.1,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "JOR": {
@@ -2312,15 +2312,15 @@
       "squad_size": 23,
       "avg_age": 28.0,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "POR": {
       "code": "PT",
       "name": "葡萄牙",
       "fifa_rank": 6,
-      "elo": 1899.6,
+      "elo": 1944.3,
       "opta_index": 88,
       "tier": 1,
       "squad_value_m": 265.7,
@@ -2363,8 +2363,8 @@
       "squad_size": 27,
       "avg_age": 27.5,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "COD": {
@@ -2414,8 +2414,8 @@
       "squad_size": 24,
       "avg_age": 28.9,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "UZB": {
@@ -2465,15 +2465,15 @@
       "squad_size": 23,
       "avg_age": 26.0,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "COL": {
       "code": "CO",
       "name": "哥伦比亚",
       "fifa_rank": 12,
-      "elo": 1883.4,
+      "elo": 1887.2,
       "opta_index": 82,
       "tier": 2,
       "squad_value_m": 146.7,
@@ -2516,15 +2516,15 @@
       "squad_size": 30,
       "avg_age": 29.2,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "ENG": {
       "code": "GB",
       "name": "英格兰",
       "fifa_rank": 4,
-      "elo": 1982.0,
+      "elo": 1949.7,
       "opta_index": 89,
       "tier": 1,
       "squad_value_m": 518.8,
@@ -2567,15 +2567,15 @@
       "squad_size": 40,
       "avg_age": 26.9,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "CRO": {
       "code": "HR",
       "name": "克罗地亚",
       "fifa_rank": 10,
-      "elo": 1879.6,
+      "elo": 1885.5,
       "opta_index": 84,
       "tier": 1,
       "squad_value_m": 268.9,
@@ -2618,15 +2618,15 @@
       "squad_size": 26,
       "avg_age": 27.9,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "GHA": {
       "code": "GH",
       "name": "加纳",
       "fifa_rank": 68,
-      "elo": 1455.6,
+      "elo": 1491.7,
       "opta_index": 65,
       "tier": 4,
       "squad_value_m": 256.5,
@@ -2669,15 +2669,15 @@
       "squad_size": 37,
       "avg_age": 26.0,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     },
     "PAN": {
       "code": "PA",
       "name": "巴拿马",
       "fifa_rank": 41,
-      "elo": 1567.0,
+      "elo": 1563.3,
       "opta_index": 70,
       "tier": 3,
       "squad_value_m": 35.6,
@@ -2720,8 +2720,8 @@
       "squad_size": 22,
       "avg_age": 28.3,
       "data_sources": [
-        "risingtransfers/world-cup-2026-data",
-        "seed"
+        "seed",
+        "risingtransfers/world-cup-2026-data"
       ]
     }
   },
@@ -6541,225 +6541,393 @@
       ],
       "record": "0W1D0L"
     },
-    "UTC_UNK": {
-      "home_edge": 0.034,
-      "history": [
-        "UTC-3  Japan v Greece 0-0 ",
-        "UTC-4  Japan v Colombia 1-4 ",
-        "UTC-3   Greece v Côte d'Ivoire 2-1 "
-      ],
-      "record": "8W2D8L"
-    },
-    "UTC_CRC": {
-      "home_edge": -0.024,
-      "history": [
-        "UTC-3   Italy 0-1 Costa Rica",
-        "UTC+3      Brazil 2-0 Costa Rica",
-        "UTC+3      Switzerland 2-2 Costa Rica"
-      ],
-      "record": "1W1D2L"
-    },
-    "UTC_ITA": {
-      "home_edge": -0.099,
-      "history": [
-        "UTC-4  England 1-2 Italy"
-      ],
-      "record": "0W0D1L"
-    },
-    "UTC_ENG": {
-      "home_edge": 0.001,
-      "history": [
-        "UTC-3  Uruguay 2-1 England",
-        "UTC-3   Costa Rica 0-0 England",
-        "UTC+3         Tunisia 1-2 England"
-      ],
-      "record": "1W1D1L"
-    },
-    "UTC_URU": {
-      "home_edge": -0.099,
-      "history": [
-        "UTC-3  Italy 0-1 Uruguay",
-        "UTC+5     Egypt 0-1 Uruguay"
-      ],
-      "record": "0W0D2L"
-    },
-    "UTC_ECU": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC-3   Switzerland 2-1 Ecuador",
-        "UTC-3   Honduras 1-2 Ecuador"
-      ],
-      "record": "1W0D1L"
-    },
-    "UTC_HON": {
+    "BRA_CRO": {
       "home_edge": 0.201,
       "history": [
-        "UTC-3  France 3-0 Honduras"
-      ],
-      "record": "1W0D0L"
-    },
-    "UTC_FRA": {
-      "home_edge": -0.099,
-      "history": [
-        "UTC-3  Switzerland 2-5 France",
-        "UTC-3   Ecuador 0-0 France",
-        "UTC+3    Denmark 0-0 France"
-      ],
-      "record": "0W2D1L"
-    },
-    "UTC_SUI": {
-      "home_edge": -0.099,
-      "history": [
-        "UTC-4   Honduras 0-3 Switzerland",
-        "UTC+3      Brazil 1-1 Switzerland",
-        "UTC+2      Serbia 1-2 Switzerland"
-      ],
-      "record": "0W1D2L"
-    },
-    "UTC_BIH": {
-      "home_edge": 0.201,
-      "history": [
-        "UTC-3   Argentina 2-1 Bosnia-Herzegovina",
-        "UTC-4  Nigeria 1-0 Bosnia-Herzegovina"
+        "Brazil 3-1 Croatia",
+        "Brazil 1-0 Croatia"
       ],
       "record": "2W0D0L"
     },
-    "UTC_NGA": {
-      "home_edge": 0.051,
+    "MEX_CMR": {
+      "home_edge": 0.201,
       "history": [
-        "UTC-3  Iran 0-0 Nigeria",
-        "UTC+2     Croatia 2-0 Nigeria"
+        "Mexico 1-0 Cameroon"
       ],
-      "record": "1W1D0L"
+      "record": "1W0D0L"
     },
-    "UTC_IRN": {
-      "home_edge": 0.101,
-      "history": [
-        "UTC-3  Argentina 1-0 Iran",
-        "UTC-3  Bosnia-Herzegovina 3-1 Iran",
-        "UTC+3    Morocco 0-1 Iran"
-      ],
-      "record": "2W0D1L"
-    },
-    "UTC_ARG": {
+    "BRA_MEX": {
       "home_edge": -0.099,
       "history": [
-        "UTC-3  Nigeria 2-3 Argentina",
-        "UTC+3     Nigeria 1-2 Argentina"
+        "Brazil 0-0 Mexico"
       ],
-      "record": "0W0D2L"
+      "record": "0W1D0L"
     },
-    "UTC_POR": {
-      "home_edge": 0.001,
-      "history": [
-        "UTC-3  Germany 4-0 Portugal",
-        "UTC-4  USA 2-2 Portugal",
-        "UTC+3    Iran 1-1 Portugal"
-      ],
-      "record": "1W2D0L"
-    },
-    "UTC_USA": {
+    "CMR_CRO": {
       "home_edge": -0.099,
       "history": [
-        "UTC-3  Ghana 1-2 USA"
+        "Cameroon 0-4 Croatia"
       ],
       "record": "0W0D1L"
     },
-    "UTC_GHA": {
+    "CMR_BRA": {
       "home_edge": 0.051,
       "history": [
-        "UTC-3  Germany 2-2 Ghana",
-        "UTC-3   Portugal 2-1 Ghana"
-      ],
-      "record": "1W1D0L"
-    },
-    "UTC_GER": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC-3  USA 0-1 Germany",
-        "UTC+3       South Korea 2-0 Germany"
+        "Cameroon 1-4 Brazil",
+        "Cameroon 1-0 Brazil"
       ],
       "record": "1W0D1L"
     },
-    "UTC_ALG": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC-3  Belgium 2-1 Algeria",
-        "UTC-3  South Korea 2-4 Algeria"
-      ],
-      "record": "1W0D1L"
-    },
-    "UTC_KOR": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC-4  Russia 1-1 South Korea",
-        "UTC+3       Sweden 1-0 South Korea"
-      ],
-      "record": "1W1D0L"
-    },
-    "UTC_RUS": {
-      "home_edge": 0.101,
-      "history": [
-        "UTC-3  Belgium 1-0 Russia",
-        "UTC-3  Algeria 1-1 Russia",
-        "UTC+4     Uruguay 3-0 Russia"
-      ],
-      "record": "2W1D0L"
-    },
-    "UTC_BEL": {
+    "CRO_MEX": {
       "home_edge": -0.099,
       "history": [
-        "UTC-3  South Korea 0-1 Belgium",
-        "UTC+2         England 0-1 Belgium"
+        "Croatia 1-3 Mexico"
+      ],
+      "record": "0W0D1L"
+    },
+    "ESP_NED": {
+      "home_edge": -0.099,
+      "history": [
+        "Spain 1-5 Netherlands"
+      ],
+      "record": "0W0D1L"
+    },
+    "CHI_AUS": {
+      "home_edge": 0.201,
+      "history": [
+        "Chile 3-1 Australia"
+      ],
+      "record": "1W0D0L"
+    },
+    "AUS_NED": {
+      "home_edge": -0.099,
+      "history": [
+        "Australia 2-3 Netherlands"
+      ],
+      "record": "0W0D1L"
+    },
+    "ESP_CHI": {
+      "home_edge": -0.099,
+      "history": [
+        "Spain 0-2 Chile"
+      ],
+      "record": "0W0D1L"
+    },
+    "AUS_ESP": {
+      "home_edge": -0.099,
+      "history": [
+        "Australia 0-3 Spain"
+      ],
+      "record": "0W0D1L"
+    },
+    "NED_CHI": {
+      "home_edge": 0.201,
+      "history": [
+        "Netherlands 2-0 Chile"
+      ],
+      "record": "1W0D0L"
+    },
+    "COL_GRE": {
+      "home_edge": 0.201,
+      "history": [
+        "Colombia 3-0 Greece"
+      ],
+      "record": "1W0D0L"
+    },
+    "CIV_JPN": {
+      "home_edge": 0.201,
+      "history": [
+        "Côte d'Ivoire 2-1 Japan"
+      ],
+      "record": "1W0D0L"
+    },
+    "COL_CIV": {
+      "home_edge": 0.201,
+      "history": [
+        "Colombia 2-1 Côte d'Ivoire"
+      ],
+      "record": "1W0D0L"
+    },
+    "JPN_GRE": {
+      "home_edge": -0.099,
+      "history": [
+        "Japan 0-0 Greece"
+      ],
+      "record": "0W1D0L"
+    },
+    "JPN_COL": {
+      "home_edge": -0.099,
+      "history": [
+        "Japan 1-4 Colombia"
+      ],
+      "record": "0W0D1L"
+    },
+    "GRE_CIV": {
+      "home_edge": 0.201,
+      "history": [
+        "Greece 2-1 Côte d'Ivoire"
+      ],
+      "record": "1W0D0L"
+    },
+    "URU_CRC": {
+      "home_edge": -0.099,
+      "history": [
+        "Uruguay 1-3 Costa Rica"
+      ],
+      "record": "0W0D1L"
+    },
+    "ENG_ITA": {
+      "home_edge": -0.099,
+      "history": [
+        "England 1-2 Italy"
+      ],
+      "record": "0W0D1L"
+    },
+    "URU_ENG": {
+      "home_edge": 0.201,
+      "history": [
+        "Uruguay 2-1 England"
+      ],
+      "record": "1W0D0L"
+    },
+    "ITA_CRC": {
+      "home_edge": -0.099,
+      "history": [
+        "Italy 0-1 Costa Rica"
+      ],
+      "record": "0W0D1L"
+    },
+    "ITA_URU": {
+      "home_edge": -0.099,
+      "history": [
+        "Italy 0-1 Uruguay"
+      ],
+      "record": "0W0D1L"
+    },
+    "CRC_ENG": {
+      "home_edge": -0.099,
+      "history": [
+        "Costa Rica 0-0 England"
+      ],
+      "record": "0W1D0L"
+    },
+    "SUI_ECU": {
+      "home_edge": 0.201,
+      "history": [
+        "Switzerland 2-1 Ecuador"
+      ],
+      "record": "1W0D0L"
+    },
+    "FRA_HON": {
+      "home_edge": 0.201,
+      "history": [
+        "France 3-0 Honduras"
+      ],
+      "record": "1W0D0L"
+    },
+    "SUI_FRA": {
+      "home_edge": -0.099,
+      "history": [
+        "Switzerland 2-5 France"
+      ],
+      "record": "0W0D1L"
+    },
+    "HON_ECU": {
+      "home_edge": -0.099,
+      "history": [
+        "Honduras 1-2 Ecuador"
+      ],
+      "record": "0W0D1L"
+    },
+    "HON_SUI": {
+      "home_edge": -0.099,
+      "history": [
+        "Honduras 0-3 Switzerland"
+      ],
+      "record": "0W0D1L"
+    },
+    "ECU_FRA": {
+      "home_edge": -0.099,
+      "history": [
+        "Ecuador 0-0 France"
+      ],
+      "record": "0W1D0L"
+    },
+    "ARG_BIH": {
+      "home_edge": 0.201,
+      "history": [
+        "Argentina 2-1 Bosnia-Herzegovina"
+      ],
+      "record": "1W0D0L"
+    },
+    "IRN_NGA": {
+      "home_edge": -0.099,
+      "history": [
+        "Iran 0-0 Nigeria"
+      ],
+      "record": "0W1D0L"
+    },
+    "ARG_IRN": {
+      "home_edge": 0.201,
+      "history": [
+        "Argentina 1-0 Iran"
+      ],
+      "record": "1W0D0L"
+    },
+    "NGA_BIH": {
+      "home_edge": 0.201,
+      "history": [
+        "Nigeria 1-0 Bosnia-Herzegovina"
+      ],
+      "record": "1W0D0L"
+    },
+    "NGA_ARG": {
+      "home_edge": -0.099,
+      "history": [
+        "Nigeria 2-3 Argentina",
+        "Nigeria 1-2 Argentina"
       ],
       "record": "0W0D2L"
     },
-    "FRI_CRC": {
+    "BIH_IRN": {
       "home_edge": 0.201,
       "history": [
-        "Fri Jun 9     Germany 4-2 Costa Rica"
+        "Bosnia-Herzegovina 3-1 Iran"
       ],
       "record": "1W0D0L"
     },
-    "FRI_ECU": {
-      "home_edge": -0.099,
-      "history": [
-        "Fri Jun 9     Poland 0-2 Ecuador"
-      ],
-      "record": "0W0D1L"
-    },
-    "WED_POL": {
+    "GER_POR": {
       "home_edge": 0.201,
       "history": [
-        "Wed Jun 14   Germany 1-0 Poland"
+        "Germany 4-0 Portugal"
       ],
       "record": "1W0D0L"
     },
-    "THU_CRC": {
+    "GHA_USA": {
+      "home_edge": 0.051,
+      "history": [
+        "Ghana 1-2 USA",
+        "Ghana 2-1 USA"
+      ],
+      "record": "1W0D1L"
+    },
+    "GER_GHA": {
+      "home_edge": -0.099,
+      "history": [
+        "Germany 2-2 Ghana"
+      ],
+      "record": "0W1D0L"
+    },
+    "USA_POR": {
+      "home_edge": -0.099,
+      "history": [
+        "USA 2-2 Portugal"
+      ],
+      "record": "0W1D0L"
+    },
+    "USA_GER": {
+      "home_edge": -0.099,
+      "history": [
+        "USA 0-1 Germany"
+      ],
+      "record": "0W0D1L"
+    },
+    "POR_GHA": {
       "home_edge": 0.201,
       "history": [
-        "Thu Jun 15   Ecuador 3-0 Costa Rica"
+        "Portugal 2-1 Ghana",
+        "Portugal 3-2 Ghana"
+      ],
+      "record": "2W0D0L"
+    },
+    "BEL_ALG": {
+      "home_edge": 0.201,
+      "history": [
+        "Belgium 2-1 Algeria"
       ],
       "record": "1W0D0L"
     },
-    "TUE_GER": {
+    "RUS_KOR": {
       "home_edge": -0.099,
       "history": [
-        "Tue Jun 20   Ecuador 0-3 Germany"
+        "Russia 1-1 South Korea"
       ],
-      "record": "0W0D1L"
+      "record": "0W1D0L"
     },
-    "TUE_POL": {
-      "home_edge": -0.099,
-      "history": [
-        "Tue Jun 20   Costa Rica 1-2 Poland"
-      ],
-      "record": "0W0D1L"
-    },
-    "SAT_PAR": {
+    "BEL_RUS": {
       "home_edge": 0.201,
       "history": [
-        "Sat Jun 10    England 1-0 Paraguay"
+        "Belgium 1-0 Russia"
+      ],
+      "record": "1W0D0L"
+    },
+    "KOR_ALG": {
+      "home_edge": -0.099,
+      "history": [
+        "South Korea 2-4 Algeria"
+      ],
+      "record": "0W0D1L"
+    },
+    "KOR_BEL": {
+      "home_edge": -0.099,
+      "history": [
+        "South Korea 0-1 Belgium"
+      ],
+      "record": "0W0D1L"
+    },
+    "ALG_RUS": {
+      "home_edge": -0.099,
+      "history": [
+        "Algeria 1-1 Russia"
+      ],
+      "record": "0W1D0L"
+    },
+    "GER_CRC": {
+      "home_edge": 0.201,
+      "history": [
+        "Germany 4-2 Costa Rica"
+      ],
+      "record": "1W0D0L"
+    },
+    "POL_ECU": {
+      "home_edge": -0.099,
+      "history": [
+        "Poland 0-2 Ecuador"
+      ],
+      "record": "0W0D1L"
+    },
+    "GER_POL": {
+      "home_edge": 0.201,
+      "history": [
+        "Germany 1-0 Poland"
+      ],
+      "record": "1W0D0L"
+    },
+    "ECU_CRC": {
+      "home_edge": 0.201,
+      "history": [
+        "Ecuador 3-0 Costa Rica"
+      ],
+      "record": "1W0D0L"
+    },
+    "ECU_GER": {
+      "home_edge": -0.099,
+      "history": [
+        "Ecuador 0-3 Germany"
+      ],
+      "record": "0W0D1L"
+    },
+    "CRC_POL": {
+      "home_edge": -0.099,
+      "history": [
+        "Costa Rica 1-2 Poland"
+      ],
+      "record": "0W0D1L"
+    },
+    "ENG_PAR": {
+      "home_edge": 0.201,
+      "history": [
+        "England 1-0 Paraguay"
       ],
       "record": "1W0D0L"
     },
@@ -6770,59 +6938,59 @@
       ],
       "record": "0W1D0L"
     },
-    "THU_TRI": {
+    "ENG_TRI": {
       "home_edge": 0.201,
       "history": [
-        "Thu Jun 15   England 2-0 Trinidad and Tobago"
+        "England 2-0 Trinidad and Tobago"
       ],
       "record": "1W0D0L"
     },
-    "THU_PAR": {
+    "SWE_PAR": {
       "home_edge": 0.201,
       "history": [
-        "Thu Jun 15   Sweden 1-0 Paraguay"
+        "Sweden 1-0 Paraguay"
       ],
       "record": "1W0D0L"
     },
-    "TUE_ENG": {
+    "SWE_ENG": {
       "home_edge": -0.099,
       "history": [
-        "Tue Jun 20   Sweden 2-2 England"
+        "Sweden 2-2 England"
       ],
       "record": "0W1D0L"
     },
-    "TUE_TRI": {
+    "PAR_TRI": {
       "home_edge": 0.201,
       "history": [
-        "Tue Jun 20   Paraguay 2-0 Trinidad and Tobago"
+        "Paraguay 2-0 Trinidad and Tobago"
       ],
       "record": "1W0D0L"
     },
-    "SAT_CIV": {
+    "ARG_CIV": {
       "home_edge": 0.201,
       "history": [
-        "Sat Jun 10    Argentina 2-1 Côte d'Ivoire"
+        "Argentina 2-1 Côte d'Ivoire"
       ],
       "record": "1W0D0L"
     },
-    "SUN_NED": {
+    "SCG_NED": {
       "home_edge": -0.099,
       "history": [
-        "Sun Jun 11    Serbia and Montenegro 0-1 Netherlands"
+        "Serbia and Montenegro 0-1 Netherlands"
       ],
       "record": "0W0D1L"
     },
-    "FRI_SCG": {
+    "ARG_SCG": {
       "home_edge": 0.201,
       "history": [
-        "Fri Jun 16   Argentina 6-0 Serbia and Montenegro"
+        "Argentina 6-0 Serbia and Montenegro"
       ],
       "record": "1W0D0L"
     },
-    "FRI_CIV": {
+    "NED_CIV": {
       "home_edge": 0.201,
       "history": [
-        "Fri Jun 16   Netherlands 2-1 Côte d'Ivoire"
+        "Netherlands 2-1 Côte d'Ivoire"
       ],
       "record": "1W0D0L"
     },
@@ -6833,24 +7001,24 @@
       ],
       "record": "0W1D0L"
     },
-    "WED_SCG": {
+    "CIV_SCG": {
       "home_edge": 0.201,
       "history": [
-        "Wed Jun 21   Côte d'Ivoire 3-2 Serbia and Montenegro"
+        "Côte d'Ivoire 3-2 Serbia and Montenegro"
       ],
       "record": "1W0D0L"
     },
-    "SUN_IRN": {
+    "MEX_IRN": {
       "home_edge": 0.201,
       "history": [
-        "Sun Jun 11     Mexico 3-1 Iran"
+        "Mexico 3-1 Iran"
       ],
       "record": "1W0D0L"
     },
-    "SUN_POR": {
+    "ANG_POR": {
       "home_edge": -0.099,
       "history": [
-        "Sun Jun 11     Angola 0-1 Portugal"
+        "Angola 0-1 Portugal"
       ],
       "record": "0W0D1L"
     },
@@ -6861,87 +7029,73 @@
       ],
       "record": "0W1D0L"
     },
-    "SAT_IRN": {
+    "POR_IRN": {
       "home_edge": 0.201,
       "history": [
-        "Sat Jun 17    Portugal 2-0 Iran"
+        "Portugal 2-0 Iran"
       ],
       "record": "1W0D0L"
     },
-    "WED_MEX": {
+    "POR_MEX": {
       "home_edge": 0.201,
       "history": [
-        "Wed Jun 21    Portugal 2-1 Mexico"
+        "Portugal 2-1 Mexico"
       ],
       "record": "1W0D0L"
     },
-    "WED_ANG": {
+    "IRN_ANG": {
       "home_edge": -0.099,
       "history": [
-        "Wed Jun 21    Iran 1-1 Angola"
+        "Iran 1-1 Angola"
       ],
       "record": "0W1D0L"
     },
-    "MON_GHA": {
+    "ITA_GHA": {
       "home_edge": 0.201,
       "history": [
-        "Mon Jun 12    Italy 2-0 Ghana"
+        "Italy 2-0 Ghana"
       ],
       "record": "1W0D0L"
     },
-    "MON_CZE": {
+    "USA_CZE": {
       "home_edge": -0.099,
       "history": [
-        "Mon Jun 12    USA 0-3 Czech Republic"
+        "USA 0-3 Czech Republic"
       ],
       "record": "0W0D1L"
     },
-    "SAT_USA": {
+    "ITA_USA": {
       "home_edge": -0.099,
       "history": [
-        "Sat Jun 17    Italy 1-1 USA"
+        "Italy 1-1 USA"
       ],
       "record": "0W1D0L"
     },
-    "SAT_GHA": {
+    "CZE_GHA": {
       "home_edge": -0.099,
       "history": [
-        "Sat Jun 17    Czech Republic 0-2 Ghana"
+        "Czech Republic 0-2 Ghana"
       ],
       "record": "0W0D1L"
     },
-    "THU_ITA": {
+    "CZE_ITA": {
       "home_edge": -0.099,
       "history": [
-        "Thu Jun 22    Czech Republic 0-2 Italy"
+        "Czech Republic 0-2 Italy"
       ],
       "record": "0W0D1L"
     },
-    "THU_USA": {
+    "AUS_JPN": {
       "home_edge": 0.201,
       "history": [
-        "Thu Jun 22    Ghana 2-1 USA"
+        "Australia 3-1 Japan"
       ],
       "record": "1W0D0L"
     },
-    "TUE_CRO": {
+    "BRA_AUS": {
       "home_edge": 0.201,
       "history": [
-        "Tue Jun 13    Brazil 1-0 Croatia"
-      ],
-      "record": "1W0D0L"
-    },
-    "MON_JPN": {
-      "home_edge": 0.201,
-      "history": [
-        "Mon Jun 12    Australia 3-1 Japan"
-      ],
-      "record": "1W0D0L"
-    },
-    "SUN_AUS": {
-      "home_edge": 0.201,
-      "history": [
-        "Sun Jun 18    Brazil 2-0 Australia"
+        "Brazil 2-0 Australia"
       ],
       "record": "1W0D0L"
     },
@@ -6952,17 +7106,17 @@
       ],
       "record": "0W1D0L"
     },
-    "THU_BRA": {
+    "JPN_BRA": {
       "home_edge": -0.099,
       "history": [
-        "Thu Jun 22    Japan 1-4 Brazil"
+        "Japan 1-4 Brazil"
       ],
       "record": "0W0D1L"
     },
-    "THU_AUS": {
+    "CRO_AUS": {
       "home_edge": -0.099,
       "history": [
-        "Thu Jun 22    Croatia 2-2 Australia"
+        "Croatia 2-2 Australia"
       ],
       "record": "0W1D0L"
     },
@@ -6973,227 +7127,412 @@
       ],
       "record": "0W1D0L"
     },
-    "TUE_TOG": {
+    "KOR_TOG": {
       "home_edge": 0.201,
       "history": [
-        "Tue Jun 13    South Korea 2-1 Togo"
+        "South Korea 2-1 Togo"
       ],
       "record": "1W0D0L"
     },
-    "SUN_KOR": {
+    "FRA_KOR": {
       "home_edge": -0.099,
       "history": [
-        "Sun Jun 18    France 1-1 South Korea"
+        "France 1-1 South Korea"
       ],
       "record": "0W1D0L"
     },
-    "MON_SUI": {
+    "TOG_SUI": {
       "home_edge": -0.099,
       "history": [
-        "Mon Jun 19    Togo 0-2 Switzerland"
+        "Togo 0-2 Switzerland"
       ],
       "record": "0W0D1L"
     },
-    "FRI_FRA": {
+    "TOG_FRA": {
       "home_edge": -0.099,
       "history": [
-        "Fri Jun 23    Togo 0-2 France"
+        "Togo 0-2 France"
       ],
       "record": "0W0D1L"
     },
-    "FRI_KOR": {
+    "SUI_KOR": {
       "home_edge": 0.201,
       "history": [
-        "Fri Jun 23    Switzerland 2-0 South Korea"
+        "Switzerland 2-0 South Korea"
       ],
       "record": "1W0D0L"
     },
-    "WED_UKR": {
+    "ESP_UKR": {
       "home_edge": 0.201,
       "history": [
-        "Wed Jun 14    Spain 4-0 Ukraine"
+        "Spain 4-0 Ukraine"
       ],
       "record": "1W0D0L"
     },
-    "WED_KSA": {
+    "TUN_KSA": {
       "home_edge": -0.099,
       "history": [
-        "Wed Jun 14    Tunisia 2-2 Saudi Arabia"
+        "Tunisia 2-2 Saudi Arabia"
       ],
       "record": "0W1D0L"
     },
-    "MON_TUN": {
+    "ESP_TUN": {
       "home_edge": 0.201,
       "history": [
-        "Mon Jun 19    Spain 3-1 Tunisia"
+        "Spain 3-1 Tunisia"
       ],
       "record": "1W0D0L"
     },
-    "MON_UKR": {
+    "KSA_UKR": {
       "home_edge": -0.099,
       "history": [
-        "Mon Jun 19    Saudi Arabia 0-4 Ukraine"
+        "Saudi Arabia 0-4 Ukraine"
       ],
       "record": "0W0D1L"
     },
-    "FRI_ESP": {
+    "KSA_ESP": {
       "home_edge": -0.099,
       "history": [
-        "Fri Jun 23    Saudi Arabia 0-1 Spain"
+        "Saudi Arabia 0-1 Spain"
       ],
       "record": "0W0D1L"
     },
-    "FRI_TUN": {
+    "UKR_TUN": {
       "home_edge": 0.201,
       "history": [
-        "Fri Jun 23    Ukraine 1-0 Tunisia"
+        "Ukraine 1-0 Tunisia"
       ],
       "record": "1W0D0L"
     },
-    "UTC_KSA": {
+    "RUS_KSA": {
       "home_edge": 0.201,
       "history": [
-        "UTC+3     Russia 5-0 Saudi Arabia",
-        "UTC+3     Uruguay 1-0 Saudi Arabia"
+        "Russia 5-0 Saudi Arabia"
+      ],
+      "record": "1W0D0L"
+    },
+    "EGY_URU": {
+      "home_edge": -0.099,
+      "history": [
+        "Egypt 0-1 Uruguay"
+      ],
+      "record": "0W0D1L"
+    },
+    "RUS_EGY": {
+      "home_edge": 0.201,
+      "history": [
+        "Russia 3-1 Egypt"
+      ],
+      "record": "1W0D0L"
+    },
+    "URU_KSA": {
+      "home_edge": 0.201,
+      "history": [
+        "Uruguay 1-0 Saudi Arabia"
+      ],
+      "record": "1W0D0L"
+    },
+    "URU_RUS": {
+      "home_edge": 0.201,
+      "history": [
+        "Uruguay 3-0 Russia"
+      ],
+      "record": "1W0D0L"
+    },
+    "KSA_EGY": {
+      "home_edge": 0.201,
+      "history": [
+        "Saudi Arabia 2-1 Egypt"
+      ],
+      "record": "1W0D0L"
+    },
+    "MAR_IRN": {
+      "home_edge": -0.099,
+      "history": [
+        "Morocco 0-1 Iran"
+      ],
+      "record": "0W0D1L"
+    },
+    "POR_ESP": {
+      "home_edge": -0.099,
+      "history": [
+        "Portugal 3-3 Spain"
+      ],
+      "record": "0W1D0L"
+    },
+    "POR_MAR": {
+      "home_edge": 0.201,
+      "history": [
+        "Portugal 1-0 Morocco"
+      ],
+      "record": "1W0D0L"
+    },
+    "IRN_ESP": {
+      "home_edge": -0.099,
+      "history": [
+        "Iran 0-1 Spain"
+      ],
+      "record": "0W0D1L"
+    },
+    "IRN_POR": {
+      "home_edge": -0.099,
+      "history": [
+        "Iran 1-1 Portugal"
+      ],
+      "record": "0W1D0L"
+    },
+    "ESP_MAR": {
+      "home_edge": -0.099,
+      "history": [
+        "Spain 2-2 Morocco"
+      ],
+      "record": "0W1D0L"
+    },
+    "FRA_AUS": {
+      "home_edge": 0.201,
+      "history": [
+        "France 2-1 Australia",
+        "France 4-1 Australia"
       ],
       "record": "2W0D0L"
     },
-    "UTC_EGY": {
+    "PER_DEN": {
+      "home_edge": -0.099,
+      "history": [
+        "Peru 0-1 Denmark"
+      ],
+      "record": "0W0D1L"
+    },
+    "DEN_AUS": {
+      "home_edge": -0.099,
+      "history": [
+        "Denmark 1-1 Australia"
+      ],
+      "record": "0W1D0L"
+    },
+    "FRA_PER": {
       "home_edge": 0.201,
       "history": [
-        "UTC+3     Russia 3-1 Egypt",
-        "UTC+3     Saudi Arabia 2-1 Egypt"
+        "France 1-0 Peru"
       ],
-      "record": "2W0D0L"
+      "record": "1W0D0L"
     },
-    "UTC_ESP": {
+    "DEN_FRA": {
       "home_edge": -0.099,
       "history": [
-        "UTC+3    Portugal 3-3 Spain",
-        "UTC+3    Iran 0-1 Spain"
+        "Denmark 0-0 France"
       ],
-      "record": "0W1D1L"
+      "record": "0W1D0L"
     },
-    "UTC_MAR": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC+3    Portugal 1-0 Morocco",
-        "UTC+2    Spain 2-2 Morocco"
-      ],
-      "record": "1W1D0L"
-    },
-    "UTC_AUS": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC+3    France 2-1 Australia",
-        "UTC+4    Denmark 1-1 Australia"
-      ],
-      "record": "1W1D0L"
-    },
-    "UTC_DEN": {
+    "AUS_PER": {
       "home_edge": -0.099,
       "history": [
-        "UTC+3    Peru 0-1 Denmark"
+        "Australia 0-2 Peru"
       ],
       "record": "0W0D1L"
     },
-    "UTC_PER": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC+5    France 1-0 Peru",
-        "UTC+3    Australia 0-2 Peru"
-      ],
-      "record": "1W0D1L"
-    },
-    "UTC_ICE": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC+3     Argentina 1-1 Iceland",
-        "UTC+3     Nigeria 2-0 Iceland"
-      ],
-      "record": "1W1D0L"
-    },
-    "UTC_CRO": {
+    "ARG_ICE": {
       "home_edge": -0.099,
       "history": [
-        "UTC+3     Argentina 0-3 Croatia",
-        "UTC+3     Iceland 1-2 Croatia"
+        "Argentina 1-1 Iceland"
       ],
-      "record": "0W0D2L"
+      "record": "0W1D0L"
     },
-    "UTC_SRB": {
-      "home_edge": -0.099,
-      "history": [
-        "UTC+4      Costa Rica 0-1 Serbia"
-      ],
-      "record": "0W0D1L"
-    },
-    "UTC_BRA": {
-      "home_edge": -0.099,
-      "history": [
-        "UTC+3      Serbia 0-2 Brazil"
-      ],
-      "record": "0W0D1L"
-    },
-    "UTC_MEX": {
-      "home_edge": -0.099,
-      "history": [
-        "UTC+3       Germany 0-1 Mexico",
-        "UTC+3       South Korea 1-2 Mexico"
-      ],
-      "record": "0W0D2L"
-    },
-    "UTC_SWE": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC+3       Germany 2-1 Sweden",
-        "UTC+5       Mexico 0-3 Sweden"
-      ],
-      "record": "1W0D1L"
-    },
-    "UTC_PAN": {
+    "CRO_NGA": {
       "home_edge": 0.201,
       "history": [
-        "UTC+3         Belgium 3-0 Panama",
-        "UTC+3         England 6-1 Panama"
+        "Croatia 2-0 Nigeria"
       ],
-      "record": "2W0D0L"
+      "record": "1W0D0L"
     },
-    "UTC_TUN": {
-      "home_edge": 0.051,
-      "history": [
-        "UTC+3         Belgium 5-2 Tunisia",
-        "UTC+3         Panama 1-2 Tunisia"
-      ],
-      "record": "1W0D1L"
-    },
-    "UTC_JPN": {
+    "ARG_CRO": {
       "home_edge": -0.099,
       "history": [
-        "UTC+3         Colombia 1-2 Japan"
+        "Argentina 0-3 Croatia"
       ],
       "record": "0W0D1L"
     },
-    "UTC_SEN": {
-      "home_edge": -0.099,
+    "NGA_ICE": {
+      "home_edge": 0.201,
       "history": [
-        "UTC+3         Poland 1-2 Senegal",
-        "UTC+5         Japan 2-2 Senegal"
+        "Nigeria 2-0 Iceland"
       ],
-      "record": "0W1D1L"
+      "record": "1W0D0L"
     },
-    "UTC_COL": {
+    "ICE_CRO": {
       "home_edge": -0.099,
       "history": [
-        "UTC+3         Poland 0-3 Colombia",
-        "UTC+4         Senegal 0-1 Colombia"
+        "Iceland 1-2 Croatia"
+      ],
+      "record": "0W0D1L"
+    },
+    "CRC_SRB": {
+      "home_edge": -0.099,
+      "history": [
+        "Costa Rica 0-1 Serbia"
+      ],
+      "record": "0W0D1L"
+    },
+    "BRA_SUI": {
+      "home_edge": 0.051,
+      "history": [
+        "Brazil 1-1 Switzerland",
+        "Brazil 1-0 Switzerland"
+      ],
+      "record": "1W1D0L"
+    },
+    "BRA_CRC": {
+      "home_edge": 0.201,
+      "history": [
+        "Brazil 2-0 Costa Rica"
+      ],
+      "record": "1W0D0L"
+    },
+    "SRB_SUI": {
+      "home_edge": -0.099,
+      "history": [
+        "Serbia 1-2 Switzerland",
+        "Serbia 2-3 Switzerland"
       ],
       "record": "0W0D2L"
     },
-    "UTC_POL": {
+    "SRB_BRA": {
       "home_edge": -0.099,
       "history": [
-        "UTC+3         Japan 0-1 Poland"
+        "Serbia 0-2 Brazil"
+      ],
+      "record": "0W0D1L"
+    },
+    "SUI_CRC": {
+      "home_edge": -0.099,
+      "history": [
+        "Switzerland 2-2 Costa Rica"
+      ],
+      "record": "0W1D0L"
+    },
+    "GER_MEX": {
+      "home_edge": -0.099,
+      "history": [
+        "Germany 0-1 Mexico"
+      ],
+      "record": "0W0D1L"
+    },
+    "SWE_KOR": {
+      "home_edge": 0.201,
+      "history": [
+        "Sweden 1-0 South Korea"
+      ],
+      "record": "1W0D0L"
+    },
+    "KOR_MEX": {
+      "home_edge": -0.099,
+      "history": [
+        "South Korea 1-2 Mexico"
+      ],
+      "record": "0W0D1L"
+    },
+    "GER_SWE": {
+      "home_edge": 0.201,
+      "history": [
+        "Germany 2-1 Sweden"
+      ],
+      "record": "1W0D0L"
+    },
+    "KOR_GER": {
+      "home_edge": 0.201,
+      "history": [
+        "South Korea 2-0 Germany"
+      ],
+      "record": "1W0D0L"
+    },
+    "MEX_SWE": {
+      "home_edge": -0.099,
+      "history": [
+        "Mexico 0-3 Sweden"
+      ],
+      "record": "0W0D1L"
+    },
+    "BEL_PAN": {
+      "home_edge": 0.201,
+      "history": [
+        "Belgium 3-0 Panama"
+      ],
+      "record": "1W0D0L"
+    },
+    "TUN_ENG": {
+      "home_edge": -0.099,
+      "history": [
+        "Tunisia 1-2 England"
+      ],
+      "record": "0W0D1L"
+    },
+    "BEL_TUN": {
+      "home_edge": 0.201,
+      "history": [
+        "Belgium 5-2 Tunisia"
+      ],
+      "record": "1W0D0L"
+    },
+    "ENG_PAN": {
+      "home_edge": 0.201,
+      "history": [
+        "England 6-1 Panama"
+      ],
+      "record": "1W0D0L"
+    },
+    "ENG_BEL": {
+      "home_edge": -0.099,
+      "history": [
+        "England 0-1 Belgium"
+      ],
+      "record": "0W0D1L"
+    },
+    "PAN_TUN": {
+      "home_edge": -0.099,
+      "history": [
+        "Panama 1-2 Tunisia"
+      ],
+      "record": "0W0D1L"
+    },
+    "COL_JPN": {
+      "home_edge": -0.099,
+      "history": [
+        "Colombia 1-2 Japan"
+      ],
+      "record": "0W0D1L"
+    },
+    "POL_SEN": {
+      "home_edge": -0.099,
+      "history": [
+        "Poland 1-2 Senegal"
+      ],
+      "record": "0W0D1L"
+    },
+    "JPN_SEN": {
+      "home_edge": -0.099,
+      "history": [
+        "Japan 2-2 Senegal"
+      ],
+      "record": "0W1D0L"
+    },
+    "POL_COL": {
+      "home_edge": -0.099,
+      "history": [
+        "Poland 0-3 Colombia"
+      ],
+      "record": "0W0D1L"
+    },
+    "JPN_POL": {
+      "home_edge": -0.099,
+      "history": [
+        "Japan 0-1 Poland"
+      ],
+      "record": "0W0D1L"
+    },
+    "SEN_COL": {
+      "home_edge": -0.099,
+      "history": [
+        "Senegal 0-1 Colombia"
       ],
       "record": "0W0D1L"
     },
@@ -7322,13 +7661,6 @@
         "Denmark 0-0 Tunisia"
       ],
       "record": "0W1D0L"
-    },
-    "FRA_AUS": {
-      "home_edge": 0.201,
-      "history": [
-        "France 4-1 Australia"
-      ],
-      "record": "1W0D0L"
     },
     "TUN_AUS": {
       "home_edge": -0.099,
@@ -7463,40 +7795,12 @@
       ],
       "record": "0W1D0L"
     },
-    "BRA_SUI": {
-      "home_edge": 0.201,
-      "history": [
-        "Brazil 1-0 Switzerland"
-      ],
-      "record": "1W0D0L"
-    },
-    "SRB_SUI": {
-      "home_edge": -0.099,
-      "history": [
-        "Serbia 2-3 Switzerland"
-      ],
-      "record": "0W0D1L"
-    },
-    "CMR_BRA": {
-      "home_edge": 0.201,
-      "history": [
-        "Cameroon 1-0 Brazil"
-      ],
-      "record": "1W0D0L"
-    },
     "URU_KOR": {
       "home_edge": -0.099,
       "history": [
         "Uruguay 0-0 South Korea"
       ],
       "record": "0W1D0L"
-    },
-    "POR_GHA": {
-      "home_edge": 0.201,
-      "history": [
-        "Portugal 3-2 Ghana"
-      ],
-      "record": "1W0D0L"
     },
     "KOR_GHA": {
       "home_edge": -0.099,
@@ -7528,85 +7832,76 @@
     }
   },
   "elo_ratings": {
-    "MEX": 1811.9,
+    "MEX": 1850.4,
     "RSA": 1461.1,
-    "KOR": 1681.6,
-    "CZE": 1624.4,
-    "CAN": 1657.0,
-    "BIH": 1364.9,
-    "QAT": 1599.1,
-    "SUI": 1807.8,
-    "BRA": 2031.3,
-    "MAR": 1860.7,
+    "KOR": 1696.5,
+    "CZE": 1587.4,
+    "CAN": 1658.3,
+    "BIH": 1399.3,
+    "QAT": 1599.9,
+    "SUI": 1815.8,
+    "BRA": 2029.6,
+    "MAR": 1867.8,
     "HAI": 1320.0,
     "SCO": 1620.0,
-    "USA": 1858.7,
-    "PAR": 1443.7,
-    "AUS": 1683.5,
+    "USA": 1812.7,
+    "PAR": 1472.9,
+    "AUS": 1678.9,
     "TUR": 1580.0,
-    "GER": 1874.7,
+    "GER": 1878.6,
     "CUW": 1280.0,
-    "CIV": 1600.6,
-    "ECU": 1680.1,
-    "NED": 1961.7,
-    "JPN": 1800.3,
-    "SWE": 1649.4,
-    "TUN": 1586.3,
-    "BEL": 1840.1,
-    "EGY": 1614.4,
-    "IRN": 1690.6,
+    "CIV": 1636.6,
+    "ECU": 1698.4,
+    "NED": 1992.2,
+    "JPN": 1748.4,
+    "SWE": 1698.6,
+    "TUN": 1590.2,
+    "BEL": 1869.4,
+    "EGY": 1596.2,
+    "IRN": 1718.6,
     "NZL": 1279.5,
-    "ESP": 2014.7,
+    "ESP": 1976.4,
     "CPV": 1400.0,
-    "KSA": 1423.5,
-    "URU": 1911.4,
-    "FRA": 1978.2,
-    "SEN": 1816.1,
+    "KSA": 1434.6,
+    "URU": 1908.9,
+    "FRA": 1976.1,
+    "SEN": 1808.1,
     "IRQ": 1405.0,
     "NOR": 1550.0,
-    "ARG": 2097.5,
-    "ALG": 1564.7,
+    "ARG": 2061.5,
+    "ALG": 1570.2,
     "AUT": 1735.0,
     "JOR": 1370.0,
-    "POR": 1899.6,
+    "POR": 1944.3,
     "COD": 1415.0,
     "UZB": 1395.0,
-    "COL": 1883.4,
-    "ENG": 1982.0,
-    "CRO": 1879.6,
-    "GHA": 1455.6,
-    "PAN": 1567.0,
-    "GRE": 1506.9,
-    "NGA": 1489.2,
+    "COL": 1887.2,
+    "ENG": 1949.7,
+    "CRO": 1885.5,
+    "GHA": 1491.7,
+    "PAN": 1563.3,
+    "GRE": 1535.5,
+    "NGA": 1521.1,
     "SVN": 1530.6,
-    "SRB": 1516.8,
-    "DEN": 1524.5,
-    "CMR": 1501.5,
-    "ITA": 1510.0,
+    "SRB": 1505.5,
+    "DEN": 1534.8,
+    "CMR": 1493.8,
+    "ITA": 1525.0,
     "SVK": 1485.2,
     "PRK": 1484.3,
-    "HON": 1479.9,
-    "CHI": 1541.8,
-    "UTC": 1556.2,
-    "UNK": 1512.5,
-    "CRC": 1526.9,
-    "RUS": 1488.3,
-    "FRI": 1562.9,
-    "WED": 1548.3,
-    "POL": 1547.9,
-    "THU": 1543.7,
-    "TUE": 1542.9,
-    "SAT": 1536.5,
-    "TRI": 1478.2,
-    "SUN": 1542.1,
-    "SCG": 1475.1,
-    "ANG": 1517.8,
-    "MON": 1508.9,
-    "TOG": 1488.3,
-    "UKR": 1509.7,
-    "PER": 1517.5,
-    "ICE": 1499.7,
-    "WAL": 1499.6
+    "HON": 1473.3,
+    "CHI": 1590.4,
+    "CRC": 1540.1,
+    "RUS": 1534.7,
+    "POL": 1544.9,
+    "TRI": 1487.4,
+    "SCG": 1489.0,
+    "ANG": 1520.9,
+    "TOG": 1484.8,
+    "UKR": 1530.2,
+    "PER": 1506.9,
+    "ICE": 1497.5,
+    "WAL": 1499.7
   },
   "benchmarks": {
     "onside": {

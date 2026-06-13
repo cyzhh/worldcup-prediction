@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T09:14:57.549427+00:00",
-  "method": "walk-forward group stage backtest (2006-2022)",
+  "generated_at": "2026-06-13T11:28:27.085150+00:00",
+  "method": "walk-forward group stage backtest (1998-2022, ELO priors from 1986+)",
   "calibration": {
     "group_stage_draw_base": 0.2,
-    "group_stage_round1_draw_boost": 0.02,
+    "group_stage_round1_draw_boost": 0.06,
     "under_25_base": 0.55,
-    "elo_blend_strong": 0.6,
+    "elo_blend_strong": 0.68,
     "elo_blend_close": 0.52,
     "historical_shrinkage": 0.08,
     "upset_elo_threshold": 120.0,
@@ -14,180 +14,311 @@
     "dixon_coles_rho": -0.08,
     "player_prob_weight": 0.05,
     "host_elo_bonus": 35.0,
+    "draw_mass_blend": 0.55,
     "wdl_priors_by_elo_gap": {
+      "moderate": {
+        "home": 0.4615,
+        "draw": 0.1846,
+        "away": 0.3538,
+        "samples": 65
+      },
       "even": {
-        "home": 0.4,
-        "draw": 0.2368,
-        "away": 0.3632,
-        "samples": 190
+        "home": 0.3933,
+        "draw": 0.2667,
+        "away": 0.34,
+        "samples": 150
       },
       "slight": {
-        "home": 0.375,
-        "draw": 0.1667,
-        "away": 0.4583,
-        "samples": 48
+        "home": 0.3793,
+        "draw": 0.2672,
+        "away": 0.3534,
+        "samples": 116
       },
-      "moderate": {
+      "large": {
         "home": 0.5,
         "draw": 0.0,
         "away": 0.5,
-        "samples": 2
+        "samples": 4
+      },
+      "extreme": {
+        "home": 1.0,
+        "draw": 0.0,
+        "away": 0.0,
+        "samples": 1
       }
     },
-    "calibrated_at": "2026-06-13T09:13:49.693656+00:00",
+    "calibrated_at": "2026-06-13T10:52:40.345447+00:00",
     "backtest_summary": {
-      "composite_score": 0.6318,
-      "matches": 240,
-      "outcome_accuracy": 0.6125,
-      "exact_score_accuracy": 0.0792,
-      "brier_score": 0.665,
-      "log_loss": 1.1016,
-      "draw_rate_actual": 0.2208,
-      "draw_rate_predicted": 0.4292
+      "composite_score": 0.6615,
+      "matches": 336,
+      "outcome_accuracy": 0.6458,
+      "exact_score_accuracy": 0.1161,
+      "brier_score": 0.6188,
+      "log_loss": 1.0359,
+      "draw_rate_actual": 0.247,
+      "draw_rate_predicted": 0.0
     }
   },
   "overall": {
-    "matches": 240,
-    "outcome_accuracy": 0.6125,
-    "exact_score_accuracy": 0.0792,
-    "brier_score": 0.6653,
-    "log_loss": 1.102,
-    "draw_rate_actual": 0.2208,
-    "draw_rate_predicted": 0.4417,
+    "matches": 336,
+    "outcome_accuracy": 0.6369,
+    "exact_score_accuracy": 0.119,
+    "brier_score": 0.6098,
+    "log_loss": 1.0235,
+    "draw_rate_actual": 0.247,
+    "draw_rate_predicted": 0.0,
     "wdl_priors_by_elo_gap": {
+      "moderate": {
+        "home": 0.4615,
+        "draw": 0.1846,
+        "away": 0.3538,
+        "samples": 65
+      },
       "even": {
-        "home": 0.4,
-        "draw": 0.2368,
-        "away": 0.3632,
-        "samples": 190
+        "home": 0.3933,
+        "draw": 0.2667,
+        "away": 0.34,
+        "samples": 150
       },
       "slight": {
-        "home": 0.375,
-        "draw": 0.1667,
-        "away": 0.4583,
-        "samples": 48
+        "home": 0.3793,
+        "draw": 0.2672,
+        "away": 0.3534,
+        "samples": 116
       },
-      "moderate": {
+      "large": {
         "home": 0.5,
         "draw": 0.0,
         "away": 0.5,
-        "samples": 2
+        "samples": 4
+      },
+      "extreme": {
+        "home": 1.0,
+        "draw": 0.0,
+        "away": 0.0,
+        "samples": 1
       }
     }
   },
   "by_tournament": {
+    "1998 法国世界杯": {
+      "matches": 48,
+      "outcome_accuracy": 0.6667,
+      "exact_score_accuracy": 0.125,
+      "brier_score": 0.5988,
+      "log_loss": 1.0015,
+      "draw_rate_actual": 0.3333,
+      "draw_rate_predicted": 0.0,
+      "wdl_priors_by_elo_gap": {
+        "moderate": {
+          "home": 0.6,
+          "draw": 0.0,
+          "away": 0.4,
+          "samples": 5
+        },
+        "even": {
+          "home": 0.4,
+          "draw": 0.3429,
+          "away": 0.2571,
+          "samples": 35
+        },
+        "slight": {
+          "home": 0.375,
+          "draw": 0.5,
+          "away": 0.125,
+          "samples": 8
+        }
+      }
+    },
+    "2002 日韩世界杯": {
+      "matches": 48,
+      "outcome_accuracy": 0.5417,
+      "exact_score_accuracy": 0.0833,
+      "brier_score": 0.6526,
+      "log_loss": 1.0811,
+      "draw_rate_actual": 0.2917,
+      "draw_rate_predicted": 0.0,
+      "wdl_priors_by_elo_gap": {
+        "slight": {
+          "home": 0.4091,
+          "draw": 0.3182,
+          "away": 0.2727,
+          "samples": 22
+        },
+        "even": {
+          "home": 0.4615,
+          "draw": 0.2692,
+          "away": 0.2692,
+          "samples": 26
+        }
+      }
+    },
     "2006 德国世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.5,
-      "exact_score_accuracy": 0.0625,
-      "brier_score": 0.6768,
-      "log_loss": 1.1134,
+      "outcome_accuracy": 0.6875,
+      "exact_score_accuracy": 0.0833,
+      "brier_score": 0.57,
+      "log_loss": 0.9652,
       "draw_rate_actual": 0.2292,
-      "draw_rate_predicted": 1.0,
+      "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
+        "slight": {
+          "home": 0.6316,
+          "draw": 0.1579,
+          "away": 0.2105,
+          "samples": 19
+        },
         "even": {
-          "home": 0.5,
-          "draw": 0.2292,
-          "away": 0.2708,
-          "samples": 48
+          "home": 0.3636,
+          "draw": 0.3182,
+          "away": 0.3182,
+          "samples": 22
+        },
+        "moderate": {
+          "home": 0.5714,
+          "draw": 0.1429,
+          "away": 0.2857,
+          "samples": 7
         }
       }
     },
     "2010 南非世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.6875,
-      "exact_score_accuracy": 0.125,
-      "brier_score": 0.6943,
-      "log_loss": 1.1436,
+      "outcome_accuracy": 0.6667,
+      "exact_score_accuracy": 0.1667,
+      "brier_score": 0.6438,
+      "log_loss": 1.0692,
       "draw_rate_actual": 0.2917,
-      "draw_rate_predicted": 0.2708,
+      "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
+        "slight": {
+          "home": 0.3158,
+          "draw": 0.2632,
+          "away": 0.4211,
+          "samples": 19
+        },
         "even": {
           "home": 0.3333,
-          "draw": 0.2667,
-          "away": 0.4,
-          "samples": 45
+          "draw": 0.3333,
+          "away": 0.3333,
+          "samples": 18
         },
-        "slight": {
-          "home": 0.3333,
-          "draw": 0.6667,
-          "away": 0.0,
-          "samples": 3
+        "moderate": {
+          "home": 0.3636,
+          "draw": 0.2727,
+          "away": 0.3636,
+          "samples": 11
         }
       }
     },
     "2014 巴西世界杯": {
       "matches": 48,
       "outcome_accuracy": 0.6042,
-      "exact_score_accuracy": 0.0417,
-      "brier_score": 0.617,
-      "log_loss": 1.0276,
+      "exact_score_accuracy": 0.125,
+      "brier_score": 0.5833,
+      "log_loss": 0.9836,
       "draw_rate_actual": 0.1875,
-      "draw_rate_predicted": 0.3333,
+      "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
+        "moderate": {
+          "home": 0.5,
+          "draw": 0.1,
+          "away": 0.4,
+          "samples": 10
+        },
         "slight": {
-          "home": 0.3077,
-          "draw": 0.1538,
-          "away": 0.5385,
-          "samples": 13
+          "home": 0.2941,
+          "draw": 0.2353,
+          "away": 0.4706,
+          "samples": 17
+        },
+        "large": {
+          "home": 0.0,
+          "draw": 0.0,
+          "away": 1.0,
+          "samples": 1
         },
         "even": {
-          "home": 0.4286,
+          "home": 0.45,
           "draw": 0.2,
-          "away": 0.3714,
-          "samples": 35
+          "away": 0.35,
+          "samples": 20
         }
       }
     },
     "2018 俄罗斯世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.6875,
-      "exact_score_accuracy": 0.0833,
-      "brier_score": 0.6757,
-      "log_loss": 1.1253,
+      "outcome_accuracy": 0.6458,
+      "exact_score_accuracy": 0.125,
+      "brier_score": 0.5928,
+      "log_loss": 1.0015,
       "draw_rate_actual": 0.1875,
-      "draw_rate_predicted": 0.3542,
+      "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
         "even": {
-          "home": 0.3636,
-          "draw": 0.2121,
-          "away": 0.4242,
-          "samples": 33
+          "home": 0.375,
+          "draw": 0.125,
+          "away": 0.5,
+          "samples": 16
         },
         "slight": {
           "home": 0.3333,
-          "draw": 0.1333,
-          "away": 0.5333,
-          "samples": 15
+          "draw": 0.2222,
+          "away": 0.4444,
+          "samples": 18
+        },
+        "moderate": {
+          "home": 0.3077,
+          "draw": 0.2308,
+          "away": 0.4615,
+          "samples": 13
+        },
+        "large": {
+          "home": 1.0,
+          "draw": 0.0,
+          "away": 0.0,
+          "samples": 1
         }
       }
     },
     "2022 卡塔尔世界杯": {
       "matches": 48,
-      "outcome_accuracy": 0.5833,
-      "exact_score_accuracy": 0.0833,
-      "brier_score": 0.6629,
-      "log_loss": 1.1,
+      "outcome_accuracy": 0.6458,
+      "exact_score_accuracy": 0.125,
+      "brier_score": 0.627,
+      "log_loss": 1.0624,
       "draw_rate_actual": 0.2083,
-      "draw_rate_predicted": 0.25,
+      "draw_rate_predicted": 0.0,
       "wdl_priors_by_elo_gap": {
         "even": {
-          "home": 0.3448,
-          "draw": 0.2759,
-          "away": 0.3793,
-          "samples": 29
-        },
-        "slight": {
-          "home": 0.4706,
-          "draw": 0.1176,
-          "away": 0.4118,
-          "samples": 17
+          "home": 0.3077,
+          "draw": 0.1538,
+          "away": 0.5385,
+          "samples": 13
         },
         "moderate": {
+          "home": 0.5263,
+          "draw": 0.2105,
+          "away": 0.2632,
+          "samples": 19
+        },
+        "slight": {
+          "home": 0.2308,
+          "draw": 0.3077,
+          "away": 0.4615,
+          "samples": 13
+        },
+        "large": {
           "home": 0.5,
           "draw": 0.0,
           "away": 0.5,
           "samples": 2
+        },
+        "extreme": {
+          "home": 1.0,
+          "draw": 0.0,
+          "away": 0.0,
+          "samples": 1
         }
       }
     }
@@ -195,207 +326,208 @@
   "sample_predictions": [
     {
       "match_id": 1,
-      "title": "Germany vs Costa Rica",
-      "subtitle": "2006 小组赛 A组 · 第1轮",
+      "title": "Brazil vs Scotland",
+      "subtitle": "1998 小组赛 A组 · 第1轮",
       "group": "A",
       "played": true,
       "openfootball": {
-        "tournament": "2006--germany",
+        "tournament": "1998--france",
         "group": "A",
         "round_num": 1
       },
       "home": {
-        "key": "GER",
-        "code": "GER",
-        "name": "Germany",
-        "fifa_rank": 30,
-        "elo": 1500.0
+        "key": "BRA",
+        "code": "BRA",
+        "name": "Brazil",
+        "fifa_rank": 1,
+        "elo": 1590.2
       },
       "away": {
-        "key": "CRC",
-        "code": "CRC",
-        "name": "Costa Rica",
-        "fifa_rank": 2,
-        "elo": 1500.0
+        "key": "SCO",
+        "code": "SCO",
+        "name": "Scotland",
+        "fifa_rank": 31,
+        "elo": 1466.4
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
-      "score_away": 1,
-      "prob_home": 32.7,
-      "prob_draw": 37.0,
-      "prob_away": 30.3,
+      "predicted_score": "2 : 0",
+      "score_home": 2,
+      "score_away": 0,
+      "prob_home": 62.2,
+      "prob_draw": 22.0,
+      "prob_away": 15.7,
       "prob_under_25": 72.0,
-      "asian_handicap": "亚盘: 平手",
+      "asian_handicap": "亚盘: Brazil-1.0",
       "analysis": [
-        "FIFA排名差距 28 位（Germany #30 vs Costa Rica #2），纸面实力主队略优。",
-        "ELO 分差 0.0 分，对应历史胜率约 50%。",
-        "世界杯参赛经验：Germany 2 次 vs Costa Rica 2 次。",
-        "近10场战绩 Germany 4胜3平3负，Costa Rica 4胜3平3负；xG差 +0.2 vs +0.2。",
-        "主场优势：Germany 联合东道主，Allianz Arena, München 作战，高原/主场效应显著。",
-        "阵容深度：Germany 整体阵容；伤病风险 14% vs 14%。",
-        "战术对抗：Germany（密集防守 + 反击）vs Costa Rica（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "FIFA排名差距 30 位（Brazil #1 vs Scotland #31），纸面实力主队显著占优。",
+        "ELO 分差 123.79999999999995 分，对应历史胜率约 65%。",
+        "世界杯参赛经验：Brazil 5 次 vs Scotland 5 次。",
+        "近10场战绩 Brazil 5胜1平0负，Scotland 1胜1平3负；xG差 +1.2 vs -0.4。",
+        "比赛环境：Stade de France, Saint-Denis，气候适应度 Brazil 72% vs Scotland 72%。",
+        "阵容深度：Brazil 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Brazil（密集防守 + 反击）vs Scotland（密集防守 + 反击），战术维度主队得分 0.70、客队 0.56。",
+        "历史交锋（openfootball）：Brazil 1-0 Scotland。",
         "小组赛首轮：各队战术偏保守，平局概率高于赛季均值；强队倾向控分而非大胜。"
       ],
       "score_probs": [
         {
-          "home": 0,
+          "home": 1,
           "away": 0,
-          "prob": 34.3
+          "prob": 27.3
         },
         {
           "home": 0,
-          "away": 1,
-          "prob": 17.8
+          "away": 0,
+          "prob": 27.3
+        },
+        {
+          "home": 2,
+          "away": 0,
+          "prob": 16.8
         },
         {
           "home": 1,
-          "away": 0,
-          "prob": 17.2
-        },
-        {
-          "home": 1,
           "away": 1,
-          "prob": 10.8
+          "prob": 7.0
         },
         {
-          "home": 0,
-          "away": 2,
-          "prob": 5.2
+          "home": 3,
+          "away": 0,
+          "prob": 6.3
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.46,
-          "away": 0.534,
-          "weight": 0.27249864281601516
+          "home": 0.596,
+          "away": 0.45,
+          "weight": 0.35528889819805587
         },
         {
           "name": "近期状态",
-          "home": 0.512,
-          "away": 0.512,
-          "weight": 0.19301987199467743
+          "home": 0.807,
+          "away": 0.337,
+          "weight": 0.19973251552139382
         },
         {
           "name": "战术风格",
-          "home": 0.5,
+          "home": 0.701,
           "away": 0.56,
-          "weight": 0.22708220234667933
+          "weight": 0.12688889221359137
         },
         {
           "name": "阵容深度",
-          "home": 0.585,
+          "home": 0.595,
           "away": 0.585,
-          "weight": 0.09991616903253892
+          "weight": 0.10339094921107447
         },
         {
           "name": "比赛环境",
-          "home": 1.0,
+          "home": 0.8,
           "away": 0.72,
-          "weight": 0.09083288093867174
+          "weight": 0.09399177201006768
         },
         {
           "name": "小组赛战意",
-          "home": 0.5,
-          "away": 0.5,
-          "weight": 0.04541644046933587
+          "home": 0.55,
+          "away": 0.47,
+          "weight": 0.04699588600503384
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.07123379240208146
+          "weight": 0.07371108684078297
         }
       ],
-      "actual_score": "4 : 2",
-      "actual_home": 4,
-      "actual_away": 2,
+      "actual_score": "2 : 1",
+      "actual_home": 2,
+      "actual_away": 1,
       "result_hit": false,
-      "outcome_hit": false,
-      "tournament": "2006 德国世界杯",
-      "year": 2006
+      "outcome_hit": true,
+      "tournament": "1998 法国世界杯",
+      "year": 1998
     },
     {
       "match_id": 2,
-      "title": "Poland vs Ecuador",
-      "subtitle": "2006 小组赛 A组 · 第1轮",
+      "title": "Morocco vs Norway",
+      "subtitle": "1998 小组赛 A组 · 第1轮",
       "group": "A",
       "played": true,
       "openfootball": {
-        "tournament": "2006--germany",
+        "tournament": "1998--france",
         "group": "A",
         "round_num": 1
       },
       "home": {
-        "key": "POL",
-        "code": "POL",
-        "name": "Poland",
-        "fifa_rank": 11,
-        "elo": 1500.0
+        "key": "MAR",
+        "code": "MAR",
+        "name": "Morocco",
+        "fifa_rank": 30,
+        "elo": 1472.7
       },
       "away": {
-        "key": "ECU",
-        "code": "ECU",
-        "name": "Ecuador",
-        "fifa_rank": 3,
-        "elo": 1500.0
+        "key": "NOR",
+        "code": "NOR",
+        "name": "Norway",
+        "fifa_rank": 29,
+        "elo": 1475.9
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 30.4,
-      "prob_draw": 37.0,
-      "prob_away": 32.6,
+      "prob_home": 35.1,
+      "prob_draw": 30.2,
+      "prob_away": 34.8,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 8 位（Poland #11 vs Ecuador #3），纸面实力接近。",
-        "ELO 分差 0.0 分，对应历史胜率约 50%。",
-        "世界杯参赛经验：Poland 2 次 vs Ecuador 2 次。",
-        "近10场战绩 Poland 4胜3平3负，Ecuador 4胜3平3负；xG差 +0.2 vs +0.2。",
-        "比赛环境：Veltins-Arena, Gelsenkirchen，气候适应度 Poland 72% vs Ecuador 72%。",
-        "阵容深度：Poland 整体阵容；伤病风险 14% vs 14%。",
-        "战术对抗：Poland（密集防守 + 反击）vs Ecuador（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "FIFA排名差距 1 位（Morocco #30 vs Norway #29），纸面实力接近。",
+        "ELO 分差 -3.2000000000000455 分，对应历史胜率约 49%。",
+        "世界杯参赛经验：Morocco 5 次 vs Norway 5 次。",
+        "近10场战绩 Morocco 1胜1平3负，Norway 1胜2平2负；xG差 -0.2 vs -0.5。",
+        "比赛环境：Stade de la Mosson, Montpellier，气候适应度 Morocco 72% vs Norway 72%。",
+        "阵容深度：Morocco 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Morocco（密集防守 + 反击）vs Norway（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
         "小组赛首轮：各队战术偏保守，平局概率高于赛季均值；强队倾向控分而非大胜。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 34.3
-        },
-        {
-          "home": 0,
-          "away": 1,
-          "prob": 18.1
+          "prob": 40.8
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 16.9
+          "prob": 18.5
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 16.8
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.8
+          "prob": 9.0
         },
         {
-          "home": 0,
-          "away": 2,
-          "prob": 5.4
+          "home": 2,
+          "away": 0,
+          "prob": 4.6
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.51,
-          "away": 0.531,
+          "home": 0.457,
+          "away": 0.46,
           "weight": 0.27249864281601516
         },
         {
           "name": "近期状态",
-          "home": 0.512,
-          "away": 0.512,
+          "home": 0.345,
+          "away": 0.369,
           "weight": 0.19301987199467743
         },
         {
@@ -429,217 +561,95 @@
           "weight": 0.07123379240208146
         }
       ],
-      "actual_score": "0 : 2",
-      "actual_home": 0,
+      "actual_score": "2 : 2",
+      "actual_home": 2,
       "actual_away": 2,
       "result_hit": false,
       "outcome_hit": true,
-      "tournament": "2006 德国世界杯",
-      "year": 2006
+      "tournament": "1998 法国世界杯",
+      "year": 1998
     },
     {
       "match_id": 3,
-      "title": "Germany vs Poland",
-      "subtitle": "2006 小组赛 A组 · 第2轮",
+      "title": "Scotland vs Norway",
+      "subtitle": "1998 小组赛 A组 · 第2轮",
       "group": "A",
       "played": true,
       "openfootball": {
-        "tournament": "2006--germany",
+        "tournament": "1998--france",
         "group": "A",
         "round_num": 2
       },
       "home": {
-        "key": "GER",
-        "code": "GER",
-        "name": "Germany",
-        "fifa_rank": 30,
-        "elo": 1500.0
+        "key": "SCO",
+        "code": "SCO",
+        "name": "Scotland",
+        "fifa_rank": 31,
+        "elo": 1466.4
       },
       "away": {
-        "key": "POL",
-        "code": "POL",
-        "name": "Poland",
-        "fifa_rank": 11,
-        "elo": 1500.0
+        "key": "NOR",
+        "code": "NOR",
+        "name": "Norway",
+        "fifa_rank": 29,
+        "elo": 1475.9
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 33.9,
-      "prob_draw": 35.6,
-      "prob_away": 30.5,
+      "prob_home": 30.5,
+      "prob_draw": 29.3,
+      "prob_away": 40.3,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 19 位（Germany #30 vs Poland #11），纸面实力主队略优。",
-        "ELO 分差 0.0 分，对应历史胜率约 50%。",
-        "世界杯参赛经验：Germany 2 次 vs Poland 2 次。",
-        "近10场战绩 Germany 4胜3平3负，Poland 4胜3平3负；xG差 +0.2 vs +0.2。",
-        "主场优势：Germany 联合东道主，Signal Iduna Park, Dortmund 作战，高原/主场效应显著。",
-        "阵容深度：Germany 整体阵容；伤病风险 14% vs 14%。",
-        "战术对抗：Germany（密集防守 + 反击）vs Poland（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
-        "积分榜战意：Germany 3分第1名；Poland 0分第4名。"
+        "FIFA排名差距 2 位（Scotland #31 vs Norway #29），纸面实力接近。",
+        "ELO 分差 -9.5 分，对应历史胜率约 48%。",
+        "世界杯参赛经验：Scotland 5 次 vs Norway 5 次。",
+        "近10场战绩 Scotland 1胜1平4负，Norway 1胜2平2负；xG差 -0.5 vs -0.4。",
+        "比赛环境：Parc Lescure, Bordeaux，气候适应度 Scotland 72% vs Norway 72%。",
+        "阵容深度：Scotland 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Scotland（密集防守 + 反击）vs Norway（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "积分榜战意：Scotland 0分第4名；Norway 1分第2名。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 31.9
+          "prob": 40.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 17.4
+          "prob": 20.7
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.2
+          "prob": 14.6
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 11.5
+          "prob": 8.9
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 5.4
+          "prob": 5.9
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.46,
-          "away": 0.51,
+          "home": 0.45,
+          "away": 0.46,
           "weight": 0.2573068908010733
         },
         {
           "name": "近期状态",
-          "home": 0.512,
-          "away": 0.512,
-          "weight": 0.2401530980810018
-        },
-        {
-          "name": "战术风格",
-          "home": 0.5,
-          "away": 0.56,
-          "weight": 0.21442240900089443
-        },
-        {
-          "name": "阵容深度",
-          "home": 0.585,
-          "away": 0.585,
-          "weight": 0.08576896360035778
-        },
-        {
-          "name": "比赛环境",
-          "home": 1.0,
-          "away": 0.72,
-          "weight": 0.08576896360035778
-        },
-        {
-          "name": "小组赛战意",
-          "home": 0.5,
-          "away": 0.5,
-          "weight": 0.04931715407020571
-        },
-        {
-          "name": "临场风险",
-          "home": 0.915,
-          "away": 0.915,
-          "weight": 0.06726252084610924
-        }
-      ],
-      "actual_score": "1 : 0",
-      "actual_home": 1,
-      "actual_away": 0,
-      "result_hit": false,
-      "outcome_hit": false,
-      "tournament": "2006 德国世界杯",
-      "year": 2006
-    },
-    {
-      "match_id": 4,
-      "title": "Ecuador vs Costa Rica",
-      "subtitle": "2006 小组赛 A组 · 第2轮",
-      "group": "A",
-      "played": true,
-      "openfootball": {
-        "tournament": "2006--germany",
-        "group": "A",
-        "round_num": 2
-      },
-      "home": {
-        "key": "ECU",
-        "code": "ECU",
-        "name": "Ecuador",
-        "fifa_rank": 3,
-        "elo": 1500.0
-      },
-      "away": {
-        "key": "CRC",
-        "code": "CRC",
-        "name": "Costa Rica",
-        "fifa_rank": 2,
-        "elo": 1500.0
-      },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
-      "score_away": 1,
-      "prob_home": 31.2,
-      "prob_draw": 35.6,
-      "prob_away": 33.2,
-      "prob_under_25": 72.0,
-      "asian_handicap": "亚盘: 平手",
-      "analysis": [
-        "FIFA排名差距 1 位（Ecuador #3 vs Costa Rica #2），纸面实力接近。",
-        "ELO 分差 0.0 分，对应历史胜率约 50%。",
-        "世界杯参赛经验：Ecuador 2 次 vs Costa Rica 2 次。",
-        "近10场战绩 Ecuador 4胜3平3负，Costa Rica 4胜3平3负；xG差 +0.2 vs +0.2。",
-        "比赛环境：AOL Arena, Hamburg，气候适应度 Ecuador 72% vs Costa Rica 72%。",
-        "阵容深度：Ecuador 整体阵容；伤病风险 14% vs 14%。",
-        "战术对抗：Ecuador（密集防守 + 反击）vs Costa Rica（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
-        "积分榜战意：Ecuador 3分第2名；Costa Rica 0分第3名。"
-      ],
-      "score_probs": [
-        {
-          "home": 0,
-          "away": 0,
-          "prob": 31.9
-        },
-        {
-          "home": 0,
-          "away": 1,
-          "prob": 17.9
-        },
-        {
-          "home": 1,
-          "away": 0,
-          "prob": 16.7
-        },
-        {
-          "home": 1,
-          "away": 1,
-          "prob": 11.5
-        },
-        {
-          "home": 0,
-          "away": 2,
-          "prob": 5.7
-        }
-      ],
-      "dimensions": [
-        {
-          "name": "基本面实力",
-          "home": 0.531,
-          "away": 0.534,
-          "weight": 0.2573068908010733
-        },
-        {
-          "name": "近期状态",
-          "home": 0.512,
-          "away": 0.512,
+          "home": 0.305,
+          "away": 0.375,
           "weight": 0.2401530980810018
         },
         {
@@ -663,7 +673,7 @@
         {
           "name": "小组赛战意",
           "home": 0.5,
-          "away": 0.54,
+          "away": 0.5,
           "weight": 0.04931715407020571
         },
         {
@@ -671,97 +681,219 @@
           "home": 0.915,
           "away": 0.915,
           "weight": 0.06726252084610924
+        }
+      ],
+      "actual_score": "1 : 1",
+      "actual_home": 1,
+      "actual_away": 1,
+      "result_hit": true,
+      "outcome_hit": true,
+      "tournament": "1998 法国世界杯",
+      "year": 1998
+    },
+    {
+      "match_id": 4,
+      "title": "Brazil vs Morocco",
+      "subtitle": "1998 小组赛 A组 · 第2轮",
+      "group": "A",
+      "played": true,
+      "openfootball": {
+        "tournament": "1998--france",
+        "group": "A",
+        "round_num": 2
+      },
+      "home": {
+        "key": "BRA",
+        "code": "BRA",
+        "name": "Brazil",
+        "fifa_rank": 1,
+        "elo": 1590.2
+      },
+      "away": {
+        "key": "MAR",
+        "code": "MAR",
+        "name": "Morocco",
+        "fifa_rank": 30,
+        "elo": 1472.7
+      },
+      "predicted_score": "2 : 0",
+      "score_home": 2,
+      "score_away": 0,
+      "prob_home": 59.4,
+      "prob_draw": 22.0,
+      "prob_away": 18.6,
+      "prob_under_25": 72.0,
+      "asian_handicap": "亚盘: Brazil-1.0",
+      "analysis": [
+        "FIFA排名差距 29 位（Brazil #1 vs Morocco #30），纸面实力主队显著占优。",
+        "ELO 分差 117.5 分，对应历史胜率约 64%。",
+        "世界杯参赛经验：Brazil 5 次 vs Morocco 5 次。",
+        "近10场战绩 Brazil 5胜1平0负，Morocco 1胜2平2负；xG差 +1.2 vs -0.2。",
+        "比赛环境：Stade de la Beaujoire, Nantes，气候适应度 Brazil 72% vs Morocco 72%。",
+        "阵容深度：Brazil 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Brazil（密集防守 + 反击）vs Morocco（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "积分榜战意：Brazil 3分第1名；Morocco 1分第3名。"
+      ],
+      "score_probs": [
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 26.0
+        },
+        {
+          "home": 1,
+          "away": 0,
+          "prob": 23.7
+        },
+        {
+          "home": 2,
+          "away": 0,
+          "prob": 13.1
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 10.2
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 9.0
+        }
+      ],
+      "dimensions": [
+        {
+          "name": "基本面实力",
+          "home": 0.596,
+          "away": 0.457,
+          "weight": 0.3103048936707508
+        },
+        {
+          "name": "近期状态",
+          "home": 0.803,
+          "away": 0.388,
+          "weight": 0.24824391493660067
+        },
+        {
+          "name": "战术风格",
+          "home": 0.5,
+          "away": 0.56,
+          "weight": 0.1436268364990332
+        },
+        {
+          "name": "阵容深度",
+          "home": 0.595,
+          "away": 0.585,
+          "weight": 0.08865854104878594
+        },
+        {
+          "name": "比赛环境",
+          "home": 0.8,
+          "away": 0.72,
+          "weight": 0.08865854104878594
+        },
+        {
+          "name": "小组赛战意",
+          "home": 0.5,
+          "away": 0.5,
+          "weight": 0.05097866110305191
+        },
+        {
+          "name": "临场风险",
+          "home": 0.915,
+          "away": 0.915,
+          "weight": 0.06952861169299149
         }
       ],
       "actual_score": "3 : 0",
       "actual_home": 3,
       "actual_away": 0,
       "result_hit": false,
-      "outcome_hit": false,
-      "tournament": "2006 德国世界杯",
-      "year": 2006
+      "outcome_hit": true,
+      "tournament": "1998 法国世界杯",
+      "year": 1998
     },
     {
       "match_id": 5,
-      "title": "Ecuador vs Germany",
-      "subtitle": "2006 小组赛 A组 · 第3轮",
+      "title": "Scotland vs Morocco",
+      "subtitle": "1998 小组赛 A组 · 第3轮",
       "group": "A",
       "played": true,
       "openfootball": {
-        "tournament": "2006--germany",
+        "tournament": "1998--france",
         "group": "A",
         "round_num": 3
       },
       "home": {
-        "key": "ECU",
-        "code": "ECU",
-        "name": "Ecuador",
-        "fifa_rank": 3,
-        "elo": 1500.0
+        "key": "SCO",
+        "code": "SCO",
+        "name": "Scotland",
+        "fifa_rank": 31,
+        "elo": 1466.4
       },
       "away": {
-        "key": "GER",
-        "code": "GER",
-        "name": "Germany",
+        "key": "MAR",
+        "code": "MAR",
+        "name": "Morocco",
         "fifa_rank": 30,
-        "elo": 1500.0
+        "elo": 1472.7
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 31.8,
-      "prob_draw": 35.6,
-      "prob_away": 32.5,
+      "prob_home": 31.5,
+      "prob_draw": 29.6,
+      "prob_away": 38.9,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 27 位（Ecuador #3 vs Germany #30），纸面实力主队显著占优。",
-        "ELO 分差 0.0 分，对应历史胜率约 50%。",
-        "世界杯参赛经验：Ecuador 2 次 vs Germany 2 次。",
-        "近10场战绩 Ecuador 4胜3平3负，Germany 4胜3平3负；xG差 +0.2 vs +0.2。",
-        "比赛环境：Olympiastadion, Berlin，气候适应度 Ecuador 72% vs Germany 90%。",
-        "阵容深度：Ecuador 整体阵容；伤病风险 14% vs 14%。",
-        "战术对抗：Ecuador（密集防守 + 反击）vs Germany（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
-        "积分榜战意：Ecuador 6分第1名，可接受平局；Germany 6分第2名。"
+        "FIFA排名差距 1 位（Scotland #31 vs Morocco #30），纸面实力接近。",
+        "ELO 分差 -6.2999999999999545 分，对应历史胜率约 49%。",
+        "世界杯参赛经验：Scotland 5 次 vs Morocco 5 次。",
+        "近10场战绩 Scotland 1胜2平3负，Morocco 1胜2平3负；xG差 -0.4 vs -0.6。",
+        "比赛环境：Stade Geoffroy-Guichard, Saint-Étienne，气候适应度 Scotland 72% vs Morocco 72%。",
+        "阵容深度：Scotland 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Scotland（密集防守 + 反击）vs Morocco（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "积分榜战意：Scotland 1分第3名，需抢分；Morocco 1分第4名。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 31.9
+          "prob": 42.9
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 17.5
+          "prob": 20.9
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.1
+          "prob": 14.3
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 11.5
+          "prob": 8.2
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 5.4
+          "prob": 5.6
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.531,
-          "away": 0.46,
+          "home": 0.45,
+          "away": 0.457,
           "weight": 0.25457753439099207
         },
         {
           "name": "近期状态",
-          "home": 0.512,
-          "away": 0.512,
+          "home": 0.343,
+          "away": 0.328,
           "weight": 0.24397013712470073
         },
         {
@@ -779,13 +911,13 @@
         {
           "name": "比赛环境",
           "home": 0.8,
-          "away": 0.9,
+          "away": 0.72,
           "weight": 0.08485917813033071
         },
         {
           "name": "小组赛战意",
-          "home": 0.36,
-          "away": 0.36,
+          "home": 0.66,
+          "away": 0.62,
           "weight": 0.05303698633145669
         },
         {
@@ -800,212 +932,213 @@
       "actual_away": 3,
       "result_hit": false,
       "outcome_hit": true,
-      "tournament": "2006 德国世界杯",
-      "year": 2006
+      "tournament": "1998 法国世界杯",
+      "year": 1998
     },
     {
       "match_id": 6,
-      "title": "Costa Rica vs Poland",
-      "subtitle": "2006 小组赛 A组 · 第3轮",
+      "title": "Brazil vs Norway",
+      "subtitle": "1998 小组赛 A组 · 第3轮",
       "group": "A",
       "played": true,
       "openfootball": {
-        "tournament": "2006--germany",
+        "tournament": "1998--france",
         "group": "A",
         "round_num": 3
       },
       "home": {
-        "key": "CRC",
-        "code": "CRC",
-        "name": "Costa Rica",
-        "fifa_rank": 2,
-        "elo": 1500.0
+        "key": "BRA",
+        "code": "BRA",
+        "name": "Brazil",
+        "fifa_rank": 1,
+        "elo": 1590.2
       },
       "away": {
-        "key": "POL",
-        "code": "POL",
-        "name": "Poland",
-        "fifa_rank": 11,
-        "elo": 1500.0
+        "key": "NOR",
+        "code": "NOR",
+        "name": "Norway",
+        "fifa_rank": 29,
+        "elo": 1475.9
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
-      "score_away": 1,
-      "prob_home": 32.0,
-      "prob_draw": 35.6,
-      "prob_away": 32.4,
+      "predicted_score": "2 : 0",
+      "score_home": 2,
+      "score_away": 0,
+      "prob_home": 60.7,
+      "prob_draw": 21.5,
+      "prob_away": 17.8,
       "prob_under_25": 72.0,
-      "asian_handicap": "亚盘: 平手",
+      "asian_handicap": "亚盘: Brazil-1.0",
       "analysis": [
-        "FIFA排名差距 9 位（Costa Rica #2 vs Poland #11），纸面实力接近。",
-        "ELO 分差 0.0 分，对应历史胜率约 50%。",
-        "世界杯参赛经验：Costa Rica 2 次 vs Poland 2 次。",
-        "近10场战绩 Costa Rica 4胜3平3负，Poland 4胜3平3负；xG差 +0.2 vs +0.2。",
-        "比赛环境：AWD-Arena, Hannover，气候适应度 Costa Rica 72% vs Poland 72%。",
-        "阵容深度：Costa Rica 整体阵容；伤病风险 14% vs 14%。",
-        "战术对抗：Costa Rica（密集防守 + 反击）vs Poland（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
-        "积分榜战意：Costa Rica 0分第4名，需抢分；Poland 0分第3名。"
+        "FIFA排名差距 28 位（Brazil #1 vs Norway #29），纸面实力主队显著占优。",
+        "ELO 分差 114.29999999999995 分，对应历史胜率约 64%。",
+        "世界杯参赛经验：Brazil 5 次 vs Norway 5 次。",
+        "近10场战绩 Brazil 5胜1平0负，Norway 1胜3平2负；xG差 +1.4 vs -0.3。",
+        "比赛环境：Stade Vélodrome, Marseille，气候适应度 Brazil 72% vs Norway 72%。",
+        "阵容深度：Brazil 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Brazil（密集防守 + 反击）vs Norway（密集防守 + 反击），战术维度主队得分 0.60、客队 0.56。",
+        "历史交锋（openfootball）：Northern Ireland 0-3 Brazil。",
+        "积分榜战意：Brazil 6分第1名，可接受平局；Norway 2分第3名。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 31.9
-        },
-        {
-          "home": 0,
-          "away": 1,
-          "prob": 17.4
+          "prob": 25.0
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.2
+          "prob": 24.5
+        },
+        {
+          "home": 2,
+          "away": 0,
+          "prob": 14.8
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 11.5
+          "prob": 9.3
         },
         {
           "home": 0,
-          "away": 2,
-          "prob": 5.4
+          "away": 1,
+          "prob": 7.6
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.534,
-          "away": 0.51,
-          "weight": 0.25457753439099207
+          "home": 0.596,
+          "away": 0.46,
+          "weight": 0.2879054031120889
         },
         {
           "name": "近期状态",
-          "home": 0.512,
-          "away": 0.512,
-          "weight": 0.24397013712470073
+          "home": 0.817,
+          "away": 0.38,
+          "weight": 0.25705839563579364
         },
         {
           "name": "战术风格",
-          "home": 0.5,
+          "home": 0.599,
           "away": 0.56,
-          "weight": 0.21214794532582676
+          "weight": 0.15021151466717683
         },
         {
           "name": "阵容深度",
-          "home": 0.585,
+          "home": 0.595,
           "away": 0.585,
-          "weight": 0.08485917813033071
+          "weight": 0.08941161587331954
         },
         {
           "name": "比赛环境",
           "home": 0.8,
           "away": 0.72,
-          "weight": 0.08485917813033071
+          "weight": 0.08941161587331954
         },
         {
           "name": "小组赛战意",
-          "home": 0.62,
-          "away": 0.66,
-          "weight": 0.05303698633145669
+          "home": 0.36,
+          "away": 0.62,
+          "weight": 0.05588225992082471
         },
         {
           "name": "临场风险",
           "home": 0.915,
           "away": 0.915,
-          "weight": 0.06654904056636236
+          "weight": 0.0701191949174769
         }
       ],
       "actual_score": "1 : 2",
       "actual_home": 1,
       "actual_away": 2,
       "result_hit": false,
-      "outcome_hit": true,
-      "tournament": "2006 德国世界杯",
-      "year": 2006
+      "outcome_hit": false,
+      "tournament": "1998 法国世界杯",
+      "year": 1998
     },
     {
       "match_id": 7,
-      "title": "England vs Paraguay",
-      "subtitle": "2006 小组赛 B组 · 第1轮",
+      "title": "Cameroon vs Austria",
+      "subtitle": "1998 小组赛 B组 · 第1轮",
       "group": "B",
       "played": true,
       "openfootball": {
-        "tournament": "2006--germany",
+        "tournament": "1998--france",
         "group": "B",
         "round_num": 1
       },
       "home": {
-        "key": "ENG",
-        "code": "ENG",
-        "name": "England",
-        "fifa_rank": 22,
-        "elo": 1500.0
+        "key": "CMR",
+        "code": "CMR",
+        "name": "Cameroon",
+        "fifa_rank": 28,
+        "elo": 1483.3
       },
       "away": {
-        "key": "PAR",
-        "code": "PAR",
-        "name": "Paraguay",
+        "key": "AUT",
+        "code": "AUT",
+        "name": "Austria",
         "fifa_rank": 27,
-        "elo": 1500.0
+        "elo": 1483.3
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 31.5,
-      "prob_draw": 37.0,
-      "prob_away": 31.6,
+      "prob_home": 38.5,
+      "prob_draw": 31.9,
+      "prob_away": 29.6,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 5 位（England #22 vs Paraguay #27），纸面实力接近。",
+        "FIFA排名差距 1 位（Cameroon #28 vs Austria #27），纸面实力接近。",
         "ELO 分差 0.0 分，对应历史胜率约 50%。",
-        "世界杯参赛经验：England 2 次 vs Paraguay 2 次。",
-        "近10场战绩 England 4胜3平3负，Paraguay 4胜3平3负；xG差 +0.2 vs +0.2。",
-        "比赛环境：Commerzbank-Arena, Frankfurt，气候适应度 England 72% vs Paraguay 72%。",
-        "阵容深度：England 整体阵容；伤病风险 14% vs 14%。",
-        "战术对抗：England（密集防守 + 反击）vs Paraguay（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "世界杯参赛经验：Cameroon 5 次 vs Austria 5 次。",
+        "近10场战绩 Cameroon 1胜1平3负，Austria 1胜0平2负；xG差 -1.8 vs -0.2。",
+        "比赛环境：Stade de Toulouse, Toulouse，气候适应度 Cameroon 72% vs Austria 72%。",
+        "阵容深度：Cameroon 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Cameroon（密集防守 + 反击）vs Austria（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
         "小组赛首轮：各队战术偏保守，平局概率高于赛季均值；强队倾向控分而非大胜。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 34.3
+          "prob": 53.2
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.6
+          "prob": 23.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 17.4
-        },
-        {
-          "home": 1,
-          "away": 1,
-          "prob": 10.8
+          "prob": 9.6
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 5.1
+          "prob": 5.5
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 4.8
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.481,
-          "away": 0.468,
+          "home": 0.467,
+          "away": 0.47,
           "weight": 0.27249864281601516
         },
         {
           "name": "近期状态",
-          "home": 0.512,
-          "away": 0.512,
+          "home": 0.254,
+          "away": 0.387,
           "weight": 0.19301987199467743
         },
         {
@@ -1039,94 +1172,94 @@
           "weight": 0.07123379240208146
         }
       ],
-      "actual_score": "1 : 0",
+      "actual_score": "1 : 1",
       "actual_home": 1,
-      "actual_away": 0,
-      "result_hit": false,
-      "outcome_hit": false,
-      "tournament": "2006 德国世界杯",
-      "year": 2006
+      "actual_away": 1,
+      "result_hit": true,
+      "outcome_hit": true,
+      "tournament": "1998 法国世界杯",
+      "year": 1998
     },
     {
       "match_id": 8,
-      "title": "Trinidad and Tobago vs Sweden",
-      "subtitle": "2006 小组赛 B组 · 第1轮",
+      "title": "Italy vs Chile",
+      "subtitle": "1998 小组赛 B组 · 第1轮",
       "group": "B",
       "played": true,
       "openfootball": {
-        "tournament": "2006--germany",
+        "tournament": "1998--france",
         "group": "B",
         "round_num": 1
       },
       "home": {
-        "key": "TRI",
-        "code": "TRI",
-        "name": "Trinidad and Tobago",
-        "fifa_rank": 15,
-        "elo": 1500.0
+        "key": "ITA",
+        "code": "ITA",
+        "name": "Italy",
+        "fifa_rank": 4,
+        "elo": 1540.4
       },
       "away": {
-        "key": "SWE",
-        "code": "SWE",
-        "name": "Sweden",
-        "fifa_rank": 9,
+        "key": "CHI",
+        "code": "CHI",
+        "name": "Chile",
+        "fifa_rank": 22,
         "elo": 1500.0
       },
       "predicted_score": "1 : 1",
       "score_home": 1,
       "score_away": 1,
-      "prob_home": 30.6,
-      "prob_draw": 37.0,
-      "prob_away": 32.5,
+      "prob_home": 39.5,
+      "prob_draw": 28.7,
+      "prob_away": 31.8,
       "prob_under_25": 72.0,
       "asian_handicap": "亚盘: 平手",
       "analysis": [
-        "FIFA排名差距 6 位（Trinidad and Tobago #15 vs Sweden #9），纸面实力接近。",
-        "ELO 分差 0.0 分，对应历史胜率约 50%。",
-        "世界杯参赛经验：Trinidad and Tobago 2 次 vs Sweden 2 次。",
-        "近10场战绩 Trinidad and Tobago 4胜3平3负，Sweden 4胜3平3负；xG差 +0.2 vs +0.2。",
-        "比赛环境：Signal Iduna Park, Dortmund，气候适应度 Trinidad and Tobago 72% vs Sweden 72%。",
-        "阵容深度：Trinidad and Tobago 整体阵容；伤病风险 14% vs 14%。",
-        "战术对抗：Trinidad and Tobago（密集防守 + 反击）vs Sweden（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
+        "FIFA排名差距 18 位（Italy #4 vs Chile #22），纸面实力主队略优。",
+        "ELO 分差 40.40000000000009 分，对应历史胜率约 55%。",
+        "世界杯参赛经验：Italy 5 次 vs Chile 5 次。",
+        "近10场战绩 Italy 3胜2平1负，Chile 4胜3平3负；xG差 +0.5 vs +0.2。",
+        "比赛环境：Parc Lescure, Bordeaux，气候适应度 Italy 72% vs Chile 72%。",
+        "阵容深度：Italy 整体阵容；伤病风险 14% vs 14%。",
+        "战术对抗：Italy（密集防守 + 反击）vs Chile（密集防守 + 反击），战术维度主队得分 0.50、客队 0.56。",
         "小组赛首轮：各队战术偏保守，平局概率高于赛季均值；强队倾向控分而非大胜。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 34.3
-        },
-        {
-          "home": 0,
-          "away": 1,
-          "prob": 18.0
+          "prob": 30.3
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.0
+          "prob": 17.3
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 16.9
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 10.8
+          "prob": 11.9
         },
         {
-          "home": 0,
-          "away": 2,
-          "prob": 5.3
+          "home": 2,
+          "away": 0,
+          "prob": 5.6
         }
       ],
       "dimensions": [
         {
           "name": "基本面实力",
-          "home": 0.499,
-          "away": 0.515,
+          "home": 0.561,
+          "away": 0.493,
           "weight": 0.27249864281601516
         },
         {
           "name": "近期状态",
-          "home": 0.512,
+          "home": 0.594,
           "away": 0.512,
           "weight": 0.19301987199467743
         },
@@ -1138,7 +1271,7 @@
         },
         {
           "name": "阵容深度",
-          "home": 0.585,
+          "home": 0.595,
           "away": 0.585,
           "weight": 0.09991616903253892
         },
@@ -1151,7 +1284,7 @@
         {
           "name": "小组赛战意",
           "home": 0.5,
-          "away": 0.5,
+          "away": 0.47,
           "weight": 0.04541644046933587
         },
         {
@@ -1161,13 +1294,13 @@
           "weight": 0.07123379240208146
         }
       ],
-      "actual_score": "0 : 0",
-      "actual_home": 0,
-      "actual_away": 0,
+      "actual_score": "2 : 2",
+      "actual_home": 2,
+      "actual_away": 2,
       "result_hit": false,
       "outcome_hit": true,
-      "tournament": "2006 德国世界杯",
-      "year": 2006
+      "tournament": "1998 法国世界杯",
+      "year": 1998
     }
   ]
 }

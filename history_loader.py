@@ -8,13 +8,24 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+from football_txt_parser import (
+    GROUP_HEADER,
+    GROUP_SECTION,
+    KNOCKOUT_MARK,
+    parse_score_line,
+)
 from team_registry import team_key
 
 ROOT = Path(__file__).parent
 OF_DIR = ROOT / "data" / "openfootball"
 
-# 按时间顺序排列，用于 walk-forward 回测
-TOURNAMENTS: list[dict[str, Any]] = [
+# ELO / H2H 先验：尽可能早的届次（仅用于赛前信息，不一定参与回测评分）
+ELO_PRIOR_TOURNAMENTS: list[dict[str, Any]] = [
+    {"id": "1986--mexico", "year": 1986, "hosts": {"MEX"}, "label": "1986 墨西哥世界杯"},
+    {"id": "1990--italy", "year": 1990, "hosts": {"ITA"}, "label": "1990 意大利世界杯"},
+    {"id": "1994--usa", "year": 1994, "hosts": {"USA"}, "label": "1994 美国世界杯"},
+    {"id": "1998--france", "year": 1998, "hosts": {"FRA"}, "label": "1998 法国世界杯"},
+    {"id": "2002--south-korea-n-japan", "year": 2002, "hosts": {"KOR", "JPN"}, "label": "2002 日韩世界杯"},
     {"id": "2006--germany", "year": 2006, "hosts": {"GER"}, "label": "2006 德国世界杯"},
     {"id": "2010--south-africa", "year": 2010, "hosts": {"RSA"}, "label": "2010 南非世界杯"},
     {"id": "2014--brazil", "year": 2014, "hosts": {"BRA"}, "label": "2014 巴西世界杯"},
@@ -22,21 +33,11 @@ TOURNAMENTS: list[dict[str, Any]] = [
     {"id": "2022--qatar", "year": 2022, "hosts": {"QAT"}, "label": "2022 卡塔尔世界杯"},
 ]
 
-GROUP_HEADER = re.compile(r"^Group\s+([A-H])\s*\|\s*(.+)$")
-GROUP_SECTION = re.compile(r"^▪\s*Group\s+([A-H])\s*$", re.I)
-KNOCKOUT_MARK = re.compile(
-    r"^(Round of|Knockout|Quarter|Semi-?final|Final|▪\s*Round|Third place)",
-    re.I,
-)
-MATCH_SCORE = re.compile(
-    r"^\s*(?:\w{3}\s+\w{3}\s+\d{1,2}\s+)?"
-    r"(?:\d{2}:\d{2}(?:\s+UTC[^\s@]+)?\s+)?"
-    r"(.+?)\s+(\d+)-(\d+)\s*(?:\(\s*(\d+)-(\d+)\s*\))?\s+(.+?)\s+@\s*(.+?)\s*$"
-)
-MATCH_SCORE_V = re.compile(
-    r"^\s*(?:\d{2}:\d{2}\s+UTC[^\s@]+\s+)?"
-    r"(.+?)\s+v\s+(.+?)\s+(\d+)-(\d+)\s*(?:\(\s*(\d+)-(\d+)\s*\))?\s+@\s*(.+?)\s*$"
-)
+# walk-forward 回测评分区间（32 队 8 组，与 2006–2022 / 2026 更接近）
+BACKTEST_TOURNAMENTS: list[dict[str, Any]] = ELO_PRIOR_TOURNAMENTS[3:]  # 1998–2022
+
+# 兼容旧 import
+TOURNAMENTS = BACKTEST_TOURNAMENTS
 
 
 @dataclass
@@ -114,20 +115,13 @@ def parse_group_stage_matches(tournament: dict[str, Any], cup_path: Path) -> Tou
         if not current_group:
             continue
 
-        t1 = t2 = gh = ga = venue = None
-        if " v " in line:
-            mv = MATCH_SCORE_V.match(line.strip())
-            if mv:
-                t1, t2, gh, ga, _, _, venue = mv.groups()
-        else:
-            m = MATCH_SCORE.match(line)
-            if m:
-                t1, gh, ga, _, _, t2, venue = m.groups()
-
-        if t1 is None or t2 is None:
+        row = parse_score_line(line)
+        if not row:
             continue
 
-        t1, t2 = t1.strip(), t2.strip()
+        t1, t2 = row["team1"], row["team2"]
+        gh, ga = row["score_home"], row["score_away"]
+        venue = row["venue"]
         k1, k2 = team_key(t1), team_key(t2)
         if current_group not in group_keys:
             continue
@@ -175,16 +169,17 @@ def parse_group_stage_matches(tournament: dict[str, Any], cup_path: Path) -> Tou
 
 def load_all_tournaments() -> list[TournamentData]:
     out: list[TournamentData] = []
-    for t in TOURNAMENTS:
+    for t in BACKTEST_TOURNAMENTS:
         path = OF_DIR / t["id"] / "cup.txt"
         if path.exists():
             out.append(parse_group_stage_matches(t, path))
     return out
 
 
-def cup_files_before(tournament_id: str) -> list[Path]:
+def cup_files_before(tournament_id: str, *, include_elo_priors: bool = True) -> list[Path]:
     files: list[Path] = []
-    for t in TOURNAMENTS:
+    source = ELO_PRIOR_TOURNAMENTS if include_elo_priors else BACKTEST_TOURNAMENTS
+    for t in source:
         if t["id"] == tournament_id:
             break
         p = OF_DIR / t["id"] / "cup.txt"

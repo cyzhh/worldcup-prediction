@@ -10,9 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from history_loader import TOURNAMENTS, cup_files_before, load_all_tournaments, to_predictor_match
-from historical_teams import build_team_profiles
+from historical_teams import build_team_profiles, refresh_teams_form
 from model_config import ModelConfig, elo_gap_bucket, save_config
 from openfootball_loader import build_h2h_from_history
+from elo_history import parse_cup_txt_results
 from predictor import predict_match, result_to_dict
 from standings import compute_standings, motivation_context
 
@@ -65,11 +66,18 @@ def run_tournament_backtest(
         group_names=td.groups,
     )
     h2h = build_h2h_from_history(prior_files)
+    prior_results: list[dict[str, Any]] = []
+    for path in prior_files:
+        if path.exists():
+            for r in parse_cup_txt_results(path.read_text(encoding="utf-8")):
+                prior_results.append(r)
 
     played_internal: list[dict[str, Any]] = []
+    current_results: list[dict[str, Any]] = []
     results: list[dict[str, Any]] = []
 
     for i, hm in enumerate(td.matches, start=1):
+        refresh_teams_form(teams, prior_results, current_results)
         standings = _build_standings_from_played(played_internal, td.group_keys)
         motivation = {
             hm.home_key: motivation_context(hm.home_key, hm.group, standings, hm.round_num),
@@ -91,6 +99,14 @@ def run_tournament_backtest(
                 "away": hm.away_key,
                 "played": True,
                 "actual_score": {"home": hm.score_home, "away": hm.score_away},
+            }
+        )
+        current_results.append(
+            {
+                "team1": hm.raw_home or hm.home_name,
+                "team2": hm.raw_away or hm.away_name,
+                "score_home": hm.score_home,
+                "score_away": hm.score_away,
             }
         )
 
@@ -172,27 +188,30 @@ def calibrate_params() -> ModelConfig:
     round1_boosts = [0.02, 0.04, 0.06]
     shrinkages = [0.0, 0.08, 0.12, 0.16]
     elo_strongs = [0.60, 0.65, 0.68, 0.72]
+    draw_blends = [0.35, 0.45, 0.55]
 
     for db in draw_bases:
         for rb in round1_boosts:
             for sh in shrinkages:
                 for es in elo_strongs:
-                    cfg = ModelConfig(
-                        group_stage_draw_base=db,
-                        group_stage_round1_draw_boost=rb,
-                        historical_shrinkage=sh,
-                        elo_blend_strong=es,
-                    )
-                    preds: list[dict[str, Any]] = []
-                    for td in tournaments:
-                        tmeta = meta_by_id[td.meta["id"]]
-                        preds.extend(run_tournament_backtest(td, tmeta, cfg))
-                    metrics = aggregate_metrics(preds)
-                    score = _score_for_calibration(metrics)
-                    if score > best_score:
-                        best_score = score
-                        best_cfg = cfg
-                        best_metrics = metrics
+                    for dbl in draw_blends:
+                        cfg = ModelConfig(
+                            group_stage_draw_base=db,
+                            group_stage_round1_draw_boost=rb,
+                            historical_shrinkage=sh,
+                            elo_blend_strong=es,
+                            draw_mass_blend=dbl,
+                        )
+                        preds: list[dict[str, Any]] = []
+                        for td in tournaments:
+                            tmeta = meta_by_id[td.meta["id"]]
+                            preds.extend(run_tournament_backtest(td, tmeta, cfg))
+                        metrics = aggregate_metrics(preds)
+                        score = _score_for_calibration(metrics)
+                        if score > best_score:
+                            best_score = score
+                            best_cfg = cfg
+                            best_metrics = metrics
 
     best_cfg.wdl_priors_by_elo_gap = best_metrics.get("wdl_priors_by_elo_gap", {})
     if best_cfg.historical_shrinkage == 0.0 and best_cfg.wdl_priors_by_elo_gap:
@@ -210,7 +229,7 @@ def run_full_backtest(calibrate: bool = True) -> dict[str, Any]:
     meta_by_id = {t["id"]: t for t in TOURNAMENTS}
 
     if calibrate:
-        print(">>> 历史回测参数校准（五届世界杯 walk-forward）...")
+        print(">>> 历史回测参数校准（1998–2022 七届 walk-forward，ELO 先验自 1986 起）...")
         cfg = calibrate_params()
         save_config(cfg)
         print(f"    最优平局基准: {cfg.group_stage_draw_base}, shrinkage: {cfg.historical_shrinkage}")
@@ -239,7 +258,7 @@ def run_full_backtest(calibrate: bool = True) -> dict[str, Any]:
     overall = aggregate_metrics(all_preds)
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "method": "walk-forward group stage backtest (2006-2022)",
+        "method": "walk-forward group stage backtest (1998-2022, ELO priors from 1986+)",
         "calibration": cfg.to_dict(),
         "overall": overall,
         "by_tournament": by_tournament,
