@@ -1,6 +1,6 @@
 {
   "meta": {
-    "built_at": "2026-06-13T13:42:53.183567+00:00",
+    "built_at": "2026-06-14T13:17:14.729039+00:00",
     "tournament": "World Cup 2026",
     "sources": [
       "https://github.com/openfootball/worldcup",
@@ -3036,9 +3036,15 @@
       "away": "SUI",
       "home_name": "Qatar",
       "away_name": "Switzerland",
-      "played": false,
-      "actual_score": null,
-      "actual_ht": null,
+      "played": true,
+      "actual_score": {
+        "home": 1,
+        "away": 1
+      },
+      "actual_ht": [
+        0,
+        1
+      ],
       "venue_altitude_m": 0,
       "travel_km": {
         "QAT": 0.0,
@@ -3231,9 +3237,15 @@
       "away": "MAR",
       "home_name": "Brazil",
       "away_name": "Morocco",
-      "played": false,
-      "actual_score": null,
-      "actual_ht": null,
+      "played": true,
+      "actual_score": {
+        "home": 1,
+        "away": 1
+      },
+      "actual_ht": [
+        1,
+        1
+      ],
       "venue_altitude_m": 0,
       "travel_km": {
         "BRA": 0.0,
@@ -3270,9 +3282,15 @@
       "away": "SCO",
       "home_name": "Haiti",
       "away_name": "Scotland",
-      "played": false,
-      "actual_score": null,
-      "actual_ht": null,
+      "played": true,
+      "actual_score": {
+        "home": 0,
+        "away": 1
+      },
+      "actual_ht": [
+        0,
+        1
+      ],
       "venue_altitude_m": 0,
       "travel_km": {
         "HAI": 0.0,
@@ -3510,9 +3528,15 @@
       "away": "TUR",
       "home_name": "Australia",
       "away_name": "Turkey",
-      "played": false,
-      "actual_score": null,
-      "actual_ht": null,
+      "played": true,
+      "actual_score": {
+        "home": 2,
+        "away": 0
+      },
+      "actual_ht": [
+        1,
+        0
+      ],
       "venue_altitude_m": 0,
       "travel_km": {
         "AUS": 0.0,
@@ -5643,80 +5667,80 @@
       },
       {
         "team": "QAT",
-        "played": 0,
+        "played": 1,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
+        "gf": 1,
+        "ga": 1,
         "gd": 0,
-        "pts": 0,
+        "pts": 1,
         "rank": 3,
         "qualification_zone": "best_third"
       },
       {
         "team": "SUI",
-        "played": 0,
+        "played": 1,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
+        "gf": 1,
+        "ga": 1,
         "gd": 0,
-        "pts": 0,
+        "pts": 1,
         "rank": 4,
         "qualification_zone": "out"
       }
     ],
     "C": [
       {
-        "team": "BRA",
-        "played": 0,
-        "w": 0,
+        "team": "SCO",
+        "played": 1,
+        "w": 1,
         "d": 0,
         "l": 0,
-        "gf": 0,
+        "gf": 1,
         "ga": 0,
-        "gd": 0,
-        "pts": 0,
+        "gd": 1,
+        "pts": 3,
         "rank": 1,
         "qualification_zone": "direct"
       },
       {
-        "team": "MAR",
-        "played": 0,
+        "team": "BRA",
+        "played": 1,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
+        "gf": 1,
+        "ga": 1,
         "gd": 0,
-        "pts": 0,
+        "pts": 1,
         "rank": 2,
         "qualification_zone": "direct"
       },
       {
-        "team": "HAI",
-        "played": 0,
+        "team": "MAR",
+        "played": 1,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
+        "gf": 1,
+        "ga": 1,
         "gd": 0,
-        "pts": 0,
+        "pts": 1,
         "rank": 3,
         "qualification_zone": "best_third"
       },
       {
-        "team": "SCO",
-        "played": 0,
+        "team": "HAI",
+        "played": 1,
         "w": 0,
         "d": 0,
-        "l": 0,
+        "l": 1,
         "gf": 0,
-        "ga": 0,
-        "gd": 0,
+        "ga": 1,
+        "gd": -1,
         "pts": 0,
         "rank": 4,
         "qualification_zone": "out"
@@ -5738,26 +5762,26 @@
       },
       {
         "team": "AUS",
-        "played": 0,
-        "w": 0,
+        "played": 1,
+        "w": 1,
         "d": 0,
         "l": 0,
-        "gf": 0,
+        "gf": 2,
         "ga": 0,
-        "gd": 0,
-        "pts": 0,
+        "gd": 2,
+        "pts": 3,
         "rank": 2,
         "qualification_zone": "direct"
       },
       {
         "team": "TUR",
-        "played": 0,
+        "played": 1,
         "w": 0,
         "d": 0,
-        "l": 0,
+        "l": 1,
         "gf": 0,
-        "ga": 0,
-        "gd": 0,
+        "ga": 2,
+        "gd": -2,
         "pts": 0,
         "rank": 3,
         "qualification_zone": "best_third"
