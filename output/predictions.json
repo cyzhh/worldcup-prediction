@@ -5,7 +5,7 @@
     "date_range": "2026.06.11 - 06.27",
     "subtitle": "awesome-football 多源融合 · 赛程/球员/球场/ELO/H2H/积分榜",
     "data_source": "https://github.com/openfootball/awesome-football",
-    "db_built_at": "2026-06-14T13:17:14.729039+00:00",
+    "db_built_at": "2026-06-15T14:32:41.727463+00:00",
     "sources": [
       "https://github.com/openfootball/worldcup",
       "https://github.com/openfootball/worldcup.json",
@@ -313,52 +313,52 @@
     "E": [
       {
         "team": "GER",
-        "played": 0,
-        "w": 0,
+        "played": 1,
+        "w": 1,
         "d": 0,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0,
-        "pts": 0,
+        "gf": 7,
+        "ga": 1,
+        "gd": 6,
+        "pts": 3,
         "rank": 1,
         "qualification_zone": "direct"
       },
       {
-        "team": "CUW",
-        "played": 0,
-        "w": 0,
+        "team": "CIV",
+        "played": 1,
+        "w": 1,
         "d": 0,
         "l": 0,
-        "gf": 0,
+        "gf": 1,
         "ga": 0,
-        "gd": 0,
-        "pts": 0,
+        "gd": 1,
+        "pts": 3,
         "rank": 2,
         "qualification_zone": "direct"
       },
       {
-        "team": "CIV",
-        "played": 0,
+        "team": "ECU",
+        "played": 1,
         "w": 0,
         "d": 0,
-        "l": 0,
+        "l": 1,
         "gf": 0,
-        "ga": 0,
-        "gd": 0,
+        "ga": 1,
+        "gd": -1,
         "pts": 0,
         "rank": 3,
         "qualification_zone": "best_third"
       },
       {
-        "team": "ECU",
-        "played": 0,
+        "team": "CUW",
+        "played": 1,
         "w": 0,
         "d": 0,
-        "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0,
+        "l": 1,
+        "gf": 1,
+        "ga": 7,
+        "gd": -6,
         "pts": 0,
         "rank": 4,
         "qualification_zone": "out"
@@ -366,53 +366,53 @@
     ],
     "F": [
       {
-        "team": "NED",
-        "played": 0,
-        "w": 0,
+        "team": "SWE",
+        "played": 1,
+        "w": 1,
         "d": 0,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0,
-        "pts": 0,
+        "gf": 5,
+        "ga": 1,
+        "gd": 4,
+        "pts": 3,
         "rank": 1,
         "qualification_zone": "direct"
       },
       {
-        "team": "JPN",
-        "played": 0,
+        "team": "NED",
+        "played": 1,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
+        "gf": 2,
+        "ga": 2,
         "gd": 0,
-        "pts": 0,
+        "pts": 1,
         "rank": 2,
         "qualification_zone": "direct"
       },
       {
-        "team": "SWE",
-        "played": 0,
+        "team": "JPN",
+        "played": 1,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
+        "gf": 2,
+        "ga": 2,
         "gd": 0,
-        "pts": 0,
+        "pts": 1,
         "rank": 3,
         "qualification_zone": "best_third"
       },
       {
         "team": "TUN",
-        "played": 0,
+        "played": 1,
         "w": 0,
         "d": 0,
-        "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0,
+        "l": 1,
+        "gf": 1,
+        "ga": 5,
+        "gd": -4,
         "pts": 0,
         "rank": 4,
         "qualification_zone": "out"
@@ -17225,8 +17225,8 @@
         "fifa_rank": 56,
         "elo": 1461.1
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 70.2,
       "prob_draw": 20.3,
@@ -17332,7 +17332,7 @@
       "actual_score": "2 : 0",
       "actual_home": 2,
       "actual_away": 0,
-      "result_hit": true,
+      "result_hit": false,
       "outcome_hit": true
     },
     {
@@ -17362,9 +17362,9 @@
         "fifa_rank": 38,
         "elo": 1587.4
       },
-      "predicted_score": "1 : 1",
+      "predicted_score": "1 : 0",
       "score_home": 1,
-      "score_away": 1,
+      "score_away": 0,
       "prob_home": 41.2,
       "prob_draw": 36.0,
       "prob_away": 22.8,
@@ -17469,7 +17469,7 @@
       "actual_home": 2,
       "actual_away": 1,
       "result_hit": false,
-      "outcome_hit": false
+      "outcome_hit": true
     },
     {
       "match_id": 7,
@@ -17634,8 +17634,8 @@
         "fifa_rank": 52,
         "elo": 1472.9
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 70.0,
       "prob_draw": 21.0,
@@ -17770,9 +17770,9 @@
         "fifa_rank": 19,
         "elo": 1815.8
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 12.9,
       "prob_draw": 20.5,
       "prob_away": 66.7,
@@ -18042,9 +18042,9 @@
         "fifa_rank": 36,
         "elo": 1620.0
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 15.4,
       "prob_draw": 28.5,
       "prob_away": 56.1,
@@ -18148,7 +18148,7 @@
       "actual_score": "0 : 1",
       "actual_home": 0,
       "actual_away": 1,
-      "result_hit": false,
+      "result_hit": true,
       "outcome_hit": true
     },
     {
@@ -18178,9 +18178,9 @@
         "fifa_rank": 42,
         "elo": 1580.0
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
-      "score_away": 1,
+      "predicted_score": "0 : 0",
+      "score_home": 0,
+      "score_away": 0,
       "prob_home": 36.1,
       "prob_draw": 36.4,
       "prob_away": 27.5,
@@ -18292,7 +18292,7 @@
       "title": "Germany vs Curaçao",
       "subtitle": "6月14日 · Matchday 4 · Group E",
       "group": "E",
-      "played": false,
+      "played": true,
       "openfootball": {
         "group": "Group E",
         "round": "Matchday 4",
@@ -18314,8 +18314,8 @@
         "fifa_rank": 90,
         "elo": 1280.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 72.3,
       "prob_draw": 19.7,
@@ -18416,14 +18416,19 @@
         "prob_away": 2.0,
         "verdict": "",
         "source": "onsidearena.com"
-      }
+      },
+      "actual_score": "7 : 1",
+      "actual_home": 7,
+      "actual_away": 1,
+      "result_hit": false,
+      "outcome_hit": true
     },
     {
       "match_id": 31,
       "title": "Netherlands vs Japan",
       "subtitle": "6月14日 · Matchday 4 · Group F",
       "group": "F",
-      "played": false,
+      "played": true,
       "openfootball": {
         "group": "Group F",
         "round": "Matchday 4",
@@ -18445,8 +18450,8 @@
         "fifa_rank": 18,
         "elo": 1748.4
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 68.2,
       "prob_draw": 19.1,
@@ -18548,14 +18553,19 @@
         "prob_away": 20.0,
         "verdict": "",
         "source": "onsidearena.com"
-      }
+      },
+      "actual_score": "2 : 2",
+      "actual_home": 2,
+      "actual_away": 2,
+      "result_hit": false,
+      "outcome_hit": false
     },
     {
       "match_id": 26,
       "title": "Ivory Coast vs Ecuador",
       "subtitle": "6月14日 · Matchday 4 · Group E",
       "group": "E",
-      "played": false,
+      "played": true,
       "openfootball": {
         "group": "Group E",
         "round": "Matchday 4",
@@ -18577,9 +18587,9 @@
         "fifa_rank": 31,
         "elo": 1698.4
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
-      "score_away": 1,
+      "predicted_score": "0 : 0",
+      "score_home": 0,
+      "score_away": 0,
       "prob_home": 34.0,
       "prob_draw": 37.1,
       "prob_away": 28.9,
@@ -18679,14 +18689,19 @@
         "prob_away": 53.0,
         "verdict": "",
         "source": "onsidearena.com"
-      }
+      },
+      "actual_score": "1 : 0",
+      "actual_home": 1,
+      "actual_away": 0,
+      "result_hit": false,
+      "outcome_hit": false
     },
     {
       "match_id": 32,
       "title": "Sweden vs Tunisia",
       "subtitle": "6月14日 · Matchday 4 · Group F",
       "group": "F",
-      "played": false,
+      "played": true,
       "openfootball": {
         "group": "Group F",
         "round": "Matchday 4",
@@ -18810,7 +18825,12 @@
         "prob_away": 26.0,
         "verdict": "",
         "source": "onsidearena.com"
-      }
+      },
+      "actual_score": "5 : 1",
+      "actual_home": 5,
+      "actual_away": 1,
+      "result_hit": false,
+      "outcome_hit": true
     },
     {
       "match_id": 43,
@@ -18839,8 +18859,8 @@
         "fifa_rank": 65,
         "elo": 1400.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 72.5,
       "prob_draw": 19.6,
@@ -18970,8 +18990,8 @@
         "fifa_rank": 33,
         "elo": 1596.2
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 71.9,
       "prob_draw": 18.5,
@@ -19233,8 +19253,8 @@
         "fifa_rank": 103,
         "elo": 1279.5
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 66.4,
       "prob_draw": 23.5,
@@ -19495,9 +19515,9 @@
         "fifa_rank": 45,
         "elo": 1550.0
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 15.9,
       "prob_draw": 22.2,
       "prob_away": 61.9,
@@ -19626,8 +19646,8 @@
         "fifa_rank": 43,
         "elo": 1570.2
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 72.5,
       "prob_draw": 18.0,
@@ -19757,8 +19777,8 @@
         "fifa_rank": 70,
         "elo": 1370.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 70.6,
       "prob_draw": 20.3,
@@ -19888,8 +19908,8 @@
         "fifa_rank": 62,
         "elo": 1415.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 70.9,
       "prob_draw": 20.3,
@@ -20019,9 +20039,9 @@
         "fifa_rank": 10,
         "elo": 1885.5
       },
-      "predicted_score": "1 : 1",
+      "predicted_score": "1 : 0",
       "score_home": 1,
-      "score_away": 1,
+      "score_away": 0,
       "prob_home": 41.3,
       "prob_draw": 33.8,
       "prob_away": 24.9,
@@ -20150,9 +20170,9 @@
         "fifa_rank": 41,
         "elo": 1563.3
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
-      "score_away": 1,
+      "predicted_score": "0 : 0",
+      "score_home": 0,
+      "score_away": 0,
       "prob_home": 35.3,
       "prob_draw": 38.7,
       "prob_away": 26.0,
@@ -20412,9 +20432,9 @@
         "fifa_rank": 56,
         "elo": 1461.1
       },
-      "predicted_score": "1 : 1",
+      "predicted_score": "1 : 0",
       "score_home": 1,
-      "score_away": 1,
+      "score_away": 0,
       "prob_home": 49.6,
       "prob_draw": 31.1,
       "prob_away": 19.2,
@@ -20544,8 +20564,8 @@
         "fifa_rank": 75,
         "elo": 1399.3
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 72.2,
       "prob_draw": 18.1,
@@ -20676,9 +20696,9 @@
         "fifa_rank": 35,
         "elo": 1599.9
       },
-      "predicted_score": "1 : 1",
+      "predicted_score": "1 : 0",
       "score_home": 1,
-      "score_away": 1,
+      "score_away": 0,
       "prob_home": 44.3,
       "prob_draw": 36.8,
       "prob_away": 18.9,
@@ -20808,8 +20828,8 @@
         "fifa_rank": 23,
         "elo": 1696.5
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 61.9,
       "prob_draw": 21.2,
@@ -20941,8 +20961,8 @@
         "fifa_rank": 24,
         "elo": 1678.9
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 62.0,
       "prob_draw": 21.3,
@@ -21073,9 +21093,9 @@
         "fifa_rank": 13,
         "elo": 1867.8
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 17.8,
       "prob_draw": 25.1,
       "prob_away": 57.1,
@@ -21205,9 +21225,9 @@
         "fifa_rank": 52,
         "elo": 1472.9
       },
-      "predicted_score": "1 : 1",
+      "predicted_score": "1 : 0",
       "score_home": 1,
-      "score_away": 1,
+      "score_away": 0,
       "prob_home": 45.8,
       "prob_draw": 33.4,
       "prob_away": 20.8,
@@ -21469,53 +21489,53 @@
         "fifa_rank": 32,
         "elo": 1698.6
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
-      "prob_home": 68.7,
-      "prob_draw": 18.7,
-      "prob_away": 12.7,
-      "prob_under_25": 65.9,
-      "prob_over_25": 34.1,
+      "prob_home": 66.9,
+      "prob_draw": 19.0,
+      "prob_away": 14.2,
+      "prob_under_25": 65.3,
+      "prob_over_25": 34.7,
       "asian_handicap": "亚盘: 荷兰-1.0",
-      "strength_diff": 0.1393,
+      "strength_diff": 0.1127,
       "asian_line_home": -1.0,
       "analysis": [
         "FIFA排名差距 25 位（荷兰 #7 vs 瑞典 #32），纸面实力主队略优。",
         "ELO 分差 293.60000000000014 分，对应历史胜率约 85%。",
         "世界杯参赛经验：荷兰 11 次 vs 瑞典 12 次。",
-        "近10场战绩 荷兰 5胜1平0负，瑞典 3胜2平1负；xG差 +1.3 vs +0.6。",
+        "近10场战绩 荷兰 4胜2平0负，瑞典 3胜2平1负；xG差 +1.1 vs +1.1。",
         "比赛环境：Houston，气候适应度 荷兰 78% vs 瑞典 74%。",
         "阵容深度：荷兰 Ryan Gravenberch、Tijjani Reijnders、Jan Paul van Hecke；伤病风险 8% vs 7%。",
         "战术对抗：荷兰（高位压迫 + 控球组织）vs 瑞典（中场绞杀 + 定位球），战术维度主队得分 0.57、客队 0.43。",
         "旅行成本：荷兰 距上场 376 km，瑞典 648 km（openfootball 赛程 + 球场坐标）。",
-        "积分榜战意：荷兰 0分第1名；瑞典 0分第3名。"
+        "积分榜战意：荷兰 1分第2名；瑞典 3分第1名。"
       ],
       "score_probs": [
         {
           "home": 1,
           "away": 0,
-          "prob": 17.9
+          "prob": 16.8
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 15.0
+          "prob": 14.6
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 14.2
+          "prob": 12.7
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 11.8
+          "prob": 12.7
         },
         {
           "home": 2,
           "away": 1,
-          "prob": 7.8
+          "prob": 8.1
         }
       ],
       "dimensions": [
@@ -21527,8 +21547,8 @@
         },
         {
           "name": "近期状态",
-          "home": 0.811,
-          "away": 0.6,
+          "home": 0.736,
+          "away": 0.63,
           "weight": 0.250965991857397
         },
         {
@@ -21601,53 +21621,53 @@
         "fifa_rank": 37,
         "elo": 1636.6
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
-      "prob_home": 66.0,
-      "prob_draw": 20.4,
-      "prob_away": 13.5,
+      "prob_home": 67.4,
+      "prob_draw": 19.4,
+      "prob_away": 13.2,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 德国-1.0",
-      "strength_diff": 0.127,
+      "strength_diff": 0.1197,
       "asian_line_home": -1.0,
       "analysis": [
         "FIFA排名差距 29 位（德国 #8 vs 科特迪瓦 #37），纸面实力主队显著占优。",
         "ELO 分差 242.0 分，对应历史胜率约 80%。",
         "世界杯参赛经验：德国 20 次 vs 科特迪瓦 4 次。",
-        "近10场战绩 德国 3胜1平2负，科特迪瓦 2胜1平3负；xG差 +0.3 vs -0.1。",
+        "近10场战绩 德国 3胜1平2负，科特迪瓦 3胜0平3负；xG差 +1.1 vs +0.1。",
         "比赛环境：Toronto，气候适应度 德国 78% vs 科特迪瓦 74%。",
         "阵容深度：德国 Nico Schlotterbeck、Aleksandar Pavlovic、Nadiem Amiri；伤病风险 8% vs 6%。",
         "战术对抗：德国（高位压迫 + 控球组织）vs 科特迪瓦（中场绞杀 + 定位球），战术维度主队得分 0.57、客队 0.43。",
         "旅行成本：德国 距上场 2100 km，科特迪瓦 544 km（openfootball 赛程 + 球场坐标）。",
-        "积分榜战意：德国 0分第1名；科特迪瓦 0分第3名。"
+        "积分榜战意：德国 3分第1名；科特迪瓦 3分第2名。"
       ],
       "score_probs": [
         {
-          "home": 0,
-          "away": 0,
-          "prob": 25.0
-        },
-        {
           "home": 1,
           "away": 0,
-          "prob": 24.2
+          "prob": 23.2
+        },
+        {
+          "home": 0,
+          "away": 0,
+          "prob": 21.2
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 14.1
+          "prob": 16.0
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 9.7
+          "prob": 9.6
         },
         {
-          "home": 0,
-          "away": 1,
-          "prob": 8.0
+          "home": 3,
+          "away": 0,
+          "prob": 6.9
         }
       ],
       "dimensions": [
@@ -21659,8 +21679,8 @@
         },
         {
           "name": "近期状态",
-          "home": 0.551,
-          "away": 0.429,
+          "home": 0.598,
+          "away": 0.504,
           "weight": 0.25108872772613866
         },
         {
@@ -21733,53 +21753,53 @@
         "fifa_rank": 90,
         "elo": 1280.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
-      "prob_home": 67.5,
-      "prob_draw": 22.9,
-      "prob_away": 9.6,
+      "prob_home": 65.4,
+      "prob_draw": 23.5,
+      "prob_away": 11.2,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
-      "asian_handicap": "亚盘: 厄瓜多尔-1.0",
-      "strength_diff": 0.1231,
-      "asian_line_home": -1.0,
+      "asian_handicap": "亚盘: 厄瓜多尔-1.5",
+      "strength_diff": 0.2422,
+      "asian_line_home": -1.5,
       "analysis": [
         "FIFA排名差距 59 位（厄瓜多尔 #31 vs 库拉索 #90），纸面实力主队显著占优。",
         "ELO 分差 418.4000000000001 分，对应历史胜率约 85%。",
         "世界杯参赛经验：厄瓜多尔 4 次 vs 库拉索 1 次。",
-        "近10场战绩 厄瓜多尔 2胜2平2负，库拉索 4胜3平3负；xG差 +0.2 vs +0.2。",
+        "近10场战绩 厄瓜多尔 2胜1平3负，库拉索 0胜0平1负；xG差 +0.0 vs -5.1。",
         "比赛环境：Kansas City，气候适应度 厄瓜多尔 74% vs 库拉索 70%。",
         "阵容深度：厄瓜多尔 Moisés Caicedo、Pervis Estupiñán、Nilson Angulo；伤病风险 6% vs 8%。",
         "战术对抗：厄瓜多尔（中场绞杀 + 定位球）vs 库拉索（低位防守 + 长传），战术维度主队得分 0.56、客队 0.43。",
         "旅行成本：厄瓜多尔 距上场 1657 km，库拉索 1045 km（openfootball 赛程 + 球场坐标）。",
-        "积分榜战意：厄瓜多尔 0分第4名；库拉索 0分第2名。"
+        "积分榜战意：厄瓜多尔 0分第3名；库拉索 0分第4名。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 31.4
+          "prob": 60.9
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 28.3
-        },
-        {
-          "home": 2,
-          "away": 0,
-          "prob": 14.9
-        },
-        {
-          "home": 1,
-          "away": 1,
-          "prob": 6.6
+          "prob": 17.9
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 6.1
+          "prob": 12.0
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 3.8
+        },
+        {
+          "home": 2,
+          "away": 0,
+          "prob": 2.7
         }
       ],
       "dimensions": [
@@ -21791,8 +21811,8 @@
         },
         {
           "name": "近期状态",
-          "home": 0.479,
-          "away": 0.512,
+          "home": 0.433,
+          "away": 0.0,
           "weight": 0.25108872772613866
         },
         {
@@ -21815,7 +21835,7 @@
         },
         {
           "name": "小组赛战意",
-          "home": 0.5,
+          "home": 0.54,
           "away": 0.5,
           "weight": 0.0515628637294749
         },
@@ -21865,53 +21885,53 @@
         "fifa_rank": 18,
         "elo": 1748.4
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
-      "prob_home": 17.1,
-      "prob_draw": 23.5,
-      "prob_away": 59.4,
+      "score_away": 1,
+      "prob_home": 17.2,
+      "prob_draw": 24.4,
+      "prob_away": 58.5,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 突尼斯+1.0",
-      "strength_diff": -0.1007,
+      "strength_diff": -0.1142,
       "asian_line_home": 1.0,
       "analysis": [
         "FIFA排名差距 23 位（突尼斯 #41 vs 日本 #18），纸面实力主队略优。",
         "ELO 分差 -158.20000000000005 分，对应历史胜率约 35%。",
         "世界杯参赛经验：突尼斯 6 次 vs 日本 8 次。",
-        "近10场战绩 突尼斯 2胜1平3负，日本 3胜1平2负；xG差 -0.5 vs -0.1。",
+        "近10场战绩 突尼斯 1胜1平4负，日本 2胜2平2负；xG差 -0.9 vs -0.1。",
         "比赛环境：Monterrey (Guadalupe)，气候适应度 突尼斯 74% vs 日本 76%。",
         "阵容深度：突尼斯 Hannibal、Elias Saad、Rani Khedira；伤病风险 7% vs 8%。",
         "战术对抗：突尼斯（中场绞杀 + 定位球）vs 日本（快速转换 + 边路进攻），战术维度主队得分 0.47、客队 0.53。",
         "旅行成本：突尼斯 距上场 0 km，日本 838 km（openfootball 赛程 + 球场坐标）。",
-        "积分榜战意：突尼斯 0分第4名；日本 0分第2名。"
+        "积分榜战意：突尼斯 0分第4名；日本 1分第3名。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 30.7
+          "prob": 33.9
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 25.5
+          "prob": 25.2
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 12.3
-        },
-        {
-          "home": 1,
-          "away": 1,
-          "prob": 8.9
+          "prob": 10.7
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 8.8
+          "prob": 9.7
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 8.7
         }
       ],
       "dimensions": [
@@ -21923,8 +21943,8 @@
         },
         {
           "name": "近期状态",
-          "home": 0.404,
-          "away": 0.53,
+          "home": 0.279,
+          "away": 0.459,
           "weight": 0.251027360488465
         },
         {
@@ -21997,8 +22017,8 @@
         "fifa_rank": 58,
         "elo": 1434.6
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 76.0,
       "prob_draw": 16.1,
@@ -22130,8 +22150,8 @@
         "fifa_rank": 20,
         "elo": 1718.6
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 68.6,
       "prob_draw": 17.9,
@@ -22262,8 +22282,8 @@
         "fifa_rank": 65,
         "elo": 1400.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 74.3,
       "prob_draw": 16.7,
@@ -22394,9 +22414,9 @@
         "fifa_rank": 33,
         "elo": 1596.2
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 16.4,
       "prob_draw": 28.1,
       "prob_away": 55.5,
@@ -22526,8 +22546,8 @@
         "fifa_rank": 22,
         "elo": 1735.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 72.5,
       "prob_draw": 17.4,
@@ -22658,8 +22678,8 @@
         "fifa_rank": 59,
         "elo": 1405.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 77.8,
       "prob_draw": 15.1,
@@ -22790,9 +22810,9 @@
         "fifa_rank": 17,
         "elo": 1808.1
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 16.7,
       "prob_draw": 25.1,
       "prob_away": 58.2,
@@ -22922,9 +22942,9 @@
         "fifa_rank": 43,
         "elo": 1570.2
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 16.7,
       "prob_draw": 29.5,
       "prob_away": 53.8,
@@ -23054,8 +23074,8 @@
         "fifa_rank": 66,
         "elo": 1395.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 73.4,
       "prob_draw": 18.3,
@@ -23186,8 +23206,8 @@
         "fifa_rank": 68,
         "elo": 1491.7
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 74.3,
       "prob_draw": 16.8,
@@ -23318,9 +23338,9 @@
         "fifa_rank": 10,
         "elo": 1885.5
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 9.5,
       "prob_draw": 19.2,
       "prob_away": 71.3,
@@ -23450,8 +23470,8 @@
         "fifa_rank": 62,
         "elo": 1415.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 71.8,
       "prob_draw": 17.9,
@@ -23582,8 +23602,8 @@
         "fifa_rank": 27,
         "elo": 1658.3
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 66.9,
       "prob_draw": 19.0,
@@ -23714,8 +23734,8 @@
         "fifa_rank": 35,
         "elo": 1599.9
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
+      "predicted_score": "0 : 1",
+      "score_home": 0,
       "score_away": 1,
       "prob_home": 29.1,
       "prob_draw": 34.1,
@@ -23978,8 +23998,8 @@
         "fifa_rank": 87,
         "elo": 1320.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 76.9,
       "prob_draw": 14.6,
@@ -24110,9 +24130,9 @@
         "fifa_rank": 14,
         "elo": 1850.4
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 16.5,
       "prob_draw": 20.9,
       "prob_away": 62.6,
@@ -24242,9 +24262,9 @@
         "fifa_rank": 23,
         "elo": 1696.5
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 17.5,
       "prob_draw": 26.5,
       "prob_away": 56.1,
@@ -24374,53 +24394,53 @@
         "fifa_rank": 37,
         "elo": 1636.6
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
-      "prob_home": 12.6,
-      "prob_draw": 21.4,
-      "prob_away": 66.1,
+      "score_away": 1,
+      "prob_home": 13.0,
+      "prob_draw": 23.9,
+      "prob_away": 63.1,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 库拉索+1.0",
-      "strength_diff": -0.116,
+      "strength_diff": -0.2688,
       "asian_line_home": 1.0,
       "analysis": [
         "FIFA排名差距 53 位（库拉索 #90 vs 科特迪瓦 #37），纸面实力主队略优。",
         "ELO 分差 -356.5999999999999 分，对应历史胜率约 35%。",
         "世界杯参赛经验：库拉索 1 次 vs 科特迪瓦 4 次。",
-        "近10场战绩 库拉索 4胜3平3负，科特迪瓦 2胜1平3负；xG差 +0.2 vs -0.1。",
+        "近10场战绩 库拉索 0胜0平1负，科特迪瓦 3胜0平3负；xG差 -5.1 vs +0.1。",
         "比赛环境：Philadelphia，气候适应度 库拉索 70% vs 科特迪瓦 74%。",
         "阵容深度：库拉索 Riechedly Bazoer、Shurandy Sambo、Sherel Floranus；伤病风险 8% vs 6%。",
         "战术对抗：库拉索（低位防守 + 长传）vs 科特迪瓦（中场绞杀 + 定位球），战术维度主队得分 0.43、客队 0.56。",
         "旅行成本：库拉索 距上场 1657 km，科特迪瓦 544 km（openfootball 赛程 + 球场坐标）。",
-        "积分榜战意：库拉索 0分第2名；科特迪瓦 0分第3名。"
+        "积分榜战意：库拉索 0分第4名；科特迪瓦 3分第2名。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 29.2
-        },
-        {
-          "home": 0,
-          "away": 1,
-          "prob": 25.5
-        },
-        {
-          "home": 0,
-          "away": 2,
-          "prob": 13.1
-        },
-        {
-          "home": 1,
-          "away": 1,
-          "prob": 9.0
+          "prob": 60.9
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 8.4
+          "prob": 17.9
+        },
+        {
+          "home": 0,
+          "away": 1,
+          "prob": 12.0
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 3.8
+        },
+        {
+          "home": 2,
+          "away": 0,
+          "prob": 2.7
         }
       ],
       "dimensions": [
@@ -24432,8 +24452,8 @@
         },
         {
           "name": "近期状态",
-          "home": 0.512,
-          "away": 0.429,
+          "home": 0.0,
+          "away": 0.504,
           "weight": 0.2600722630708875
         },
         {
@@ -24509,51 +24529,51 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 15.6,
-      "prob_draw": 21.5,
-      "prob_away": 62.9,
-      "prob_under_25": 72.0,
-      "prob_over_25": 28.0,
+      "prob_home": 15.2,
+      "prob_draw": 16.9,
+      "prob_away": 67.9,
+      "prob_under_25": 71.0,
+      "prob_over_25": 29.0,
       "asian_handicap": "亚盘: 厄瓜多尔+1.0",
-      "strength_diff": -0.1438,
+      "strength_diff": -0.1657,
       "asian_line_home": 1.0,
       "analysis": [
         "FIFA排名差距 23 位（厄瓜多尔 #31 vs 德国 #8），纸面实力主队略优。",
         "ELO 分差 -180.19999999999982 分，对应历史胜率约 35%。",
         "世界杯参赛经验：厄瓜多尔 4 次 vs 德国 20 次。",
-        "近10场战绩 厄瓜多尔 2胜2平2负，德国 3胜1平2负；xG差 +0.2 vs +0.3。",
+        "近10场战绩 厄瓜多尔 2胜1平3负，德国 3胜1平2负；xG差 +0.0 vs +1.1。",
         "比赛环境：New York/New Jersey (East Rutherford)，气候适应度 厄瓜多尔 74% vs 德国 78%。",
         "阵容深度：厄瓜多尔 Moisés Caicedo、Pervis Estupiñán、Nilson Angulo；伤病风险 6% vs 8%。",
         "战术对抗：厄瓜多尔（中场绞杀 + 定位球）vs 德国（高位压迫 + 控球组织），战术维度主队得分 0.33、客队 0.57。",
         "历史交锋（openfootball）：Ecuador 0-3 Germany。",
         "旅行成本：厄瓜多尔 距上场 1747 km，德国 540 km（openfootball 赛程 + 球场坐标）。",
-        "积分榜战意：厄瓜多尔 0分第4名；德国 0分第1名。"
+        "积分榜战意：厄瓜多尔 0分第3名；德国 3分第1名。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 1,
-          "prob": 24.2
+          "prob": 22.9
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 21.8
+          "prob": 18.6
         },
         {
           "home": 0,
           "away": 2,
-          "prob": 16.7
-        },
-        {
-          "home": 1,
-          "away": 1,
-          "prob": 8.8
+          "prob": 18.3
         },
         {
           "home": 0,
           "away": 3,
-          "prob": 7.2
+          "prob": 9.0
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 8.4
         }
       ],
       "dimensions": [
@@ -24565,8 +24585,8 @@
         },
         {
           "name": "近期状态",
-          "home": 0.479,
-          "away": 0.551,
+          "home": 0.433,
+          "away": 0.598,
           "weight": 0.2599867994127589
         },
         {
@@ -24589,7 +24609,7 @@
         },
         {
           "name": "小组赛战意",
-          "home": 0.5,
+          "home": 0.54,
           "away": 0.5,
           "weight": 0.05651886943755628
         },
@@ -24639,53 +24659,53 @@
         "fifa_rank": 32,
         "elo": 1698.6
       },
-      "predicted_score": "1 : 1",
+      "predicted_score": "1 : 0",
       "score_home": 1,
-      "score_away": 1,
-      "prob_home": 38.7,
-      "prob_draw": 33.8,
-      "prob_away": 27.5,
+      "score_away": 0,
+      "prob_home": 35.9,
+      "prob_draw": 32.4,
+      "prob_away": 31.7,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
-      "strength_diff": 0.0129,
+      "strength_diff": -0.0121,
       "asian_line_home": 0.0,
       "analysis": [
         "FIFA排名差距 14 位（日本 #18 vs 瑞典 #32），纸面实力接近。",
         "ELO 分差 49.80000000000018 分，对应历史胜率约 56%。",
         "世界杯参赛经验：日本 8 次 vs 瑞典 12 次。",
-        "近10场战绩 日本 3胜1平2负，瑞典 3胜2平1负；xG差 -0.1 vs +0.6。",
+        "近10场战绩 日本 2胜2平2负，瑞典 3胜2平1负；xG差 -0.1 vs +1.1。",
         "比赛环境：Dallas (Arlington)，气候适应度 日本 76% vs 瑞典 74%。",
         "阵容深度：日本 Ayumu Seko、Kaishu Sano、Yuito Suzuki；伤病风险 8% vs 7%。",
         "战术对抗：日本（快速转换 + 边路进攻）vs 瑞典（中场绞杀 + 定位球），战术维度主队得分 0.53、客队 0.47。",
         "旅行成本：日本 距上场 838 km，瑞典 376 km（openfootball 赛程 + 球场坐标）。",
-        "积分榜战意：日本 0分第2名；瑞典 0分第3名。"
+        "积分榜战意：日本 1分第3名；瑞典 3分第1名。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 0,
-          "prob": 23.6
+          "prob": 22.5
         },
         {
           "home": 1,
           "away": 0,
-          "prob": 17.2
-        },
-        {
-          "home": 1,
-          "away": 1,
-          "prob": 13.8
+          "prob": 15.3
         },
         {
           "home": 0,
           "away": 1,
-          "prob": 13.4
+          "prob": 14.7
+        },
+        {
+          "home": 1,
+          "away": 1,
+          "prob": 14.3
         },
         {
           "home": 2,
           "away": 0,
-          "prob": 7.9
+          "prob": 6.5
         }
       ],
       "dimensions": [
@@ -24697,8 +24717,8 @@
         },
         {
           "name": "近期状态",
-          "home": 0.53,
-          "away": 0.6,
+          "home": 0.459,
+          "away": 0.63,
           "weight": 0.24649105484121062
         },
         {
@@ -24774,50 +24794,50 @@
       "predicted_score": "0 : 1",
       "score_home": 0,
       "score_away": 1,
-      "prob_home": 9.7,
-      "prob_draw": 16.1,
-      "prob_away": 74.2,
-      "prob_under_25": 69.9,
-      "prob_over_25": 30.1,
+      "prob_home": 9.8,
+      "prob_draw": 16.5,
+      "prob_away": 73.7,
+      "prob_under_25": 72.0,
+      "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 突尼斯+1.0",
-      "strength_diff": -0.2287,
+      "strength_diff": -0.2416,
       "asian_line_home": 1.0,
       "analysis": [
         "FIFA排名差距 34 位（突尼斯 #41 vs 荷兰 #7），纸面实力主队略优。",
         "ELO 分差 -402.0 分，对应历史胜率约 35%。",
         "世界杯参赛经验：突尼斯 6 次 vs 荷兰 11 次。",
-        "近10场战绩 突尼斯 2胜1平3负，荷兰 5胜1平0负；xG差 -0.5 vs +1.3。",
+        "近10场战绩 突尼斯 1胜1平4负，荷兰 4胜2平0负；xG差 -0.9 vs +1.1。",
         "比赛环境：Kansas City，气候适应度 突尼斯 74% vs 荷兰 78%。",
         "阵容深度：突尼斯 Hannibal、Elias Saad、Rani Khedira；伤病风险 7% vs 8%。",
         "战术对抗：突尼斯（中场绞杀 + 定位球）vs 荷兰（高位压迫 + 控球组织），战术维度主队得分 0.43、客队 0.57。",
         "旅行成本：突尼斯 距上场 1576 km，荷兰 1045 km（openfootball 赛程 + 球场坐标）。",
-        "积分榜战意：突尼斯 0分第4名；荷兰 0分第1名。"
+        "积分榜战意：突尼斯 0分第4名；荷兰 1分第2名。"
       ],
       "score_probs": [
         {
           "home": 0,
           "away": 1,
-          "prob": 23.5
-        },
-        {
-          "home": 0,
-          "away": 2,
-          "prob": 18.7
+          "prob": 24.3
         },
         {
           "home": 0,
           "away": 0,
-          "prob": 17.3
+          "prob": 19.0
+        },
+        {
+          "home": 0,
+          "away": 2,
+          "prob": 17.9
         },
         {
           "home": 0,
           "away": 3,
-          "prob": 9.4
+          "prob": 8.5
         },
         {
           "home": 1,
           "away": 1,
-          "prob": 8.0
+          "prob": 8.2
         }
       ],
       "dimensions": [
@@ -24829,8 +24849,8 @@
         },
         {
           "name": "近期状态",
-          "home": 0.404,
-          "away": 0.811,
+          "home": 0.279,
+          "away": 0.736,
           "weight": 0.26000816552498385
         },
         {
@@ -24903,9 +24923,9 @@
         "fifa_rank": 11,
         "elo": 1812.7
       },
-      "predicted_score": "0 : 0",
+      "predicted_score": "0 : 1",
       "score_home": 0,
-      "score_away": 0,
+      "score_away": 1,
       "prob_home": 17.6,
       "prob_draw": 20.5,
       "prob_away": 61.9,
@@ -25035,8 +25055,8 @@
         "fifa_rank": 24,
         "elo": 1678.9
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
+      "predicted_score": "0 : 1",
+      "score_home": 0,
       "score_away": 1,
       "prob_home": 17.6,
       "prob_draw": 29.9,
@@ -25299,8 +25319,8 @@
         "fifa_rank": 59,
         "elo": 1405.0
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 77.4,
       "prob_draw": 14.9,
@@ -25431,8 +25451,8 @@
         "fifa_rank": 3,
         "elo": 1976.4
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
+      "predicted_score": "0 : 1",
+      "score_home": 0,
       "score_away": 1,
       "prob_home": 26.8,
       "prob_draw": 30.5,
@@ -25563,9 +25583,9 @@
         "fifa_rank": 58,
         "elo": 1434.6
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
-      "score_away": 1,
+      "predicted_score": "0 : 0",
+      "score_home": 0,
+      "score_away": 0,
       "prob_home": 31.5,
       "prob_draw": 42.0,
       "prob_away": 26.6,
@@ -25695,8 +25715,8 @@
         "fifa_rank": 20,
         "elo": 1718.6
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
+      "predicted_score": "0 : 1",
+      "score_home": 0,
       "score_away": 1,
       "prob_home": 22.3,
       "prob_draw": 34.2,
@@ -26092,8 +26112,8 @@
         "fifa_rank": 68,
         "elo": 1491.7
       },
-      "predicted_score": "2 : 0",
-      "score_home": 2,
+      "predicted_score": "1 : 0",
+      "score_home": 1,
       "score_away": 0,
       "prob_home": 72.5,
       "prob_draw": 17.4,
@@ -26224,8 +26244,8 @@
         "fifa_rank": 6,
         "elo": 1944.3
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
+      "predicted_score": "0 : 1",
+      "score_home": 0,
       "score_away": 1,
       "prob_home": 26.4,
       "prob_draw": 30.7,
@@ -26356,9 +26376,9 @@
         "fifa_rank": 66,
         "elo": 1395.0
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
-      "score_away": 1,
+      "predicted_score": "0 : 0",
+      "score_home": 0,
+      "score_away": 0,
       "prob_home": 35.1,
       "prob_draw": 38.9,
       "prob_away": 26.1,
@@ -26488,8 +26508,8 @@
         "fifa_rank": 22,
         "elo": 1735.0
       },
-      "predicted_score": "1 : 1",
-      "score_home": 1,
+      "predicted_score": "0 : 1",
+      "score_home": 0,
       "score_away": 1,
       "prob_home": 21.3,
       "prob_draw": 31.5,

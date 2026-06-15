@@ -495,6 +495,19 @@ def apply_upset_adjustment(
     return p_h / t, p_d / t, p_a / t
 
 
+def _pred_outcome(p_h: float, p_d: float, p_a: float) -> str:
+    probs = {"home": p_h, "draw": p_d, "away": p_a}
+    return max(probs, key=probs.get)
+
+
+def _score_matches_outcome(h: int, a: int, outcome: str) -> bool:
+    if outcome == "home":
+        return h > a
+    if outcome == "away":
+        return h < a
+    return h == a
+
+
 def pick_display_score(
     p_h: float,
     p_d: float,
@@ -502,28 +515,27 @@ def pick_display_score(
     scores: list[tuple[int, int, float]],
     strength_diff: float,
 ) -> tuple[int, int]:
-    """从比分矩阵中选取最符合小组赛场景的代表比分。"""
-    # 势均力敌 / 高平局概率 → 优先 1:1
-    if p_d >= 0.28 and abs(p_h - p_a) < 0.35:
-        for s in scores:
-            if s[0] == 1 and s[1] == 1:
-                return 1, 1
+    """在与 1X2 投注一致的最高概率赛果下，取泊松矩阵中概率最高的具体比分。"""
+    del strength_diff  # 保留参数以兼容现有调用
+    if not scores:
+        return 0, 0
 
-    # 主队明显优势 → 优先 2:0 / 2:1 类净胜球比分
-    if p_h >= 0.55 and strength_diff > 0.12:
-        for s in scores:
-            if s[0] == 2 and s[1] == 0 and s[2] >= 0.12:
-                return 2, 0
-        for s in scores:
-            if s[0] > s[1]:
-                return s[0], s[1]
+    outcome = _pred_outcome(p_h, p_d, p_a)
+    matching = [s for s in scores if _score_matches_outcome(s[0], s[1], outcome)]
+    if matching:
+        best = max(matching, key=lambda s: s[2])
+        return best[0], best[1]
 
-    # 主队小幅领先
-    if p_h >= 0.42 and p_h > p_a:
-        for s in scores:
-            if s[0] == 1 and s[1] == 0:
-                return 1, 0
-
+    if outcome == "home":
+        best = max(scores, key=lambda s: (s[0] - s[1], s[2]))
+        return best[0], best[1]
+    if outcome == "away":
+        best = max(scores, key=lambda s: (s[1] - s[0], s[2]))
+        return best[0], best[1]
+    draw_scores = [s for s in scores if s[0] == s[1]]
+    if draw_scores:
+        best = max(draw_scores, key=lambda s: s[2])
+        return best[0], best[1]
     best = scores[0]
     return best[0], best[1]
 
