@@ -14,8 +14,8 @@
     "1986--mexico/cup.txt": "https://raw.githubusercontent.com/openfootball/worldcup/master/1986--mexico/cup.txt"
   },
   "status": {
-    "2026--usa/cup.txt": "downloaded",
-    "2026/worldcup.json": "downloaded",
+    "2026--usa/cup.txt": "fallback: <urlopen error <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>>",
+    "2026/worldcup.json": "fallback: <urlopen error <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>>",
     "2022--qatar/cup.txt": "cached",
     "2018--russia/cup.txt": "cached",
     "2014--brazil/cup.txt": "cached",
@@ -27,5 +27,5 @@
     "1990--italy/cup.txt": "cached",
     "1986--mexico/cup.txt": "cached"
   },
-  "synced_at": "2026-06-15T14:32:41.178341+00:00"
+  "synced_at": "2026-06-19T01:57:25.073572+00:00"
 }

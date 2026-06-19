@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T14:32:43.598985+00:00",
+  "generated_at": "2026-06-19T01:57:27.223113+00:00",
   "method": "walk-forward group stage backtest (1998-2022, ELO priors from 1986+)",
   "calibration": {
     "group_stage_draw_base": 0.21,
@@ -110,7 +110,7 @@
     "outcome_accuracy": 0.6548,
     "exact_score_accuracy": 0.125,
     "brier_score": 0.6249,
-    "log_loss": 1.0446,
+    "log_loss": 1.0445,
     "draw_rate_actual": 0.247,
     "draw_rate_predicted": 0.3839,
     "wdl_priors_by_elo_gap": {
@@ -186,7 +186,7 @@
       "outcome_accuracy": 0.7292,
       "exact_score_accuracy": 0.125,
       "brier_score": 0.5965,
-      "log_loss": 0.9911,
+      "log_loss": 0.9912,
       "draw_rate_actual": 0.3333,
       "draw_rate_predicted": 0.5208,
       "wdl_priors_by_elo_gap": {
@@ -248,8 +248,8 @@
       "matches": 48,
       "outcome_accuracy": 0.5417,
       "exact_score_accuracy": 0.0417,
-      "brier_score": 0.6625,
-      "log_loss": 1.0962,
+      "brier_score": 0.6624,
+      "log_loss": 1.096,
       "draw_rate_actual": 0.2917,
       "draw_rate_predicted": 0.3958,
       "wdl_priors_by_elo_gap": {
@@ -305,8 +305,8 @@
       "matches": 48,
       "outcome_accuracy": 0.7083,
       "exact_score_accuracy": 0.1667,
-      "brier_score": 0.5876,
-      "log_loss": 0.9899,
+      "brier_score": 0.5874,
+      "log_loss": 0.9894,
       "draw_rate_actual": 0.2292,
       "draw_rate_predicted": 0.4167,
       "wdl_priors_by_elo_gap": {
@@ -368,8 +368,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6667,
       "exact_score_accuracy": 0.1458,
-      "brier_score": 0.6466,
-      "log_loss": 1.0748,
+      "brier_score": 0.6467,
+      "log_loss": 1.0749,
       "draw_rate_actual": 0.2917,
       "draw_rate_predicted": 0.4583,
       "wdl_priors_by_elo_gap": {
@@ -500,8 +500,8 @@
       "matches": 48,
       "outcome_accuracy": 0.6458,
       "exact_score_accuracy": 0.1667,
-      "brier_score": 0.6241,
-      "log_loss": 1.0459,
+      "brier_score": 0.624,
+      "log_loss": 1.0457,
       "draw_rate_actual": 0.1875,
       "draw_rate_predicted": 0.2917,
       "wdl_priors_by_elo_gap": {
@@ -757,8 +757,8 @@
         },
         "odds_source": "典型欧赔（1X2 1.6 / 亚盘 1.9 / 大小 1.85）"
       },
-      "overall_profit_all_tournaments": -1157.5,
-      "overall_roi": -0.1033,
+      "overall_profit_all_tournaments": -1250.0,
+      "overall_roi": -0.1116,
       "overall_staked": 11200.0,
       "leg_breakdown": {},
       "by_tournament": {
@@ -772,12 +772,12 @@
           "selected_matches": 15,
           "legs": 34,
           "legs_counted": 33,
-          "wins": 13,
-          "hit_rate": 0.3939,
+          "wins": 12,
+          "hit_rate": 0.3636,
           "staked": 1700.0,
-          "profit": -490.0,
-          "ending_bankroll": 1510.0,
-          "roi": -0.2882,
+          "profit": -582.5,
+          "ending_bankroll": 1417.5,
+          "roi": -0.3426,
           "by_tier": {
             "strong": {
               "matches": 8,
@@ -788,7 +788,7 @@
             "medium": {
               "matches": 5,
               "staked": 500.0,
-              "profit": -222.5,
+              "profit": -315.0,
               "legs": 10
             }
           }
@@ -983,8 +983,8 @@
     },
     "comparison": {
       "flat_profit": 3023.5,
-      "tiered_profit": -1157.5,
-      "delta": -4181.0,
+      "tiered_profit": -1250.0,
+      "delta": -4273.5,
       "why_tiered_underperforms": [
         "1X2 模型有 walk-forward edge，亚盘/大小球未单独校准",
         "强信号场追加亚盘要求净胜球，1 球小胜常赢 1X2 却输亚盘",
@@ -1892,7 +1892,7 @@
         "key": "CHI",
         "code": "CHI",
         "name": "Chile",
-        "fifa_rank": 21,
+        "fifa_rank": 20,
         "elo": 1500.0
       },
       "predicted_score": "0 : 0",
@@ -1900,14 +1900,14 @@
       "score_away": 0,
       "prob_home": 33.5,
       "prob_draw": 38.7,
-      "prob_away": 27.8,
+      "prob_away": 27.9,
       "prob_under_25": 72.0,
       "prob_over_25": 28.0,
       "asian_handicap": "亚盘: 平手",
-      "strength_diff": 0.0298,
+      "strength_diff": 0.0291,
       "asian_line_home": 0.0,
       "analysis": [
-        "FIFA排名差距 17 位（Italy #4 vs Chile #21），纸面实力主队略优。",
+        "FIFA排名差距 16 位（Italy #4 vs Chile #20），纸面实力主队略优。",
         "ELO 分差 40.40000000000009 分，对应历史胜率约 55%。",
         "世界杯参赛经验：Italy 5 次 vs Chile 5 次。",
         "近10场战绩 Italy 3胜2平1负，Chile 4胜3平3负；xG差 +0.5 vs +0.2。",
@@ -1925,7 +1925,7 @@
         {
           "home": 1,
           "away": 0,
-          "prob": 17.0
+          "prob": 16.9
         },
         {
           "home": 0,
@@ -1947,7 +1947,7 @@
         {
           "name": "基本面实力",
           "home": 0.561,
-          "away": 0.495,
+          "away": 0.498,
           "weight": 0.27249864281601516
         },
         {

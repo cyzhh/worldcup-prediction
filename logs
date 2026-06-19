@@ -25,3 +25,13 @@
 2026-06-15 22:32:41 [INFO] worldcup.sync: 已同步 2026/worldcup.json
 2026-06-15 22:32:41 [INFO] worldcup.db_builder: 已构建 D:\CYZ\project\worldcup\data\worldcup_db.json
 2026-06-15 22:32:45 [INFO] worldcup.generate_html: 已生成 D:\CYZ\project\worldcup\index.html
+2026-06-19 09:57:02 [WARNING] worldcup.sync: 下载失败 (1/3) https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+2026-06-19 09:57:06 [WARNING] worldcup.sync: 下载失败 (2/3) https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+2026-06-19 09:57:12 [WARNING] worldcup.sync: 下载失败 (3/3) https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+2026-06-19 09:57:12 [WARNING] worldcup.sync: LIVE_REFRESH 回退上一版: 2026--usa/cup.txt
+2026-06-19 09:57:15 [WARNING] worldcup.sync: 下载失败 (1/3) https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+2026-06-19 09:57:19 [WARNING] worldcup.sync: 下载失败 (2/3) https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+2026-06-19 09:57:25 [WARNING] worldcup.sync: 下载失败 (3/3) https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+2026-06-19 09:57:25 [WARNING] worldcup.sync: LIVE_REFRESH 回退上一版: 2026/worldcup.json
+2026-06-19 09:57:25 [INFO] worldcup.db_builder: 已构建 D:\CYZ\project\worldcup\data\worldcup_db.json
+2026-06-19 09:57:28 [INFO] worldcup.generate_html: 已生成 D:\CYZ\project\worldcup\index.html
